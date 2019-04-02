@@ -1,0 +1,17 @@
+.row
+	
+	.offset-sm-1.col-sm-10.col-md-4.company-middle-reviews-items
+		.company-middle-reviews-feedback
+			+feedback-company(false, 'Написать отзыв', true)
+		.company-middle-reviews-rating
+			include ../sections/_rating-reviews.pug
+	
+	.offset-sm-1.col-sm-10.offset-md-0.col-md-7.company-middle-reviews-items
+		//- h2.company-middle-reviews__title.heading-2.d-sm-none
+		h2.company-middle-reviews__title.heading-2
+			| Отзывы о компании «Веб Инвест»
+		.company-middle-reviews-block
+			include ../sections/_block-company-reviews.pug
+			//- include _pagination.pug
+		.company-middle-reviews-subscribe
+			+subscribe('Подпишитесь на новые отзывы о компании «Название компании»')

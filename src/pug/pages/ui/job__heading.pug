@@ -1,0 +1,31 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Заголовок о компании';
+	- var pageClass = 'body--dashboard';
+	- var CompanyHeader = {BrandImg: 'brand-logo-big.svg', CompanyTitle:'Веб Инвест', CompanyDescrip: 'Информационные технологии', CompanySite: 'webinvestment.ru', Items:['Главная','Компании','Компании'], breadcrumbItems: ['Санкт-Петербург', 'Информационные технологии'], splitTextObject: {modif: "", items: ['Санкт-Петербург', 'Информационные технологии']} };
+
+block content
+	.container-fluid.container--left
+		.title Заголовок о компании
+		.section-ui(style = "border: 1px dashed black; padding: 0;")
+			.container
+				.row
+					.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+						+job__company-heading(CompanyHeader)
+		p Код
+		pre.
+			+job__company-heading(CompanyHeader)
+		p Миксин
+		pre.
+			mixin job__company-heading(dataObject)
+				.company-heading-wrapper
+					.company-heading
+						.company-banner-logo
+							+brand-logo-bgstyle(dataObject.BrandImg)
+						.company-heading__info
+							.company-heading__title
+								span(itemprop="name") \#{dataObject.CompanyTitle}
+								+rating-mark(100).company-banner__rate
+							+split-text-object(dataObject.splitTextObject)
+							a(href="").company-heading__site \#{dataObject.CompanySite}

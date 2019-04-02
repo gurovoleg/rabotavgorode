@@ -1,0 +1,53 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Title-block';
+	- var pageClass = 'body--dashboard';
+	-var candidateObject = { splitTextDescription: {modif: "", items: ['Senior Front-end Developer']}, title: 'Константин Константинопольский', ratingStars: ['', '#2389A9', 'full', 'full', 'full', 'full', 'empty'], info: {pay: '100 000 руб', splitTextInfo: {modif: "", items: ['32 года', 'Санкт-Петербург']}, splitTextContscts: {modif: "", items: ['+7 (982) 555-22-44', 'kkkonstantinopolskiy@test.com']}} };
+
+block content
+
+	.container.container--left
+		.title Title-block
+		.section-ui(style="border: 1px dashed black;")
+			+preview-title-block(candidateObject, '#!', 'preview.png', 'blue', 'Интервью')
+		p Код
+		pre.
+			+preview-title-block(candidateObject, '#!', 'preview.png', 'blue', 'Интервью')
+		p Миксин
+		pre.
+			mixin preview-title-block(dataObject, referenceLink, imgAvatar, markerColor, statusText)
+				.preview-title-block
+					.split-text-block
+						if dataObject.splitTextObject
+							+split-text-object(dataObject.splitTextObject).split-text-preview
+							.reference-block
+						a(href='#').reference-link.reference-link--desktop
+							span.reference-text.text-caption Открыть в новом окне
+							+reference
+					.preview-title-header
+						.preview-title-wrapper
+							.preview-title \#{dataObject.title}
+							+split-text-object(dataObject.splitTextDescription).split-text-preview-description
+						if imgAvatar
+							.preview-avatar
+								img(src="../../img/avatar/"+imgAvatar, alt= imgAvatar)
+					.review-status
+						if dataObject.ratingStars
+							.preview-rating-stars
+								+rating-stars-block(...dataObject.ratingStars).rating-stars-preview
+						+color-marker(markerColor)
+						span.status-text= statusText
+					if dataObject.info
+						.review-info-block
+							.review-info
+								.review-info__pay \#{dataObject.info.pay}
+								.review-info__age-location
+									+split-text-object(dataObject.info.splitTextInfo)
+								.review-info__contacts
+									+split-text-object(dataObject.info.splitTextContscts)
+							.preview-avatar--mobile
+									img(src="../../img/avatar/"+imgAvatar, alt= imgAvatar)
+		p Объект
+		pre.
+			-var candidateObject = { splitTextDescription: {modif: "", items: ['Senior Front-end Developer']}, title: 'Fullstack Developer Ruby/React', ratingStars: ['', '#2389A9', 'full', 'full', 'full', 'full', 'empty'], info: {pay: '100 000 руб', splitTextInfo: {modif: "", items: ['32 года', 'Санкт-Петербург']}, splitTextContscts: {modif: "", items: ['+7 (982) 555-22-44', 'kkkonstantinopolskiy@test.com']}} };

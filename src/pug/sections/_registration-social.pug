@@ -1,0 +1,16 @@
+form.authorization-form(action="" method="")
+	.registration-block.registration-block--social
+		a(href="#").round-icon.round-icon--registration.round-icon--user KK
+		h2.heading-2.heading-2--registration Константин Константинопольский
+		.form-block
+			form(action="" method="")
+				.input-wrapper.mb-15
+					+inputField('input-email', 'text', 'input-email', 'email', 'Электронная почта или номер телефона', 'Не найдено аккаунтов связанных с указанной электронной почтой')
+				+inputPass('input-pass', 'password', 'input-pass', 'pass', 'Введите пароль', 'Пароль введен неверно')
+				.input-wrapper.input-wrapper--radio.input-wrapper--radio-left
+					+radio-button('Ищу работу', 'checked')
+					+radio-button('Ищу сотрудника', '')
+				.input-wrapper
+					+button('Зарегистрироваться', '#', 'btn-semi-rounded-blue').btn-large
+					p.consept-text.
+						Зарегистрировавшись, вы принимаете условия #[a.consept-text_link(href="#") Соглашения] и #[a.consept-text_link(href="#") Правила сайта]

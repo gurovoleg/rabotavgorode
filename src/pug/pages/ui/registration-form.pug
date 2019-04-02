@@ -1,0 +1,27 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Форма регистрации';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		
+		.section-ui
+			.title-5 Страница Регистрации - формы
+			form.authorization-form(action="" method="")
+				.input-wrapper.mb-15
+					+inputField('input-email', 'text', 'input-email', 'email', 'Электронная почта или номер телефона', 'Не найдено аккаунтов связанных с указанной электронной почтой')
+				.input-wrapper
+					+inputField('input-pass', 'password', 'input-pass', 'pass', 'Введите пароль', 'Пароль введен неверно')
+					//- .icon-eye.icon-eye--show
+					//- 	+icon-eye
+					+icon-eye(class="icon-eye--show")
+		pre.
+			form.authorization-form(action="" method="")
+				.input-wrapper.mb-15
+					+inputField('input-email', 'text', 'input-email', 'email', 'Электронная почта или номер телефона', 'Не найдено аккаунтов связанных с указанной электронной почтой')
+				.input-wrapper
+					+inputField('input-pass', 'password', 'input-pass', 'pass', 'Введите пароль', 'Пароль введен неверно')
+					.icon-eye.icon-eye--show
+						+icon-eye

@@ -1,0 +1,102 @@
+.check-box {
+	display: none;	 
+}
+
+.check-box__label {
+	margin:0;
+}
+
+.check-box:checked ~ .custom-check-box {
+	background-color: $blue;
+
+	&::after {border-color: $white;}
+}
+
+.check-box:checked ~ .custom-check-box--employer {
+	// background-color: $employer;
+}
+
+
+.custom-check-box {
+	display: inline-block;
+	position:relative;
+	background-color: $white;
+	border-radius:4px;
+	border: 1px solid $lightGrey;
+	vertical-align: middle;
+	transition:all 0.2s;
+	cursor: pointer; 
+
+	&::after {
+		content: '';
+		position:absolute;
+		border-right:2px solid transparent;
+		border-bottom:2px solid transparent;
+		transform: rotate(45deg);
+	}
+}
+
+.custom-check-box--small {
+	height: 16px;
+	width: 16px;
+	min-width:16px;
+
+	&::after {
+		width: 4px;
+		height: 10px;
+		top:1px;left:5px;
+		border-right:1px solid transparent;
+		border-bottom:1px solid transparent;
+	}
+}
+
+.custom-check-box--big {
+	height: 24px;
+	width: 24px;
+
+	&::after {
+		width: 8px;
+		height: 17px;
+		top:0px;left:7px;
+	}
+}
+
+.custom-check-box__label {
+	vertical-align: bottom;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-left: 16px; 
+	line-height: 1;
+}
+
+.check-box__label--flex-start {
+	display: flex;
+	width: 100%;
+	align-items:center;
+	justify-content:flex-start;
+	cursor: pointer;
+}
+
+.label--nowrap {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.custom-check-box--disabled {
+	opacity: 0.4;
+}
+
+.custom-check-box__label--no-margin {
+	margin:0;
+}
+
+.custom-check-box__label--margin-right {
+	margin-right:16px;
+}
+
+.dropdown-list__item--employer {
+	.check-box:checked ~ .custom-check-box { 
+		// background-color: $employer;
+	}
+}

@@ -1,0 +1,43 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Инпуты - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Поля ввода
+		.title-2 Использование миксина
+		pre.
+			mixin inputField(attrFor, attrType, attrId, attrDataType, attrPlaceholder, error)
+		
+		.section-ui(style="width: 350px")
+			p Поле без проверки на заполненость
+			+inputField('input-simple', '', 'input-simple', '', 'Введите текст СМС', '')
+		pre.
+			+inputField('input-simple', '', 'input-simple', '', 'Введите текст СМС', '')
+
+		.section-ui(style="width: 350px")
+			p Поле с проверкой формата email
+			+inputField('input-email', 'text', 'input-email', 'email', 'Введите текст СМС', 'Не найдено аккаунтов связанных с указанной электронной почтой')
+		pre.
+			+inputField('input-email', 'text', 'input-email', 'email', 'Введите текст СМС', 'Не найдено аккаунтов связанных с указанной электронной почтой')
+
+		.section-ui(style="width: 350px")
+			p Поле с проверкой на заполненость
+			+inputField('input-checkfield', 'text', 'input-checkfield', 'checkField', 'Введите текст СМС', 'Вы ничего не ввели')
+		pre.
+			+inputField('input-checkfield', 'text', 'input-checkfield', 'checkField', 'Введите текст СМС', 'Вы ничего не ввели')
+
+		.section-ui(style="width: 350px")
+			p Поле с проверкой на заполненость пароля
+			+inputPass('input-pass', 'password', 'input-pass', 'pass', 'Введите пароль', 'Пароль введен неверно')
+		pre.
+			+inputPass('input-pass', 'password', 'input-pass', 'pass', 'Введите пароль', 'Пароль введен неверно')
+
+		.section-ui(style="width: 350px")
+			p Поле textarea
+			+textarea('Расскажите о плюсах и минусах работы в компании ', 'text')
+		p Миксин textarea(placeholderName, name), где placeholderName - placeholder, name - name
+		pre.
+			+textarea('Расскажите о плюсах и минусах работы в компании ', 'text')

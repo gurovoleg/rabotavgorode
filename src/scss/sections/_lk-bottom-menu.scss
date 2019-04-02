@@ -1,0 +1,76 @@
+//-для отображения на панели ui-kit
+.bottom-menu-preview{
+	.lk-bottom-menu.lk-bottom-menu--vacancies{display: block;}
+}
+//-end  для отображения на панели ui-kit
+
+
+.lk-bottom-menu{
+	display: none;
+	position: fixed;
+	z-index: 201;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	background-color: $white;
+	box-shadow: 0px -2px 4px $silver, inset 0px 1px 0px $silver ;
+	align-items: center;
+	
+	@media #{$md}{
+		//-justify-content: center;
+		// display: flex;
+	}
+}
+.lk-bottom-menu-content{
+	display: flex;
+	align-items: center;
+	padding-left: 101px;
+	@media #{$hd}{
+		padding-left: 135px;
+		width: 1520px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+.menu-selected{
+	display: none;
+	@media #{$xl}{
+		display: inline-block;
+		padding-right: 65px;
+	}
+}
+.lk-bottom-menu__items{
+	// justify-content: space-between;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.icon-panel-item{
+	display: flex;
+	align-items: center;
+	padding-right: 32px;
+	justify-content:center;
+	
+	.icon-box{
+		display: flex;
+		//-min-width: 32px;
+		padding-right: 16px;
+	}
+	.icon-star path{fill: $basicText;}
+}
+.icon-panel-item__text{color: $basicText;}
+.icon-panel-item:hover,
+a.icon-panel-item__text:hover {
+	color: $basicText;
+	opacity: 0.7;
+}
+.icon-panel-item:last-child{
+	padding-right: 0px;
+}
+
+//-стили для меню на странице Вакансии
+.lk-bottom-menu--vacancies{
+	// padding-left: 95px;
+}

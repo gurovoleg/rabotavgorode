@@ -1,0 +1,33 @@
+- var reviewItem_1 = {display: '',avatarLetter: 'ВИ', topText: 'Константин', bottomText: '21 сентября 2018' ,ratingType: 'like' , likeCount:'345', dislikeCount:'652', text: 'Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus  facere. '};
+
+.row
+	//- Mobile, Tablet
+	.offset-sm-1.col-sm-10.d-md-none
+		include ../sections/_company-about.pug
+		include ../sections/_rating.pug
+		
+		//- Блок отзывы
+		.block-company-reviews
+			.block-company-reviews__title Отзывы
+			+company-review(reviewItem_1)
+			+button('Читать все 123 отзыва', '#!').text-action.read-all-reviews
+
+		include ../sections/company-vacancies-current-region.pug
+		+subscribe('Подпишитесь на вакансии компании')(class="subscribe--padding-fix ")
+		include ../sections/_contact-person.pug
+
+	//- Desktop
+	.col-md-7.d-md-block
+		include ../sections/_company-about.pug
+		include ../sections/company-vacancies-current-region.pug
+		
+		//- Блок отзывы
+		.block-company-reviews
+			.block-company-reviews__title Отзывы
+			+company-review(reviewItem_1)
+			+button('Читать все 123 отзыва', '#!').text-action.read-all-reviews
+		+subscribe('Подпишитесь на вакансии компании')(class="subscribe--padding-fix ")
+	.offset-md-1.col-md-4.d-md-block
+		include ../sections/_contact-person.pug
+		include ../sections/_rating.pug
+		

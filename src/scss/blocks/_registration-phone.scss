@@ -1,0 +1,32 @@
+.registration-block--phone{
+	padding-bottom: 90px;
+	border-bottom: 1px solid $silver;
+}
+
+.registration-block__number{
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 24px;
+	color: $basicText;
+	letter-spacing: 3px;
+}
+.registration-block__notify{
+	text-align: left;
+	margin-bottom: 16px;
+	margin-top: 32px;
+}
+.registration-block__btn{
+	margin-top: 24px;
+	width: 100%;
+}
+.registration-block__time{
+	font-size: 16px;
+	color: $basicText;
+	margin-bottom: 16px;
+}
+.registration-block__footer{
+	position: relative;
+	padding-top: 32px;
+	text-align: center;
+}

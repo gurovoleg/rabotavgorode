@@ -1,0 +1,37 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточка Образование';
+	- var pageClass = 'body--dashboard';
+	- var educationCard = {period: '2005-2009', titleSplit:{modif:'education-title', items:['Специальность', 'Бакалавр']}, educationInfo:{modif:'education-type', items:['Учебное заведение', 'Высшее'] }, text:'Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.'};
+
+block content
+	.container.container--left
+		
+		.section-ui
+			.title Карточка Образование			
+			
+			+education-card(educationCard)
+		pre.
+			+education-card(educationCard)
+
+		.section-ui
+			.title Миксин и объект
+		pre.
+			mixin education-card(cardObject)
+				.education-card&attributes(attributes)
+					.row
+						.col-md-2
+							.education-card__period cardObject.period
+						.col-md-7
+							+split-text-object(cardObject.titleSplit) 
+							+split-text-object(cardObject.educationInfo)
+							.education-card__period cardObject.period
+							.education-card__description.paragrafe cardObject.text
+
+			educationCard = {
+			period: '2005-2009', 
+			titleSplit:{modif:'education-title', items:['Специальность', 'Бакалавр']}, educationInfo:{modif:'education-type', items:['Учебное заведение', 'Высшее'] }, 
+			text:'Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.'
+			};
+			

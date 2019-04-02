@@ -1,0 +1,30 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Аватар + информация ';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Аватар + информация 
+		
+		.section-ui
+			+avatar-block('ВИ', 'Старший рекрутер')
+		pre.
+			+avatar-block('ВИ', 'Старший рекрутер')
+
+		.section-ui
+			+avatar-block('ВИ', 'Константин','21 сентября 2018' )
+		pre.
+			+avatar-block('ВИ', 'Константин','21 сентября 2018' )
+			
+		
+
+		.title-5 Миксин для блока
+		pre.
+			mixin avatar-block(avatarLetter, topText, bottomText)
+				.avatar-block.d-flex&attributes(attributes)
+					a(href="#" class="round-icon round-icon--card") #{avatarLetter}
+					.avatar-block-info
+						.avatar-block-info__top.text-body #{topText}
+						.avatar-block-info__bottom.text-body-grey #{bottomText}

@@ -1,0 +1,15 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Company таб-Вакансии';
+	- var pageClass = 'body--dashboard';
+		
+block content
+	.container.container--left
+		.title Company таб-Вакансии
+
+		.section-ui
+		.company-tabs-container
+			include ../../sections/_company-tab-vacancy.pug
+		pre.
+			include ../../sections/_company-tab-vacancy.pug

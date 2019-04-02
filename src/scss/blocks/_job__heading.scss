@@ -1,0 +1,40 @@
+.company-heading-wrapper {
+	padding-bottom: 16px;
+	text-align: center;
+	.company-banner__rate {
+		position: absolute;
+		top: 3px;
+	}
+	.company-heading__site {
+		font-size: 16px;
+		line-height: 19px;
+		//-display: block;
+		display: inline-block;
+	}
+	.company-heading-breadcrumb {
+		display: block;
+		.breadcrumb-item {
+			vertical-align: middle;
+		}
+	}
+}
+.company-heading__info {
+	padding-top: 16px;
+	.split-text {
+		justify-content: center;
+		font-size: 16px;
+		padding-bottom: 8px;
+	}
+}
+.company-heading__title {
+	padding-bottom: 8px;
+	position: relative;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+}
+.company-heading__site {
+	color: $link;
+}
+

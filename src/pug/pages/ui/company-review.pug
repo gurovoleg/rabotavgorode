@@ -1,0 +1,47 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточка с отзывом';
+	- var pageClass = 'body--dashboard';
+	- var reviewItem_1 = {display: 'rating-like--visible',avatarLetter: 'ВИ', topText: 'Константин', bottomText: '21 сентября 2018' ,ratingType: 'like' , likeCount:'345', dislikeCount:'652', text: 'Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. '};
+	- var reviewItem_2 = {display: 'rating-like--visible',avatarLetter: 'ВИ', topText: 'Константин', bottomText: '21 сентября 2018' ,ratingType: 'dislike' , likeCount:'345', dislikeCount:'652', text: 'Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. '};
+	- var reviewItem_3 = {display: '',avatarLetter: 'ВИ', topText: 'Константин', bottomText: '21 сентября 2018' ,ratingType: 'dislike' , likeCount:'345', dislikeCount:'652', text: 'Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. '};
+
+block content
+	.container.container--left
+		.title Карточка с отзывом
+
+		.section-ui
+			.title-5 Отзыв с блоком иконок like
+			+company-review(reviewItem_1)
+		pre.
+			+company-review(reviewItem_1)
+
+		.section-ui
+			.title-5 Отзыв c блоком иконок dislike
+			+company-review(reviewItem_2)
+		pre.
+			+company-review(reviewItem_2)
+
+		.section-ui
+			.title-5 Отзыв без блока иконок
+			+company-review(reviewItem_3)
+		pre.
+			+company-review(reviewItem_3)
+
+		.section-ui
+			.title-5 Пример объекта
+		pre.
+			-var reviewItem_1 = {display: 'rating-like--visible',avatarLetter: 'ВИ', topText: 'Константин', bottomText: '21 сентября 2018' ,ratingType: 'like' , likeCount:'345', dislikeCount:'652', text: 'Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. '};
+
+		.section-ui
+			.title-5 Миксин карточки с отзывом
+		pre.
+			mixin company-review(ReviewObject)
+				.company-review
+					.company-review__head.d-flex
+						+avatar-block(ReviewObject.avatarLetter, ReviewObject.topText, ReviewObject.bottomText)
+						+rating-like(ReviewObject.likeCount, ReviewObject.dislikeCount, ReviewObject.ratingType)(class=" rating-like--"+ ReviewObject.display)
+					.company-review__box
+						.company-review-text.paragrafe ReviewObject.text
+						a(href="#" class="text-action link-more link-more--hide") Еще

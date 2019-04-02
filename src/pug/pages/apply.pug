@@ -1,0 +1,24 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Откликнуться на вакансию';
+	//- - var pageClass = 'index-page';
+
+block content
+	+button('Откликнуться на вакансию', '#window-modal').modal-window-button
+	+modalWindow().apply-page-modal#window-modal
+		.apply-page
+			//- Заголовок
+			include ../sections/_apply-header.pug
+			//- Контейнер для табов
+			.apply-tabs-container#apply-tabs-container
+				//- Вкладка Выбрать резюме
+				.apply-tabs__choose#apply-tabs__choose 
+					include ../sections/_apply-tab-choose.pug
+
+				//- Вкладка Загрузить резюме
+				.apply-tabs__download#apply-tabs__download 
+					include ../sections/_apply-tab-download.pug
+		.apply-notify
+			include ../sections/_apply-notify.pug
+

@@ -1,0 +1,59 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = "Страница - О компании"
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#company-tabs__about", itemName: "Описание"},{itemAddClass: "", itemHref: "#company-tabs__vacancies", itemName: "Вакансии"}, {itemAddClass: "", itemHref: "#company-tabs__reviews", itemName: "Отзывы"}];
+
+	- var CompanyBanner = {BrandImg: 'brand-logo-big.svg', CompanyTitle:'ВебИнвест', CompanyDescrip: 'Информационные технологии', CompanySite: 'webinvestment.ru', Items:['Главная','Компании','Компании'], splitTextObject: {modif: "", items: ['Санкт-Петербург', 'Информационные технологии']} };
+
+	- var companyModal = {BrandImg: 'brand-logo-big.svg', companyName: 'Название компании', companySite: 'mysitename.ru', companyContactName: 'Константин Константинопольский', companyPosition: 'Старший рекрутер', companyPhone: '+7 987 123-45-67', companyStreet: 'Свердловская набережная, 44Д,', companyCity: 'Санкт-Петербург', companyMetroColor: 'red', companyMetro: ['Пл. Ленина', '3км'] };
+
+	- var HeaderLihgt = {modif: 'company-page',  loggedPerson:{letters: 'LB', image: ''} };
+
+block content
+	+modalWindow()#window-modal
+		+companyModal(companyModal)
+		
+	//- Фильтр Отрасли
+	+filter-sectors(class="bg-container--page-company")
+	
+	//- Шапка
+	//-+page-header('company-page', 'AS')
+	+pageHeader(HeaderLihgt)
+	
+	.bg-logo-menu-dropdown.bg-logo-menu-dropdown--small-header
+		include ../sections/_main-menu.pug
+
+	//- Баннер - обычный вариант
+	//- +companyBanner(CompanyBanner)
+	
+	//- Баннер - VIP вариант
+	+companyBanner(CompanyBanner, 'vip')
+
+	.container
+		.row
+			.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+				+nav-menu(menuLinks)(id="company-nav-menu")
+
+		//- Контейнер с вкладками
+		.company-tabs-container#company-tabs-container
+			
+			//- Вкладка Описание
+			.company-tabs__about#company-tabs__about
+				include ../sections/_company-tab-about.pug
+
+			//- Вкладка Вакансии
+			.company-tabs__vacancies#company-tabs__vacancies
+				include ../sections/_company-tab-vacancy.pug
+			
+			//- Вкладка Отзывы
+			.company-tabs__reviews#company-tabs__reviews.company-middle-reviews-wrapper
+				//- include ../sections/_company-middle-reviews.pug
+				include ../sections/_company-tab-reviews.pug
+
+	//- Футер
+	.bg-footer
+		.container
+			.row
+				.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+					include ../sections/footer.pug

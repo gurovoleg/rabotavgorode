@@ -1,0 +1,49 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Job opening Блок бейджи';
+	- var pageClass = 'body--dashboard';
+	-var badgesBlock = {title: 'Вакансии для дизайнеров с навыками',Items:[{text:'Пиво',modif: 'skill'}, {text:'Отдых',modif: 'skill'}, {text:'Баня',modif: 'skill'}, {text:'Шашлык',modif: 'skill'}, {text:'Пиво',modif: 'skill'}, {text:'Отдых',modif: 'skill'}, {text:'Баня',modif: 'skill'}, {text:'Шашлык',modif: 'skill'}, {text:'Пиво',modif: 'skill'}, {text:'Отдых',modif: 'skill'}, {text:'Сериалы',modif: 'skill'}, {text:'Отдых',modif: 'skill'}], btnText:'Смотреть все', btnClass:'btn--badges-skill'};
+
+block content
+	.container.container--left
+	.title Job opening Блок бейджи
+	.section-ui
+		+badges-block( badgesBlock).badges-block--skill
+
+	.title-5 Вставить на страницу
+	pre.
+		+badges-block( badgesBlock).badges-block--skill
+
+	.title-5 Миксин
+	pre.
+		mixin badges-block(badgesGroup)
+			.badges-block&attributes(attributes)
+				.badges-block__title  badgesGroup.title
+				+badges-block__items(...badgesGroup.Items)
+				+button(badgesGroup.btnText,'#',badgesGroup.btnClass)
+
+	.title-5 Объект для миксина
+	pre.
+		-var badgesBlock = {
+		title: 'Вакансии для дизайнеров с навыками',
+		Items[
+			{text:'Пиво',modif: 'skill'},
+			{text:'Отдых',modif: 'skill'}, 
+			{text:'Баня',modif: 'skill'}, 
+			{text:'Шашлык',modif: 'skill'}, 
+			{text:'Пиво',modif: 'skill'}, 
+			{text:'Отдых',modif: 'skill'}, 
+			{text:'Баня',modif: 'skill'}, 
+			{text:'Шашлык',modif: 'skill'}, 
+			{text:'Пиво',modif: 'skill'}, 
+			{text:'Отдых',modif: 'skill'}, 
+			{text:'Сериалы',modif: 'skill'}, 
+			{text:'Отдых',modif: 'skill'}],
+			
+		 btnText:'Смотреть все', 
+		 btnClass:'btn--badges-skill'};
+		};
+
+
+

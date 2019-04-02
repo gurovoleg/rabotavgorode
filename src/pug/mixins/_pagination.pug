@@ -1,0 +1,24 @@
+//-миксин для кнопок с цифрой 
+mixin pageToggleItem(pageToggle)
+	a.page-toggle__item.text-body-link(href=""+ pageToggle.href class=""+  pageToggle.class1 +' '+ pageToggle.class2)
+		= pageToggle.text
+	
+//-миксин блока пагинации
+mixin pagination(pageToggle)
+	.pagination&attributes(attributes)
+		.pagination-row.pagination-row--nowrap
+			//-кнопка с текстом
+			
+			+button('Загрузить еще', '#', 'page-toggle__item--more btn-semi-rounded-gray')
+			//-миксин выпадашка
+			+dropdown('Показывать по ', '40', 'link', '', '20', '40', '100')(class="pagination-count")
+				
+		.pagination-row
+			.page-toggle
+				each btns in pageToggle
+					+pageToggleItem(btns)
+					
+			//-кнопки с текстом и стрелочками
+			+button('Назад', '#', 'btn page-toggle__item page-toggle__item--prev btn-semi-rounded-gray','left' )
+			+button('Вперед', '#', 'btn page-toggle__item page-toggle__item--next btn-semi-rounded-gray','right' )
+			

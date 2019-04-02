@@ -1,0 +1,46 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Поиск резюме - Шапка в "Просмотр Резюме"';
+	- var pageClass = 'body--dashboard';
+	- var viewResume = {title: 'Менеджер по продажам', pay: '150 000 Р', userInfo: 'Константин, 33 года', location: 'Купчино, г. Санкт-Петербург', splitTextObject: {modif: "", items: ['123 Просмотра  (+45)', '21 августа']}, splitUserObject: {modif: "", items: ['7 лет опыта', 'Эксперт', 'Неполное высш...']}, badgeLetter: 'ВИ'};
+
+block content
+	.container.container--left
+		.title Поиск резюме - Шапка в "Просмотр Резюме"
+		.section-ui
+			.view-resume-ui-kit
+				include ../../sections/_search-resume__view-resume-header.pug
+		p Код
+		pre.
+			include ../../sections/_search-resume__view-resume-header.pug
+		p Миксин
+		pre.
+			mixin search-resume__view-resume-header(dataObject)
+				.view-resume-header-block
+					.view-resume-header__breadcrumb-block
+						+split-text-object(dataObject.splitTextObject)
+						a(href='#').reference-link
+							span.reference-text.text-caption Открыть
+							+reference
+					.view-resume-header__title-block
+						.view-resume-header__title-block-info
+							.view-resume-header__title \#{dataObject.title}
+							.view-resume-header__pay \#{dataObject.pay}
+						.view-resume-header__button
+							+respond-block-employer('view-resume', 'Сохранить', 'btn--bg-employer')(data-dropdownId="#job__header-dropdown")
+							+respond-block-dropdown('view-resume')(id="job__header-dropdown")
+					.view-resume-header__user-content
+						.view-resume-header__user-block
+							.view-resume-header__user-info \#{dataObject.userInfo}
+							+vip-badge('#FDCE14','#000', '#', 'Pro').view-resume-header__user-badge
+							+split-text-object(dataObject.splitUserObject)
+							.view-resume-header__location
+								+color-marker('blue')
+								.view-resume-header__address \#{dataObject.location}
+							+button('Показать контакты', '#').view-resume-header__show-contacts
+						.view-resume-header__user-badge
+							+round-icon--user(dataObject.badgeLetter)
+		p Объект
+		pre.
+			- var viewResume = {title: 'Менеджер по продажам', pay: '150 000 Р', userInfo: 'Константин, 33 года', location: 'Купчино, г. Санкт-Петербург', splitTextObject: {modif: "", items: ['123 Просмотра  (+45)', '21 августа']}, splitUserObject: {modif: "", items: ['7 лет опыта', 'Эксперт', 'Неполное высш...']}, badgeLetter: 'ВИ'};

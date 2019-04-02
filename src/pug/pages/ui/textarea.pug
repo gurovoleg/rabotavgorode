@@ -1,0 +1,14 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Инпуты - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Поле textarea
+		.section-ui(style="width: 350px")
+			+textarea('Расскажите о плюсах и минусах работы в компании ', 'text')
+		p Миксин textarea(placeholderName, name), где placeholderName - placeholder, name - name
+		pre.
+			+textarea('Расскажите о плюсах и минусах работы в компании ', 'text')

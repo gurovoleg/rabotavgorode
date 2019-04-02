@@ -1,0 +1,7 @@
+form.authorization-form(action="" method="")
+	.input-wrapper.mb-15
+		+inputField('input-email', 'text', 'input-email', 'email', 'Электронная почта или номер телефона', 'Не найдено аккаунтов связанных с указанной электронной почтой')
+	+inputPass('input-pass', 'password', 'input-pass', 'pass', 'Введите пароль', 'Пароль введен неверно')
+	.input-wrapper.input-wrapper-btn
+		+button('Войти', '#', 'btn-semi-rounded-blue')
+		a(href="auth-recovery-password.html").text-body-link Забыли пароль?

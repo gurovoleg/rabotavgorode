@@ -1,0 +1,26 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Вакансии компании в текущем регионе - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Вакансии компании в текущем регионе
+		
+		include ../../sections/company-vacancies-current-region.pug
+
+		pre Подклчение: include ../../sections/company-vacancies-current-region.pug
+		pre.
+			Код:
+			
+			.company-vacancies-region
+				.company-vacancies-region__title Вакансии компании в текущем регионе
+				+company-vacancy-card(true, 'Ассистент отдела недвижимости', 'до 35 000 руб.')
+				+company-vacancy-card(true, 'Директор по маркетингу', 'з/п не указана')
+				+company-vacancy-card(true, 'Личный помощник Генерального Директора', 'до 60 000 руб.')
+				+company-vacancy-card(true, 'Менеджер по продажам первичной недвижимости', 'от 85 000 до 255 000 руб')
+				+company-vacancy-card(true, 'Руководитель направления продаж недвижимости', 'от 40 000 до 90 000 руб')
+
+				+button('Смотреть все вакансии', '#!')

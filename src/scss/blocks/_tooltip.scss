@@ -1,0 +1,112 @@
+.tooltip {
+    position: relative;
+    display: inline-block;    
+}
+
+.tooltip-target{cursor: pointer;}
+
+.tooltip-body {
+    font-size: 14px;
+    line-height: 17px;
+    visibility: hidden;    
+    background-color: $bgTooltip;
+    color: $white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 1000;
+    width: 200px;
+    display: inline-block;
+    opacity: 0;
+    transition: .5s
+}
+
+//-окно сверху
+.tooltip-body.tooltip-body--top{    	
+    left: 50%;
+    top: -$tooltipIndent;   	
+   	transform: translate(-50%, -100%);
+}
+
+//-окно снизу
+.tooltip-body.tooltip-body--bottom{	
+    left: 50%;    
+    bottom: -$tooltipIndent;
+    transform: translate(-50%, 100% );
+}
+// .tooltip-body.tooltip-body--bottom{ 
+//     left: 50%;    
+//     top: 100%;
+//     transform: translate(-50%, $tooltipIndent);
+// }
+//-окно справа
+.tooltip-body.tooltip-body--right{
+	top: 50%;
+    right: -$tooltipIndent;  
+   	transform: translate(100%, -50%);
+}
+
+//-окно слева
+.tooltip-body.tooltip-body--left{
+	top: 50%; 
+    left: -$tooltipIndent;   
+   	transform: translate(-100%, -50%);
+}
+
+//-носик для окна
+.tooltip .tooltip-body::after {
+   
+}
+
+//-носик для окна сверху
+.tooltip-body.tooltip-body--top::before { 
+     content: "";
+    position: absolute;    
+    border-style: solid;   
+    bottom: -10px;
+    left: 50%;    
+    border-width: 5px;    
+    border-color: $basicText transparent transparent transparent;
+}
+
+//-носик для окна снизу
+.tooltip-body.tooltip-body--bottom::after {  
+     content: "";
+    position: absolute;    
+    border-style: solid;  
+    top: -10px;
+    left: 50%;    
+    border-width: 5px;    
+    border-color: transparent transparent  $basicText transparent;
+}
+
+//-носик для окна справа
+.tooltip-body.tooltip-body--right::before { 
+    content: "";
+    position: absolute;    
+    border-style: solid;   
+    top: 50%;
+    transform: translateY(-50%);
+    left: -10px;   
+    border-width: 5px;    
+    border-color: transparent $basicText transparent transparent;
+}
+
+//-носик для окна слева
+.tooltip-body.tooltip-body--left::after {  
+     content: "";
+    position: absolute;    
+    border-style: solid;  
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;   
+    border-width: 5px;    
+    border-color: transparent transparent transparent $basicText;
+}
+
+.tooltip:hover .tooltip-body {
+    visibility: visible;
+    opacity: 1;
+    //-transition: opacity 1s ease;
+}

@@ -1,0 +1,80 @@
+.service-card{
+	height: 145px;
+	background: $white;
+	//-box-shadow: 0px 2px 6px $silver;
+	border-bottom: 1px solid $silver;
+	//-border-radius: 8px;
+	padding: 16px 0px 16px 16px;
+	
+	@media #{$md}{height: 131px;}
+	.radio-button__label{
+		align-self: flex-start;
+		@media #{$md}{align-self: center;}
+	}
+	
+	.link-more{
+		color: $employer;
+		cursor: pointer;
+	}
+	cursor:pointer;
+	transition:.5s;
+	&:hover{box-shadow:none;}
+}
+
+.service-card__icon{
+	width: 64px;
+	text-align: left;
+	@media #{$md}{
+		min-width: 90px;
+		padding-left: 16px;
+	}
+	
+}
+.service-card__row{
+	justify-content: space-between;
+	align-items: center;
+}
+.service-card__row-item{
+	flex-grow: 2;
+	//-padding-left: 16px;
+}
+.card-title{
+	overflow: hidden;
+    color: $basicText;
+    font-size: 18px;       
+    white-space: nowrap;
+    overflow: hidden;   
+    text-overflow: ellipsis;    
+    @media #{$md}{ font-weight: 700;}
+}
+.service-card__salary{
+	color:$employer;
+	padding-bottom: 10px;
+}
+.service-card__descrip-mobile{
+	font-size: 14px;
+	color: $greyText;
+	padding-right: 16px;
+	line-height: normal;
+	@media #{$md}{
+		display: none;
+		.link-more{display: none;}
+	}
+
+}
+.service-card__descrip-desktop{
+	color: $greyText;
+	font-size: 16px;
+	display: none;
+	line-height: normal;
+	@media #{$md}{
+		padding-right: 16px;
+		display: block;
+	}
+}
+.service-card{		
+	.ic-refresh path {fill: $employer;}
+}
+
+.service-card:nth-last-child(2) {border-bottom: 0px;}
+

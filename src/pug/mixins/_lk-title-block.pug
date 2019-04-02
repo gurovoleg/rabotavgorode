@@ -1,0 +1,33 @@
+//- личный кабинет title-block
+mixin lk-title-block(Object)
+	.lk-title-block&attributes(attributes)
+		+breadcrumb(...Object.breadcrumb)
+		.title-block-row.d-flex
+			h1.heading-1.title-block__heading #{Object.title}
+			.lk-respond-block.d-flex
+				if (Object.iconGroup)
+					.icon-group.icon-group--left
+						+#{Object.iconGroup.iconName}
+						span.item-text #{Object.iconGroup.iconText}
+				if (Object.btnGroup)		
+					+buttonBig(Object.btnGroup)
+
+		+vacancy-serp(...Object.vacancySerp)
+		if 	Object.tagFilters
+			.lk-title-block__tag-filters
+				+tag-filters(Object.tagFilters)
+		if 	Object.description
+			.lk-title-block__description #{Object.description}
+
+		.title-block__dropdown-menu
+			
+			.title-block__dropdown-menu-right
+				+dropdown("", "Вакансия", "autocomplete")
+				+dropdown("", "Город", "link", "", "по з/п", "по соответствию", "по дате", "по удаленности")
+				+dropdown("", "Рекрутер", "checkbox", "small", "Полная", "Неполная", "Вахтовая", "Сменная", "Удаленная")
+				
+
+			.title-block__dropdown-menu-left
+				+dropdown("Сортировка", "По дате закрытия", "link", "", "по з/п", "по соответствию", "по дате", "по удаленности")
+				if Object.filterView == 'view'
+					+dropdown("Вид", "список", "view")

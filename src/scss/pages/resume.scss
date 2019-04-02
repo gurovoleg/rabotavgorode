@@ -1,0 +1,61 @@
+//-обертка для секций
+.page-section{
+	padding: 24px 0;
+	border-bottom: 1px solid $silver;
+
+	@media #{$md} {padding:40px 0;}
+
+	p {
+		margin:0;
+		font-size: 18px;
+		line-height: 29px;
+	}
+
+	// Последняя карточка в секции Похожие резюме
+	.resume-card--list:last-child {border:none;}
+}
+//-заголовок секций
+.section-title{
+	font-size: 24px;
+	font-weight: 700;
+	color: $basicText;
+	margin-bottom: 24px;
+	@media #{$md}{margin-bottom: 40px;}
+}
+
+.nav-menu--resume-fix {
+	@media #{$md} {display: none;}
+}
+
+// Выравнивание внешних отступов у сетки при вложенности колонок
+.row--margin {
+	margin:0 -8px;
+	@media #{$sm} {margin:0 -10px;}	
+	@media #{$lg} {margin:0 -12px;}	
+}
+
+.col--padding {
+	padding-right: 50px;
+}
+
+// Border для Title block на экранах от 992px
+.row--border-bottom {
+	@media #{$md} {border-bottom:1px solid $silver;}
+}
+
+.resume__footer {
+	position:relative;
+	background-color: $white;
+	border-top:1px solid $silver;
+	position: fixed;
+	bottom: 0; 
+	left: 0;right: 0;
+	z-index:2;
+	
+	@media #{$md} {display: none;}
+}
+.theme--employer{
+	.resume-card__title,
+	.resume-card .vip-badge {color:$basicText;}
+}
+

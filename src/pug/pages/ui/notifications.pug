@@ -1,0 +1,33 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Уведомления';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+	.title Уведомления
+
+	.section-ui
+		.notification-wrapper
+			+notification("error", "Я — алерт, который опускается не сдвигая контент под собой, могу быть и другого цвета.")
+			+notification("success", "Успех!")
+			+notification("attention", "Внимание!")
+
+	.section-ui(class="mt-100")
+		pre.
+			.notification-wrapper
+				+notification("error", "Я — алерт, который .... цвета.")
+				+notification("success", "Успех!")
+				+notification("attention", "Внимание!")
+
+			Миксин:
+
+			mixin notification(notifyType, text) // notifyType = 'error/success/attention'
+				.notification-bar(class="notification-bar--" + notifyType)&attributes(attributes)
+					.notification-bar-text #{text}
+					.notification-bar-icon
+						if notifyType == 'error'  || notifyType == 'success'
+							+icon-close(class="icon-close--white")
+						else if notifyType == 'attention'
+							+icon-close(class="icon-close--black")

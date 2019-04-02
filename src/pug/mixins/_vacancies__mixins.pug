@@ -1,0 +1,107 @@
+//-таб Услуги - Карточка
+mixin service-card(iconName, title, salary, description, linkMore)
+	.service-card
+		.service-card__row.d-flex
+			.service-card__icon
+				+#{iconName}(class= 'icon--big')
+			.service-card__row-item
+				.service-card__title.card-title #{title}
+				.service-card__salary.text-action #{salary}
+				.service-card__descrip-desktop #{description}
+				
+			+radio-button('radio-tab-service', '', 'big','employer')
+
+		.service-card__descrip-mobile #{description}
+			if linkMore
+				span.link-more #{linkMore}
+-;
+//-таб Отклики - Карточка 
+mixin response-card(imgName, name, job, city, date, status)
+	a(href="#!").response-block
+		.response__avatar
+			img(src="../img/avatar/"+imgName, alt= imgName)
+		.response__info
+			.response__name= name
+			.response__job= job
+			.response__city= city
+
+		.response__date= date
+		.response__status
+			if status == 'new'
+				span.response__status--new Не просмотрен
+			if status == 'accept'
+				+color-marker('green')
+				span.response__status--accept Интервью
+			if status == 'decline'
+				+color-marker('red')
+				span.response__status--decline Не подходит
+
+//-элемент на горизонтальной панели меню с иконками, фиксированное внизу страницы
+mixin icon-menu-item(name,text,iconSize )
+	.icon-panel-item
+		if param
+			.icon-box
+				+#{name}(class= ''+ iconSize)
+		else
+			.icon-box
+				+#{name}
+		a(href='#').icon-panel-item__text #{text}
+-;
+//-для  горизонтальной Панели с иконками
+mixin icon-menu-itemObj(itemObj)
+	.icon-panel-item
+		if itemObj.param
+			.icon-box
+				+#{itemObj.name}(style= ''+ itemObj.iconSize)
+		else
+			.icon-box
+				+#{itemObj.name}
+		a(href='#').icon-panel-item__text #{itemObj.text}
+-;
+//-второй вариант для  горизонтальной Панели с иконками
+mixin icon-menu-panel(dataObject)
+	.icon-menu-panel(class=" icon-menu-panel--"+ dataObject.modif)
+		each item in dataObject.items
+			+icon-menu-itemObj(item)
+
+-;
+mixin history-card(dataObject)
+	.history-card
+		.history-card__split
+			+split-text-object(dataObject.splitText)
+		.history-card__text.text-body  #{dataObject.historyText}
+
+
+-;
+//-элемент индикатора
+mixin indicator-item(dataIndic)
+	.indicator-item
+		.indicator-item-bottom(style= dataIndic.param1)
+			.indicator-item-top(style= dataIndic.param2)
+//-блок-индикатор
+mixin indicator(dataObj)
+	.indicator
+		each item in dataObj
+			+indicator-item(item)
+-;
+//-блок описание -Шапка
+
+mixin preview-header(previewHeader)
+	.preview-header.d-flex
+		+dropdown-icons(previewHeader.dropdownList)
+		.preview-header__left.d-flex
+			.preview-header__nav.d-flex
+				+arrow.arrow--left
+				+arrow.arrow--right
+
+			.preview-header__button
+				+button(previewHeader.BtnText, previewHeader.BtnLink, previewHeader.BtnModif)
+			.preview-header__icon-group.d-flex
+				if previewHeader.Icons
+					each item in previewHeader.Icons
+						.preview-header__icon-group-item
+							+#{item.nameIcon}(class="icon--normal")
+							.icon-preview.text-action #{item.descrIcon}
+				+arrow.arrow--down(class="open-preview-header-drop")
+		.preview-header__right.d-flex.preview-close-button
+			+#{previewHeader.Icon2}

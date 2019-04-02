@@ -1,0 +1,96 @@
+//- Фон
+.bg-container
+	
+	//- Основной контейнер
+	.filter-main-container
+		
+		//- Форма
+		form.filter-vacancies-sectors#filter-vacancies-sectors(method="")
+			
+			//- Контейнер Ряд
+			.row-container
+
+				//- Колонка Отрасли
+				.column-container#column-container-selectors
+					
+					//- Content
+					.filter-vacancies-sectors__title-block.flex-wrapper
+						.filter-vacancies-sectors__title Отрасли
+						.filter-vacancies-sectors__title-buttons
+							+button('Очистить', '#!')(class="btn--pr-30" id="filter-vacancies-sectors-clear")
+							+icon-close(class="icon-close--black filter-vacancies-sectors-close")
+
+					.filter-vacancies-sectors__list
+						+filter-sectors-list__item("Автомобильный бизнес")(class="custom-check-box__notification--show") 
+						+filter-sectors-list__item("Административный персонал")
+						+filter-sectors-list__item("Банки, Инвестиции, Лизинг")
+						+filter-sectors-list__item("Безопасность")
+						+filter-sectors-list__item("Бухгалтерия, Учет, Финансы")
+						+filter-sectors-list__item("Высший менеджмент")
+						+filter-sectors-list__item("Добыча cырья")
+						+filter-sectors-list__item("Закупки")
+						+filter-sectors-list__item("Инсталляция и Сервис")
+						+filter-sectors-list__item("Информационные технологии, Интернет, Связь")
+						+filter-sectors-list__item("Искусство, Развлечения, Масс-медиа")
+						+filter-sectors-list__item("Консультирование")
+						+filter-sectors-list__item("Маркетинг, Реклама, PR")
+						+filter-sectors-list__item("Медицина, Фармацевтика, Красота")
+						+filter-sectors-list__item("Наука, Образование")
+						+filter-sectors-list__item("Начало карьеры, Студенты")
+						+filter-sectors-list__item("Некоммерческие организации")
+						+filter-sectors-list__item("Персонал для дома")
+						+filter-sectors-list__item("Продажи")
+						+filter-sectors-list__item("Производство")
+						+filter-sectors-list__item("Рабочие специальности")
+						+filter-sectors-list__item("Спортивные клубы, Фитнес")
+						+filter-sectors-list__item("Страхование")
+						+filter-sectors-list__item("Строительство, Недвижимость")
+						+filter-sectors-list__item("Транспорт")
+						+filter-sectors-list__item("Управление персоналом, HR")
+
+					//- Кнопка + notification (only Mobile)
+					.filter-vacancies-sectors__button.filter-vacancies-sectors__button--mobile-show
+						+button('Применить', '#', 'btn-semi-rounded-blue')(class="filter-vacancies-sectors-close")
+						.filter-vacancies-sectors__notification Выбрано 56&nbsp;Специализаций
+							
+				//- Колонка Спецификации
+				.column-container#column-container-profiles.column-container--profiles
+					
+					//- Content
+					
+					.sector-item-profile__title 
+						+arrow(class="arrow--left arrow--left-modificator" id="header__arrow-back")
+						span Специализации
+					.sector-item-profile__list
+						+profile-list__item("Все")
+						+profile-list__item("Автомобильный бизнес")
+						+profile-list__item("Административный персонал")
+						+profile-list__item("Банки, Инвестиции, Лизинг")
+						+profile-list__item("Безопасность")
+						+profile-list__item("Бухгалтерия, Учет, Финансы")
+						+profile-list__item("Высший менеджмент")
+						+profile-list__item("Добыча cырья")
+						+profile-list__item("Закупки")
+						+profile-list__item("Инсталляция и Сервис")
+						+profile-list__item("Информационные технологии, Интернет, Связь")
+						+profile-list__item("Искусство, Развлечения, Масс-медиа")
+						+profile-list__item("Консультирование")
+						+profile-list__item("Маркетинг, Реклама, PR")
+						+profile-list__item("Медицина, Фармацевтика, Красота")
+						+profile-list__item("Наука, Образование")
+						+profile-list__item("Начало карьеры, Студенты")
+						+profile-list__item("Некоммерческие организации")
+						+profile-list__item("Персонал для дома")
+						+profile-list__item("Продажи")
+						+profile-list__item("Производство")
+						+profile-list__item("Рабочие специальности")
+						+profile-list__item("Спортивные клубы, Фитнес")
+						+profile-list__item("Страхование")
+						+profile-list__item("Строительство, Недвижимость")
+						+profile-list__item("Транспорт")
+						+profile-list__item("Управление персоналом, HR")
+
+			//- Кнопка + notification ( => Tablet )
+			.filter-vacancies-sectors__button.filter-vacancies-sectors__button--mobile-none
+				+button('Применить', '#', 'btn-semi-rounded-blue')(class="filter-vacancies-sectors-close")
+				.filter-vacancies-sectors__notification Выбрано 56&nbsp;Специализаций

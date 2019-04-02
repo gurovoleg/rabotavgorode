@@ -1,0 +1,15 @@
+.search-resume-card-info {
+	padding:32px;
+	@media #{$md} {padding: 48px;}	
+}
+.search-resume-header-tabs-container {
+	padding-top: 24px;
+}
+.search-resume-text {
+	font-size: 18px;
+	line-height: 29px;
+	color: $basicText;
+}
+.search-resume-header-menu {
+	padding-top: 30px;
+}

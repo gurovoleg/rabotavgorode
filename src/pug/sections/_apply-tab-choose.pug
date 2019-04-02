@@ -1,0 +1,16 @@
+form(action="").apply-tab-form
+	.apply-tab-form__group
+		+inputField('input-simple', '', 'input-simple', '', 'UI/UX дизайнер', '').apply-tab-input.apply-tab-input--choose
+		+arrow.arrow--down.arrow--apply-input
+		+dropdown-simple-list('input','UI/UX дизайнер','WebDev-разработчик','Супер-пупер программист' ).dropdown-simple-list--hidden
+
+	+textarea('Расскажите чем вас привлекла эта вакансия и почему вы хорошо подойдете на эту роль', 'text').apply-tab-textarea
+	+checkbox('Подписаться на похожие вакансии', 'big').apply-tab-checkbox
+	+button('Отправить резюме', '#!', 'btn-semi-rounded-blue').apply-tab-btn-send
+
+.text-action.text-action--resume.
+	Создайте резюме и работадатели сами найдут вас. Работодатели чаще приглашают на собеседование кандидатов чей опыт и образование им известны.
++button('Создать резюме', '#!', 'btn-semi-rounded-gray')
+
+
+.text-action.text-action--resume #[a(href='#').text-action Войдите] или  #[a(href='#').text-action Зарегистрируйтесь] чтобы создать резюме

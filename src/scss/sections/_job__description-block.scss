@@ -1,0 +1,84 @@
+.job-description-wrapper {
+	padding-top:24px;
+
+	@media #{$sm} {padding-top:32px;}
+	@media #{$md} {padding-top:40px;}
+}
+
+.job-description__block-title {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: bold;
+	padding: 24px 0 16px;
+}
+
+.job-description__about {
+	font-size: 18px; 
+	line-height: 29px;
+}
+
+.job-description__functions-list {
+	margin:0;
+	padding:0;
+	list-style:none;
+	font-size: 18px;
+}
+
+.job-description__functions-list-item {
+	position:relative;
+	font-weight: normal;
+	line-height: 29px;
+	padding-left: 15px;
+
+	&:before {
+		content:"-";
+		position:absolute;
+		left:0;
+	}
+
+}
+
+.job-description__skills-item {
+	display: inline-block;
+	padding-right: 22px;
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.job-description__location {
+	padding-bottom: 24px;
+	border-bottom: 1px solid $silver;
+	@media #{$md} {padding-bottom: 32px;}
+
+}
+
+.job-description__location-badge {
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+	
+	.card-address {
+		font-size: 18px;
+		line-height: 22px;
+	}	
+}
+
+.job-description__location-address {
+	font-size: 18px;
+	line-height: 29px;
+	margin-bottom: 8px;
+}
+
+.job-description__location-map {
+	width: 100%;
+	border-radius: 16px;
+	height: 160px;
+	overflow:hidden;
+
+	@media #{$sm} {height: 240px;}
+	@media #{$md} {height: 320px;}
+}
+
+

@@ -1,0 +1,8 @@
+.badges-counter--areas{
+	padding-top: 24px;
+	padding-bottom: 8px;
+	.badge-counter-item{
+		@media #{$sm}{margin-right: 21px;}
+	}
+	
+}

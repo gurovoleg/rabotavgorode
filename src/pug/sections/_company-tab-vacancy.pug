@@ -1,0 +1,46 @@
+.container-main.container-main--vacancy-tab
+	
+	.row
+		.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+			h2.vacancy-tab__title.heading-2 
+				| Вакансии в компании 
+				span «Веб Инвест»
+			
+			+tag-filter('Информационные технологии', 'Интернет', 'Связь')
+			.dropdown-block.d-flex
+				+dropdown("", "Город", "link", "", "Москва", "Санкт-Петербугр", "Уфа", "Екатеринбург", "Петропавловск-Камчатский")
+				+dropdown("", "Отрасли", "empty")(class="filter-vacancies-sectors-open")
+	
+	.row
+		.offset-sm-1.col-sm-10.offset-md-0.col-md-4
+		
+			+company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.')
+		
+			+company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.')
+		
+			+company-vacancy-card(false, 'Менеджер по продажам первичной недвижимости', 'от 85 000 до 255 000 руб', '', 'Информационные технологии') 
+		
+			+company-vacancy-card(false, 'Менеджер по продажам первичной недвижимости', 'от 85 000 до 255 000 руб', '', 'Информационные технологии') 
+		
+			+company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.', 'Санкт-Петербург', 'Информационные технологии')
+		.offset-sm-1.col-sm-10.offset-md-0.col-md-4
+		
+			+company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.', 'Санкт-Петербург', '')
+			+company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.', 'Санкт-Петербург', 'Информационные технологии')
+			+company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.', 'Санкт-Петербург', 'Информационные технологии')
+			+company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.', 'Санкт-Петербург', 'Информационные технологии')
+		
+		.offset-sm-1.col-sm-10.offset-md-0.col-md-4
+			.vacancy-tab-contacts.d-flex
+				
+				include _contact-person.pug
+	.row
+		
+		.offset-sm-1.col-sm-10.offset-md-0.col-md-8
+			.vacancy-tab-button-wrapper
+				+button('Загрузить еще', '#!')
+			
+			//- include _pagination.pug
+			
+			+subscribe('Подпишитесь на вакансии компании')
+				

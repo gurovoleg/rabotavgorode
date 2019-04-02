@@ -1,0 +1,60 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Баннер инфо о компании';
+	- var pageClass = 'body--dashboard';
+	- var CompanyBanner = {BrandImg: 'brand-logo-big.svg', CompanyTitle:'ВебИнвест', CompanyDescrip: 'Информационные технологии', CompanySite: 'webinvestment.ru', Items:['Главная','Компании','Компании'], splitTextObject: {modif: "", items: ['Санкт-Петербург', 'Информационные технологии']} };
+
+block content
+	.container-fluid.container--left
+		.title Баннер инфо о компании
+		.title-5 Без VIP
+		.section-ui(style = "border: 1px dashed black; padding: 0;")
+			+companyBanner(CompanyBanner)
+		pre.
+			+companyBanner(CompanyBanner)
+		.title-5 С VIP
+		.section-ui(style = "border: 1px dashed black; padding: 0;")
+			+companyBanner(CompanyBanner, 'vip')
+		pre.
+			+companyBanner(CompanyBanner, 'vip')
+		p Миксин
+		pre.
+			mixin companyBanner(dataObject, vipStatus)
+				if vipStatus
+					.company-banner-wrapper.company-banner--vip(style="background-image: url('../img/bg/bg-company-banner-vip.png')" )
+						.container
+							.row
+								.col
+									+button('Назад', '#', 'btn', 'left')
+									+breadcrumb(...dataObject.Items).company-banner-breadcrumb.company-banner-breadcrumb--light
+								.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+									.company-banner
+										.company-banner-logo
+											+brand-logo-bgstyle(dataObject.BrandImg)
+										.company-banner__info(itemscope itemtype="http://schema.org/LocalBusiness")
+											h1.heading-1.company-banner__title(itemprop="name") \#{dataObject.CompanyTitle}
+												+rating-mark(100).company-banner__rate
+											.company-banner__subtitle
+												+split-text-object(dataObject.splitTextObject)
+											a(href="").company-banner__site \#{dataObject.CompanySite}
+				else
+					.company-banner-wrapper
+						.container
+							.row
+								.col
+									+button('Назад', '#', 'btn', 'left')
+								.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+									+breadcrumb(...dataObject.Items).company-banner-breadcrumb
+									.company-banner
+										.company-banner-logo
+											+brand-logo-bgstyle(dataObject.BrandImg)
+										.company-banner__info(itemscope itemtype="http://schema.org/LocalBusiness")
+											h1.heading-1.company-banner__title(itemprop="name") \#{dataObject.CompanyTitle}
+												+rating-mark(100).company-banner__rate
+											.company-banner__subtitle
+												+split-text-object(dataObject.splitTextObject)
+											a(href="").company-banner__site \#{dataObject.CompanySite}
+		p Объект
+		pre.
+			- var CompanyBanner = {BrandImg: 'brand-logo-big.svg', CompanyTitle:'ВебИнвест', CompanyDescrip: 'Информационные технологии', CompanySite: 'webinvestment.ru', Items:['Главная','Компании','Компании'], splitTextObject: {modif: "", items: ['Санкт-Петербург', 'Информационные технологии']} };

@@ -1,0 +1,56 @@
+.education-card,
+.position-card{
+	padding-bottom: 16px;
+	@media #{$md}{margin-bottom: 24px;}
+}
+.position-card__title{
+	font-weight: 700;
+	font-size: 18px;
+	line-height: normal;
+	margin-bottom: 8px;
+}
+.split-text--period{
+	.split-text__item{
+		&:after{top: 8px;}
+		font-size: 16px;
+		line-height: normal;
+		@media #{$md}{font-size: 18px;}
+		
+	}
+	margin-bottom: 8px;
+	@media #{$md}{
+		flex-wrap: wrap;
+		flex-direction: column;
+		.split-text__item{
+			white-space: pre-wrap;
+			margin-bottom: 8px;
+		}
+		.split-text__item:after{display: none;}
+	}
+}
+.split-text--period:first-of-type{
+	.split-text__item{margin-right: 0;}
+	display: none;
+	@media #{$md}{
+		display: flex;
+		max-width: 140px
+	}
+	
+}
+.split-text--sector{
+	.split-text__item{
+		line-height: normal;
+		font-size: 18px;
+	}
+	margin-bottom: 8px;
+	@media #{$md}{
+		&+.split-text--period{display: none;}
+	}
+}
+.position-card__description{
+	@media #{$md}{margin-bottom: 8px;}
+}
+.position-card__site-link{
+	display: none;
+	@media #{$md}{display: block;}
+}

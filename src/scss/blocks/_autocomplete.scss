@@ -1,0 +1,94 @@
+.autocomplete {
+	background: $white;
+	box-shadow: 0px 2px 8px $bg-shadow;
+	border-radius: 4px;
+	min-width: 30vw;
+}
+
+.autocomplete__input-wrapper {
+	padding:8px;
+}
+
+.autocomplete__input {
+	width: 100%;
+	border: 1px solid $lightGrey;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding:6px 10px;
+	font-size: 16px;
+	line-height: 1;
+	transition: all 0.2s;
+
+	&:hover {
+		border:1px solid $greyText;
+		outline:none;
+	}
+
+	&:focus, &:active {
+		border:2px solid $blue;
+		outline: none;
+		padding:5px 9px;
+	}
+}
+
+.autocomplete__result {
+	padding-bottom:8px;
+	display: none; 
+}
+
+.autocomplete__result--show {
+	display: block;
+}
+
+.autocomplete__result-item {
+	padding:12px 16px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position:relative;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $lightBlue;
+	}
+}
+
+.result-item-block {
+	display: flex;
+	align-items: center;
+}
+
+
+.result-item__name {
+	display: inline-block;
+	font-size: 16px;
+	color:$black;
+	vertical-align: middle;
+	// padding-left: 26px;
+	padding-right: 16px;
+}
+
+.result-item__icon {
+	line-height: 1;
+	margin-right: 12px;
+	// position:absolute;
+	// top:10px;
+	// left:16px;
+}
+
+.result-item__description {
+	line-height: 1;
+	font-size: 14px;
+		
+	color: $greyText;
+}
+
+.autocomplete__result--employer { 
+	.autocomplete__result-item:hover { 
+		background-color: $employerBg;
+	} 
+}
+
+
+

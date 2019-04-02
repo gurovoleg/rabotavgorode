@@ -1,0 +1,77 @@
+.search-form__container {
+	display: flex;
+	@media #{$md} {max-width:400px;}
+}
+
+.input-block {
+	position: relative;
+	width: 100%;
+}
+
+.search-input {
+	border: 1px solid $lightGrey;
+	padding: 11px 16px 11px 40px;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	z-index: 120;
+	border-radius: 8px 0 0 8px;
+	width: 100%;
+	transition: padding-left 0.2s;
+			
+	&:hover {
+		border:1px solid $greyText;
+		outline:none;
+	}
+
+	&:focus {
+		border: 2px solid $blue;
+		border-right:none;
+		padding:10px 39px 10px 16px;
+		cursor: text;
+		outline:none;
+		
+	}
+}
+
+.search-button {
+	position: relative;
+	height: 48px;
+	width: 48px;
+	background: $blue;
+	border-radius: 0 8px 8px 0;
+	cursor: pointer;
+	transition:0.2s;
+
+	&:hover {background-color: $btn-hover;}
+	&:active {background-color: $btn-active;}
+
+}
+
+// Иконка поиск задаем абсолют
+.icon-search--absolute {
+	position: absolute;
+	top:50%;left:50%;
+	transform:translate(-50%,-50%);
+	path {fill: $white}
+}
+
+.search-icon-movable {
+	position: absolute;
+	background-color: transparent;
+	z-index: 140;
+	top:50%;
+	transform: translateY(-50%);
+	left:12px;
+	transition: all 0.2s;
+}
+
+.search-input:focus ~ .search-icon-movable {
+	left: 0px;
+	opacity:0;
+}
+
+.search-form-wrapper {
+	padding-top: 24px;
+	@media #{$md} {padding-top: 16px;}
+}

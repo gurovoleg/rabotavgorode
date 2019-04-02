@@ -1,0 +1,132 @@
+.save-suggest-resume-block {
+	padding-left: 16px;
+	padding-right: 16px;
+	@media #{$sm} {
+		margin-left: 79px;
+		margin-right: 79px;
+	}
+	@media #{$md} {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+.save-suggest-resume-title {
+	padding-bottom: 32px;
+	font-size: 24px;
+	line-height: 29px;
+	font-weight: 700;
+	margin-right: 15px;
+}
+.save-suggest-resume-form__group {
+	position: relative;
+	margin-bottom: 24px;
+	@media #{$sm} {
+		width: 484px;
+	}
+	@media #{$md} {
+		width: 100%;
+	}
+}
+.arrow--down.arrow--save-suggest-resume-input {
+	position: absolute;
+	top: 10px;
+	right: 8px;
+	z-index: 10;
+}
+.save-suggest-resume-textarea {
+	margin-bottom: 24px;
+	@media #{$sm} {
+		width: 484px;
+	}
+	@media #{$md} {
+		width: 100%;
+	}
+}
+.save-suggest-resume-checkbox {
+	padding-bottom: 32px;
+	display: block;
+}
+.save-suggest-resume-unsign__text {
+	font-size: 18px;
+	line-height: 29px;
+	color: $basicText;
+	padding-bottom: 24px;
+}
+.save-suggest-resume-unsign__favourite {
+	.reference-text {
+		display: block;
+	}
+	@media #{$sm} {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.save-suggest-resume-unsign__link {
+	color: $basicText;
+	display: flex;
+}
+.save-suggest-resume-unsign__link:hover {
+	.icon-favorite path {
+		stroke: $link;
+	}
+}
+.save-suggest-resume-unsign__text-caption {
+	padding-left: 16px;
+}
+.save-suggest-resume-input  {
+	position: relative;
+	z-index: 10;
+}
+.save-suggest-resume-modal {
+	display: none;
+}
+.save-suggest-resume-form__title {
+	font-size: 18px;
+	line-height: 22px;
+	color: $basicText;
+	padding-bottom: 8px;
+}
+.save-suggest-resume-form__group {
+	position: relative;
+	margin-bottom: 24px;
+	@media #{$sm} {
+		width: 484px;
+	}
+	@media #{$md} {
+		width: 100%;
+	}
+}
+.suggest-resume-textarea {
+	margin-bottom: 24px;
+	height: 157px;
+	@media #{$sm} {
+		width: 484px;
+	}
+	@media #{$md} {
+		width: 100%;
+	}
+}
+.save-suggest-resume-btn-create {
+	height: 40px;
+	line-height: 19px;
+	display: inline-block;
+	margin-bottom: 32px;
+	margin-right: 24px;
+}
+.save-suggest-resume-unsign__subtext {
+	font-size: 16px;
+	line-height: 19px;
+	color: $greyText;
+	padding-right: 24px;
+}
+.save-suggest-resume-input  {
+	position: relative;
+	z-index: 10;
+}
+.save-suggest-resume-form__dropdown {
+	padding-top: 18px;
+}
+.save-suggest-resume-modal .modal-window,
+.save-suggest-resume-modal .modal-window {
+	width: 552px;
+}

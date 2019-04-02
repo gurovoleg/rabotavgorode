@@ -1,0 +1,47 @@
+.search-form-wrapper--candidates {
+	padding-bottom: 32px;
+	@media #{$sm}{padding-bottom: 24px;}
+	@media #{$md}{padding-bottom: 16px;}
+}
+
+.preview-tabs-vacancies{
+	.vacance-card--short{border-bottom: 0px;}
+	.vacance-card--short:first-child{padding-top: 0px;}
+}
+
+.preview-tabs__history{
+	.responding-panel__item-child{
+		display: flex;
+		flex-direction: column;
+		
+		@media(min-width:480px){
+			flex-direction: row;
+			align-items: center;
+		}
+		
+		//-align-items: center;
+		.action-date{padding-right: 30px;}
+		.btn-link--action-type{padding-right: 16px;}
+	}
+}
+
+.preview-tabs__resume{
+	.page-section{padding-top: 16px;}
+	.position-card{padding-bottom: 24px} 
+}
+
+.cover-letter__title{
+	font-size: 20px;
+	font-weight: 700;
+	color: $basicText;
+	@media #{$sm}{font-size: 24px;}
+}
+
+// Модификатор для Портфолио на данной странице
+.preview {
+	.portfolio-wrapper {padding-left: 0;}
+}
+
+// Классы модификаторы для страницы
+.nav-manu--no-border {border:none;}
+.lk-content-container--no-top-padding {padding-top: 0;} 

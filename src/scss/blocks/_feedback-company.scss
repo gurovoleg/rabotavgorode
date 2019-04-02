@@ -1,0 +1,49 @@
+.feedback-company__title {
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 32px;
+
+	@media #{$sm} {
+		display: none;
+	}
+}
+
+.feedback-company__button-block {
+	display: block;
+	align-items: center;
+	// padding-top: 16px;
+
+	@media #{$sm} {
+		display: flex;
+		align-items: center;
+	}
+
+	@media #{$md} {display: block;}
+
+}
+
+.button-block__comment {
+	font-size: 16px;
+	line-height: 19px;
+	color:$gray;
+	padding-top: 16px;
+	white-space: pre-line;
+
+	@media #{$sm} {
+		padding-top: 0;
+		padding-left: 20px;
+	}
+
+	@media #{$md} {
+		padding-top: 16px;
+		padding-left: 0;
+	}
+}
+
+.btn--min-width {
+	min-width: 196px;
+	text-align: center;
+}
+.feedback-company__textarea {
+	margin-bottom: 16px;
+}

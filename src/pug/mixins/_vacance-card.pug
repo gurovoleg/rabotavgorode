@@ -1,0 +1,53 @@
+
+mixin vacance-card(dataObject, displayMode)
+	if displayMode == "list"
+		.vacance-card.vacance-card--list(class=" "+ dataObject.addClass)
+			.vacance-card__flex-block.vacance-card__flex-block--nowrap
+				.vacance-card__title
+					a(href='#').vacance-card__title-link #{dataObject.title}
+				.vacance-card-date(itemprop="datePosted") #{dataObject.datePosted}
+				+icon-favorite
+			.vacance-card__flex-block.vacance-card__flex-block--special
+				if dataObject.vipObject == null 
+					.vacance-card__salary(itemprop="salaryCurrency") #{dataObject.salary} Р
+				else
+					.vacance-card__flex-block-column
+						.vacance-card__salary.vacance-card__salary--mb(itemprop="salaryCurrency") #{dataObject.salary} Р
+						+vip-badge-color(dataObject)
+				+split-text-object(dataObject.splitTextObject)
+
+			.vacance-card__flex-block.vacance-card__flex-block--nowrap.vacance-card__flex-col
+				.vacance-card__address
+					+color-marker(dataObject.addressObject.marker_color)
+					+address-badge(dataObject.addressObject.street, dataObject.addressObject.addressInfo )
+				.vacance-card__badge-block
+					+badge-group-object(dataObject.badgeObject)
+			.vacance-card__description #{dataObject.vacanceDescription}
+
+			+round-icon--card (dataObject.companyLetter,dataObject.companyIconSrc)
+
+	else 
+		.vacance-card(class=" "+ dataObject.addClass)
+			.vacance-card__flex-block.vacance-card__flex-block--nowrap
+				.vacance-card__title
+					a(href='#').vacance-card__title-link #{dataObject.title}
+				.vacance-card-date(itemprop="datePosted") #{dataObject.datePosted}
+				+icon-favorite
+			.vacance-card__flex-block.vacance-card__flex-block--grid
+
+				if dataObject.vipObject == null 
+					.vacance-card__salary(itemprop="salaryCurrency") #{dataObject.salary} Р
+				else
+					.vacance-card__flex-block-column
+						.vacance-card__salary.vacance-card__salary--mb(itemprop="salaryCurrency") #{dataObject.salary} Р
+						+vip-badge-color(dataObject)
+				+split-text-object(dataObject.splitTextObject)
+
+			.vacance-card__flex-block.vacance-card__flex-block--grid
+				.vacance-card__address
+					+color-marker(dataObject.addressObject.marker_color)
+					+address-badge(dataObject.addressObject.street, dataObject.addressObject.addressInfo )
+				.vacance-card__flex-block--nowrap
+					+badge-group-object(dataObject.badgeObject)
+				.vacance-card__description #{dataObject.vacanceDescription}
+			+round-icon--card (dataObject.companyLetter,dataObject.companyIconSrc)

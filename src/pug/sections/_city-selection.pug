@@ -1,0 +1,14 @@
+- var cities1 = ['Москва','Санкт-Петербург','Новосибирск','Екатеринбург','Нижний Новгород','Казань','Челябинск','Омск',];
+
+.bg-city-selection
+	.city-selection-wrapper
+		+icon-close(class="icon-close--black icon-close--absolute" id="citi-selection__close-button")
+		
+		.city-selection__header
+			.city-selection__header-title Работа в городе
+			+input-text('Введите город', 'input--city-celection-mod')
+		
+		.city-selection__block
+			+city-selection-block('Популярные города', cities1)
+			+city-selection-block('Центр', cities1)
+			+city-selection-block('Центр', cities1)

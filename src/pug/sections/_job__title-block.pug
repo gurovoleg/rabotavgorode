@@ -1,0 +1,30 @@
+//- Блок над sticky блоком
+
+.row
+	.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+		.job-title-block
+			+button('Назад', '#', 'btn btn--job btn-link', 'left')
+			.job-title-block__row.d-flex
+				.job-title-block__row-item
+					+breadcrumb('Главная', 'Работа', 'Вакансии')
+				.job-title-block__row-item
+					+split-text('vacance-description-head','123 Просмотра (+45)', '21 августа')
+
+//-stiky block (фиксируется по заголовку .job-title-sticky__title)
+.job-title-sticky-wrapper
+	.row.job-title-sticky
+			//- .col-md-7
+			.offset-sm-1.col-sm-10.offset-md-0.col-md-8.job-title-block__row-item
+				.job-title-sticky__title UI / UX дизайнер мобильных приложений
+				.job-title-sticky__paycheck 150 000 Р
+			.col-md-4
+				.job-title-block__respond-block
+					+respond-block('title-sticky modal-window-button', 'Откликнуться', '#window-modal', '', 'icon-favorite')(data-dropdownId="#job__header-dropdown")
+					+respond-block-dropdown('title-sticky job-title-dropdown')(id="job__header-dropdown")
+
+//-Блок под stiсky block
+.row
+	.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+		.job-title-block--sub
+			.job-title-block__row.d-flex
+				+vacancy-serp('Полная занятость', 'Уровень эксперт').vacancy-serp--job

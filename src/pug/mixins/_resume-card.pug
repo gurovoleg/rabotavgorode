@@ -1,0 +1,63 @@
+mixin resume-card__job-item(jobObjectItems)
+	.resume-card__job-item.d-flex 
+		.resume-card__job-positions #{jobObjectItems.title}
+		+split-text-object(jobObjectItems.splitElemts)
+
+mixin resume-card__job(jobObject)
+	.resume-card__job
+		each item in jobObject
+			+resume-card__job-item(item)
+-;
+mixin resume-card(dataObject,  modif)
+	.resume-card(class=" resume-card--"+ modif)&attributes(attributes)
+		.resume-card-header(class=" resume-card-header--"+ modif).d-flex
+			.resume-card-header__left(class=" resume-card-header__left--"+ modif)
+
+				if(modif == 'grid')
+					.resume-card__title--grid 
+						a(href="#").resume-card__title #{dataObject.cardHeader.title}
+						span.resume-card__salary  #{dataObject.cardHeader.salary}
+				else
+
+					a(href="#" class=" resume-card__title--"+  modif).resume-card__title #{dataObject.cardHeader.title}
+
+					span.resume-card__salary  #{dataObject.cardHeader.salary}
+
+			.resume-card-header__right
+				.resume-card__published #{dataObject.cardHeader.published}
+				+icon-favorite
+
+		//-card-body		
+		.resume-card-body(class=" resume-card-body--" + modif).d-flex
+			.resume-card-body-left
+				.resume-card-body__col.d-flex
+					.resume-card-body__row.d-flex
+						.resume-card__aspirant-name.text-body #{dataObject.aspirantInfo.name},
+						.resume-card__aspirant-age.text-body #{dataObject.aspirantInfo.age}
+						+vip-badge-color(dataObject)
+					+split-text-object(dataObject.splitTextObject)(class='split-text--mobile')
+						//-if(modif !== 'list')
+					.resume-card__aspirant-address
+						+color-marker(dataObject.aspirantAddress.metroLine)
+						.resume-card__aspirant-address-metro #{dataObject.aspirantAddress.metroStation},
+						.resume-card__aspirant-address-city г. #{dataObject.aspirantAddress.cityName}
+
+				+split-text-object(dataObject.splitTextObject)(class='split-text--desktop')
+				
+			.resume-card-body-right
+				//- +round-icon--user (dataObject.companyLetter,dataObject.companyIconSrc)(class="icon-user--resume-card")
+				if(dataObject.personLetters)
+					+round-icon--user(dataObject.personLetters)(class="icon-user--resume-card")
+					
+				else if(dataObject.personImgSrc)
+					+round-icon--user(class="icon-user--resume-card" style="background-image: url(../img/person-icons/"+ dataObject.personImgSrc +");")
+		
+			//-card-body-positions and experience
+		+resume-card__job(dataObject.jobPlaceItems)
+		if dataObject.badgeObjects
+			.resume-card__badges
+				+badge-group-object(dataObject.badgeObjects)
+		if dataObject.actionLinks
+			.resume-card__links
+				each item in dataObject.actionLinks
+					a(href="#").resume-card__links-item.text-action #{item}

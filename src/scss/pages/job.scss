@@ -1,0 +1,44 @@
+.nav-menu--job-fix {
+	@media #{$md} {display: none;}
+}
+
+.job-banner-block {
+	text-align: center;
+	justify-content: center;
+	padding-top: 40px;
+	display: none;
+
+	@media #{$md} {display: flex;}
+}
+
+.job-banner-block__content {
+	width: 240px;
+	height: 400px;
+	background-color: $light-gray;
+}
+
+// Задаем отступ у контейнера на высоту зафиксированной шапки
+.container--padding-top {
+	padding-top: 80px; // высота шапки
+	padding-bottom: 121px;
+
+	@media #{$sm} {padding-bottom: 127px;}
+}
+
+// Фиксации шапки
+.bg-header--job{
+	position:fixed;
+	left: 0;right: 0;
+	z-index: 2000;
+}
+
+.job__footer {
+	position:relative;
+	background-color: $white;
+	border-top:1px solid $silver;
+	position: fixed;
+	bottom: 0; 
+	left: 0;right: 0;
+	z-index:200;
+	@media #{$md} {display: none;}
+}

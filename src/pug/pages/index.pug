@@ -1,0 +1,113 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Главная страница';
+	- var pageClass= "index-page";
+
+block content
+	.container
+		.title-1.text-center.mb-55 Проект Rabotavgorode
+
+		.row.mb-30
+			.col
+				.card.align-items-center.pb-35
+					.title-2 UI-Kit
+					+button("Перейти", "ui/ui-kit.html",'btn-link')
+			
+		.row
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Search-results
+					+button("Перейти", "search-results.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Search-results+Aside
+					+button("Перейти", "search-results-aside.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 О компании
+					+button("Перейти", "company.html", 'btn-link')
+
+		.row
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Описание вакансии (Job opening)
+					+button("Перейти", "job.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Отрасли
+					+button("Перейти", "areas.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Компании
+					+button("Перейти", "companies.html", 'btn-link')
+
+		.row
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Города
+					+button("Перейти", "cities.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Откликнуться на вакансию
+					+button("Перейти", "apply.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Поиск резюме
+					+button("Перейти", "search-resume.html", 'btn-link')
+
+		.row
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Резюме
+					+button("Перейти", "resume.html", 'btn-link')
+
+		
+		.title-2.text-center.mb-55 Работодатель - Личный кабинет
+		.row
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Вакансии
+					+button("Перейти", "vacancies.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Кандидаты
+					+button("Перейти", "candidates.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Избранное
+					+button("Перейти", "favourites.html", 'btn-link')
+
+		.title-2.text-center.mb-55 Страницы авторизации, регистрации
+		.row
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Страница авторизации
+					+button("Перейти", "auth-autorization.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Страница регистрации
+					+button("Перейти", "auth-registration.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Страница регистрация через социальные сети
+					+button("Перейти", "auth-registration-social.html", 'btn-link')
+
+		.title-2.text-center.mb-55 Страницы сброса и восстановления пароля
+		.row
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Страница восстановления пароля
+					+button("Перейти", "auth-recovery-password.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Страница сброса пароля (email)
+					+button("Перейти", "auth-recovery-password-reset.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Страница сброса пароля (телефон)
+					+button("Перейти", "auth-recovery-password-reset-phone.html", 'btn-link')
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Страница создания пароля
+					+button("Перейти", "auth-password-create.html", 'btn-link')

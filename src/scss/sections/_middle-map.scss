@@ -1,0 +1,90 @@
+.middle-map-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.middle-map--header {
+	width: 100%;
+	position: absolute;
+	z-index: 30;
+	display: flex;
+	justify-content: space-between;
+}
+.middle-map--header-search {
+	z-index: 30;
+	position: absolute;
+	top: 52px;
+	left: 16px;
+	width: 95%;
+}
+
+#map { 
+	width: 100%; 
+	height: 100vh;
+	@media #{$sm} {height: 100%;} 
+}
+
+.middle-map-subscribe {
+	display: none;
+}
+.middle-map-cards-wrapper {
+	background-color: $white;
+	border-radius: 8px;
+	height: 128px;
+	width: 327px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+
+	&:first-child {margin-left: 16px;}
+	&:not(:first-child){margin-left: 8px;}
+
+	@media #{$sm} {
+		background-color: transparent;
+		width: 100%;
+		box-shadow: none;
+	} 
+}
+
+.middle-map-cards {
+	margin-left: 8px;
+	z-index: 1;
+	
+	@media #{$sm} {
+		margin-left: 0;
+	}
+}
+.middle-map-mobilebutton {
+	display: block;
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	z-index:50;
+	text-align: center;
+}
+
+.middle-map--subscribe {
+	display: none;
+
+	@media #{$sm} {
+		display: block;
+	}
+}
+
+// Медиа запросы
+@media #{$sm} {
+	.middle-map--header, .middle-map--header-search {
+		display: none;
+	}
+	.middle-map-subscribe {
+		display: block;
+	}
+	.middle-map-mobilebutton {
+		display: none;
+	}
+	.middle-map-cards-wrapper {
+		border-radius: 0;
+		margin-bottom: 0;
+		height: auto;
+		&:first-child {margin-left: 0;}
+		&:not(:first-child){margin-left: 0;}
+	}
+}

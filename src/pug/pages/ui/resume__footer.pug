@@ -1,0 +1,55 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Сохранить в футере';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+	.title Сохранить в футере
+
+	.section-ui
+		.respond-block-resume-ui-kit(style="position: relative; width: 300px;")
+			+respond-block('resume respond-block__btn', 'Сохранить', '#!', 'Скачать', 'icon-download')(data-dropdownId="#resume__footer-ui-kit")
+			+respond-block-dropdown('resume','menu1')(id="resume__footer-ui-kit")
+	p Код
+	pre.
+		+respond-block-resume('resume', 'Сохранить', '', '', '')(data-dropdownId="#resume__footer")
+		+respond-block-dropdown('resume','menu1')(id="resume__footer-ui-kit")
+	p Миксин
+	pre.
+		mixin respond-block-resume(modif, btnName, text, btnLink, btnClass)
+			.respond-block(class="respond-block--"+ modif)&attributes(attributes)
+				+button(btnName, btnLink, 'respond-block__btn btn-semi-rounded-blue btn--'+ modif + btnClass)
+				.respond-block__download-btn
+					+icon-download(class="icon-download--"+ modif)
+					if text
+						a(href="#!")= text
+				+arrow(class="respond-block-arrow--down arrow--down")
+	pre.
+		mixin respond-block-dropdown-resume(modif)
+			.respond-block-dropdown(class="respond-block-dropdown--"+ modif)&attributes(attributes)
+				
+				.respond-block-dropdown-item.respond-block-dropdown-item-favor
+					+icon-download.respond-block-dropdown-icon
+					span.text-action Скачать Word.doc
+
+				.respond-block-dropdown-item
+					+icon-printer.respond-block-dropdown-icon
+					span.text-action Распечатать
+
+				.respond-block-dropdown-item
+					+icon-label.respond-block-dropdown-icon
+					span.text-action Предложить вакансию
+		 
+				.respond-block-dropdown-item
+					+icon-looks-two.respond-block-dropdown-icon
+					span.text-action Найти похожие резюме
+
+				.respond-block-dropdown-item
+					+icon-favorite.respond-block-dropdown-icon
+					span.text-action Добавить в избранное
+
+				.respond-block-dropdown-item
+					+icon-complaint.respond-block-dropdown-icon
+					span.text-action Пожаловаться

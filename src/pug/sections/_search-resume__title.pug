@@ -1,0 +1,25 @@
+.title-block.search-resume-title-block
+	+breadcrumb('Главная', 'Работа')
+	h1.heading-1.search-resume-heading-1 Резюме в Санкт-Петербурге
+	
+	.title-block__vacancy-serp#scroll-break-point
+		+vacancy-serp('9522 Вакансии', 'З/п ~ 45 350 р')
+
+	.title-block__tag-filters
+		+tag-filter('Информационные технологии', 'Интернет', 'Связь')
+		+tag-filter('дизайнер')
+		+button('Очистить', '#','btn-link')
+
+	.title-block__dropdown-menu
+		
+		.title-block__dropdown-menu-right
+			+dropdown("", "Расположение", "autocomplete").autocomplete__result--employer
+			+dropdown("", "Отрасли", "empty")(class="filter-vacancies-sectors-open").dropdown-list__item--employer
+			+dropdown("", "Тип занятости", "checkbox", "small", "Полная", "Неполная", "Вахтовая", "Сменная", "Удаленная").dropdown-list__item--employer
+			+dropdown("", "Опыт работы", "checkbox", "small", "Без опыта", "Начальный", "Специалист","Эксперт").dropdown-list__item--employer
+			//- a(href="#!" id="search-resume-filter-toggle").search-resume-title-block__link Все фильтры
+			+button('Все фильтры', '#!', 'btn-link')#search-resume-filter-toggle.search-resume-title-block__link
+
+		.title-block__dropdown-menu-left
+			+dropdown("Сортировка", "по соответствию", "link", "", "по з/п", "по соответствию", "по дате", "по удаленности").dropdown-list__item--employer
+			+dropdown("Вид", "списком", "view").dropdown-list__item--employer

@@ -1,0 +1,27 @@
+.job-company__list {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.job-company__list-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:13px 0;
+	border-bottom:1px solid $silver;
+	color: $basicText;
+	//-cursor: pointer;
+	&:last-child {border:none;}
+	//-&:hover{color: $linkHover;}
+}
+
+.job-company__list-item__name {
+	display: flex;
+	align-items: flex-end;
+
+	span {margin-right: 16px;}
+}
+
+.job-company__list-item__value {
+	color:$gray;
+}

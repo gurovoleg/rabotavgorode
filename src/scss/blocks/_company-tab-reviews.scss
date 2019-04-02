@@ -1,0 +1,59 @@
+.company-middle-reviews-wrapper {
+	padding-bottom: 74px;
+	@media #{$md} {
+		padding-top: 24px;
+	}
+}
+
+.company-middle-reviews__title {
+	padding-top: 24px;
+	@media #{$md} {
+		padding-top: 40px;
+	}
+
+}
+
+.company-middle-reviews-feedback {
+	border-bottom: 1px solid $silver;
+	padding-bottom: 24px;
+	padding-top: 24px;
+	@media #{$md} {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+.company-middle-reviews-rating {
+	// padding-top: 24px;
+}
+.company-middle-reviews-items {
+	@media #{$md} {
+
+		&:first-child {
+			order: 2;
+			// padding-left: 79px;
+		}
+	}
+	
+}
+.company-middle-reviews-block {
+	// border-bottom: 1px solid $silver;
+	// padding-bottom: 24px;
+	.block-company-reviews__title {
+		display: none;
+	}
+	.company-review:first-child{
+		padding-top: 0;
+	}
+	.block-company-reviews {
+		padding-top: 0;
+	}
+}
+.company-middle-reviews-subscribe {
+	.subscribe-title {
+		font-size: 18px!important;
+		padding-bottom: 24px!important;
+	}
+	@media #{$md} {
+		padding-bottom: 40px;	
+	}
+}

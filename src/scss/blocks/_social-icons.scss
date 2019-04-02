@@ -1,0 +1,109 @@
+.social-block{
+	background-color: $platinum;
+	position: relative;
+	margin-top: 32px;
+	margin-bottom: 24px;
+	border-top: 1px solid $silver;
+
+	@media #{$md} {margin-top: 56px;}
+
+}
+.autorization-social-block {
+	// padding-bottom: 75px;
+}
+.social-block__top {
+	padding-left: 16px;
+	padding-right: 16px;
+	position: absolute;
+	left: 50%;
+	top: -14px;
+	transform: translateX(-50%);
+	font-size: 16px;
+	color: rgba(0,0,0, .38);
+	
+	z-index: 2;
+	background-color: $platinum;
+	
+	@media #{$sm}{
+		padding-left: 22px;
+		padding-right: 22px;
+	}
+}
+
+.social-block__title{
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 21px;
+	color: $black;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.social-icons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.icon-social:not(:last-child){
+	margin-right: 16px;
+
+}
+.icon-gu{
+	position: relative;
+}
+.icon-gu:after{
+	display: none;
+	position: absolute;
+	content:"Gdeuslugi.ru";	
+	width:74px;
+	color: $white;
+	background-color: $black;
+	font-size: 12px;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;	
+	border-radius: 5px;
+	bottom: -40px;
+	@media #{$sm}{
+		font-size: 14px;
+		min-width: 108px
+	}
+
+  	@media #{$md}{min-width: 89px}
+
+}
+.icon-gu:before{
+	display: none;
+	position: absolute;
+	content:"";
+	width: 10px;
+	height: 10px;
+	border:5px solid $black;
+	border-top-width: 0px;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	bottom: -18px;
+	@media #{$sm}{bottom: -15px;}
+}
+.icon-gu:hover:after{display: block;} 
+.icon-gu:hover:before{display: block;} 
+	
+
+.icon-social{
+  display: flex;  
+  height: 40px;
+  width: 74px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: backhround-color 1s;
+
+  @media(min-width: 768px){width: 108px}
+  @media #{$md} {width: 89px}
+
+
+}
+.icon-social:hover{opacity: 0.7;}
+.icon-vk{background-color: $vk;}
+.icon-fb{background-color: $fb;}
+.icon-ok{background-color: $ok;}
+.icon-gu{background-color: $gu;}

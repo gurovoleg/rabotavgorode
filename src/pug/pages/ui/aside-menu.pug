@@ -1,0 +1,26 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Боковое меню - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.title Боковое меню
+
+	.container.container--left
+		.div(style="margin-left:240px;")
+			p Подключение:
+			pre
+				|+aside-menu(objCompanies) - меню работодателя
+				|+aside-menu - меню соискателя
+			p Объект:
+			pre.
+				objCompanies = {
+					activeCompany: {name: 'W-Group Technology', amount: '1234,56 Р', logoLetters: 'WT', fileName: ''  },
+					companies: [{name: 'Тинькофф', amount: '91 234,56 Р', logoLetters: '', fileName: 'tinkoff-small.svg'}, {name: 'ИП «Иванова»', amount: '0 Р', logoLetters: '', fileName: 'company-photo.jpg'}]
+				};
+		
+	.theme--employer
+		+aside-menu(objCompanies)(style="display:flex;")
+	

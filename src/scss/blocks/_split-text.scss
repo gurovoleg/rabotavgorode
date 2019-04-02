@@ -1,0 +1,37 @@
+.split-text{
+	list-style-type: none;
+	padding: 0;
+  	margin: 0;
+  	display: flex;
+  	//margin-bottom: 20px;
+}
+
+.split-text__item {
+  display: inline;
+  position: relative;
+  margin-right: 22px;
+  font-size: 14px; 
+  color: $greyText;
+  white-space: nowrap;
+}
+.split-text__item:last-child{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+.split-text__item:hover{
+  color: $greyText;  
+  text-decoration: none;
+}
+.split-text__item:last-child { margin-right: 0;} 
+
+.split-text__item:not(:last-child):after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: $greyText;
+  right: -13px;
+  top: 11px;
+}

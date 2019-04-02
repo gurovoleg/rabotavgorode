@@ -1,0 +1,99 @@
+-var companiesTitleBlock = {modif: 'areas',breadcrumb:['Главная', 'Компании'], title: 'Компании в Санкт-Петербурге', serpItems: ['522 Компании', 'З/п ~ 45 350 Р'], text: ' Для того, что бы пользователь увидел список вакансий по отрасли, ему нужно сначала выбрать свою отрасль из списка и клике по отрасли пользователь переходит к результатам поиска. '};
+
+- var menuLinksCompanies = [{itemAddClass: "nav-menu-item-active", itemHref: "#companies-tabs__names", itemName: "Названия"},{itemAddClass: "", itemHref: "#companies-tabs__sectors", itemName: "Отрасли"}];
+
+- var listItems = {vacancyCount: '12 Вакансии', vacancyPay: 'ЗП ~  34 567 Р'};
+
+.container.container--max-width
+	.row
+		.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+			
+			//- Title-block
+			+light-title-block(companiesTitleBlock)
+			.companies-slider-head
+				h2.heading-2.companies-slider-head__title Vip Компании
+				+button('Добавить', '#')
+
+//-slider vip companies
+include ../sections/_companies__slider.pug
+//-контент под слайдером
+
+.container.container--max-width
+	.row
+		.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+	
+			h2.search-results-tabs__title Компании
+
+			//- Навигация по Табам
+			+nav-menu(menuLinksCompanies)(class="nav-menu--margin-bottom" id="companies-nav-menu")
+
+	//- Контейнер с вкладками
+	.companies-tabs-container#companies-tabs-container
+		
+		//- Вкладка Название
+		.companies-tabs__names#companies-tabs__names
+			.row
+				.col-sm-10.offset-sm-1.col-md-12.offset-md-0
+				
+					//-алфавит
+					+areas-companies-alphabet('ru', 'en', 'numb')
+			.row
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Автомобильный бизнес', listItems)
+						+areas-companies__list('','Администрантивный персонал', listItems)
+						+areas-companies__list('','Банки, Инвестиции, Лизинг', listItems)
+						+areas-companies__list('','Безопасность', listItems)
+						a(href="#!").areas-companies__more Смотреть все
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Бухгалтерия, Учет, Финансы', listItems)
+						+areas-companies__list('','Высший менеджмент', listItems)
+						+areas-companies__list('','Добыча сырья', listItems)
+						+areas-companies__list('','Закупки', listItems)
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Инсталляция и Сервис', listItems)
+						+areas-companies__list('','Искусство и Развлечения', listItems)
+						+areas-companies__list('','Информационные технологии, Интернет, Связь', listItems)
+						+areas-companies__list('','Консультирование', listItems)
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Автомобильный бизнес', listItems)
+						+areas-companies__list('','Администрантивный персонал', listItems)
+						+areas-companies__list('','Банки, Инвестиции, Лизинг', listItems)
+						+areas-companies__list('','Безопасность', listItems)
+					
+		//- Вкладка Округа
+		.companies-tabs__sectors#companies-tabs__sectors
+			.row
+				.col-sm-10.offset-sm-1.col-md-12.offset-md-0
+				
+					//-алфавит
+					+areas-companies-alphabet('ru', 'en', 'numb')
+			.row
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Автомобильный бизнес', listItems)
+						+areas-companies__list('','Администрантивный персонал', listItems)
+						+areas-companies__list('','Банки, Инвестиции, Лизинг', listItems)
+						+areas-companies__list('','Безопасность', listItems)
+						a(href="#!").areas-companies__more Смотреть все
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Бухгалтерия, Учет, Финансы', listItems)
+						+areas-companies__list('','Высший менеджмент', listItems)
+						+areas-companies__list('','Добыча сырья', listItems)
+						+areas-companies__list('','Закупки', listItems)
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Бухгалтерия, Учет, Финансы', listItems)
+						+areas-companies__list('','Высший менеджмент', listItems)
+						+areas-companies__list('','Добыча сырья', listItems)
+						+areas-companies__list('','Закупки', listItems)
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Бухгалтерия, Учет, Финансы', listItems)
+						+areas-companies__list('','Высший менеджмент', listItems)
+						+areas-companies__list('','Добыча сырья', listItems)
+						+areas-companies__list('','Закупки', listItems)

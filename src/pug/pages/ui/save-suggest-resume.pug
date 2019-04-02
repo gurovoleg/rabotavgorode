@@ -1,0 +1,15 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Сохранить резюме / Разместить вакансию';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Сохранить резюме / Разместить вакансию
+		.section-ui
+			+button('Сохранить резюме', '#save-modal').modal-window-button
+			include ../../sections/_save-suggest-resume.pug
+		p Код
+		pre.
+			include ../../sections/_save-suggest-resume.pug

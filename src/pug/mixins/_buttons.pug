@@ -1,0 +1,19 @@
+mixin button(text, link, modifyClass, icon)
+	if !icon 
+		a(class="btn "+ modifyClass href=link)&attributes(attributes) #{text}
+	
+	else if icon == 'send'
+		a(class="btn "+ modifyClass href=link)&attributes(attributes) 
+			+send
+	
+	else 
+		a(href= link class=" "+ modifyClass)&attributes(attributes)
+			
+			+arrow(class="arrow--"+  icon)
+			span #{text}
+
+mixin buttonObject(Object)
+	a(href= Object.link class="btn-link btn-link--"+ Object.modify) #{Object.text}
+
+mixin buttonBig(Object)
+	a(href= Object.link class="btn "+ Object.modify) #{Object.text}

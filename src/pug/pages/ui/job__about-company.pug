@@ -1,0 +1,16 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Секция О компании';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+	
+	.section-ui
+		.title-5 Секция О компании
+		.ui-wrapper.col-4
+			include ../../sections/_job__about-company.pug
+		pre.
+			include ../../sections/_job__about-company.pug

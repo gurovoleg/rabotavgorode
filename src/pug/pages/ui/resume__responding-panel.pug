@@ -1,0 +1,12 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Панель откликнувшегося кандидата';
+	- var pageClass = 'body--dashboard';
+	- var reviewItem_3 = {display: '',avatarLetter: 'ВИ', topText: 'Константин', bottomText: '21 сентября 2018' ,ratingType: 'dislike' , likeCount:'345', dislikeCount:'652', text: 'Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. '};
+
+block content
+	.container.container--left
+		.title Панель откликнувшегося кандидата
+		.section-ui
+			include ../../sections/_resume__responding-panel.pug

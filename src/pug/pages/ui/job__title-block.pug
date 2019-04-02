@@ -1,0 +1,52 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+//-extends ../../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Блок под шапкой- title-block';
+	- var pageClass = 'body--dashboard';
+	- var JobHeader = {modif: 'job',  lightHeaderBtn:{btnText:'Войти',btnHref: '#', btnClass: 'btn-rounded-blue'} };
+
+block content
+
+	//- Шапка + выпадающее меню из логотипа
+	+pageHeader(JobHeader)
+	.bg-logo-menu-dropdown.bg-logo-menu-dropdown--small-header
+		include ../../sections/_main-menu.pug
+
+	
+	//- У контейнера серху отступ на высоту зафиксированной шапки
+	.container.container--padding-top
+		include ../../sections/_job__title-block.pug
+
+		.row
+			.col-6
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+				p.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.
+
+
+		pre.
+			include ../../sections/_job__title-block.pug

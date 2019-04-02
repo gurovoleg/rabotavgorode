@@ -1,0 +1,25 @@
+.indicator{
+	display: flex;
+	align-items: flex-end;
+}
+.indicator-item:not(:last-child){margin-right: 6px;}
+.indicator-item-bottom{
+	position: relative;
+	width: 2px;
+	
+	background-color: $lightGrey;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	
+}
+.indicator-item-top{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $greyText;
+	
+	z-index: 10;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}

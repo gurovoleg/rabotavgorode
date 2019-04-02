@@ -1,0 +1,17 @@
+mixin resumeSkills(dataObject)
+	each objectItem in dataObject
+		.resume-skills-content__item
+			.resume-skills-content__name #{objectItem.title}
+			.resume-skills-content__rating
+				+rating-stars-block(...objectItem.stars)
+
+mixin resumeSkillsBadge(dataObject)
+	.resume-skills-content__badge-skills
+		each items in dataObject
+			+badge--big(items)
+			//- +badge--big('JavaScript')
+			//- +badge--big('HTML 5sdf')
+			//- +badge--big('CSS 12345')
+			//- +badge--big('JavaScript')
+			//- +badge--big('HTML 5sdf')
+			//- +badge--big('CSS 12345')

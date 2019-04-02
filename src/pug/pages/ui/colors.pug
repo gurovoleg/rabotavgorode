@@ -1,0 +1,56 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Цвета и типографика';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Цветовые схемы		
+		.section-ui
+			.color
+				.color-value(style='background-color: #333')
+				.color-name @basicText
+			.color
+				.color-value(style='background-color: #999')
+				.color-name @greyText
+			.color
+				.color-value(style='background-color: rgba(0,0,0, .16)')
+				.color-name @lightGrey
+			.color
+				.color-value(style='background-color: rgba(0,0,0, .08)')
+				.color-name @silver
+			.color
+				.color-value(style='background-color: #FCFBFA')
+				.color-name @platinum
+			.color
+				.color-value(style='background-color: #FFF')
+				.color-name @white
+			.color
+				.color-value(style='background-color: #EDF4FF')
+				.color-name @lightBlue
+			.color
+				.color-value(style='background-color: #1878FF')
+				.color-name @blue
+			pre.
+				color: @basicText;
+				background-color: @lightBlue;
+
+		
+			.title.mt-50 Цвета для ссылок
+			.link-color-block
+				.link-color
+					.link-color-status Normal
+					.link-color-value(style='background-color: #1878FF')
+					.color-name @link
+				.link-color
+					.link-color-status Hover
+					.link-color-value(style='background-color: #4F98FF')
+					.color-name @linkHover
+				.link-color
+					.link-color-status Pressed
+					.link-color-value(style='background-color: #125BC2')
+					.color-name @linkPressed
+				
+			pre.
+				a:hover{color:@linkHover}

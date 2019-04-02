@@ -1,0 +1,141 @@
+
+//-элемент таблицы иконка+тултип
+mixin tooltip-item(dataObject)
+	+tooltip(dataObject.toolData.type,dataObject.toolData.text)
+		+#{dataObject.icName}(class="icon--normal")
+
+//-элемент выпадашки иконка+текст
+mixin dropdown-icons-item(dropdownItem)
+	.dropdown-icons-item
+		.dropdown-icons-item__icon(class=" dropdown-icon--"+ dropdownItem.boxModif)
+			+#{dropdownItem.icName}(class="icon--normal")
+		.dropdown-icons-item__text #{dropdownItem.icText}
+
+//-выпадашка иконка+текст
+mixin dropdown-icons(icData)
+	.dropdown-icons(class=" dropdown-icons--"+ icData.modif)&attributes(attributes)
+		each item in icData.Items
+			+dropdown-icons-item(item)
+-;			
+
+
+//-строка таблицы страница Вакансии
+mixin table-row(dataRow)
+	.table-row(class=" "+dataRow.modif)&attributes(attributes)
+		.table-item.table-item--check
+			+checkbox-simple-small
+		.table-item.table-item--id.text-body #{dataRow.itemId}
+		.table-item.card-title #{dataRow.itemTitle}
+		.table-item.table-item--city.text-body-grey #{dataRow.cityName}
+		.table-item.table-item--date #{dataRow.date}
+		.table-item.table-item--status #{dataRow.itemStatus}
+		if (dataRow.modif == 'table-item--header')
+			.table-item.table-item--indicator #{dataRow.itemIndicator}
+				
+		else
+			.table-item.table-item--indicator
+				+tooltip(dataRow.itemIndicator.tooltype, dataRow.itemIndicator.tooltext)
+					+indicator(dataRow.itemIndicator.value)
+			
+			//-колонка Резюме
+		if (dataRow.modif == 'table-item--header')	
+			.table-item.table-item--resume.text-body #{dataRow.itemResume}
+				
+		else
+			.table-item.table-item--resume
+				span.old-number #{dataRow.itemResume.param1} 
+				span.new-number + #{dataRow.itemResume.param2}
+
+			//-группа для отображения на мобилках
+		.table-item-group
+			.table-item.table-item--status.table-item--double #{dataRow.itemStatus}
+			.table-item.table-item--recruiter.text-body #{dataRow.itemRecruiter}
+
+			//-последняя колонка с точками и иконками
+		.table-item.table-item--icons-box
+			if (dataRow.modif == 'table-item--header')
+				//-фильтр Поля
+				+dropdown("", "Поля", "checkbox", "small","id", "Город", "Дата", "Статус","Статистика","Рекрутер")
+			else				
+				.table-item-icons
+					each item in dataRow.actionIcons
+						+tooltip-item(item)
+				.table-item-dots
+					span.dots-link
+					span.dots-link
+					span.dots-link
+
+
+-;
+//-строка таблицы страница Кандидаты
+
+mixin table-row-large(dataRowObj)
+	//-строка для экрана от 992пкс
+	if dataRowObj.modif == 'table-item--header'
+		.table-row.table-row-large--desktop(class=" "+dataRowObj.modif)&attributes(attributes)
+			.table-item.table-item--check
+				+checkbox-simple-small
+			.table-item.table-item--candidate Кандидат
+				span.tick
+					+tick
+			.table-item.table-item--contacts Контакты
+				span.tick
+					+tick
+			.table-item.table-item--status Статус/id
+				span.tick
+					+tick
+			.table-item.table-item--vacancy Вакансия
+				span.tick
+					+tick
+			.table-item.table-item--recruter Рекрутер
+				span.tick
+					+tick
+			.table-item.table-item--rating Рейтинг
+				span.tick
+					+tick
+			.table-item.table-item--icons-box
+				+dropdown("", "Колонки", "checkbox", "small","Кандидат", "Контакты", "Статус/id","Статистика","Рекрутер")
+	else
+		//-строка для мобильных+планшет
+		.table-row.table-row-large--mobile
+			.table-row-mobile--column
+				.avatar-block-info__top #{dataRowObj.personData.topText}
+
+				.table-item-mobile--subcolumn
+					.subcolumn-items-left
+						.avatar-block-info__bottom.text-body-grey #{dataRowObj.personData.bottomText}
+						.rating-mobile
+							+status-item(dataRowObj.statusData)
+							+rating-stars-custom(dataRowObj.ratingData)
+					.subcolumn-items-right
+						.item #{dataRowObj.personPhone}
+						.item #{dataRowObj.personMail}
+
+			.table-item-mobile--avatar
+				if dataRowObj.personData.avatarImg
+					.round-icon.round-icon--user(style="background-image: url(../img/person-icons/"+dataRowObj.personData.avatarImg +");")
+				else
+					+round-icon--card(dataRowObj.personData.avatarLetter)
+			//-строка для экрана от 992пкс
+		.table-row.table-row-large--desktop(class=" "+dataRowObj.modif)&attributes(attributes)
+			.table-item.table-item--check
+				+checkbox-simple-small
+			.table-item.table-item--candidate
+				+avatarBlock(dataRowObj.personData)
+			.table-item.table-item--contacts
+				.person-phone #{dataRowObj.personPhone}
+				.person-mail #{dataRowObj.personMail}
+			.table-item.table-item--status
+				+status-item(dataRowObj.statusData)
+				.id-number.text-body-grey #{dataRowObj.statusId}
+			.table-item.table-item--vacancy
+				.table-item--vacancy-name.text-body #{dataRowObj.vacancyName}
+				.table-item--vacancy-city.text-body-grey #{dataRowObj.vacancyCity}
+			.table-item.table-item--recruter.text-body-grey #{dataRowObj.recruterName}
+			.table-item.table-item--rating
+				+rating-stars-custom(dataRowObj.ratingData)
+			.table-item.table-item--icons-box
+				.table-item-dots
+					span.dots-link
+					span.dots-link
+					span.dots-link

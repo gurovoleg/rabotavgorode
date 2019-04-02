@@ -1,0 +1,124 @@
+.dropdown {
+	position:relative;
+	white-space: nowrap;
+	margin-right: 52px;
+
+	&:last-child {
+		margin-right: 0;
+	}
+	
+	// @media #{$md}{margin-right: 52px;}
+}
+
+.dropdown-prename {
+	//-margin-right: 10px;
+	font-size: 16px;
+	opacity: 0.4;
+}
+
+.dropdown-list-wrapper{
+	position:relative;
+	
+	@media #{$sm}{display: inline-block;}
+}
+
+.dropdown-list-name{
+	display: block;
+	cursor: pointer;
+	color: $link;
+	
+	&:hover {color: $linkHover;}
+
+	//arrow--down-small{margin-left: 10px;}
+}
+
+.dropdown-list-name .arrow--down-small{
+	top:8px;
+}
+.dropdown-list {
+	display: none;
+	position:absolute;
+	z-index: 2600;
+	background-color: $white;
+  	padding-top: 8px;
+  	padding-bottom: 8px;
+  	border-radius: 4px;
+  	overflow: hidden; 
+  	box-shadow: 0px 2px 8px $bg-shadow;
+  	left:0px; bottom: -10px;
+  	transform: translateY(100%);
+}
+
+.dropdown-list--right { right:0; left:auto;}
+
+.dropdown-list__item{
+	min-width: 10px;
+	display: block;
+	font-size: 16px;
+	line-height: 21px;
+	padding: 10px 16px;
+	background-color: $white;
+	color: $black;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $light-gray;
+		text-decoration: none;
+		color:$black;
+	}
+}
+
+// Модификаторы
+.dropdown-list--show{display: block;}
+
+.dropdown-list--reset {
+	padding: 0;
+	box-shadow: none;
+	width: 100%;
+	overflow: visible;
+
+}
+
+.dropdown-list__item--no-hover {
+	&:hover {
+		background-color: transparent;	
+	}
+}
+//-для простого дропдауна, как на стр employer modal
+.dropdown-simple-list--input{
+	top: 38px;
+	position: absolute;
+	transform: none;
+	min-height: 100%;
+	bottom: inherit;
+	width: 100%;
+	max-height: 136px;
+	overflow: auto;
+	border-radius: 0 0 4px 4px;
+	padding-top: 10px;
+	z-index: 1;
+	.dropdown-list__item {color: $greyText;}
+}
+.dropdown-simple-list--hidden{
+	display: none;
+}
+.preview-wrapper {
+	.dropdown-select .input-wrapper {
+		z-index: 150;
+	}
+	.dropdown-simple-list--input {
+		z-index: 10;
+	}
+	.dropdown-select .input-wrapper .arrow {
+		z-index: 100;
+	}
+	.dropdown-select__current .dropdown-select__item ~ .arrow {
+		z-index: 0;
+	}
+	.dropdown-select .input-wrapper ~ .dropdown-list {
+		z-index: 50;
+	}
+	.dropdown-select .input-wrapper ~ .arrow {
+		z-index: 150;
+	}
+}

@@ -1,0 +1,7 @@
+mixin city-selection-block(title, cities)
+	.city-selection__block-title #{title}
+	ul.city-selection__block-list
+		each item in cities
+			li.city-name
+				a.city-link(href="#!") #{item}
+			

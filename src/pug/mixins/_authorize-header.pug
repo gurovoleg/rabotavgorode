@@ -1,0 +1,24 @@
+mixin authorize-header(headerTitle, headerLinkTitle, href )
+	.bg-header&attributes(attributes)
+		.header.authorize-header
+			.authorize-header-left
+				.header-main__logo.header-main__logo--authorize
+					.logo-group
+						+logo-icon
+						+arrow(class="arrow--down")
+				.authorize-header__title  #{headerTitle}
+			
+			a(href=""+ href).text-body-link  #{headerLinkTitle}
+
+//-миксин шапки с иконкой пользователя в правом краю
+
+mixin authorize-header-user-icon(headerTitle, userLetter )
+	.bg-header
+		.header.authorize-header
+			.authorize-header-left
+				.header-main__logo.header-main__logo--authorize
+					.logo-group
+						+logo-icon
+						+arrow(class="arrow--down")
+				.authorize-header__title  #{headerTitle}
+			+round-icon--user(userLetter)

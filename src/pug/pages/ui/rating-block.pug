@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Блок с отзывом для рейтинга';
+	- var pageClass = 'body--dashboard';
+	- var ratingObject = {ratingTitle:'Зарплата и социальный пакет', ratingSubtitle:'Зарплата, соцпакет, отпуск, языковые курсы, корпоративы, другие “плюшки”', ratingStars:['50%', 'full', 'full', 'half', 'half', 'empty', 'empty']};
+
+block content
+
+	.container.container--left
+	.title Блок с отзывом для рейтинга
+	.section-ui
+		+raitingBlock(ratingObject)
+	p Миксин
+	pre.
+		+raitingBlock(ratingObject)
+
+		mixin raitingBlock(dataObject)
+			.rating-block
+				.rating-block__title= dataObject.ratingTitle
+				.rating-block_subtitle= dataObject.ratingSubtitle
+				+rating-stars-block(...dataObject.ratingStars)
+	p Объект
+	pre.
+		ratingObject = {ratingTitle:'Зарплата и социальный пакет', ratingSubtitle:'Зарплата, соцпакет, отпуск, языковые курсы, корпоративы, другие “плюшки”', ratingStars:['50%', 'full', 'full', 'half', 'half', 'empty', 'empty']};

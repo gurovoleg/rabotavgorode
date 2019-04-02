@@ -1,0 +1,8 @@
+mixin company-review(ReviewObject)
+	.company-review&attributes(attributes)
+		.company-review__head.d-flex
+			+avatar-block(ReviewObject.avatarLetter, ReviewObject.topText, ReviewObject.bottomText,ReviewObject.avatarImg)
+			+rating-like(ReviewObject.likeCount, ReviewObject.dislikeCount, ReviewObject.ratingType)(class="  "+ ReviewObject.display)
+		.company-review__box
+			.company-review-text.paragrafe #{ReviewObject.text}
+			a(href="#" class="text-action link-more link-more--hide") Еще

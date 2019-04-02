@@ -1,0 +1,145 @@
+.company-banner-wrapper {
+	padding-bottom: 24px;
+	padding-top: 16px;
+	.btn {
+		margin-bottom: 16px;
+		display: table;
+		height: 24px;
+		span{
+			display: table-cell;
+			vertical-align: middle;
+		}
+		@media #{$md} {
+			margin-bottom: 32px;
+		}
+	}
+	.arrow {
+		display: inline-block;
+		margin-right: 7px;
+		vertical-align: top;
+	}
+	.arrow.arrow--left svg {
+			top: 3px;
+	}
+	@media #{$md} {
+		padding-bottom: 108px;
+		padding-top: 32px;
+	}
+}
+.company-banner {
+	margin:0 auto;
+	padding-top: 24px;
+	text-align: center;
+	@media #{$md} {
+		padding-top: 45px;
+		padding-right: 50px;
+		display: flex;
+		justify-content: flex-start;
+	}
+}
+.company-banner-logo {
+	display: inline-block;
+	height: 104px;
+	width: 104px;
+	margin-right: 0;
+	background-color: $white;
+	border-radius: 50%;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.16);
+	margin-bottom: 16px;
+	@media #{$md} {
+		margin-right: 32px;
+	}
+}
+.company-banner__subtitle {
+	display: inline;
+	padding-bottom: 8px;
+	.breadcrumb-item-link {
+		color: $greyText;
+	}
+	.split-text {
+		display: block;
+	}
+	.split-text__item{
+		padding-bottom: 8px;
+		font-size: 16px;
+		line-height: 19px;
+		@media #{$md} {
+			font-size: 18px;
+			line-height: 21px;
+		} 
+	}
+}
+.company-banner--vip {
+	background-repeat: no-repeat;
+	background-size: cover;
+	.company-banner__title, .company-banner__subtitle {
+		color: $white;
+	}
+	.brand-logo {
+		border: none;
+		background-color: $white;
+	}
+	.breadcrumb-item-link {
+		color: $white;
+	}
+	.split-text__item{
+		color: $white;
+	}
+	.split-text__item:not(:last-child)::after {
+		background-color: $white;
+	}
+	.breadcrumb-item:not(:last-child)::after {
+		background-color: $white;
+	}
+	.btn {
+		background-color: rgba(252, 251, 250, 0.8);
+		border-radius: 42px;
+		padding-right: 16px;
+	}
+	.company-banner-logo {
+		border: none;
+	}
+}
+.company-banner__info {
+	@media #{$md} {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	}
+}
+.company-banner__title {
+	font-size: 24px;
+	color: $basicText;
+	font-weight: 700;
+	position: relative;
+	display: inline-block;
+	width: auto;
+	padding-bottom: 8px;
+	@media #{$md} {
+		font-size: 32px;
+		align-self: flex-start;	
+	}
+}
+
+.company-banner__rate {
+	font-weight: 300;
+	position: absolute;
+	top: 3px;
+	right: -67px;
+ 	.rating-mark__value {
+		font-size: 18px;
+	}
+	@media #{$md} {
+		top: 9px;
+	}
+}
+
+.company-banner__site {
+	font-size: 16px;
+	color: $link;
+	@media #{$md} {
+		font-size: 18px; 
+	}
+}

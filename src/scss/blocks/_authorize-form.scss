@@ -1,0 +1,67 @@
+.input-wrapper--radio{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.consept-text{
+	font-size: 14px;
+	line-height: 16px;
+	text-align: left;
+	color:$black;
+	opacity:0.9;
+}
+.consept-text_link:hover{
+	text-decoration: none;
+}
+
+.icon-eye {
+	position: absolute;
+	right: 9px;
+	top: 11px;
+	svg path:nth-child(1) {
+		display: block;
+	}
+}
+.icon-eye--show {
+	display: block;
+}
+.icon-eye--crossed {
+	svg path:nth-child(1) {
+		display: none;
+	}
+}
+
+.input-wrapper{
+	position: relative;
+	text-align: left;
+}
+
+.input-wrapper-btn{
+	margin-top: 24px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn-large{
+	text-align: center;
+	width: 100%;
+	margin-bottom: 16px;
+}
+
+.authorization-error {
+	position: absolute!important;
+	top: 0;
+	color: $textError;
+	z-index: 100;
+	display: block;
+	top: 50px;
+}
+.registration-error {
+	position: absolute!important;
+	top: 0;
+	color: $textError;
+	z-index: 100;
+	display: block;
+	top: 48px;
+}

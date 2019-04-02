@@ -1,0 +1,212 @@
+//-логотип
+i {
+	display: inline-block;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+
+	position: relative;
+	& svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: inline-block;
+	}
+}
+
+
+.icon--big{
+	width: 48px;
+	height: 48px;
+}
+
+.logo-icon path {fill: $blue;}
+.logo-icon{
+	cursor:pointer;
+	margin-right: 4px;}
+
+//-геолокация
+.icon-location path {fill: $grey;}
+.icon-location {margin-right: 4px;}
+
+//-указатель вверх
+
+.arrow path {fill: $link;}
+.arrow--down path {fill: $black;}
+.btn .arrow {
+	margin-right: 10px;
+	transform: translateY(25%);
+}
+
+.arrow--white path {fill: $white;}
+
+//-указатель вниз
+.arrow.arrow--down svg{
+	transform:  translate(-50%,-50%) rotate(180deg);
+	// top:40%;
+	// left: 20%;
+}
+//-указатель вправо
+.arrow.arrow--right svg{
+	transform: rotate(90deg);
+	top:35%;
+	left: 30%;
+}
+//-указатель влево
+.arrow.arrow--left svg{
+	transform: rotate(-90deg);
+	top:35%;
+	left: 20%;
+}
+
+.arrow.arrow--down-small svg{
+	transform: rotate(180deg);
+	width: 8px;
+	height: 8px;
+	& path {fill: $blue;}
+	left:35%;
+	top: 35%;
+}
+//-метка расположения
+.icon-place path {fill: $grey;}
+
+//- иконка фильтр
+.icon-filter path {fill: $smoky;}
+.icon-filter rect {fill: $smoky;}
+
+.icon-filter.icon-filter--active svg rect {
+	fill: $linkHover;
+}
+.icon-filter.icon-filter--active svg path {
+	fill: $linkHover;
+}
+//- иконка лупа
+.icon-search path {fill: $grey;}
+.icon-search.icon-search--big path{fill: $white}
+
+//- колокольчик
+.icon-notify path {fill: $grey;}
+
+//- флажок избранное
+.icon-favorite path {
+	stroke: $grey;
+	stroke-width: 2px;
+	stroke-opacity: 1;
+	fill: transparent;
+}
+.icon-favorite.icon-favorite--blue path {
+	stroke: $blue;	
+	fill: $blue;
+}
+.icon-favorite:hover path{stroke: $linkHover;}
+.icon-favorite.icon-favorite--black-border path {
+	stroke: $black;	
+	fill: transparent; 
+}
+//- принтер
+.icon-printer path {fill: $black;}
+
+//- загрузка
+.icon-download path {fill: $black;}
+
+//- поделиться -расшарить
+.icon-share path {fill: $black;}
+
+//- пожаловаться
+
+.icon-complaint path {fill: $black;}
+
+//- флаг
+.icon-star path {fill: $blue;}
+
+//- закрыть
+
+.icon-close path {fill: $grey;}
+.icon-close--black path {fill: $basicText;}
+.icon-close--white path {fill: $white;}
+
+
+//- иконка -like
+
+.icon-like path {fill: $blue;}
+.icon-like--gray path {fill: $gray;}
+
+//- иконка -dislike
+
+.icon-dislike path {fill: $grey;}
+.icon-dislike--blue path {fill: $blue;}
+
+//-маркеры метро
+.color-marker {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+//-гербы компании в круге
+.brand-logo {
+  padding: 23px 20px;  
+  display: inline-block;
+  border: 1px solid $lightGrey;
+  border-radius: 50%;
+}
+
+.card-address {
+  font-size: 16px;
+  color:$black;
+}
+.card-address-street{margin-right: 8px;}
+.card-address-distance {color: $greyText;}
+
+
+.notify {
+  display: inline-block;
+  position: relative;
+}
+
+.notify-marker {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: $blue;
+	position: absolute;
+	right: -4px;
+	top: -3px;
+}
+
+.photo-camera path{
+	fill: $link;
+}
+.icon-eye{cursor:pointer;}
+.reference path {fill: $reference;}
+
+.gdeuslugi{
+	width: 28px;
+	height: 28px;
+}
+.vk-grey{
+	width: 26px;
+	height: 24px;
+}
+//-стрелка отправить 
+.send path{fill: $white;}
+.sendbg{
+	width: 48px;
+	height: 48px;
+	background-color: $blue;
+	text-align: center;
+	padding-top: 13px;
+}
+//-размеры кастомных иконок
+.icon--big{
+	width: 48px;
+	height: 48px;
+}
+
+.icon--normal{
+	width: 24px;
+	height: 24px;
+}

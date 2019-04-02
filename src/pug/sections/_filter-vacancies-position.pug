@@ -1,0 +1,17 @@
+.filter-vacancies-position__container
+	
+	//- Заголовок
+	.filter-vacancies-position__title-block.d-flex.justify-content-between
+		.filter-vacancies-position__title Расположение
+		+icon-close(class="icon-close--black filter-vacancies-position-close")
+
+	//- Autocomlete
+	.filter-vacancies-position__autocomplete-wrapper
+		include _autocomplete.pug
+	
+	//- //- Map
+	.filter-vacancies-position__map#filter-map
+	
+	//- Button
+	.filter-vacancies-position__button
+		+button('Применить', '#', 'btn-semi-rounded-blue')(class="filter-vacancies-position-close")

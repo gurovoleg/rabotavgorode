@@ -1,0 +1,34 @@
+.company-review{
+	padding-top: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid $silver;
+	@media #{$md} {
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+}
+.company-review__head{
+	align-items: start;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+
+.company-review-text__item{
+	margin-bottom: 10px;
+}
+.company-review__head .rating-like-wrapper{display: none;}
+.rating-like-wrapper.rating-like--visible{display: flex;}
+
+.company-review-text{
+	display: inline;    
+	overflow: hidden;
+}
+.company-review__box{
+    position: relative;
+    display: inline-block;
+    
+}
+.link-more.link-more--hide{display: none;}
+.company-review-cut-text--hide {display: none;}
+	
+

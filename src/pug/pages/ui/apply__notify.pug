@@ -1,0 +1,16 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Сообщение об отправке резюме';
+	- var pageClass = 'body--dashboard';
+	
+
+block content
+	.container.container--left
+		
+		.section-ui
+			.title Сообщение об отправке резюме
+		.section-ui
+			include ../../sections/_apply-notify.pug
+		pre.
+			include ../../sections/_apply-notify.pug

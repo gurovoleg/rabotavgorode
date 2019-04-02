@@ -1,0 +1,12 @@
+mixin position-card(cardObject)
+	.position-card&attributes(attributes)
+		.row.row--margin
+			.col-md-3
+				+split-text-object(cardObject.periodSplit)
+			.col-md-9
+				.position-card__title #{cardObject.title}
+				+split-text-object(cardObject.sectorSplit)
+				+split-text-object(cardObject.periodSplit)
+				.position-card__description.paragrafe #{cardObject.text}
+				.position-card__site-link.text-action-grey #{cardObject.siteLink}
+					

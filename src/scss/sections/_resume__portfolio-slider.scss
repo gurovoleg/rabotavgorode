@@ -1,0 +1,65 @@
+//-обертка 
+.portfolio-wrapper{
+	overflow: hidden;
+	position: relative;
+	padding-left: 16px;
+	.btn{
+		@media #{$md}{padding-top: 8px;}}
+}
+.page-section.portfolio-wrapper{
+	padding-left: 16px;
+	@media #{$sm}{padding-left: 85px;}
+	@media #{$md}{padding-left: 0px;}
+}
+//-контейнер с элементами слайдера
+.portfolio{
+	display: flex;	
+	padding-top: 5px;
+	padding-bottom: 24px;
+	overflow-x: auto;
+  	
+	-webkit-overflow-scrolling: touch;
+	&::-webkit-scrollbar {
+    	display: none;
+	}
+
+	@media #{$md}{
+		padding-bottom: 0px;
+		flex-wrap: wrap;
+	}
+}
+.portfolio-group{	
+	padding-right: 16px;
+		@media #{$md}{
+			padding-right: 19px;
+			padding-bottom: 24px;
+		}
+	&:hover{box-shadow:none;}		
+}
+.portfolio-group:last-child{padding-right: 0;}
+.portfolio-group:nth-child(3n){
+	@media #{$xl}{padding-right: 0;}
+}		
+
+.portfolio-item{
+	background: $white;	
+	box-shadow: 0px 2px 6px $silver;
+	border-radius: 8px;
+	
+	transition: box-shadow .3s;
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border: 5px solid $white;
+	@media #{$md}{
+		
+		width: 252px;
+		height: 252px;}
+}
+.portfolio-item__title{
+	padding-top: 8px;
+	@media #{$md}{padding-top: 12px;}
+}

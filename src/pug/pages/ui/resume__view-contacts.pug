@@ -1,0 +1,37 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Просмотр контактов';
+	- var pageClass = 'body--dashboard theme--employer';
+	- var contacts = { logo: 'ava_card.png', name: 'Константин Константинопольский', position: 'менеджер по продажам' };
+	- var contactsObject = {contactObject1: {icon: "phone.svg", text: "+7 987 123-45-67", link: "tel:+7 987 123-45-67"}, contactObject2: {icon: "mail.svg", text: "username@domain.com", link: "mailto:username@domain.com"}, contactObject3: {icon: "web.svg", text: "mysitename.ru", link: "mysitename.ru"}, contactObject4: {icon: "telegram.svg", text: "Telegram", link: "#!"}, contactObject5: {icon: "whatsapp.svg", text: "Whatsapp", link: "#!"}  };
+
+block content
+	.container.container--left
+		.title Просмотр контактов
+		.section-ui(style = "width: 320px;")
+			+button('Показать контакты', '#window-modal').modal-window-button
+			+modalWindow()
+				+viewContacts(contacts, contactsObject)
+
+		p Код
+		pre.
+			+modalWindow()
+				+viewContacts(contacts, contactsObject)
+		p Миксин
+		pre.
+			mixin viewContacts(dataObject, contactsObject)
+				.view-contacts
+					.view-contacts__logo
+						img(src='../img/avatar/'+ dataObject.logo, alt='icon')
+					.view-contacts__name \#{dataObject.name}
+					.view-contacts__position \#{dataObject.position}
+					each contact in contactsObject
+						.view-contacts__info-block
+							.view-contacts__info-icon
+								img(src='../img/ic-svg/'+ contact.icon, alt='icon')
+							.view-contacts__info-text \#{contact.text}
+		p Объект
+		pre.
+			- var contacts = { logo: 'ava_card.png', name: 'Константин Константинопольский', position: 'менеджер по продажам' };
+			- var contactsObject = {contactObject1: {icon: "phone.svg", text: "+7 987 123-45-67"}, contactObject2: {icon: "mail.svg", text: "username@domain.com"}, contactObject3: {icon: "web.svg", text: "mysitename.ru"}, contactObject4: {icon: "telegram.svg", text: "Telegram"}, contactObject5: {icon: "whatsapp.svg", text: "Whatsapp"}  };

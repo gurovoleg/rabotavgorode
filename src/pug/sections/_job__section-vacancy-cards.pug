@@ -1,0 +1,13 @@
+- var jobOpening_vacancy_card = {addClass: "job-vacancy-card", title: "Дизайнер продукта в Музыку ", datePosted: "", salary: "150 000", companyLetter: "", companyIconSrc: 'alfa.svg', splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: {badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vacanceDescription: " Wrike – американская компания со штаб-квартирой в Калифорнии, разрабатывающая одноимённый продукт для управления проектами и совместной работы. Мы создали один из лучших инструментов, который позволя..."};
+
+- var jobOpening_vacancy_card2 = {addClass: "job-vacancy-card", title: "PHP программист ", datePosted: "", salary: "по договоренности", companyLetter: "LB", companyIconSrc: '', splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: {badgeType:"", items: ["CJM","CJM","CJM","CJM","CJM"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vacanceDescription: " Wrike – американская компания со штаб-квартирой в Калифорнии, разрабатывающая одноимённый продукт для управления проектами и совместной работы. Мы создали один из лучших инструментов, который позволя..."};
+
+.job-section-vacancy-cards
+	.job-section-vacancy-cards__title Похожие вакансии
+	.job-section-vacancy-cards__box
+		+vacance-card(jobOpening_vacancy_card,'list')
+		+vacance-card(jobOpening_vacancy_card2,'list')
+		+vacance-card(jobOpening_vacancy_card,'list')
+		+vacance-card(jobOpening_vacancy_card2,'list')
+		+vacance-card(jobOpening_vacancy_card,'list')
+	+button('Смотреть все', '#')

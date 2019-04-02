@@ -1,0 +1,12 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Фильтр вакансий - Отрасли';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+	.title Фильтр вакансий - Отрасли 
+	a(href="#!").filter-vacancies-sectors-open Открыть
+	
+	include ./../../sections/_filter-vacancies-sectors.pug

@@ -1,0 +1,63 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Дата и время - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+	- var time = {item: {time: '09:00', status: 'checked'}, item2: {time: '09:30', status: ''}, item3: {time: '10:00', status: 'disabled'}, item4: {time: '10:30', status: ''}, item5: {time: '11:00', status: ''}, item6: {time: '11:30', status: ''}, item7: {time: '12:00', status: ''}, item8: {time: '12:30', status: ''}, item9: {time: '13:00', status: ''}, item10: {time: '13:30', status: ''}, item11: {time: '14:00', status: ''}, item12: {time: '14:30', status: ''}, item13: {time: '15:00', status: ''}, item14: {time: '15:30', status: ''}, item15: {time: '16:00', status: ''}, item16: {time: '16:30', status: ''}, item17: {time: '17:00', status: ''}, item18: {time: '17:30', status: ''} };
+
+block content
+	.container.container--left
+		.title Дата и время
+		.section-ui
+			.data-time-choose
+				.field-group
+					.data-time-choose__title Дата и время
+					input(type="date" value="1999-08-30").input-field.input-field--date
+				.field-group
+					.data-time-choose__title Время
+					.time-choose-block
+						each item, id in time
+							if item.status == 'disabled'
+								input(disabled type="radio" name="time" id= id).time-choose__time-input
+								label(for= id)
+									.time-choose__time-item(class='time-choose__time-item--disabled')
+										span= item.time
+							else if item.status == 'checked'
+								input(checked type="radio" name="time" id= id).time-choose__time-input
+								label(for= id)
+									.time-choose__time-item
+										span= item.time
+							else
+								input(type="radio" name="time" id= id).time-choose__time-input
+								label(for= id)
+									.time-choose__time-item
+										span= item.time
+								
+		p Код
+		pre.
+			.data-time-choose
+				.field-group
+					.data-time-choose__title Дата и время
+					input(type="date" value="1999-08-30").input-field.input-field--date
+				.field-group
+					.data-time-choose__title Время
+					.time-choose-block
+						each item, id in time
+							if item.status == 'disabled'
+								input(disabled type="radio" name="time" id= id).time-choose__time-input
+								label(for= id)
+									.time-choose__time-item(class='time-choose__time-item--disabled')
+										span= item.time
+							else if item.status == 'checked'
+								input(checked type="radio" name="time" id= id).time-choose__time-input
+								label(for= id)
+									.time-choose__time-item
+										span= item.time
+							else
+								input(type="radio" name="time" id= id).time-choose__time-input
+								label(for= id)
+									.time-choose__time-item
+										span= item.time
+		p Объект
+		pre.
+			- var time = {item: {time: '09:00', status: 'checked'}, item2: {time: '09:30', status: ''}, item3: {time: '10:00', status: 'disabled'}, item4: {time: '10:30', status: ''}, item5: {time: '11:00', status: ''}, item6: {time: '11:30', status: ''}, item7: {time: '12:00', status: ''}, item8: {time: '12:30', status: ''}, item9: {time: '13:00', status: ''}, item10: {time: '13:30', status: ''}, item11: {time: '14:00', status: ''}, item12: {time: '14:30', status: ''}, item13: {time: '15:00', status: ''}, item14: {time: '15:30', status: ''}, item15: {time: '16:00', status: ''}, item16: {time: '16:30', status: ''}, item17: {time: '17:00', status: ''}, item18: {time: '17:30', status: ''} };

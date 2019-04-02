@@ -1,0 +1,12 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Секция карточек вакансий';
+	- var pageClass = 'body--dashboard';
+	
+block content
+		.title Секция карточек вакансий
+		.section-ui
+			include ../../sections/_job__section-vacancy-cards.pug
+		pre.
+			include ../../sections/_job__section-vacancy-cards.pug

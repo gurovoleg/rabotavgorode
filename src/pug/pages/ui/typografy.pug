@@ -1,0 +1,65 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Цвета и типографика';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Типографика
+		.section-ui
+			
+			h1.heading-1 Heading 1 Desktop
+			
+		pre.mt-0.
+			h1.heading-1 Desktop
+		.section-ui
+		h2.heading-2 Heading 2
+		pre.mt-0.
+			h2.heading-2 Heading 2
+		.section-ui
+			a(href='#').heading-2 Heading 2
+		pre.mt-0.
+			a(href='#').heading-2 Heading 2
+
+		.section-ui
+			.paragrafe
+					| Paragraf paragraf paragraf paragraf paragraf paragraf
+					br
+					| paragraf paragraf paragraf paragraf paragraf paragraf
+					br
+					| paragraf paragraf paragraf paragraf paragraf paragraf
+					br
+					| paragraf paragraf paragraf paragraf paragraf paragraf
+		pre.mt-0.
+			.paragrafe.
+				 Paragraf paragraf paragraf paragraf paragraf paragraf			
+				 paragraf paragraf paragraf paragraf paragraf paragraf			
+				 paragraf paragraf paragraf paragraf paragraf paragraf				
+				 paragraf paragraf paragraf paragraf paragraf paragraf
+		
+		.section-ui
+			.textBlock
+				.text-action Action
+				.text-action-grey Action
+				a(href='#').text-action Link
+		pre.
+			.text-action Action
+			.text-action-grey Action
+			a(href='#').text-action Link
+
+		.section-ui
+			.textBlock
+				.text-body Body
+				.text-body-grey Body
+				a(href='#').text-body Link
+		pre.
+			.text-body Body
+			.text-body-grey Body
+			a(href='#').text-body Link
+
+		.section-ui
+			.text-caption caption
+
+		pre.
+			.text-caption caption

@@ -1,0 +1,153 @@
+.btn {
+	position: relative;
+	cursor: pointer;
+	font-size: 16px;
+	display: inline-block;
+	outline: none;
+	border: none;
+	letter-spacing: 0.5px;
+	color: $btn;
+	background-color: transparent;	
+	transition: background-color .25s;
+
+	&:hover {
+		text-decoration: none;
+		outline: none;
+		color: $btn-hover;
+	}
+	&:active {
+		outline: none;
+		color: $btn-active;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.btn-rounded-blue {
+	background-color: $btn;
+	color: $white;
+	border-radius: 16px;
+	padding: 4px 16px;
+}
+.btn-rounded-blue:hover {
+	color: $white;
+	background-color: $btn-hover;
+}
+.btn-rounded-blue:active{
+	color: $white;
+	background-color: $btn-active;
+}
+.btn-rounded-gray {
+	color: $white;
+	border-radius: 16px;
+	padding: 4px 16px;
+}
+.btn-rounded-gray {
+	background-color: $light-gray;
+	color: $btn;
+}
+.btn-rounded-gray:hover {
+	color: $btn-hover;
+}
+.btn-rounded-gray:active{
+	color: $btn-active;
+}
+.btn-semi-rounded-gray {
+	color: $btn;
+	border-radius: 8px;
+	padding: 8px 24px 8px 24px;
+	background-color: $light-gray;
+}
+.btn-semi-rounded-gray:hover {
+	color: $btn-hover;
+}
+.btn-semi-rounded-gray:active {
+	color: $btn-active;
+}
+.btn-semi-rounded-blue {
+	background-color: $btn;
+	color: white;
+	border-radius: 8px;
+	padding: 11px 32px;
+}
+.btn-semi-rounded-blue:hover {
+	background-color: $btn-hover;
+	color: $white;
+}
+.btn-semi-rounded-blue:active{
+	background-color: $btn-active;
+	color: $white;
+}
+.btn-square {
+	background-color: $btn;
+	color: $white;
+	padding: 12px 68px 12px 68px;
+	text-align: center;
+}
+.btn-square:hover {
+	background-color: $btn-hover;
+	color: $white;
+}
+.btn-square:active{
+	background-color: $btn-active;
+	color: $white;
+}
+.btn-large {
+	font-size: 18px;
+}
+.btn-square-grey { 
+	color: $link; 
+	padding: 16px 68px 15px 68px; 
+	text-align: center; 
+	background-color: $light-gray; 
+} 
+.btn-square-grey:hover{ 
+	text-decoration: none; 
+	color:$linkHover; 
+} 
+.btn-square-grey:active{ color:$linkPressed;}
+.file {
+	position: relative;
+}
+.file__input:focus + .file__inner-label,
+.file__inner-label:hover {
+  color: #4F98FF;
+}
+.file__input {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.btn--showmore-vacancies {
+	font-size: 18px;
+	padding: 30px 0;
+}
+
+.btn--pr-30 {
+	padding-right: 30px;
+}
+
+.btn--send {
+	width: 48px;
+	height: 48px;
+	text-align: center;
+	padding: 0;
+	padding-top: 12px;
+}
+
+.btn--bg-none {
+	background-color: none;
+	span {
+		vertical-align: middle;
+	}
+	.arrow {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 8px;
+	}
+}

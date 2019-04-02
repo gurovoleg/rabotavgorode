@@ -1,0 +1,93 @@
+-var citiesTitleBlock = {modif: 'areas',breadcrumb:['Главная', 'Города'], title: 'Вакансии по городам', serpItems: ['522 Города', 'З/п ~ 45 350 Р'], text: ' Для того, что бы пользователь увидел список вакансий по отрасли, ему нужно сначала выбрать свою отрасль из списка и клике по отрасли пользователь переходит к результатам поиска. '};
+
+- var menuLinksCities = [{itemAddClass: "nav-menu-item-active", itemHref: "#cities-tabs__cities", itemName: "Города"},{itemAddClass: "", itemHref: "#cities-tabs__districts", itemName: "Округа"}];
+
+- var listItems = {vacancyCount: '12 Вакансии', vacancyPay: 'ЗП ~  34 567 Р'};
+
+.container.container--max-width
+	.row
+		.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+			
+			//- Title-block
+			+light-title-block(citiesTitleBlock)
+			
+			h2.search-results-tabs__title Населенные пункты
+
+			//- Навигация по Табам
+			+nav-menu(menuLinksCities)(id="cities-nav-menu")
+
+	//- Контейнер с вкладками
+	.cities-tabs-container#cities-tabs-container
+		
+		//- Вкладка Города
+		.cities-tabs__cities#cities-tabs__cities
+			.row
+				.col-sm-10.offset-sm-1.col-md-12.offset-md-0
+					//-блок с бейджами
+					include _areas__badges-block.pug
+					//-алфавит
+					+areas-companies-alphabet('ru', '')
+			.row
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						a(href="#!").areas-companies__more Смотреть все
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+
+					
+		//- Вкладка Округа
+		.cities-tabs__districts#cities-tabs__districts
+			.row
+				.col-sm-10.offset-sm-1.col-md-12.offset-md-0
+					//-блок с бейджами
+					include _areas__badges-block.pug
+					//-алфавит
+					+areas-companies-alphabet('ru', '')
+			.row
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('','Округ Х', listItems)
+						+areas-companies__list('','Округ Х', listItems)
+						+areas-companies__list('','Округ Х', listItems)
+						+areas-companies__list('','Округ Х', listItems)
+						a(href="#!").areas-companies__more Смотреть все
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('','Округ Х', listItems)
+						+areas-companies__list('','Округ Х', listItems)
+						+areas-companies__list('','Округ Х', listItems)
+						+areas-companies__list('','Округ Х', listItems)
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('', 'Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)
+						+areas-companies__list('','Город Х', listItems)

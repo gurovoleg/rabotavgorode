@@ -1,0 +1,15 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Поиск Резюме - Секция Шапка + Табы';
+	- var pageClass = 'body--dashboard';
+	- var deskriptionLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#search-resume-tabs__about", itemName: "О себе"},{itemAddClass: "", itemHref: "#search-resume-tabs__experience ", itemName: "Опыт"}, {itemAddClass: "", itemHref: "#search-resume-tabs__education", itemName: "Образование"}, {itemAddClass: "", itemHref: "#search-resume-tabs__another", itemName: "Другое"}];
+
+block content
+	.container.container--left
+		.title Поиск Резюме - Секция Шапка + Табы
+		
+		.section-ui
+			include ../../sections/_search-resume__header-tabs.pug
+		pre.
+			include ../../sections/_search-resume__header-tabs.pug

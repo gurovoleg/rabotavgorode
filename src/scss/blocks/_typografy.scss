@@ -1,0 +1,92 @@
+/*классы для стиллизации отображения на ui-панели*/
+.textBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 500px;
+  margin-bottom: 20px;
+}
+/*//классы для стиллизации отображения на ui-панели*/
+
+/*Типографика*/
+
+.heading-1 {  
+  font-size: 24px;
+  line-height: 29px;
+  color: $basicText;
+  font-weight: bold;
+    
+  @media #{$md} {
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+.heading-2 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+
+  color: $basicText;
+  margin: 0;
+  padding: 0;
+  
+  @media #{$md} {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+a.heading-2 {  
+  &:hover{
+  color: $linkHover;
+  text-decoration: none;
+  }
+  &:active {
+    color:$linkPressed;
+  }
+}
+.text-action{
+  font-size: 18px;
+  color: $basicText;
+}
+.text-action-grey{
+  font-size: 18px;
+  color: $greyText;
+}
+
+.text-body{
+  font-size: 16px;
+  color: $basicText;
+}
+.text-body-grey{
+  font-size: 16px;
+  color: $greyText;
+}
+a.text-body,
+a.text-action{color: $link;}
+a.text-action:hover,
+a.text-body:hover{
+  text-decoration: none;
+  color: $linkHover;
+}
+a.text-action:active,
+a.text-body:active{
+  text-decoration: none;
+  color: $linkPressed;
+}
+.text-caption{
+  font-size: 14px;
+  color:$greyText;
+}
+
+.paragrafe {
+  font-size: 18px;
+  color:$basicText;
+  line-height: 27px;
+}

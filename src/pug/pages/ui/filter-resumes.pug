@@ -1,0 +1,83 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Фильтр резюме (mobile and tablet)';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+	.title Фильтр резюме
+
+	form.filter-vacancies(id="filter-vacancies" style="display:block; width:375px;")
+		.filter-vacancies__wrapper
+			
+			.filter-vacancies__header
+				.filter-vacancies__title Фильтры
+				.filter-vacancies__clean-button
+					+button("Очистить","#!")(id="filter-vacancies-clear")
+			
+			.filter-vacancies__block
+				.filter-vacancies__block-title Заработанная плата
+				.filter-vacancies__block-inputs
+					+input-number ("От", "input-field--modificator", 10000, 1000000, 10000)
+					+input-number ("До", "input-field--modificator", 10000, 1000000, 10000)
+						
+			.filter-vacancies__block
+				.filter-vacancies__block-title Расположение
+				+button("Выберите расположение", "#!", "filter-vacancies-position-open")
+				
+			.filter-vacancies__block
+				.filter-vacancies__block-title Отрасли
+				+tag-filter('Информационные технологии', 'Интернет', 'Связь')
+				+button("Выберите отрасль", "#!", "filter-vacancies-sectors-open pt-15 d-block")
+			
+			.filter-vacancies__block
+				.filter-vacancies__block-title Опыт работы
+				+checkbox-reverse('Начальный уровень', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Специалист', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Эксперт', 'big')(class="check-box__label--flex")
+			
+			.filter-vacancies__block
+				.filter-vacancies__block-title Тип занятости
+				+checkbox-reverse('Полная', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Неполная', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Вахтовая', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Сменная', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Удаленная', 'big')(class="check-box__label--flex")
+
+			.filter-vacancies__block
+				.filter-vacancies__block-title Образование
+				+checkbox-reverse('Высшее', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Неоконченное высшее', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Среднее специальное', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Среднее', 'big')(class="check-box__label--flex")
+
+			.filter-vacancies__block
+				.filter-vacancies__block-title Пол
+				+checkbox-reverse('Мужской', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Женский', 'big')(class="check-box__label--flex")
+
+			.filter-vacancies__block
+				.filter-vacancies__block-title Возраст
+				.filter-vacancies__block-inputs
+					+input-number ("От", "input-field--modificator", 15, 100, 1)
+					+input-number ("До", "input-field--modificator", 15, 100, 1)
+
+			.filter-vacancies__block
+				.filter-vacancies__block-title Знание языков
+				+checkbox-reverse('Английский', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Немецкий', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Французский', 'big')(class="check-box__label--flex")
+				+button('Еще', '#', 'btn--employer btn--padding-top')
+
+			.filter-vacancies__block
+				.filter-vacancies__block-title Водительские права
+				+checkbox-reverse('A', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('B', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('C', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('D', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Есть свой автомобиль', 'big')(class="check-box__label--flex")
+				
+
+		.filter-vacancies__button
+			+button('Найдено 25 333 резюме', '#', 'btn-semi-rounded-blue btn-semi-rounded-blue--full-width')(id="filter-vacancies-submit")

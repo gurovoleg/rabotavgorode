@@ -1,0 +1,128 @@
+.lk-title-block{
+	// padding-bottom: 24px;
+	
+	@media #{$md}{
+		padding-bottom: 16px;
+		border-bottom: 1px solid $silver;
+	}
+	
+	.breadcrumb-list,	
+	.vacancy-serp{margin-bottom: 0;}
+	.lk-title-block__tag-filters{
+		padding-top: 24px;
+		padding-bottom: 8px;
+		
+	}
+	.tag-filter{
+		background-color:$employerBg ;
+		margin-bottom: 0;
+	}
+	.tag-filters{
+		flex-wrap: wrap;
+		svg {
+			width: 8px;
+			height: 8px;
+		}
+		path{fill: $employer}
+	}
+
+	.title-block__dropdown-menu{
+		flex-direction: row;
+		// border-bottom: 1px solid $silver;
+		// padding-bottom: 16px;
+	}		
+	
+	.title-block__dropdown-menu-right{margin-bottom: 0;}
+}
+.icon-group{
+	display: flex;
+	align-items: center;
+	order:2;
+	padding-left: 24px;
+	@media #{$md}{order:1;}
+	cursor: pointer;
+	&:hover{opacity: .7;}
+}
+
+
+.tag-filter-box{
+	padding-bottom: 8px;
+	padding-right: 16px;
+}
+
+.title-block-row{
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 8px;
+	padding-bottom: 4px;	
+	@media #{$md}{
+		padding-top: 16px;
+		padding-bottom: 8px;
+	}
+}
+
+.item-text{
+	display: inline-block;
+	padding-left: 10px;
+	@media #{$md}{padding-right: 32px;}
+	
+}
+.title-block__heading{
+	margin: 0;
+	padding: 0;
+}
+
+//-respond-block
+.lk-respond-block{
+	align-items: center;
+	height: 80px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: $white;
+	border-top: 1px solid $silver;
+	padding-left: 16px;
+	z-index:200;
+
+	//-i,span {display: none;}
+	@media #{$md}{
+		height: auto;
+		position: relative;
+		bottom: auto;
+		left: auto;
+		right: auto;
+		background-color: transparent;
+		border-top: 0px; 
+		padding-left: 0px;
+		z-index: 0;
+		.btn {
+			order:2;
+			padding: 8px 22px;
+		}
+
+		//-i,span {display: inline-block;}
+	}
+
+}
+
+
+//-стили конкретно для страницы Вакансии
+.lk-title-block--vacancies{
+	.lk-title-block__tag-filters,
+	.title-block__dropdown-menu{
+		display: none;
+		@media #{$md}{display: flex;}
+	}
+	
+	.icon-group--left{display: none;}
+}
+
+//-стили конкретно для страницы Кандидаты
+.lk-title-block--candidates{
+	.icon-group,
+	.title-block__dropdown-menu{
+		display: none;
+		@media #{$sm}{display: flex;}
+	}
+}

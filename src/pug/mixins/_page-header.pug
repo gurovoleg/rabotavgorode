@@ -1,0 +1,200 @@
+//- Шапка
+- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#", itemName: "Вакансии"},{itemAddClass: "", itemHref: "#", itemName: "Отрасли"},{itemAddClass: "", itemHref: "#", itemName: "Компании"}, {itemAddClass: "", itemHref: "#", itemName: "Города"},{itemAddClass: "", itemHref: "#", itemName: "Метро"}];
+
+
+//- 1. modif: Определяет тип шапки. 
+	full - большая шапка; 
+	'' - маленькая шапка; 
+	другие значения - для стилизации маленьких шапок, если требуется (например страница Job, шапка зафиксирована bg-header--job)
+
+//- 2. personStatus: Определяет цвет элементов. 
+	'' - по умолчанию (синий)
+	'employer' - цвет работодателя (оранжеый)
+
+//- 3. city:  Название города в шапке
+	'' - нет нзвания, нет иконки локации
+
+//- 4. loggedPerson:{letters: 'LB', image: ''}: Определяет наличии панели аторизованного пользователя (иконки избранное, уведомление, логотип пользователя)
+	По умолчанию, если параметр отсутствует - пользователь не авторизован.
+	Если параметр присутствует - пользователь авторизован.
+	{letters: 'LB', image: ''} - логотип с инициалами
+	{letters: '', image: '/imageName'} - логотип с изображением
+
+//- 5. inputNumber: Определяет количество инпутов у большой шапки (2 или 3)
+
+//- 6. lightHeaderBtn:{btnText:'Зарегистрироваться',btnHref: '#', btnClass:'' }}: Определяет наличие кнопки на маленькой шапке и ее свойства
+
+
+
+//-	ШАПКА ДЛЯ ОБЪЕКТА
+mixin pageHeader(DataObject)
+	if (DataObject.modif == 'full')
+		.bg-header.bg-header--full(class= " bg-header--"+ DataObject.personStatus)&attributes(attributes)
+
+			.header
+				//- Кнопка на мобиле
+				+button('Зарегистрироваться', '#', 'btn-square-grey btn--full-width')
+				
+				//- Шапка поиск + регистрация + инфо
+				.header-main
+					
+					+logo-icon
+					+arrow.arrow--down
+					
+					.d-none.d-xl-block.header-main__search
+						
+						//- Форма поиска с микроразметкой
+						div(itemscope itemtype="http://schema.org/WebSite")
+							meta(itemprop="url" content="https://spb.rabotavgorode.ru/")
+							form.search-form(itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction")
+								meta(itemprop="target" content="https://spb.rabotavgorode.ru/search?q={текст_запроса}")
+								
+								//- Бейдж-вакансия
+								+tag-filter('дизайнер').tag-filter--absolute
+									+icon-close.tag-filter--close
+
+								//-flex container
+								.search-form__group
+									.input-container
+										input(itemprop="query-input" type="text" name="" required placeholder="Профессия, отрасль, компания").search-job.search-job__name
+
+										+icon-search.tag-filter__search-icon.tag-filter--absolute
+										+icon-filter.icon-filter--absolute.filter-vacancies-open
+											
+										//- Выпадающее меню поиска	
+										include ../sections/_header-search-input-dropdown.pug
+
+									//- Для 2-х инпутов добавлям модифиакоры и кнопку поиска
+
+									if (DataObject.inputNumber == '2')
+										.input-container.input-container--last-input
+											input(type="number" name="job-sallary-from" value="30000" min="10000" max="1000000" step="10000").search-job.search-job__sallary-from
+											
+											.input__search-button
+												+icon-search.icon-search--big.icon-search--absolute
+
+											span.search-job__sallary-from-text-before от
+											span.search-job__sallary-from-text-after руб
+									else
+										.input-container
+											input(type="number" name="job-sallary-from" value="30000" min="10000" max="1000000" step="10000").search-job.search-job__sallary-from
+
+											span.search-job__sallary-from-text-before от
+											span.search-job__sallary-from-text-after руб
+
+									// Блок для 3-го инпута
+									if (DataObject.inputNumber == '3')
+										.input-container
+											input(type="number" name="job-sallary-to" value="40000" min="10000" max="1000000" step="10000").search-job.search-job__sallary-to
+											.input__search-button
+												+icon-search.icon-search--big.icon-search--absolute
+													
+											span.search-job__sallary-to-text-before до
+											span.search-job__sallary-to-text-after руб
+
+					.header-main__city#city-selection__open-button
+						+link-icon(DataObject.city)
+
+						//-иконка юзера, если вход выполнен
+					if (DataObject.loggedPerson)
+						
+						.header-main__buttons.header__user-panel.d-flex
+							+icon-favorite
+							+notify
+							if (DataObject.loggedPerson.letters !== '')
+								.round-icon.round-icon--user #{DataObject.loggedPerson.letters}
+							else
+								.round-icon.round-icon--user(style='background-image: url(../img/person-icons/'+ DataObject.loggedPerson.image)
+
+						//-кнопки войти и зарегистрироваться если не залогинен
+					else
+						.header-main__buttons
+							
+							+icon-favorite
+							+button('Зарегистрироваться', '#', 'btn-rounded-gray btn-rounded-gray--show')
+							+button('Войти', '#', 'btn-rounded-blue')
+
+				.d-xl-none.header-main__search
+						
+						//- Форма поиска с микроразметкой
+						div(itemscope itemtype="http://schema.org/WebSite")
+							meta(itemprop="url" content="https://spb.rabotavgorode.ru/")
+							form.search-form(itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction")
+								meta(itemprop="target" content="https://spb.rabotavgorode.ru/search?q={текст_запроса}")
+								
+								//- Бейдж-вакансия
+								+tag-filter('дизайнер').tag-filter--absolute
+									+icon-close.tag-filter--close
+
+								//-flex container
+								.search-form__group
+									.input-container
+										input(itemprop="query-input" type="text" name="" required placeholder="Профессия, отрасль, компания").search-job.search-job__name
+
+										+icon-search.tag-filter__search-icon.tag-filter--absolute
+										+icon-filter.icon-filter--absolute.filter-vacancies-open
+											
+										//- Выпадающее меню поиска	
+										include ../sections/_header-search-input-dropdown.pug
+
+									//- Для 2-х инпутов добавлям модифиакоры и кнопку поиска
+
+									if (DataObject.inputNumber == '2')
+										.input-container.input-container--last-input
+											input(type="number" name="job-sallary-from" value="30000" min="10000" max="1000000" step="10000").search-job.search-job__sallary-from
+											
+											.input__search-button
+												+icon-search.icon-search--big.icon-search--absolute
+
+											span.search-job__sallary-from-text-before от
+											span.search-job__sallary-from-text-after руб
+									else
+										.input-container
+											input(type="number" name="job-sallary-from" value="30000" min="10000" max="1000000" step="10000").search-job.search-job__sallary-from
+
+											span.search-job__sallary-from-text-before от
+											span.search-job__sallary-from-text-after руб
+
+									// Блок для 3-го инпута
+									if (DataObject.inputNumber == '3')
+										.input-container
+											input(type="number" name="job-sallary-to" value="40000" min="10000" max="1000000" step="10000").search-job.search-job__sallary-to
+											.input__search-button
+												+icon-search.icon-search--big.icon-search--absolute
+													
+											span.search-job__sallary-to-text-before до
+											span.search-job__sallary-to-text-after руб
+
+
+				//- Навигация
+				.header-nav
+					//- +nav-menu(menuLinks)(class="nav-menu--fix" id="search-results-nav-menu")
+					+nav-menu(menuLinks)(class="nav-menu--fix")
+
+
+	//-легкие шапки для страниц авторизации, job ...
+	else
+		//-bg-header--"+DataObject.personStatus -задает цвет работодателя
+
+		.bg-header.bg-header--basic(class=" bg-header--"+ DataObject.modif + " bg-header--" + DataObject.personStatus)&attributes(attributes)
+			.header.d-flex.header--content
+				+logo-icon
+				+arrow.arrow--down
+				if (DataObject.city)
+					+link-icon(DataObject.city)#city-selection__open-button
+					//-если нет данных для аватврки
+				if (DataObject.loggedPerson == null)
+					+button( DataObject.lightHeaderBtn.btnText, DataObject.lightHeaderBtn.btnHref, DataObject.lightHeaderBtn.btnClass)
+
+					//-рисуем кнопки в правом углу для незалогиненного
+				else 
+					.header__user-panel.d-flex
+						+icon-favorite.icon-favorite--bg-header--basic
+						+notify
+
+						//-буквы в иконке юзера	
+						if (DataObject.loggedPerson.letters !== '')
+							.round-icon.round-icon--user #{DataObject.loggedPerson.letters}
+						//- картинка в иконке юзера
+						else
+							.round-icon.round-icon--user(style='background-image: url(../img/person-icons/'+ DataObject.loggedPerson.image)

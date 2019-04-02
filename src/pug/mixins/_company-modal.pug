@@ -1,0 +1,18 @@
+mixin companyModal(dataObject)
+	.company-modal(itemscope itemtype="http://schema.org/Organization")
+		.comany-modal-info
+			.company-modal-logo
+				+brand-logo-bgstyle(dataObject.BrandImg).company-modal-logo__img
+			.company-modal-title(itemprop="name") #{dataObject.companyName}
+			.company-modal-site #{dataObject.companySite}
+		.comany-modal-contacts(itemscope itemtype="http://schema.org/Person")
+			.company-modal-name(itemprop="name") #{dataObject.companyContactName}
+			.company-modal-position(itemprop="jobTitle") #{dataObject.companyPosition}
+			.company-modal-phone(itemprop="telephone") #{dataObject.companyPhone}
+			.company-modal-address-block(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+				.company-modal-street(itemprop="streetAddress") #{dataObject.companyStreet}
+				.company-modal-city(itemprop="addressLocality") #{dataObject.companyCity}
+				.company-modal-metro
+					+color-marker(dataObject.companyMetroColor)
+					+address-badge(dataObject.companyMetro)
+				.company-modal-map#companyMap

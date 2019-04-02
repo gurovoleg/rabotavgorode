@@ -1,0 +1,310 @@
+// Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
+
+//- Notification
+mixin notification(notifyType, text)
+	.notification-bar(class="notification-bar--" + notifyType)&attributes(attributes)
+		.notification-bar-text #{text}
+		//- .notification-bar-icon
+		if notifyType == 'error'  || notifyType == 'success'
+			+icon-close(class="icon-close--white notification-bar-icon")
+		else if notifyType == 'attention'
+			+icon-close(class="icon-close--black notification-bar-icon")
+-;
+//- Autocomplete
+mixin autocomplete__result-item( icon, name, desc )
+	.autocomplete__result-item
+		.result-item-block
+			if icon != ''
+				.result-item__icon
+					+#{icon}
+			.result-item__name #{name}
+		.result-item__description #{desc}
+
+-;
+//- Радио-кнопка
+mixin radio-button(group, text, size, color, checked)
+	label.radio-button__label&attributes(attributes)
+		input.radio-button(type='radio' name=group checked=checked)
+		if color != '' && color != undefined
+			span.custom-radio-button(class="custom-radio-button--" + color + " custom-radio-button--" + size)
+		else 
+			span.custom-radio-button(class="custom-radio-button--" + size)
+		span.custom-radio-button__label #{text}
+
+-;
+//- Миксин для элемента списка в фильтре Отрасли
+mixin filter-sectors-list__item (name)
+	.sectors-list__item
+		+checkbox-simple-small
+		.custom-check-box__label-block
+			.custom-check-box__label-name #{name}
+			.custom-check-box__notification&attributes(attributes) Выбрана 1 специализация
+		+arrow(class="arrow--right arrow-right--modificator")
+
+
+//- Миксин для элемента списка в фильтре Специализации
+mixin profile-list__item (text)
+	.profile-list__item
+		+checkbox(text,'small','label--nowrap')(class="check-box__label--flex-start")
+
+			
+//-миксин для tag-filter
+mixin tag-filter( ...items)
+	.tag-filter&attributes(attributes)
+		.d-flex
+			.tag-filter__text-box
+				each item in items
+					.tag-filter-item= item
+			+icon-close
+
+-;
+//-миксин для блока из tag-filters
+mixin tag-filters(Object)
+	.tag-filters.d-flex&attributes(attributes)
+		
+		each item in Object
+			.tag-filter-box
+				+tag-filter(...item)
+		+button('Очистить', '#','btn-link')
+
+
+-;
+
+//-миксин для vacancy-serp
+mixin vacancy-serp( ...items)
+	ul.vacancy-serp&attributes(attributes)
+		each item in items
+			li.vacancy-serp-item= item
+
+-;
+//-миксин для  vacancy-serp внутри миксина для объекта
+//- mixin vacancy-serp-object(argumentObj)
+//- 	ul.vacancy-serp&attributes(attributes)
+//- 		each item in argumentObj
+//- 			li.vacancy-serp-item= item
+
+-;
+//-цветной маркер кружок
+mixin color-marker(markerClr)
+	.color-marker(class="color-marker--"+ markerClr)
+
+mixin colorMarker(markerColor)
+	.color-marker(class="color-marker--"+ markerColor)
+
+//- маркер Статус стр Кандидаты
+mixin status-item(statusData)
+	.status-item
+		+colorMarker(statusData.markerColor)
+		.status-item-text #{statusData.statusText}
+
+//-двойной маркер линии метро
+mixin double-marker(color1, color2)
+	.color-marker.double-marker(style="border-color:"+ color1 +"; background-color:"+ color2 +";" )
+
+//-address			
+mixin address-badge(street, moreInfo)
+	.address-badge&attributes(attributes)
+		.card-address
+			span.card-address-street #{street}
+			span.card-address-distance #{moreInfo}
+//-малый бренд в круге
+mixin brand-logo-small(imgSrc)
+	.brand-logo-small
+		img.brand-img(src='../img/ic-svg/'+ imgSrc, alt='icon')
+//- бренд в круге
+mixin brand-logo(img)
+	.brand-logo&attributes(attributes)
+		img.brand-img(src='../img/ic-svg/'+ img, alt='icon')
+//- бренд через background
+mixin brand-logo-bgstyle(img) 
+	.brand-logo__img(style="background-image: url(../img/ic-svg/"+ img + "")&attributes(attributes)
+//-nav-menu
+mixin nav-menu(El)
+	.nav-menu&attributes(attributes)
+		for menuItem in El
+			a.nav-menu-item(class= ''+ menuItem.itemAddClass href= menuItem.itemHref data-pill=''+ menuItem.dataAttr)
+				span.nav-menu-item__name #{ menuItem.itemName}
+				if menuItem.spanValue
+					span.nav-menu-item__count #{menuItem.spanValue}
+
+-;
+//-Миксин для блока с рейтингом страница Company
+mixin raitingBlock(dataObject)
+	.rating-block
+		.rating-block__title #{dataObject.ratingTitle}
+		.rating-block_subtitle #{dataObject.ratingSubtitle}
+		+rating-stars-block(...dataObject.ratingStars)
+			
+-;
+//- Миксин для textarea
+mixin textarea(placeholderName, name, uRow,uCols )
+	textarea(rows= uRow cols= uCols name= name placeholder= placeholderName)&attributes(attributes)
+
+
+	
+//-tooltip
+mixin tooltip(tooltipModif, tooltipText)
+	.tooltip
+		.tooltip-body(class=" tooltip-body--"+ tooltipModif) #{tooltipText}
+		.tooltip-target
+			block
+			
+//- Отзыв о компании
+mixin feedback-company(enabled, buttonText, login)
+	.feedback-company
+		if enabled == true
+			.feedback-company__title Оставить отзыв о компании
+			+textarea('Расскажите о плюсах и минусах работы в компании ')(class="feedback-company__textarea")
+			.feedback-company__button-block
+				+button( buttonText, '#', 'btn-semi-rounded-blue btn--min-width')
+				
+		else if enabled == false
+			.feedback-company__button-block
+				+button( buttonText, '#', 'btn-semi-rounded-blue btn--min-width control-disabled')
+				if login == true
+					.button-block__comment 
+						| Чтобы оставить отзыв, 
+						+button('войдите', '#', 'btn-link')
+						|  на сайт или 
+						+button('зарегистрируйтесь.', '#', 'btn-link')
+				else 
+					.button-block__comment Чтобы проголосовать, войдите на сайт. В резюме должен быть указан опыт работы в этой компании.
+
+
+//- Миксин для company-vacancy-card
+mixin company-vacancy-card(currentRegion, title, sallary, city, section)
+	.company-vacancy-card&attributes(attributes)
+		if currentRegion == true
+			a(href="#!").company-vacancy-card__title.company-vacancy-card__title--current-region= title
+			.company-vacancy-card__sallary.company-vacancy-card__sallary--current-region= sallary	
+		else
+			a(href="#!").company-vacancy-card__title= title
+			.company-vacancy-card__sallary= sallary
+			if city != "" 
+				.company-vacancy-card__city= city
+			if section != "" 
+				.company-vacancy-card__section= section
+
+//- Миксин для VIP company (Companies page)
+mixin companies-vip-company(imgName, ratingValue, vacancyTotal, sallary)
+	a(href="#").bg-vip-company
+		.vip-company__image(style="background-image: url('../img/company-logo-svg/" + imgName "'")
+		.vip-company__rating
+			+rating-mark(ratingValue)
+		.vip-company__vacancy-total=vacancyTotal 
+		.vip-company__sallary=sallary
+
+// Миксин title block для Компаний/Отраслей/Городов
+mixin light-title-block(Object)
+	.light-title-block(class=" light-title-block--"+ Object.modif)
+		+breadcrumb(...Object.breadcrumb)
+		h1.heading-1(class=" light-title-block__heading--" +Object.modif) #{Object.title}
+		+vacancy-serp(...Object.serpItems)
+		.light-title-block__text.paragrafe  #{Object.text}
+-;
+//apply page выбранный файл
+mixin choose-file(modif, fileName, iconName,iconAddClass)
+	.choose-file(class=" choose-file--"+ modif)
+		span #{fileName}
+		+#{iconName}(class=" "+ iconAddClass)
+-;
+
+mixin lightbox-item(fileName, label)
+	.lightbox-block
+		a(href="#!").lightbox-block__image
+			picture
+				source(srcset='../../img/photo/portfolio/mobile/' + fileName, media='(max-width: 991px)')
+				source(srcset='../../img/photo/portfolio/' + fileName, media='(min-width: 992px)')
+				img(src="../../img/photo/portfolio/" + fileName) 
+
+		.lightbox-block__label=label 
+
+
+
+//-миксин для запроса в карточке vacancy-card-serp
+mixin split-text( modif, ...items)
+	.split-text(class=" split-text--"+ modif )
+		each item in items
+			.split-text__item= item
+
+//-миксин для split-text-object
+mixin split-text-object(argumentObj)
+	.split-text(class=" split-text--"+ argumentObj.modif)&attributes(attributes)
+		each item in argumentObj.items
+			.split-text__item= item
+
+
+//- //-секция Другое(стр Резюме)
+//- mixin other-info__item(dataItems)
+//- 	.other-info__item
+//- 		//-+split-text-object(dataItems.splitText)
+//- 		.other-info-item__description.text-body-grey #{dataItems.description}
+
+//- -;
+//- mixin other-info(Object)
+//- 	.other-info&attributes(attributes)
+//- 		.other-info__title.text-action #{Object.title}
+//- 		for item in Object
+//- 			+other-info__item(Object.dataSplitText)
+
+-;
+// Показать контакты со страницы Resume-Page
+mixin showContacts(status)
+	if status == 'sign'
+		.show-contacts.page-section
+			.show-contacts--sign
+				+button('Показать контакты', '#contacts-modal', 'btn-semi-rounded-blue btn-semi-rounded-blue--bg modal-window-button')
+				.show-contacts__suggest-vacancy
+					+icon-label.show-contacts__label
+					a(href="#suggest-modal").show-contacts__text.modal-window-button Предложить вакансию
+	if status == 'unsign'
+		.show-contacts.page-section
+			.show-contacts--unsign
+				+button('Показать контакты', '#', 'btn-semi-rounded-blue').control-disabled
+				+button('Войдите на сайт чтобы посмотреть контакты','auth-autorization.html','show-contacts__text')
+
+-;
+//- миксинчики для правой панели на стр Резюме
+
+mixin vacance-card--short(dataCard)
+	.vacance-card--short&attributes(attributes)
+		a(href="#").vacance-card--short__title #{dataCard.title}
+		.vacance-card--short__salary #{dataCard.salary} P
+			//-+split-text('responding-card','Веб Инвест', 'Информационные технологии')
+			+split-text-object(dataCard.splitText)
+-;
+//-миксинчики для правой панели на стр Резюме
+mixin responding-panel__item-child(actionData)
+	.responding-panel__item-child
+		.action-date.text-body-grey
+			span.action-date-date__value #{actionData.date},
+			span.action-date-time__value #{actionData.time}
+		if (actionData.type)	
+			.action-type
+				span.action-type__name.text-body #{actionData.type}
+				if (actionData.btn)
+					span
+						+buttonObject(actionData.btn) 
+
+		.action-author(class=" "+actionData.textClass) #{actionData.author}
+
+-;
+
+//- Строка поиска с микроразметкой
+mixin search-form(placeholder)
+	div(itemscope itemtype="http://schema.org/WebSite")
+		meta(itemprop="url" content="https://spb.rabotavgorode.ru/")
+		form.search-form(itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction")
+			meta(itemprop="target" content="https://spb.rabotavgorode.ru/search?q={текст_запроса}")
+			
+			.search-form__container
+				
+				.input-block
+					input(itemprop="query-input" type="text" name="" required placeholder=placeholder).search-input
+					//- Выпадающее меню поиска	
+					include ../sections/_header-search-input-dropdown.pug
+					
+					+icon-search.search-icon-movable
+				
+				.search-button
+					+icon-search.icon-search--absolute

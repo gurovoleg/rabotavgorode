@@ -1,0 +1,136 @@
+-var areasTitleBlock = {modif: 'areas',breadcrumb:['Главная', 'Отрасли'], title: 'Вакансии по отраслям в Санкт-Петербурге', serpItems: ['9522 Ваканси', 'З/п ~ 45 350 Р'], text: ' Для того, что бы пользователь увидел список вакансий по отрасли, ему нужно сначала выбрать свою отрасль из списка и клике по отрасли пользователь переходит к результатам поиска. '};
+
+- var menuLinksAreas = [{itemAddClass: "nav-menu-item-active", itemHref: "#areas-tabs__areas", itemName: "Отрасли"},{itemAddClass: "", itemHref: "#areas-tabs__jobs", itemName: "Профессии"}, {itemAddClass: "", itemHref: "#areas-tabs__skills", itemName: "Навыки"}];
+
+- var listItems = {vacancyCount: '12 Вакансии', vacancyPay: 'ЗП ~  34 567 Р'};
+
+.container.container--max-width
+	.row
+		.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+			
+			//- Title-block
+			+light-title-block(areasTitleBlock)
+
+			h2.search-results-tabs__title Отрасли
+
+			//- Навигация по Табам
+			+nav-menu(menuLinksAreas)(id="areas-nav-menu")
+
+	//- Контейнер с вкладками
+	.areas-tabs-container#areas-tabs-container
+		
+		//- Вкладка Отрасли
+		.areas-tabs__areas#areas-tabs__areas
+			.row
+				.col-sm-10.offset-sm-1.col-md-12.offset-md-0
+					//-блок с бейджами
+					include _areas__badges-block.pug
+					//-алфавит
+					+areas-companies-alphabet('ru', '')
+			.row
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('', 'Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						a(href="#!").areas-companies__more Смотреть все
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('', 'Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('', 'Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('', 'Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+
+		//- Вкладка Профессии
+		.areas-tabs__jobs#areas-tabs__jobs
+			.row
+				.col-sm-10.offset-sm-1.col-md-12.offset-md-0
+					//-блок с бейджами
+					include _areas__badges-block.pug
+					//-алфавит
+					+areas-companies-alphabet('ru', '')
+			.row
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						a(href="#!").areas-companies__more Смотреть все
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+						+areas-companies__list('','Профессия Х', listItems)
+					
+		//- Вкладка Навыки
+		.areas-tabs__skills#areas-tabs__skills
+			.row
+				.col-sm-10.offset-sm-1.col-md-12.offset-md-0
+					//-блок с бейджами
+					include _areas__badges-block.pug
+					//-алфавит
+					+areas-companies-alphabet('ru', '')
+			.row
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						a(href="#!").areas-companies__more Смотреть все
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						a(href="#!").areas-companies__more Смотреть все
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0.col-hd-3
+					.areas-companies__list
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)
+						+areas-companies__list('','Навык Х', listItems)

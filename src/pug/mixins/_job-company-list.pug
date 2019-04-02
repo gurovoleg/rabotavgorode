@@ -1,0 +1,22 @@
+//- Миксин для Job-company__list-item
+mixin job-company__list-item(name,value,ratingValue,link)
+	if link != ''
+		a(href=link).job-company__list-item
+			.job-company__list-item__name 
+				span #{name}
+				if ratingValue
+					+rating-mark(ratingValue)
+			.job-company__list-item__value #{value}
+	else
+		.job-company__list-item
+			.job-company__list-item__name 
+				span #{name}
+				if ratingValue
+					+rating-mark(ratingValue)
+			.job-company__list-item__value #{value}		
+
+//-  Миксин Job-company-list (весь блок)
+mixin job-company-list(items)
+	.job-company__list
+		each item in items
+			+job-company__list-item(item.name,item.value,item.ratingValue, item.link )

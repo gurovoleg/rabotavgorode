@@ -1,0 +1,37 @@
+// Модификатор для контейнера
+.lk-content-container--grid {
+	display: flex;
+	flex-wrap:wrap;
+	overflow: auto;
+	padding: 16px;
+	
+	@media #{$md} {padding: 8px 0;}
+	@media #{$xl} {padding: 4px 0;}
+
+	.column-wrapper {
+		padding: 8px 0px;
+		flex: 1 0 100%;
+		width: 100%;
+		
+		@media #{$xl} {
+		  	padding: 12px 0;
+		  	-webkit-box-flex: 0;
+		  	-ms-flex: 0 0 50%;
+		  	flex: 0 0 calc(50% - 12px); /* margin-right*1/2 = 12px */
+		  	max-width: calc(50% - 12px); 
+			margin-right: 24px;
+				
+			&:nth-child(2n) {margin-right: 0px;}
+		}
+	}
+
+	// Задаем другой шрифт для карточек в Избранном
+	.resume-card__job-positions, .split-text__item {font-size: 16px;}
+
+}
+
+.lk-title-block--favourites{	
+	.lk-respond-block{display: none !important;}
+	.title-block__dropdown-menu{display: none;}
+}
+	

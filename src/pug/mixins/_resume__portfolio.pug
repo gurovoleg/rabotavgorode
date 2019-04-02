@@ -1,0 +1,5 @@
+//-стр Резюме карточка портфолио
+mixin portfolio-item(href, imgSrc, title)
+	.portfolio-group
+		a(href= ''+ href style="background-image: url(../img/portfolio/"+ imgSrc +")").portfolio-item
+		.portfolio-item__title.text-body #{title}

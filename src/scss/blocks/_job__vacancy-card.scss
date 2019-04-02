@@ -1,0 +1,57 @@
+.job-vacancy-card{
+	padding-bottom: 12px;
+	padding-right: 0;
+	& .round-icon.round-icon--card {
+		display: none;
+		@media #{$sm}{
+			justify-content:center;
+			display: flex;
+		}
+	}
+	& .vacance-card__address{
+		margin-bottom: 8px;
+		@media #{$sm}{margin-bottom: 0px}
+		@media #{$md}{margin-bottom: 8px}
+	}
+	& .split-text,
+	& .vacance-card__salary{
+		margin-bottom: 4px;}
+
+	@media #{$sm}{padding-bottom: 16px;}
+	
+}
+.vacance-card.job-vacancy-card .round-icon {
+	right: 0;
+}
+.job-vacancy-card .vacance-card__flex-col{
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	@media #{$sm}{
+		flex-direction: row;
+		margin-bottom: 8px;
+	}
+	@media #{$md}{
+		margin-bottom: 4px;
+		flex-direction: column;
+	}
+}
+.vacance-card.job-vacancy-card .badge-group{
+	height: 23px;
+	display: block;
+	
+}
+.job-vacancy-card .vacance-card__description{
+	padding-right: 60px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #999;
+	display: none;
+	@media #{$sm}{display: block;}
+	// @media #{$md}{display: none;}
+
+}
+.job-vacancy-card .vacance-card__flex-block--special{
+	@media #{$sm}{display: flex;}
+	@media #{$md}{display: block;}
+}

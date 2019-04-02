@@ -1,0 +1,48 @@
+.show-contacts {
+	display: block;
+}
+
+.show-contacts__suggest-vacancy {
+	display: none;
+	cursor: pointer;
+	@media #{$sm} {
+		padding-left: 48px;
+		display: inline-flex;
+		align-content: center;
+	}
+
+	&:hover {opacity:0.8;}
+}
+.show-contacts__text {
+	color: $greyText;
+	opacity: 1;
+}
+.show-contacts--sign {
+	display: flex;
+	align-items: center;
+	.show-contacts__text {
+		padding-left: 15px;
+		font-size: 16px;	
+	}
+}
+
+.show-contacts--unsign {
+	.show-contacts__btn {
+		margin-right: 32px;
+	}
+	.show-contacts__text {
+		display: none;
+		@media #{$sm} {
+			display: inline;
+			padding-left: 32px;
+		}
+	}
+	.control-disabled.btn-semi-rounded-blue{
+		background-color: rgba(0, 0, 0, 0.08);
+		color: $greyText;
+		opacity: 1;
+	}
+}
+.icon-label:hover + a {
+	color: $link;
+}

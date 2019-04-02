@@ -1,0 +1,156 @@
+//--- Вспомогательные классы ---//
+.display-none {display: none !important;} 
+.display-block {display: block !important;} 
+.overflow-hidden {overflow: hidden;}
+//-стили для лого
+.bg-header--full{
+	.logo{margin-right: 6px;}
+	// .arrow.arrow--down{
+	// .arrow {
+	// 	margin-right: 16px;
+	// 	@media #{$md}{margin-right: 10px;}
+	// }
+}
+.bg-header{
+	.arrow {
+		margin-right: 16px;
+		@media #{$md}{margin-right: 10px;}
+	}
+}
+// Все режимы отображения контента страницы отключены по умолчанию
+.search-result {display: none;}
+
+// Класс переключения режимов отображения
+.search-result--show {
+	display: block;
+	position:relative;
+}
+
+// Title block убираем на мобильном экране для MAP
+.display-mobile-none {
+	display: none;
+	@media #{$sm} {display: block;}
+}
+
+// Header изменяем на мобильном экране для MAP
+.bg-header--map {
+	background-color: transparent;
+	position: absolute;
+	z-index: 50;
+	width: 100%;
+	border:none;
+
+	@media #{$sm} {
+		background-color: $white;
+		position: relative;
+		border-bottom:1px solid $silver;
+	}
+}
+
+
+//--- Классы для фиксации блоков на странице ---//
+
+// Основной блок
+.fixed-position {
+	position:fixed;
+	left:0 !important; 
+	right:0 !important;
+	z-index:1550;
+}
+
+// Правая колонка
+.fixed-position-same-location {
+	position:fixed;
+	max-width: 50%;
+	bottom:0;
+	z-index:1500;
+	overflow-y: scroll;
+}
+
+// Боковая панель
+.fixed-position-aside {
+	position:fixed;
+	z-index:1500;
+	overflow-y: auto; 
+}
+
+
+// Сетка доработки
+.search-result-list__item {
+	position:relative;
+}
+
+.search-result-list__item::before {
+	content:'';
+	position:absolute;
+	height: 100%;
+	top:0;
+	width: calc(100% + 16px);
+	left:-16px;
+	display: block;
+ 	
+	@media #{$md} {
+		width: calc(100% + 24px);
+		left:-24px;
+ 	}
+}
+
+.search-result-list__item--vip::before{
+	border-left: 3px solid $vip;
+}
+
+.search-result-list__item--greenBadge::before{
+	border-left: 3px solid $greenBadge;
+}
+
+
+
+.search-result-list__item:hover::before{
+ 	background-color: #EDF4FF;
+}
+
+
+// В режиме карта на мобильных экранах убираем полоску VIP карт, а так же убираем ховер для всех карточек
+.search-result-list--map {
+	.search-result-list__item:hover::before{
+	 	background-color: transparent;
+	 	@media #{$sm} {background-color: #EDF4FF;}
+	}
+	.search-result-list__item--vip::before {
+		border-left:none;
+		@media #{$sm} {border-left: 3px solid $vip;}
+	}	
+}
+
+.logo-menu--show{margin-right: 16px;}
+
+
+.search-results-tabs__title {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: bold;
+
+	padding:24px 0;
+}
+.search-results-tabs__companies{
+	.companies-slider-wrapper{
+		margin-bottom: 5px;
+		padding-top: 2px;
+		padding-bottom: 5px;
+	}
+}
+
+.nav-menu--fix {	
+	border: none;
+	padding-top: 0;
+}
+
+// Убираем фиксированную ширину от 1440, фиксируем от 1920
+.container--max-width {
+	@media #{$xl} {
+		padding:0 68px;
+		max-width: 1920px;
+	}
+}
+//-отступ под вкладками табов для страницы компании
+.nav-menu--margin-bottom{margin-bottom: 24px;}

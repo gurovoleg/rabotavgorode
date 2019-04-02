@@ -1,0 +1,37 @@
+.view-contacts {
+	padding-left: 16px;
+	padding-right: 16px;
+	line-height: normal;
+	
+}
+.view-contacts__logo {
+	width: 64px;
+	height: 64px;
+	margin-bottom: 24px;
+}
+.view-contacts__name {
+	font-size: 24px;
+	color: $basicText;
+	font-weight: 700;
+	padding-bottom: 8px;
+}
+.view-contacts__position {
+	font-size: 18px;
+	color: $greyText;
+	padding-bottom: 32px;
+}
+.view-contacts__info-block {
+	display: flex;
+	padding-bottom: 24px;
+}
+.view-contacts__info-icon {
+	width: 24px;
+	height: 24px;
+}
+.view-contacts__info-text {
+	padding-left: 16px;
+	font-size: 18px;
+	a {
+		color: $basicText;	
+	}
+}

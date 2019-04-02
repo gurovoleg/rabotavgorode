@@ -1,0 +1,297 @@
+.resume-card{
+	position:relative;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	z-index:1;
+	transition:0.25s all;
+	.icon-favorite{
+		top:-3px;
+	}
+	.vip-badge--yellow {
+		margin-right: 8px;
+		margin-left: 0px;
+	}
+}
+.resume-card-body__col{
+	flex-direction: column;
+	@media #{$sm}{flex-direction: row;}
+}
+.resume-card--list,
+.resume-card--map {
+	padding-right: 16px;
+	border-bottom: 1px solid $silver;
+	background-color: transparent;
+	
+	.split-text--desktop{
+		display: none;
+		@media #{$lg}{display: flex;}
+	}
+	.resume-card-body__col{
+	flex-direction: column;
+	@media #{$lg}{
+		.split-text--mobile{display: none;}
+		flex-direction: row;
+		}
+	}
+	@media #{$hd}{padding-right:32px;}
+}
+
+.resume-card--grid{
+	padding:16px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	background-color: $white;
+
+	//-.resume-card-header{align-items: center;}
+	.split-text--desktop{display: none;}
+	
+	@media #{$sm}{
+		.split-text--desktop{display: flex;}
+		.split-text--mobile{display: none;}
+		padding:24px;
+	}
+	
+	.resume-card__aspirant-address--list{display: none;}
+	.icon-user--resume-card{
+		@media #{$sm}{
+			min-width: 72px;
+			min-height: 72px;
+			font-size: 24px;
+
+			line-height: 3;
+			// line-height: 2.3;
+			top:26px;
+
+			margin-left: 24px;
+			position: relative;
+		}
+	}
+	&:hover {
+		box-shadow: none;
+		transform: translateY(2px);
+		box-shadow:0 0px 0px 1px rgba(0, 0, 0, 0.05)
+	}
+	.resume-card__job-item{
+		margin-bottom: 16px;
+		@media #{$sm}{margin-bottom: 8px;}
+	}
+
+	.resume-card__badges{
+		display: flex;
+		margin-top: 16px;
+		@media #{$sm}{margin-top: 24px;}
+	}
+}
+
+.resume-card-header{
+	align-items:  flex-start;
+	justify-content: space-between;
+}
+.resume-card__title{
+	color:$basicText;
+	font-size: 18px;
+	font-weight: bold;
+	white-space: wrap;	
+	white-space: nowrap;
+   	overflow: hidden;
+   	text-overflow: ellipsis;
+}
+
+.resume-card-header__left{	
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+.resume-card-header__right{	display: flex;}
+
+.resume-card-header__left--grid{
+
+	.resume-card__title{
+		@media #{$sm}{margin-right: 8px;}
+	}
+	.resume-card__salary{
+		font-size: 20px;
+		font-weight: 400;
+		white-space: nowrap;
+	}
+}
+
+.resume-card__title--map{	
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	@media #{$sm}{
+  		white-space: wrap;
+  		overflow: visible;
+  	}
+}
+.resume-card__title--grid{
+	display: flex;
+	flex-direction: column;
+	padding-right: 16px;
+	@media #{$sm}{
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+}
+.resume-card__salary{
+	font-size: 18px;
+	color: $basicText;
+	flex-shrink: 0;
+	@media #{$md}{font-size: 20px;}
+}
+.resume-card__published {
+	margin-right: 8px;
+	margin-left: 16px;
+	color: $basicText;
+	font-size: 12px;
+
+}
+//-card-body-style
+.resume-card-body{
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+}
+.resume-card-body--grid{
+	padding-bottom: 12px;
+	border-bottom: 1px solid $silver;
+	@media #{$sm}{
+		border-bottom-width: 0px;
+		padding-bottom: 0px;
+	}
+}
+.resume-card-body--grid .resume-card-body-left{
+	width: 100% ;	
+	padding-bottom: 0px;
+	@media #{$sm}{
+		padding-bottom: 12px;
+		border-bottom: 1px solid $silver;
+		width: calc(100% - 104px);
+	}
+}
+.resume-card-body-left{
+
+	overflow: hidden;
+}
+
+.resume-card__aspirant-address{
+	display: flex;
+	align-items: center;
+}
+.resume-card-body__row{
+	align-items: center;
+}
+.resume-card__aspirant-address-metro,
+.resume-card__aspirant-name{margin-right: 5px;}
+
+
+.resume-card__aspirant-age{
+	margin-right: 8px;
+	@media #{$md}{right: 16px;}
+}
+.split-text--resume-card{
+	flex-wrap: wrap;
+	//-margin-bottom: 4px;
+	.split-text__item{
+		font-size: 16px;
+	}
+	.split-text__item:not(:last-child):after{top: 10px;}
+	
+	
+}
+.resume-card__job-item{	
+	flex-direction: column;
+	margin-bottom: 8px;
+	@media #{$md}{
+		align-items: center;
+		flex-direction: row;
+	}
+	.split-text__item{@media #{$sm}{font-size: 16px;}}
+	.split-text__item:after{top: 10px;}
+}
+
+.icon-user--resume-card{
+	color: $blue;
+	background-color: $white;
+	border: 1px solid $lightGrey;
+}
+
+.resume-card__job-positions{
+	margin-right: 8px;
+	font-size: 14px;
+	color: basicText;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	@media #{$sm}{font-size: 16px;}
+}
+.resume-card--list{
+	.resume-card__job-positions{
+		font-size: 14px;
+		@media #{$md}{font-size: 16px;}
+	}
+	.resume-card__job-item{
+		.split-text__item{
+			font-size: 14px;
+			@media #{$md}{font-size: 16px;}
+		}
+	}
+}
+.resume-card__badges{
+	margin-top: 16px;
+	display: none;	
+	margin-top: 16px;
+	overflow: hidden;
+	height: 24px;
+	flex-wrap:wrap;
+		
+	.badge--big:not(:last-child){margin-right: 8px;}
+	.badge a{font-size: 14px;}
+	@media #{$md}{display: flex;}
+}
+
+.resume-card--map{
+	height: 141px;
+	width: 327px;
+	padding:16px;
+	//-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	background-color: $white;
+	.resume-card__aspirant-address,
+	.resume-card__badges,
+	.resume-card__job{display: none;}
+	.split-text--resume-card{
+		overflow: hidden;
+		flex-wrap: nowrap;
+		text-overflow: ellipsis;
+		@media #{$sm}{
+			overflow: visible;
+			flex-wrap: wrap;
+		}
+	}
+	@media #{$sm}{
+		height: auto;
+		width: auto;
+		padding-left:0px;
+		padding-right:16px;
+		//-box-shadow: none;
+		border-radius: 0px;
+		background-color: transparent;
+		.resume-card__aspirant-address,
+		.resume-card__badges{display: flex;}
+		.resume-card__job {display: block;}
+
+		@media #{$hd}{padding-right:32px;}
+
+	}
+}
+.resume-card__links{
+	padding-top: 16px;
+	display: flex;
+	align-items: center;
+	.resume-card__links-item{display: inline-block;}
+	.resume-card__links-item:not(:last-child){padding-right: 24px;}
+}

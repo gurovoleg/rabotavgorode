@@ -1,0 +1,93 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Фильтр (Все фильтры) - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Фильтр (Все фильтры)
+
+		.search-resume-filter__wrapper(style="background-color:#F2F2F2")
+			.search-resume-filter__block
+				.search-resume-filter__block-title Образование
+				.search-resume-filter__block-list
+					+checkbox('Высшее', 'small', 'employer')
+					+checkbox('Неоконченное высшее', 'small', 'employer')
+					+checkbox('Среднее специальное', 'small', 'employer')
+					+checkbox('Среднее', 'small', 'employer')
+
+			.search-resume-filter__block
+				.search-resume-filter__block-title Пол
+				.search-resume-filter__block-list
+					+checkbox('Мужской', 'small', 'employer')
+					+checkbox('Женский', 'small', 'employer')
+					
+			.search-resume-filter__block
+				.search-resume-filter__block-title Возраст
+				.search-resume-filter__block-inputs
+					+input-text('От', 'input-field--employer')
+					+input-text('До', 'input-field--employer')
+
+			.search-resume-filter__block
+				.search-resume-filter__block-title Знание языков
+				.search-resume-filter__block-list
+					+checkbox('Английский', 'small', 'employer')
+					+checkbox('Русский', 'small', 'employer')
+					+checkbox('Среднее специальное ', 'small', 'employer')
+					+checkbox('Среднее', 'small', 'employer')
+					+button('Еще', '#', 'btn--employer btn--padding-left')
+
+			.search-resume-filter__block
+				.search-resume-filter__block-title Водительские права
+				.search-resume-filter__block-list
+					+checkbox('A', 'small', 'employer')
+					+checkbox('B', 'small', 'employer')
+					+checkbox('C', 'small', 'employer')
+					+checkbox('D', 'small', 'employer')
+					+checkbox('E', 'small', 'employer')
+					+checkbox('Есть свой автомобиль', 'small', 'employer')
+		
+		pre.
+			Код:
+			
+			.search-resume-filter__wrapper
+				.search-resume-filter__block
+					.search-resume-filter__block-title Образование
+					.search-resume-filter__block-list
+						+checkbox('Высшее', 'small', 'employer')
+						+checkbox('Неоконченное высшее', 'small', 'employer')
+						+checkbox('Среднее специальное', 'small', 'employer')
+						+checkbox('Среднее', 'small', 'employer')
+
+				.search-resume-filter__block
+					.search-resume-filter__block-title Пол
+					.search-resume-filter__block-list
+						+checkbox('Мужской', 'small', 'employer')
+						+checkbox('Женский', 'small', 'employer'
+
+				.search-resume-filter__block
+					.search-resume-filter__block-title Возраст
+					.search-resume-filter__block-inputs
+						+input-text('От', 'input-field--employer')
+						+input-text('От', 'input-field--employer')
+
+				.search-resume-filter__block
+					.search-resume-filter__block-title Знание языков
+					.search-resume-filter__block-list
+						+checkbox('Английский', 'small', 'employer')
+						+checkbox('Русский', 'small', 'employer')
+						+checkbox('Среднее специальное ', 'small', 'employer')
+						+checkbox('Среднее', 'small', 'employer')
+						+button('Еще', '#', 'btn--employer btn--padding-left')
+
+				.search-resume-filter__block
+					.search-resume-filter__block-title Водительские права
+					.search-resume-filter__block-list
+						+checkbox('A', 'small', 'employer')
+						+checkbox('B', 'small', 'employer')
+						+checkbox('C', 'small', 'employer')
+						+checkbox('D', 'small', 'employer')
+						+checkbox('E', 'small', 'employer')
+						+checkbox('Есть свой автомобиль', 'small', 'employer')

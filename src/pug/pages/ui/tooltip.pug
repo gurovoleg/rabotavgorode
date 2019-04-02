@@ -1,0 +1,53 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Tooltip';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+				
+		.section-ui
+			.title-5 Tooltip bottom
+			
+			+tooltip('bottom', 'Чтобы оценить компанию в резюме должен быть указан опыт работы в ней .')
+				+rating-stars-block("50%", "full", "full", "half", "empty", "empty")
+			
+		pre.
+			+tooltip('bottom', 'Чтобы оценить компанию в резюме должен быть указан опыт работы в ней.')
+				+rating-stars-block("50%", "full", "full", "half", "empty", "empty")
+		.section-ui
+			.title-5 Tooltip top
+			
+			+tooltip('top', 'Чтобы оценить компанию в резюме должен быть указан опыт работы в ней. Чтобы оценить компанию в резюме должен быть указан опыт работы в ней')
+				+button('Зарегистрироваться', '#', 'btn-square-grey')
+		pre.
+			+tooltip('top', 'Чтобы оценить компанию в резюме должен быть указан опыт работы в ней.')
+				+button('Зарегистрироваться', '#', 'btn-square-grey')
+
+		.section-ui
+			.title-5 Tooltip right
+			
+			+tooltip('right', 'Чтобы оценить компанию в резюме должен быть указан опыт работы в ней.')
+				+vip-badge('#00AE00', '#FFF', '#', 'Gdeuslugi.ru')
+		pre.
+			+tooltip('right', 'Чтобы оценить компанию в резюме должен быть указан опыт работы в ней.')
+				+vip-badge('#00AE00', '#FFF', '#', 'Gdeuslugi.ru')
+
+		.section-ui
+			.title-5 Tooltip left
+			
+			+tooltip('left', 'Чтобы оценить компанию в резюме должен быть указан опыт работы в ней.')
+				include ../../sections/_contact-person.pug
+		pre.
+			+tooltip('right', 'Чтобы оценить компанию в резюме должен быть указан опыт работы в ней.')
+				include ../../sections/_contact-person.pug
+		br
+		.section-ui
+			.title-5 Миксин
+		pre.
+			mixin tooltip(tooltipModif, indentValue, tooltipText)
+				.tooltip
+					.tooltip-body(class=" tooltip-body--"+ tooltipModif style= tooltipModif": "+ indentValue ) #{tooltipText}
+					.tooltip-target
+						block

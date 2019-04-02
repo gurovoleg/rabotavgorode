@@ -1,0 +1,11 @@
+mixin job__company-heading(dataObject)
+	.company-heading-wrapper
+		.company-heading
+			.company-banner-logo
+				+brand-logo-bgstyle(dataObject.BrandImg)
+			.company-heading__info
+				.company-heading__title
+					span(itemprop="name") #{dataObject.CompanyTitle}
+					+rating-mark(100).company-banner__rate
+				+split-text-object(dataObject.splitTextObject)
+				a(href="").company-heading__site #{dataObject.CompanySite}

@@ -1,0 +1,8 @@
+mixin areas-companies__list(itemHeader, listTitle, dataObject)
+	.areas-companies__list-item
+		if itemHeader
+			a(href="#!").areas-companies__list-header= itemHeader
+			+vacancy-serp(dataObject.vacancyCount, dataObject.vacancyPay)
+		else
+			a(href="#!").areas-companies__list-title= listTitle
+			+vacancy-serp(dataObject.vacancyCount, dataObject.vacancyPay)

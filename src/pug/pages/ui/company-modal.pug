@@ -1,0 +1,51 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Company модальное окно';
+	- var pageClass = 'body--dashboard';
+	- var companyModal = {BrandImg: 'brand-logo-big.svg', companyName: 'Название компании', companySite: 'mysitename.ru', companyContactName: 'Константин Константинопольский', companyPosition: 'Старший рекрутер', companyPhone: '+7 987 123-45-67', companyStreet: 'Свердловская набережная, 44Д,', companyCity: 'Санкт-Петербург', companyMetroColor: 'red', companyMetro: ['Пл. Ленина', '3км'] };
+
+block content
+		.container.container--left
+		.title Company модальное окно
+		
+		.section-ui
+			+button('Показать контакты', '#window-modal').modal-window-button
+			+modalWindow()
+				+companyModal(companyModal)
+
+		p Код
+		pre.
+			+modalWindow()
+				+companyModal(companyModal)
+
+		p Миксин
+		pre.
+			mixin companyModal(dataObject)
+				.company-modal(itemscope itemtype="http://schema.org/Organization")
+					.comany-modal-info
+						.company-modal-logo
+							img(src="../../img/ic-svg/" + dataObject.companyLogo, alt="brand")
+						.company-modal-title(itemprop="name") \#{dataObject.companyName}
+						.company-modal-site \#{dataObject.companySite}
+					.comany-modal-contacts(itemscope itemtype="http://schema.org/Person")
+						.company-modal-name(itemprop="name") \#{dataObject.companyContactName}
+						.company-modal-position(itemprop="jobTitle") \#{dataObject.companyPosition}
+						.company-modal-phone(itemprop="telephone") \#{dataObject.companyPhone}
+						.company-modal-address-block(itemprop="address" itemscope itemtype="http://schema.org/PostalAddress")
+							.company-modal-street(itemprop="streetAddress") \#{dataObject.companyStreet}
+							.company-modal-city(itemprop="addressLocality") \#{dataObject.companyCity}
+							.company-modal-metro
+								+color-marker(dataObject.companyMetroColor)
+								+address-badge(dataObject.companyMetro)
+							.company-modal-map#companyMap
+
+		p Объект
+		pre.
+			- var companyModal = {companyLogo: 'brand-logo-big.svg', companyName: 'Название компании', companySite: 'mysitename.ru', companyContactName: 'Константин Константинопольский', companyPosition: 'Старший рекрутер', companyPhone: '+7 987 123-45-67', companyStreet: 'Свердловская набережная, 44Д,', companyCity: 'Санкт-Петербург', companyMetroColor: 'red', companyMetro: ['Пл. Ленина', '3км'] };
+
+
+
+
+
+

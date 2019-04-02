@@ -1,0 +1,27 @@
+meta(charset="UTF-8")
+//- meta(name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no")
+meta(name="viewport" content="width=375,initial-scale=1, shrink-to-fit=no")
+
+<!--[if IE]>
+meta(http-equiv='X-UA-Compatible', content="IE=edge")
+<![endif]-->
+meta(http-equiv='X-UA-Compatible', content="IE=edge")
+
+
+title #{title}
+meta(name="keywords" content="")
+meta(name="description" content="")
+
+- var time = (new Date()).getTime()
+
+link(rel="stylesheet", href="./libs/custom-grid/custom-grid-dynamic.css?timestamp=#{time}")
+link(rel="stylesheet", href="./libs/custom-grid/custom-grid-static.css?timestamp=#{time}")
+link(rel="stylesheet", href="./fonts/proximaNova.css?timestamp=#{time}")
+link(rel="stylesheet", href="./css/main.css?timestamp=#{time}")
+
+//- Яндекс карта
+script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+
+<!--[if lt IE 9]>
+script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+<![endif]-->

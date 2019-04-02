@@ -1,0 +1,116 @@
+mixin resume-description__header(dataObject, namePage, vip)
+	if namePage == 'resume'
+		if vip == 'vip'
+			.resume-header-block(style="background-image: url(../img/bg/"+dataObject.imgBg+");")
+				.resume-header-wrapper-bg
+					.container
+						.row
+							.col-12.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+								.resume-header__breadcrumb-split
+									.resume-header__breadcrumb
+										+breadcrumb(...dataObject.Items)
+									.resume-header__split-text-block
+										+split-text-object(dataObject.splitTextObject)
+							.col-sm-12.col-md-2
+								.resume-header__user-badge
+									if dataObject.userPhoto != ''
+										.resume-header__user-avatar(style="background-image: url(../img/avatar/"+dataObject.userPhoto+");")
+									else
+										+round-icon--user(dataObject.badgeLetter)
+
+
+							.col-12.offset-sm-1.col-sm-10.offset-md-0.col-md-10
+								.resume-header__title-block
+									.resume-header__title-block-info
+										.resume-header__title #{dataObject.title}
+										.resume-header__pay #{dataObject.pay}
+									.resume-header__button
+
+										+respond-block('resume modal-window-button', 'Сохранить', '#save-modal', 'Скачать', 'icon-download')(data-dropdownId="#resume__header-dropdown--vip")
+										+respond-block-dropdown('resume', 'menu1')(id="resume__header-dropdown--vip")
+
+								.resume-header__user-content
+									.resume-header__user-block
+										.resume-header__user-info #{dataObject.userInfo}
+										+vip-badge('#FDCE14','#000', '#', 'Pro').view-resume-header__user-badge
+										+split-text-object(dataObject.splitUserObject)
+										.resume-header__location
+											+color-marker('blue')
+											.resume-header__address #{dataObject.location}
+										+button('Показать контакты', '#contacts-modal', 'btn-link modal-window-button').resume-header__show-contacts
+										.resume-header__show-contacts-unsign
+											+button('Показать контакты', '#', 'btn-link').resume-header__show-contacts.control-disabled
+											span.resume-header__unsign-text
+												a(href="auth-autorization.html").resume-header__link Войдите на сайт чтобы посмотреть контакты
+
+
+		else
+			.resume-header-block
+				.container
+					.row.row--border-bottom
+						.col-12.offset-sm-1.col-sm-10.offset-md-0.col-md-12
+							.resume-header__breadcrumb-split
+								.resume-header__breadcrumb
+									+breadcrumb(...dataObject.Items)
+								.resume-header__split-text-block
+									+split-text-object(dataObject.splitTextObject)
+						.col-sm-12.col-md-2
+							.resume-header__user-badge
+								+round-icon--user(dataObject.badgeLetter)
+
+						.col-12.offset-sm-1.col-sm-10.offset-md-0.col-md-10
+							.resume-header__title-block
+								.resume-header__title-block-info
+									.resume-header__title #{dataObject.title}
+									.resume-header__pay #{dataObject.pay}
+								.resume-header__button
+
+									+respond-block('resume modal-window-button', 'Сохранить', '#save-modal', 'Скачать', 'icon-download')(data-dropdownId="#resume__header-dropdown")
+									+respond-block-dropdown('resume', 'menu1')(id="resume__header-dropdown")
+
+							.resume-header__user-content
+								.resume-header__user-block
+									.resume-header__user-info #{dataObject.userInfo}
+									+vip-badge('#FDCE14','#000', '#', 'Pro').view-resume-header__user-badge
+									+split-text-object(dataObject.splitUserObject)
+									.resume-header__location
+										+color-marker('blue')
+										.resume-header__address #{dataObject.location}
+									+button('Показать контакты', '#', 'btn-link').resume-header__show-contacts
+									.resume-header__show-contacts-unsign
+										+button('Показать контакты', '#', 'btn-link').resume-header__show-contacts.control-disabled
+										span.resume-header__unsign-text
+											a(href="auth-autorization.html").resume-header__link Войдите на сайт чтобы посмотреть контакты
+
+	else
+		.view-resume-header-block
+			.view-resume-header__split-text-block
+				+split-text-object(dataObject.splitTextObject)
+				a(href='#').reference-link.reference-link--mobile
+					span.reference-text.text-caption Открыть
+					+reference
+				a(href='#').reference-link.reference-link--desktop
+					span.reference-text.text-caption Открыть в новом окне
+					+reference
+			.view-resume-header__title-block
+				.view-resume-header__title-block-info
+					.view-resume-header__title #{dataObject.title}
+					.view-resume-header__pay #{dataObject.pay}
+				.view-resume-header__button
+
+
+					+respond-block('view-resume btn--bg-rounded modal-window-button', 'Сохранить', '#window-modal', '', '')(data-dropdownId="#job__header-dropdown")
+					+respond-block-dropdown('view-resume','')(id="job__header-dropdown")
+
+
+			.view-resume-header__user-content
+				.view-resume-header__user-block
+					.view-resume-header__user-info #{dataObject.userInfo}
+					+vip-badge('#FDCE14','#000', '#', 'Pro').view-resume-header__user-badge
+					+split-text-object(dataObject.splitUserObject)
+					.view-resume-header__location
+						+color-marker('blue')
+						.view-resume-header__address #{dataObject.location}
+					+button('Показать контакты', '#', 'btn-link').view-resume-header__show-contacts
+				.view-resume-header__user-badge
+					+round-icon--user(dataObject.badgeLetter)

@@ -1,0 +1,15 @@
+.light-title-block--areas{
+	padding-top: 16px;
+
+	@media #{$md}{padding-top: 40px;}
+	
+	.breadcrumb-list {
+		@media #{$md}{margin-bottom: 24px;}
+	}
+	.vacancy-serp{margin-bottom: 24px;}
+}
+
+.light-title-block__heading--areas{
+	padding-bottom: 0;
+	margin-bottom: 8px; 
+}

@@ -1,0 +1,32 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Отрасли';
+	- var pageClass = 'index-page';
+	//-ШАПКА
+	- var HeaderSR = {modif: 'full', personStatus: '', city:'Санкт-Петербург',  inputNumber: '2' };
+
+	- var menuLinks = [{itemAddClass: "", itemHref: "#", itemName: "Вакансии"},{itemAddClass: "nav-menu-item-active", itemHref: "#", itemName: "Отрасли"},{itemAddClass: "", itemHref: "#", itemName: "Компании"}, {itemAddClass: "", itemHref: "#", itemName: "Города"},{itemAddClass: "", itemHref: "#", itemName: "Метро"}];
+
+block content
+	
+	//- Header + Выпадающее меню из логотипа
+	+pageHeader(HeaderSR)
+	.bg-logo-menu-dropdown
+		include ../sections/_main-menu.pug
+		
+	//- Фильтр Вакансии (мобильный вариант)
+	include ../sections/filter-vacancies.pug
+
+	//- Фильтр Отрасли
+	+filter-sectors
+
+	//- Фильтр Расположение
+	include ../sections/_filter-vacancies-position.pug
+
+	//- Выбор города
+	include ../sections/_city-selection.pug
+
+	//- Основная секция
+	include ../sections/_search-results-tabs__areas.pug
+	

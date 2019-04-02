@@ -1,0 +1,11 @@
+mixin breadcrumb-item(text, position)
+	li.breadcrumb-item(itemprop = "itemListElement" itemscope itemtype = "http://schema.org/ListItem")&attributes(attributes)
+		a.breadcrumb-item-link(itemprop = "item" href= '#')
+			span(itemprop = "name") #{text}
+		meta(itemprop = "position" content = ""+ position)
+
+
+mixin breadcrumb(...items)
+	ol.breadcrumb-list(itemscope itemtype = "http://schema.org/BreadcrumbList" )&attributes(attributes)
+		each item, id in items
+			+breadcrumb-item(item, id+1)

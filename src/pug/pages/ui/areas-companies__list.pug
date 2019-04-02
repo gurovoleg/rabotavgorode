@@ -1,0 +1,42 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Отрасли/Компании. Блок. Список';
+	- var pageClass = 'body--dashboard';
+	- var listItems = {vacancyCount: '9522 Вакансии', vacancyPay: 'ЗП ~  45 350 Р'};
+	- var listItems2 = {vacancyCount: '8522 Вакансии', vacancyPay: 'ЗП ~  35 350 Р'};
+	- var listItems3 = {vacancyCount: '7522 Вакансии', vacancyPay: 'ЗП ~  25 350 Р'};
+
+
+block content
+	.container.container--left
+		
+		.section-ui
+			.title-5 Отрасли/Компании. Блок. Список
+			.areas-companies__list
+				+areas-companies__list('Автомобильный бизнес', '', listItems)
+				+areas-companies__list('', 'Компания 1', listItems2)
+				+areas-companies__list('','Компания 2', listItems3)
+				+areas-companies__list('','Компания 3', listItems)
+				a(href="#!").areas-companies__more Смотреть все
+		p Код
+		pre.
+			.areas-companies__list
+				+areas-companies__list('Компания Х', listItems)
+				+areas-companies__list('Компания 1', listItems2)
+				+areas-companies__list('Компания 2', listItems3)
+				+areas-companies__list('Компания 3', listItems)
+				a(href="").areas-companies__more Смотреть все
+		p Миксин
+		pre.
+			mixin areas-companies__list(itemHeader, listTitle, dataObject)
+				.areas-companies__list-item
+					if itemHeader
+						.areas-companies__list-header= itemHeader
+						+vacancy-serp(dataObject.vacancyCount, dataObject.vacancyPay)
+					else
+						.areas-companies__list-title= listTitle
+						+vacancy-serp(dataObject.vacancyCount, dataObject.vacancyPay)
+		p Объект
+		pre.
+			- var listItems = {vacancyCount: '9522 Вакансии', vacancyPay: 'ЗП ~  45 350 Р'};

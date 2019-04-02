@@ -1,0 +1,11 @@
+mixin education-card(cardObject)
+	.education-card&attributes(attributes)
+		.row.row--margin
+			.col-md-3
+				.education-card__period #{cardObject.period}
+			.col-md-9
+				+split-text-object(cardObject.titleSplit) 
+				+split-text-object(cardObject.educationInfo)
+				.education-card__period #{cardObject.period}
+				.education-card__description.paragrafe #{cardObject.text}
+				

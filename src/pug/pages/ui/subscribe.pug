@@ -1,0 +1,71 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Подписка';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+	.title Подписка
+
+	p 1. Вариант стандартный
+	+subscribe('Подпишитесь на вакансии по запросу «дизайнер»')
+	pre.
+		+subscribe('Подпишитесь на вакансии по запросу «дизайнер»')
+
+	br
+	p 2. Вариант с уменьшенной кнопкой для GRID
+	div(style="height:auto;")
+		+subscribe('Подпишитесь на вакансии по запросу «дизайнер»','grid')
+	pre.
+		+subscribe('Подпишитесь на вакансии по запросу «дизайнер»','grid')
+
+
+	p 3. Вариант пользователь залогинен
+	+subscribe('Подпишитесь на вакансии по запросу «дизайнер»', 'user')
+	pre.
+		+subscribe('Подпишитесь на вакансии по запросу «дизайнер»', 'user')
+
+	br
+	p 4. Вариант "Подписка выполнена" / Completed
+	+subscribe('Подпишитесь на вакансии по запросу «дизайнер»','completed')
+	pre.
+		+subscribe('Подпишитесь на вакансии по запросу «дизайнер»','completed')
+
+	br
+	p Миксин:
+	pre.
+		mixin subscribe(title, parameter)
+			
+			//- Подписка выполнена
+			if parameter == 'completed'
+				.subscribe-completed
+					+done
+					.subscribe-title.subscribe-title--completed #{title}
+			
+			//- Подписка для залогиненного пользователя
+			else if parameter == 'user'
+				form.subscribe.subscribe--user
+					.subscribe-title #{title}
+					+button('Подписаться', '#', 'btn-semi-rounded-blue')
+			
+			//- Подписка для карточки GRID
+			else if parameter == 'grid'
+				form.subscribe&attributes(attributes)
+					.subscribe-title #{title}
+					.subscribe-input.subscribe-input--grid
+						.input-wrapper
+							+inputField('input-email', 'text', 'input-email', 'email', 'Email', 'Неверный формат email')
+						.subscribe-button.subscribe-button--grid
+							+button('', '#', 'btn-semi-rounded-blue btn--send', 'send')
+			
+			//- Подписка стандартная
+			else
+				form.subscribe&attributes(attributes)
+					.subscribe-title #{title}
+					.subscribe-input
+						.input-wrapper
+							+inputField('input-email', 'text', 'input-email', 'email', 'Email', 'Неверный формат email')
+						.subscribe-button
+							+button('Подписаться', '#', 'btn-semi-rounded-blue')
+

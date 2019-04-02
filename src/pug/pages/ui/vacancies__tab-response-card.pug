@@ -1,0 +1,43 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Таб отклики';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Таб отклики
+		.section-ui(style="border: 1px dashed black;")
+			+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'new')
+			+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'accept')
+			+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'decline')
+
+		p Код
+		pre.
+			+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'new')
+			+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'accept')
+			+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'decline')
+		p Миксин
+		pre.
+			mixin response-card(imgName, name, job, city, date, status)
+				.response-block
+					.response__avatar
+						img(src="../img/avatar/"+imgName, alt= imgName)
+					.response__info
+						.response__name= name
+						.response__job= job
+						.response__city= city
+
+					.response__date= date
+					.response__status
+						if status == 'new'
+							span.response__status--new Не просмотрен
+						if status == 'accept'
+							+color-marker('green')
+							span.response__status--accept Интервью
+						if status == 'decline'
+							+color-marker('red')
+							span.response__status--decline Не подходит
+		p.
+			status имеет 3 варианта: 'new', 'accept', 'decline'

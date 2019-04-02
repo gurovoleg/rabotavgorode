@@ -1,0 +1,329 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Иконки';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Иконки
+
+		.section-ui
+			p Логотип
+			+logo-icon
+		pre.
+			+logo-icon
+
+		.section-ui
+			p Геолокация с кастомным размером
+			+icon-location-custom-size(style='width:24px;height: 24px;')
+			+icon-location-custom-size(style='width:30px;height: 30px;')
+			+icon-location-custom-size(style='width:40px;height: 40px;')
+			p.
+				Стили заданы инлайново для демонстрации. Мы можем задать размеры для элемента i по умолчанию так
+				как это и было, но если мы хотим увиличить иконку мы должны просто увиличить размеры i
+		pre.
+			+icon-location-custom-size(style='width:24px;height: 24px;')
+			+icon-location-custom-size(style='width:30px;height: 30px;')
+			+icon-location-custom-size(style='width:40px;height: 40px;')
+		.section-ui
+			p Геолокация
+			+icon-location
+		pre.
+			+icon-location
+
+		.section-ui
+			p Вверх
+			+arrow
+		pre.
+			+arrow
+
+		.section-ui
+			p Вниз
+
+			+arrow(class="arrow--down")
+		pre.
+			+arrow(class="arrow--down")
+
+		.section-ui
+			p Вправо
+			+arrow(class="arrow--right")
+			+arrow--custom(style='width:40px;height: 40px;').arrow--right
+		pre.
+			+arrow(class="arrow--right")
+			+arrow--custom(style='width:40px;height: 40px;').arrow--right
+		.section-ui
+			p Влево
+			+arrow(class="arrow--left")
+
+		pre.
+			+arrow(class="arrow--left")
+
+		.section-ui
+			p Отправить
+			.sendbg
+				+send
+		pre.
+			+send
+		.section-ui
+			p Избранное
+			+icon-favorite
+		pre.
+			+icon-favorite
+
+		.section-ui
+			p Расположение
+			+icon-place
+		pre.
+			+icon-place
+
+		.section-ui
+			p Фильтр
+			+icon-filter
+		pre.
+			+icon-filter
+
+		.section-ui
+			p Лупа
+			+icon-search
+		pre.
+			+icon-search
+
+		.section-ui
+			p Колокольчик
+
+			+icon-notify
+		pre.
+			+icon-notify
+
+		.section-ui
+			p Колокольчик оповещение
+
+			+notify
+		pre.
+			+notify
+
+		.section-ui
+			p Принтер
+			+icon-printer
+		pre.
+			+icon-printer
+
+		.section-ui
+			p Загрузить
+			+icon-download
+		pre.
+			+icon-download
+
+		.section-ui
+			p Поделиться
+			+icon-share
+		pre.
+			+icon-share
+
+		.section-ui
+			p Пожаловаться
+			+icon-complaint
+		pre.
+			+icon-complaint
+
+		.section-ui
+			p Звездочка
+
+			+icon-star
+			
+		pre.
+			+icon-star
+		.section-ui
+			p Звездочка с заданными значениями
+			+icon-star-custom(style='width:40px;height: 40px;')
+		pre.
+			+icon-star-custom(style='width:40px;height: 40px;')
+
+		.section-ui
+			p Звезда для рейтинга
+			+rating-star('#1878FF', '#CBCBCB')
+		pre.
+			+rating-star('#1878FF', '#CBCBCB')
+
+		.section-ui
+			p Закрыть
+
+			+icon-close
+		pre.
+			+icon-close
+
+		.section-ui
+			p Like - палец вверх
+
+			+icon-like
+		pre.
+			+icon-like
+
+		.section-ui
+			p Dislike - палец вниз
+
+			+icon-dislike
+		pre.
+			+icon-dislike
+
+		.section-ui
+			p Метро
+			+icon-metro
+		pre.
+			+icon-metro
+
+		.section-ui
+			p Фотоаппарат
+			+photo-camera
+		pre.
+			+photo-camera
+
+		.section-ui
+			p Gdeuslugi
+			+gdeuslugi('gdeuslugi.ru')
+		pre.
+			+gdeuslugi('gdeuslugi.ru')
+
+		.section-ui
+			p ВК
+			+vk-grey('#999999')
+		pre.
+			+vk-grey('#999999')
+
+		.section-ui
+			p Fb
+			+fb-grey('#999999')
+		pre.
+			+fb-grey('#999999')
+
+		.section-ui
+			p Инстаграмм
+			+instgr('#999999')
+		pre.
+			+instgr('#999999')
+
+		.section-ui
+			p Твиттер
+			+tweet('#999999')
+		pre.
+			+tweet('#999999')
+
+		.section-ui
+			p Переход по внутренней ссылке
+			+reference
+		pre.
+			+reference
+
+		.section-ui
+			p Done/Completed
+			+done
+		pre.
+			+done
+		.section-ui
+			p Предложить
+			+icon-label
+		pre.
+			+icon-label
+		.section-ui
+			p Найти похожие 2
+			+icon-looks-two
+		pre.
+			+icon-looks-two
+		.section-ui
+			+ic_add(style='width:24px;height: 24px;')
+		pre.
+			+ic_add(style='width:24px;height: 24px;')
+		.section-ui
+			+ic_pro
+		pre.
+			+ic_pro
+		.section-ui
+			+ic_mask(style='width:32px;height: 14px;')
+		pre.
+			+ic_mask(style='width:32px;height: 14px;')
+
+		.section-ui
+			+ic_free
+		pre.
+			+ic_free(style='width:34px;height: 22px;')
+
+		.section-ui(style="background-color: #f3f3f3")
+			+close_round(style='width:48px;height: 48px;')
+		pre.
+			+close_round(style='width:48px;height: 48px;')
+
+		.section-ui(style="background-color: #f3f3f3")
+			+left-round(style='width:48px;height: 48px;')
+		pre.
+			+left_round(style='width:48px;height: 48px;')
+
+		.section-ui(style="background-color: #f3f3f3")
+			+right_round(style='width:48px;height: 48px;')
+		pre.
+			+right_round(style='width:48px;height: 48px;')
+
+		.section-ui
+			+ic_flame(style='width:24px;height: 24px;')
+			pre.
+				+ic_flame(style='width:24px;height: 24px;')
+		.section-ui
+			+ic_diagram(style='width:24px;height: 24px;')
+			pre.
+				+ic_diagram(style='width:24px;height: 24px;')
+
+		.section-ui
+			+ic_copy(style='width:24px;height: 24px;')
+			pre.
+				+ic_copy(style='width:24px;height: 24px;')
+		.section-ui
+			+ic-refresh(style='width:24px; height:24px;' )
+			pre.
+				+ic_refresh(style='width:24px;height: 24px;')
+
+		.section-ui
+			+ic_service(style='width:16px; height:16px;')
+			pre.
+				+ic_service(style="width:16px; height:16px;")
+		.section-ui
+
+			+ic_cash(style='width:16px; height:16px;')
+		pre.
+			+ic_cash(style="width:16px; height:16px;")
+
+		.section-ui
+			+ic_calendar(style='width:16px; height:16px;')
+			pre.
+				+ic_calendar(style='width:16px; height:16px;')
+		.section-ui
+			+ic_worker(style="width:16px; height:16px;")
+			pre.
+				+ic_worker(style="width:16px; height:16px;")
+		.section-ui
+			+ic_check-list(style="width:16px; height:16px;")
+			pre.
+				+ic_check-list(style="width:16px; height:16px;")
+		.section-ui
+			+ic_dashboard(style="width:16px; height:16px;")
+			pre.
+				+ic_dashboard(style="width:16px; height:16px;")
+		.section-ui
+			+ic_settings(style='width:24px; height:24px;')
+			pre.
+				+ic_settings(style='width:24px; height:24px;')
+		.section-ui
+			+ic_respond(style='width:24px; height:24px;')
+			pre.
+				+ic_respond(style='width:24px; height:24px;')
+		.section-ui
+			+icon-notify-custom(style='width:17px; height:20px;')
+			pre.
+				+icon-notify-custom(style='width:17px; height:20px;')
+		.section-ui
+			+mailing(style='width:18px; height:21px;')
+			pre.
+				+mailing(style='width:18px; height:21px;')
+		.section-ui
+			+logout(style='width:24px; height:24px;')
+			pre.
+				+logout(style='width:24px; height:24px;')

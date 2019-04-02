@@ -1,0 +1,27 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Регистрация через соцсети -середина';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+	.section-ui
+		.title-5 Регистрация через соцсети -середина
+		.registration-block.registration-block--phone
+			.registration-block__number +7 981 850-22-47
+			a(href="#").registration-block__number-edite.text-body-link Изменить номер телефона
+			.registration-block__notify.text-body-grey Мы отправили Вам СМС-сообщение с кодом подтверждения 
+			.input-wrapper
+				+inputField('input-checkfield', 'text', 'input-checkfield', 'checkField', 'Введите текст СМС', 'Вы ничего не ввели')
+					+button('Подтвердить', '#', 'btn-semi-rounded-blue').registration-block__btn
+
+		.registration-block__footer
+			.text-body-grey.social-block__top Не получили CMC?
+			.text-body-grey.mb-20 Вы сможете запросить новое СМС-сообщение через
+				
+			.registration-block__time 29:25
+			.text-body-grey Или зарегистрироваться через #[a(href="#").text-body-link Email]
+	pre.
+		include ../sections/_recovery-password-reset-phone.pug

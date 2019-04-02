@@ -1,0 +1,16 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Портфолио';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container
+		.section-ui.theme--employer
+			.title Портфолио
+		.row.col-md-8
+			include ../../sections/_resume__portfolio-slider.pug
+			
+		pre.
+			
+			include ../../sections/_resume__portfolio-slider.pug

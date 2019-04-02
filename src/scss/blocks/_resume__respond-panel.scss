@@ -1,0 +1,76 @@
+.responding-panel{
+	display: none;
+	@media #{$md}{
+		//-margin-top: 40px;
+		display: block;
+		background: $white;		
+		box-shadow: 0px 2px 6px $silver;
+		border-radius: 8px;
+		padding: 0px 32px 40px;
+	}
+	textarea{
+		padding-bottom: 32px;
+	}
+}
+.page-section.page-section--no-border-bottom{
+	border-bottom: none;
+	padding-bottom: 0;
+}
+.responding-panel-block{
+	border-bottom: 1px solid $silver;
+	padding-bottom: 0;
+	padding-top: 40px;
+	//margin-bottom: 17px;
+}
+.section-title.section-title--small-mb{
+	padding-bottom: 24px;
+}
+.responding-panel__item{
+	padding-bottom: 17px;
+	padding-top: 17px;
+}
+.responding-panel__item-child{
+	padding-bottom: 24px;
+	&:last-child{padding-bottom: 7px;}
+}
+.vacance-card--short{
+	border-bottom: 1px solid $silver;
+}
+a.vacance-card--short__title{
+	font-size: 18px;
+	color: $basicText;
+	font-weight: 700;
+	padding-bottom: 4px;
+}
+.vacance-card--short__salary{
+	font-size: 18px;
+	padding-bottom: 4px;
+}
+.split-text--responding-card{
+	.split-text__item {
+		font-size: 16px;
+		&:after{top:10px;}
+	}
+}
+.action-type{
+	display: flex;
+	align-items: center;
+}
+.action-date-date__value{padding-right: 8px;}
+
+.action-type__name{
+	line-height: normal;
+	//-margin-right: 16px;
+	padding-right: 16px;
+}
+
+.btn--responding-panel{
+	min-width: 245px;
+	margin-bottom: 32px;
+}
+
+.company-review--responding-panel{
+	border-top: 1px solid $silver;
+	padding-top: 17px;
+	padding-bottom: 17px;
+}

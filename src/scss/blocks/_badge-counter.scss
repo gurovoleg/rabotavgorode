@@ -1,0 +1,43 @@
+.badge-counter-item{
+  display: inline-block;
+  max-width: 100%;  
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid $lightGrey;
+  border-radius: 16px;
+  background-color: $white;  
+  cursor:pointer;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+
+
+.badge-counter-item__content{
+  
+  display: flex;
+  align-items: center;
+ 
+    .badge-counter-item__text {
+      color: $black;
+      font-size: 16px;
+      line-height: 19px;
+      margin-right: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+  }
+
+    .badge-counter-item__number{ color: $greyText;}
+}
+
+
+
+
+
+//-.badge-counter-item:hover{text-decoration: none;}
+.badge-counter-item:hover .badge-counter-item__text { color: $linkHover;}
+.badge-counter-item:active .badge-counter-item__text { color: $linkPressed;}
+.badge-counter-item:active {border-color:$linkPressed; }

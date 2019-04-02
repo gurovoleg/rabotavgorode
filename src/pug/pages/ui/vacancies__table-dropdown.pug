@@ -1,0 +1,17 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Выпадающее меню в таблице';
+	- var pageClass = 'body--dashboard';
+
+
+block content
+	.container.container--left
+				
+		.section-ui
+			.title-5 Выпадающее меню в таблице
+			.drop-wrapper(style=" width: 400px; height: 400px;")
+				include ../../sections/_vacancies__table-dropdown.pug
+		pre.
+			include ../../sections/_vacancies__table-dropdown.pug
+				

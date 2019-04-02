@@ -1,0 +1,15 @@
+.input-wrapper--radio{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.consept-text{
+	font-size: 14px;
+	line-height: 16px;
+	text-align: left;
+	color:$black;
+	opacity:0.9;
+}
+.consept-text_link:hover{
+	text-decoration: none;
+}

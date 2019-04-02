@@ -1,0 +1,46 @@
+.resume-skills__title {
+	font-size: 24px;
+	color: basicText;
+	font-weight: 700;
+	padding-bottom: 24px;
+}
+.resume-skills-content__item {
+	padding-bottom: 26px;
+	display: flex;
+	justify-content: space-between;
+}
+.resume-skills-content__name {
+	font-size: 18px;
+	text-overflow: ellipsis;
+	overflow:hidden;
+	white-space: nowrap;
+	// max-width: 45%;
+}
+.resume-skills-content__rating {
+	.rating-stars__item:not(:last-child) {
+		padding-right: 8px;
+	}
+}
+.resume-skills-content__badge-skills  {
+	padding-bottom: 24px;
+	.badge {
+		height: 32px;
+		display: inline-flex;
+		align-items: center;
+		margin-bottom: 8px;
+		&:not(:last-child) {
+			margin-right: 8px;	
+		}
+	}
+}
+// .resume-skills__btn-show {
+// 	padding-bottom: 24px;
+// }
+.resume-skills-content__badge {
+	display: none;
+}
+
+// для UI-kit
+.resume-skills-uiKit {
+	width: 411px;
+}

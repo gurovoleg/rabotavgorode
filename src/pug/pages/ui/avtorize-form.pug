@@ -1,0 +1,26 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Форма авторизации';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Форма авторизации
+		
+		.section-ui
+			
+			.form-block
+				form(action="" method="")
+					.input-wrapper.input-wrapper--avtorize
+						label.input-label(for="input-email")
+							input.input-field(type="text" id="input-email" data-type="email" placeholder="Электронная почта или номер телефона")
+							span.input-error Не найдено аккаунтов связанных с указанной электронной почтой
+					.input-wrapper
+						label.input-label(for="input-pass")
+							input.input-field(type="password" id="input-pass" data-type="pass" placeholder="Пароль")
+							span.input-error Пароль введен неверно
+							+icon-eye('')
+					.input-wrapper.input-wrapper-btn
+						+button('Войти', '#', 'btn-semi-rounded-blue')
+						a(href="#").text-body-link Забыли пароль?

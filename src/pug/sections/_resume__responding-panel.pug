@@ -1,0 +1,36 @@
+- var reviewItem_3 = {display: '',avatarLetter: 'ВИ', topText: 'Константин', bottomText: '21 сентября 2018' ,ratingType: 'dislike' , likeCount:'345', dislikeCount:'652', text: 'Отличный кандидат, в жизни лучше не встречал, рекомендую звать на интервью.'};
+
+.page-section.page-section--no-border-bottom
+	.responding-panel
+		.responding-panel-block
+
+			.section-title.section-title--small-mb Отклик на вакансии
+			+vacance-card--short({title:'Product designer',salary:'123 000', splitText:{modif:'responding-card', items:['Веб Инвест','Информационные технологии']}})(class="responding-panel__item")
+
+			+vacance-card--short({title:'Product designer',salary:'123 000', splitText:{modif:'responding-card', items:['Веб Инвест','Информационные технологии']}})(class="responding-panel__item")
+
+			
+		.responding-panel-block
+
+			.section-title.section-title--small-mb История
+			.responding-panel__item
+				+responding-panel__item-child({date:'19.10.18', time:'20:37',type:'Отправлено сообщение',btn:{link:'#',text:'Показать',modify:'action-type'}, textClass:'text-body-grey', author:'Вы'})
+
+				+responding-panel__item-child({date:'19.10.18', time:'20:37',type:'Тестовое задание', textClass:'text-body-grey', author:'Йохансон Олофсон'})
+
+				+responding-panel__item-child({date:'19.10.18', time:'20:37',type:'Отклик', textClass:'text-body-grey', author:'Йохансон Олофсон'})
+
+		.responding-panel-block
+			.section-title Комментарий
+			.field-group
+				+textarea('Запишите какими качествами вас привлек этот кандидат, чтобы легче вспомнить его потом. ', 'text')
+
+			+button('Написать комментарий', '#', 'btn-semi-rounded-blue btn--responding-panel')
+			+company-review(reviewItem_3)(class="company-review--responding-panel")
+
+		.responding-panel-block
+			.section-title.section-title--small-mb Просмотры
+			.responding-panel__item
+				+responding-panel__item-child({date:'19.10.18', time:'20:37', textClass:'text-body', author:'Йохансон Олофсон'})
+
+				+responding-panel__item-child({date:'19.10.18', time:'20:37', textClass:'text-body', author:'Йохансон Олофсон'})

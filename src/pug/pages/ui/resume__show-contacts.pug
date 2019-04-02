@@ -1,0 +1,35 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Показать контакты';
+	- var pageClass = 'body--dashboard theme--employer';
+
+block content
+	.container.container--left
+		.title Показать контакты
+		.section-ui
+			+showContacts('sign')
+		p Код
+			pre.
+				+showContacts('sign')
+		.section-ui
+			+showContacts('unsign')
+		p Код
+			pre.
+				+showContacts('unsign')
+
+		p Миксин
+		pre.
+			mixin showContacts(status)
+				if status == 'sign'
+					.show-contacts.page-section
+						.show-contacts--sign
+							+button('Показать контакты', '#', 'btn-semi-rounded-blue')
+							.show-contacts__suggest-vacancy
+								+icon-label.show-contacts__label
+								span.show-contacts__text Предложить новость
+				if status == 'unsign'
+					.show-contacts.page-section
+						.show-contacts--unsign
+							+button('Показать контакты', '#', 'btn-semi-rounded-blue').control-disabled.show-contacts__btn
+							span.show-contacts__text Войдите на сайт чтобы посмотреть контакты

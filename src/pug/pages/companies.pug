@@ -1,0 +1,30 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Компании';
+	- var pageClass = 'index-page';
+	//-ШАПКА
+	- var HeaderSR_companies = {modif: 'full', personStatus: '', city:'Санкт-Петербург', loggedPerson:{letters: 'LB', image: ''},  inputNumber: '2' };
+	- var menuLinks = [{itemAddClass: "", itemHref: "#", itemName: "Вакансии"},{itemAddClass: "", itemHref: "#", itemName: "Отрасли"},{itemAddClass: "nav-menu-item-active", itemHref: "#", itemName: "Компании"}, {itemAddClass: "", itemHref: "#", itemName: "Города"},{itemAddClass: "", itemHref: "#", itemName: "Метро"}];
+
+block content
+	
+	//- Header + Выпадающее меню из логотипа
+	+pageHeader(HeaderSR_companies)
+	.bg-logo-menu-dropdown
+		include ../sections/_main-menu.pug
+		
+	//- Фильтр Вакансии (мобильный вариант)
+	include ../sections/filter-vacancies.pug
+
+	//- Фильтр Отрасли
+	+filter-sectors
+
+	//- Фильтр Расположение
+	include ../sections/_filter-vacancies-position.pug
+
+	//- Выбор города
+	include ../sections/_city-selection.pug
+	
+	//- Основная секция
+	include ../sections/_search-results-tabs__companies.pug

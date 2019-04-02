@@ -1,0 +1,41 @@
+//- Vacance description
+-var TabsToggle = [{itemAddClass: "nav-menu-item-active", itemHref: "#",dataAttr: 'one', itemName: "Описание"},{itemAddClass: "", itemHref: "#",dataAttr: 'two', itemName: "Компания"}, {itemAddClass: "", itemHref: "#",dataAttr: 'three', itemName: "Похожие вакансии"}];
+- var badgesBlock = {title: 'Вакансии для дизайнеров с навыками',Items:[{text:'Пиво',modif: 'skill'}, {text:'Отдых',modif: 'skill'}, {text:'Баня',modif: 'skill'}, {text:'Шашлык',modif: 'skill'}, {text:'Пиво',modif: 'skill'}, {text:'Отдых',modif: 'skill'}, {text:'Баня',modif: 'skill'}, {text:'Шашлык',modif: 'skill'}, {text:'Пиво',modif: 'skill'}, {text:'Отдых',modif: 'skill'}, {text:'Сериалы',modif: 'skill'}, {text:'Отдых',modif: 'skill'}], btnText:'Смотреть все', btnClass:'btn--badges-skill'};
+ 
+//-.description-block
+.vacance-description
+	//-верхний колонтитул
+	.vacance-description__head--top.d-flex
+		+split-text('vacance-description-head','123 Просмотра (+45)', '21 августа')
+		a(href='#').reference-link
+			span.reference-text.text-caption Открыть в новом окне
+			+reference
+	//-блок с ценой и синей кнопкой		
+	.vacance-description__fixed-block.d-flex
+		.vacance-description__title-block
+			.vacance-description__title UI / UX дизайнер мобильных приложений для iOS/Android
+			.vacance-description__paycheck 150 000 Р
+		//-блок с синей кнопкой	
+		.vacance-description__respond-block
+			+respond-block('title-sticky', 'Откликнуться', '#!', '', '')(data-dropdownId="#search-result__dropdown")
+			+respond-block-dropdown('title-sticky')(id="search-result__dropdown")
+	//-цепочка запроса
+	+vacancy-serp('Полная занятость', 'Эксперт').vacancy-serp--vacance-description
+		
+	//-tabs
+	.vacance-tabs
+		+nav-menu(TabsToggle)(id="vacance-description-nav-menu" class="nav-menu--search-result-fix")
+		
+		//- Контент табов
+		.vacance-tabs__content
+	
+			.vacance-tabs__content-item.vacance-tabs__content-item--active(data-name='one')
+				include ../sections/_job__description-block.pug
+
+			.vacance-tabs__content-item(data-name='two')
+				include ../sections/_job__about-company.pug
+		
+			.vacance-tabs__content-item(data-name='three')
+				include ../sections/_job__section-vacancy-cards.pug
+				+badges-block(badgesBlock).badges-block--skill
+		

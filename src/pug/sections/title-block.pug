@@ -1,0 +1,25 @@
+//- Блок под шапкой
+.title-block
+	+breadcrumb('Главная', 'Работа')
+	h1.heading-1.heading-1--title-block Вакансии в Санкт-Петербург
+
+	.title-block__vacancy-serp#scroll-break-point
+		+vacancy-serp('9522 Вакансии', 'З/п ~ 45 350 р')
+
+	.title-block__tag-filters
+		+tag-filter('Информационные технологии', 'Интернет', 'Связь')
+		+tag-filter('дизайнер')
+		+button('Очистить', '#','btn-link')
+
+	.title-block__dropdown-menu
+		
+		.title-block__dropdown-menu-right
+			+dropdown("", "Расположение", "autocomplete")
+			+dropdown("", "Отрасли", "empty")(class="filter-vacancies-sectors-open")
+			+dropdown("", "Тип занятости", "checkbox", "small", "Полная", "Неполная", "Вахтовая", "Сменная", "Удаленная")
+			+dropdown("", "Опыт работы", "checkbox", "small", "Без опыта", "Начальный", "Специалист","Эксперт")
+
+		.title-block__dropdown-menu-left
+			+dropdown("Сортировка", "по з/п", "link", "", "по з/п", "по соответствию", "по дате", "по удаленности")
+			+dropdown("Вид", "список", "view")
+

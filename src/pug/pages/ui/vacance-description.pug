@@ -1,0 +1,15 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Полное описание вакансии';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Полное описание вакансии
+		.section-ui
+			
+			include ../../sections/_vacance-description.pug
+		pre.
+			include ../../sections/_vacance-description.pug

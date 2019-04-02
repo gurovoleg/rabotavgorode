@@ -1,0 +1,33 @@
+.registration-block{
+	text-align: center;	
+}
+.round-icon--registration{
+	width: 72px;
+	height: 72px;
+	font-size: 24px;
+	line-height: 55px;
+	letter-spacing: 1px;
+	cursor: default;
+}
+.heading-2--registration{color: $black}
+.registration-block .round-icon--user{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 16px;
+	&:hover{
+		color: $white;
+		text-decoration: none;
+	}
+}
+.heading-2--registration{
+	margin-bottom: 32px;
+}
+.input-wrapper--radio-left{
+	margin-top: 24px;
+	margin-bottom: 32px;
+	@media #{$sm}{
+		justify-content: start;
+	}
+	& .radio-button__label:first-child{margin-right: 40px;}
+}

@@ -1,0 +1,17 @@
+.rating-mark {
+	display: flex;
+	align-items: center;
+}
+
+.rating-mark__value {
+	font-size: 16px;
+	line-height: 1;
+	color:$blue;
+	margin-left: 5px;
+	padding-top: 2px;
+}
+
+.rating-mark__value--gray { 
+	color: $gray; 
+	margin-left: 2px;
+}

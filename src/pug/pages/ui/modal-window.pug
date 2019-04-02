@@ -1,0 +1,35 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Модально окно';
+	- var pageClass = 'body--dashboard';
+
+
+block content
+	.container.container--left
+	.title Модальное окно
+	.section-ui
+		+button('Показать контакты', '#modal-window').modal-window-button
+		+modalWindow()#window-modal
+			span Здесь будет находится контент для модального окна.
+		p У кнопки должен быть обязательно указан класс modal-window-button и стоять якорь на модальное окно.
+		p Код
+		pre.
+			+modalWindow()#window-modal
+				p Здесь будет находится контент для модального окна.
+		p Миксин.
+		pre.
+			mixin modalWindow()
+				.bg-modal-window&attributes(attributes)
+
+					.bg-header(class=" bg-header--"+ modif)
+						.header
+							//- Шапка поиск + регистрация + инфо
+							.header-main
+								
+								+logo-icon
+								+arrow(class="arrow--down")
+
+					.modal-window
+						block
+						+icon-close.modal-window-close#modal-window-close

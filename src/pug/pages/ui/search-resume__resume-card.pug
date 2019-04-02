@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточки резюме';
+	- var pageClass = 'body--dashboard';
+	- var resumeCard = {cardHeader: {title: 'Менеджер по продажам недвижимости', salary: '150 000 Р', published: '2д'}, aspirantInfo:{name:'Константин', age:'33 года'}, aspirantAddress:{metroLine: 'blueMarker', metroStation: 'Купчино', cityName: 'Санкт-Петербург' }, personLetters:'LB', vipObject:{color:'yellow', title:'Pro'}, splitTextObject:{modif: "resume-card", items: ["7 лет опыта","Эксперт","Неполное высшее"]}, badgeObjects:{badgeType:"big", items:['Премиум сегмент','Переговоры','Проведение корпоративов','Открываю пиво глазом']}, jobElmts:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, jobPlaceItems:{it1:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, it2:{title:'Руководитель отдела закупки сырья ', splitElemts: {modif:'job-info', items:['Лен Строй','3 года 9 месяцев']}}}};
+	
+	
+
+block content
+	.container.container--left
+		.title-1 Карточки резюме
+		.section-ui
+			.title-5 List display
+			+resume-card(resumeCard, 'list')
+			pre +resume-card(resumeCard, 'list')
+		.section-ui
+			.title-5 Grid display
+			+resume-card(resumeCard, 'grid')
+			pre +resume-card(resumeCard, 'grid')
+		.section-ui
+			.title-5 Map display
+			+resume-card(resumeCard, 'map')
+			pre +resume-card(resumeCard, 'map')
+			

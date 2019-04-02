@@ -1,0 +1,29 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Рейтинг - оценка';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		
+		.section-ui
+			.title Рейтинг - оценка
+
+			+rating-mark(33, 100)
+			+rating-mark(100)
+		pre.
+			+rating-mark(33, 100)
+			+rating-mark(100)
+
+			Миксин:
+
+			mixin rating-mark(value1, value2)
+				.rating-mark(itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating")&attributes(attributes)
+					+icon-star
+					.rating-mark__value(itemprop="ratingValue") \#{value1}
+					
+					if value2
+						.rating-mark__value.rating-mark__value--gray /\#{value2}
+
+			

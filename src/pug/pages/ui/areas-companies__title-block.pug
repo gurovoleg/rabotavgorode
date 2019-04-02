@@ -1,0 +1,17 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Areas/companies - блок под шапкой.';
+	- var pageClass = 'body--dashboard';
+	-var areasTitleBlock = {modif: 'areas',breadcrumb:['Главная', 'Отрасли'], title: 'Вакансии по отраслям в Санкт-Петербурге', serpItems: ['9522 Ваканси', 'З/п ~ 45 350 Р'], text: ' Для того, что бы пользователь увидел список вакансий по отрасли, ему нужно сначала выбрать свою отрасль из списка и клике по отрасли пользователь переходит к результатам поиска. '};
+
+block content
+	.container.container--left
+				
+		.section-ui
+			.title Areas/companies  - блок под шапкой.
+
+			+light-title-block(areasTitleBlock)
+			
+		pre.
+			+light-title-block(areasTitleBlock)

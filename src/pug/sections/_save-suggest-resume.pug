@@ -1,0 +1,32 @@
++modalWindow().save-suggest-resume-modal#save-modal
+	.save-suggest-resume-block.search-resume-wrapper
+		.save-suggest-resume-title Сохранить резюме «Дизайнер мобильных приложений»
+		form(action="").save-suggest-resume-form
+			.save-suggest-resume-form__group
+				+inputField('input-simple', '', 'input-simple', '', 'UI/UX дизайнер', '').save-suggest-resume-input
+				+arrow.arrow--down.arrow--save-suggest-resume-input
+				+dropdown-simple-list('input','UI/UX дизайнер','WebDev-разработчик','UI/UX дизайнер','WebDev-разработчик' ).save-suggest-resume-form__dropdown
+			+textarea('Расскажите чем вас привлекла эта вакансия и почему вы хорошо подойдете на эту роль', 'text').save-suggest-resume-textarea
+			+checkbox('Подписаться на похожие вакансии', 'big custom-check-box--employer').save-suggest-resume-checkbox
+			+button('Сохранить резюме', '#!', 'btn-semi-rounded-blue btn--bg-employer').save-suggest-resume-btn-send
+		.save-suggest-resume-unsign
+			.save-suggest-resume-unsign__text Создайте вакансию для которой подходит это резюме и соискатели сами найдут вас. Соискатели чаще соглашаются на собеседование заранее ознакомившись с вакансией.
+			+button('Создать вакансию', '#suggest-modal', 'btn-semi-rounded-blue btn-semi-rounded-blue--bg').save-suggest-resume-btn-create
+			span.save-suggest-resume-unsign__subtext или
+			.save-suggest-resume-unsign__favourite
+				a(href='#').save-suggest-resume-unsign__link
+					+icon-favorite
+					span.save-suggest-resume-unsign__text-caption Добавить в избранное
+
++modalWindow().save-suggest-resume-modal#suggest-modal
+	.save-suggest-resume-block.search-resume-wrapper
+		.save-suggest-resume-title Предложить вакансию резюме «Дизайнер мобильных приложений» 
+		form(action="").save-suggest-resume-form
+			.save-suggest-resume-form__title Вакансия
+			.save-suggest-resume-form__group
+				+inputField('input-simple', '', 'input-simple', '', 'UI/UX дизайнер', '').save-suggest-resume-input
+				+arrow.arrow--down.arrow--save-suggest-resume-input
+				+dropdown-simple-list('input','UI/UX дизайнер','WebDev-разработчик' ).dropdown-simple-list--hidden.save-suggest-resume-form__dropdown.dropdown-list__item--employer
+			+textarea('Добрый день уважаемый, Имя Фамилия, Нам очень понравилось ваше резюме, мы оценили ваш опыт и профессиональные навыки. Пожалуйста ознакомьтесь с нашей вакансией. Будем рады видеть вас в нашей команде.', 'text').suggest-resume-textarea
+			+checkbox('Подписаться на похожие вакансии', 'big custom-check-box--employer').save-suggest-resume-checkbox
+			+button('Сохранить резюме', '#!', 'btn-semi-rounded-blue btn--bg-employer').save-suggest-resume-btn-send

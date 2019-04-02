@@ -1,0 +1,27 @@
+.rating {
+	width: 100%;
+	padding:24px 0;
+	border-bottom:1px solid $silver;
+
+	@media #{$md} {
+		padding:40px 0;		
+	}
+}
+.rating-header {
+	display: flex;
+	align-items: center;
+	padding-bottom: 24px;
+}
+.rating-title {
+	color: $basicText;
+	font-size: 18px;
+	font-weight: 700;
+	@media #{$md} {
+		font-size: 24px;
+	}
+}
+.rating-marks {
+	padding-right: 24px;
+	margin-left: auto;
+	color: $greyText;
+}

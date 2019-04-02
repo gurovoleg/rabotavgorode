@@ -1,0 +1,46 @@
+.data-time-choose {
+	// width: 482px;
+}
+.time-choose-block {
+	display: flex;
+	width: 100%;
+	max-width: 482px;
+	flex-wrap: wrap;
+}
+.time-choose__time-item {
+	display: flex;
+	font-size: 16px;
+	color: $basicText;
+	border: 1px solid $silver;
+	border-radius: 4px;
+	width: 62px;
+	height: 40px;
+	text-align: center;
+	// padding: 10px 12px;
+	margin-right: 8px;
+	// margin-bottom: 8px;
+	line-height: normal;
+	cursor: pointer;
+	&--disabled {
+		border: none;
+		color: $greyText;
+	}
+	span {
+		display: inline-block;
+		margin: auto;
+	}
+}
+.data-time-choose__title {
+	padding-bottom: 8px;
+}
+.time-choose__time-input:checked + label > .time-choose__time-item {
+	color: $white;
+	background-color: $btn;
+	border: 1px solid rgba(0, 0, 0, 0.16);
+}
+.time-choose__time-input {
+	display: none;
+}
+.input-field--date {
+	height: 42px;
+}

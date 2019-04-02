@@ -1,0 +1,65 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточки вакансии';
+	- var pageClass = 'body--dashboard';
+		//-карточка list and map
+	- var vacance_card_map = {addClass: "middle-map-cards", title: "Product designer", datePosted: "21.01.2018", salary: "150 000", companyLetter: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: {badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }};
+
+		//-VIP-карточка list and map
+	- var vacance_card_map_vip = {addClass: "middle-map-cards", title: "Chief designer of the product in the field of perfumery", datePosted: "21.01.2018", salary: "150 000", companyLetter: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vipObject: {color:"yellow",title:"VIP"}};
+
+	//-карточка grid
+	- var vacance_card_grid = {addClass: "vacance-card--grid", title: "Product designer", datePosted: "21.01.2018", salary: "150 000", companyLetter: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }};
+	//-VIP-карточка grid
+	- var vacance_card_grid_vip = {addClass: "vacance-card--grid vacance-card-border--green", title: "Product designer", datePosted: "21.01.2018", salary: "150 000", companyLetter: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vipObject: {color:"green",title:"Gosuslugi.ru"}};
+
+	
+
+block content
+	.container.container--left
+		.title-1 Карточки вакансии
+		.section-ui
+			.title-5 Карточка вид Список и Карта
+			+vacance-card(vacance_card_map, 'list')
+		pre.
+			Объект:
+			var vacance_card_map = {addClass: "middle-map-cards", title: "Product designer", datePosted: "21.01.2018", salary: "150 000", companyName: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }};
+
+			Вывать объект:
+			+vacance-card(vacance_card_map, 'list')	
+
+		
+		.section-ui
+			.title-5 Vip-карточка вакансии вид Список и Карта
+			+vacance-card(vacance_card_map_vip, 'list')
+			
+			pre.
+				Объект:
+				var vacance_card_map_vip = {addClass: "middle-map-cards", title: "Chief designer of the product in the field of perfumery", datePosted: "21.01.2018", salary: "150 000", companyName: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vipObject: {color:"yellow",title:"VIP"}};
+
+				Вывать объект:
+				+vacance-card(vacance_card_map_vip, 'list')
+		
+		.section-ui
+			.title-5 Карточка вакансии на Плитка
+			+vacance-card(vacance_card_grid,'')
+			
+		pre.
+				Объект:
+				var vacance_card_grid = {addClass: "vacance-card--grid", title: "Product designer", datePosted: "21.01.2018", salary: "150 000", companyName: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }};
+
+				Вывать объект:
+				+vacance-card(vacance_card_grid)
+		
+		
+		.section-ui
+			.title-5 Vip-карточка вакансии на Плитка
+			+vacance-card(vacance_card_grid_vip,'')
+		pre.
+				Объект:
+				var vacance_card_grid_vip = {addClass: "middle-map-cards", title: "Product designer", datePosted: "21.01.2018", salary: "150 000", companyName: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vipObject: {color:"green",title:"Gosuslugi.ru"}};
+
+				Вывать объект:
+				+vacance-card(vacance_card_grid_vip)
+			

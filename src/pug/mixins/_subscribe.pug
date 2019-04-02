@@ -1,0 +1,34 @@
+mixin subscribe(title, parameter)
+	
+	//- Подписка выполнена
+	if parameter == 'completed'
+		.subscribe-completed
+			+done
+			.subscribe-title.subscribe-title--completed #{title}
+	
+	//- Подписка для залогиненного пользователя
+	else if parameter == 'user'
+		form.subscribe.subscribe--user
+			.subscribe-title.subscribe-title--user #{title}
+			+button('Подписаться', '#', 'btn-semi-rounded-blue')
+	
+	//- Подписка для карточки GRID
+	else if parameter == 'grid'
+		form.subscribe.subscribe--grid
+			.subscribe-title.subscribe-title--grid #{title}
+			.subscribe-input.subscribe-input--grid
+				.input-wrapper
+					+inputField('input-email', 'text', 'input-email', 'email', 'Email', 'Неверный формат email')
+				.subscribe-button.subscribe-button--grid
+					+button('', '#', 'btn-semi-rounded-blue btn--send', 'send')
+	
+	//- Подписка стандартная
+	else
+		form.subscribe&attributes(attributes)
+			.subscribe-title #{title}
+			.subscribe-input
+				.input-wrapper
+					+inputField('input-email', 'text', 'input-email', 'email', 'Email', 'Неверный формат email')
+				.subscribe-button
+					+button('Подписаться', '#', 'btn-semi-rounded-blue')
+

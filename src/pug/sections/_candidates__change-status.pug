@@ -1,0 +1,57 @@
+- var time = {item: {time: '09:00', status: 'checked'}, item2: {time: '09:30', status: ''}, item3: {time: '10:00', status: 'disabled'}, item4: {time: '10:30', status: ''}, item5: {time: '11:00', status: ''}, item6: {time: '11:30', status: ''}, item7: {time: '12:00', status: ''}, item8: {time: '12:30', status: ''}, item9: {time: '13:00', status: ''}, item10: {time: '13:30', status: ''}, item11: {time: '14:00', status: ''}, item12: {time: '14:30', status: ''}, item13: {time: '15:00', status: ''}, item14: {time: '15:30', status: ''}, item15: {time: '16:00', status: ''}, item16: {time: '16:30', status: ''}, item17: {time: '17:00', status: ''}, item18: {time: '17:30', status: ''} };
+- var objStatus = {typeMod:'text', currentItem: {color: '#F2994A', text:'Новый'}, items: [{color: '#F2C94C', text:'В работе'}, {color: '#2F80ED', text:'Собеседование'}, {color: '#56CCF2', text:'Согласование'}, {color: '#EB5757', text:'Отказ'}, {color: '#47AB2F', text:'Принят'}, {color: '#999999', text:'Резерв'}] };
+- var objStars = {typeMod:'stars', color: '#2389A9', currentItem: {star1:'full', star2:'full', star3:'full', star4:'full', star5:'full'}, items: [{star1:'full', star2:'full', star3:'full', star4:'full', star5:'empty'}, {star1:'full', star2:'full', star3:'full', star4:'empty', star5:'empty'}, {star1:'full', star2:'full', star3:'empty', star4:'empty', star5:'empty'}, {star1:'full', star2:'empty', star3:'empty', star4:'empty', star5:'empty'}] };
+-var objInput = {typeMod:'input', placeholder: 'UI/UX дизайнер', items:['UI/UX дизайнер','WebDev-разработчик','UI/UX дизайнер','WebDev-разработчик']};
+
+.preview.preview--change-status
+	.preview-wrapper
+		.change-status__title Изменить статус
+		.change-status__subtitle Кандидат
+		.change-status__name Константин Константинопольский
+		.field-group
+			.change-status__name Статус
+			+dropdown-select(objStatus)
+
+		.field-group
+			.data-time-choose
+				.field-group
+					.change-status__name Дата и время
+					input(type="date" value="1999-08-30").input-field.input-field--date
+				.field-group
+					.change-status__name Время
+					.time-choose-block
+						each item, id in time
+							if item.status == 'disabled'
+								input(disabled type="radio" name="time" id= id).time-choose__time-input
+								label(for= id)
+									.time-choose__time-item(class='time-choose__time-item--disabled')
+										span= item.time
+							else if item.status == 'checked'
+								input(checked type="radio" name="time" id= id).time-choose__time-input
+								label(for= id)
+									.time-choose__time-item
+										span= item.time
+							else
+								input(type="radio" name="time" id= id).time-choose__time-input
+								label(for= id)
+									.time-choose__time-item
+										span= item.time
+		.field-group
+			.change-status__name Вакансия
+			+dropdown-select(objInput)
+		.field-group
+			.change-status__name Рейтинг
+			+dropdown-select(objStars)
+		.field-group
+			.change-status__name Комментарий
+			+textarea('Расскажите о чем вас привлек кандидат или связанные с ним действия', 'text')
+		.field-group
+			+checkbox('Уведомить кандидата о смене статуса', 'small')
+		.field-group
+			.change-status__name Текст сообщения
+			+textarea('', 'text')#change-status__notify-text.change-status__notify-text
+		.field-group
+			+button('Сохранить', '#', 'btn-semi-rounded-blue').change-status__save
+			+button('Отмена', '#', 'btn-link').change-status__cancel
+
+	+icon-close.close-preview#close-change-status

@@ -1,0 +1,5 @@
+mixin progress-bar(modif, pbSvgWidth, pbSvgHeight,pbBodycolor, pbScaleWidth,pbScaleColor)
+	.progress-bar(class=" progress-bar"+ modif)
+		svg( width= ''+ pbSvgWidth height=''+ pbSvgHeight )
+			rect(width= ''+ pbSvgWidth  height=''+ pbSvgHeight x='0' y='0' rx='4' ry='4' fill=''+ pbBodycolor)
+			rect(width=''+ pbScaleWidth  height=''+ pbSvgHeight x='0' y='0' rx='4' ry='4' fill=''+ pbScaleColor)

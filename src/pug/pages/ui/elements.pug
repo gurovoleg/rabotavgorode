@@ -1,0 +1,76 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Бэйджи и другие элементы';
+	- var pageClass = 'body--dashboard';
+	- var menuLinksCount = [{itemAddClass: "nav-menu-item-active", itemHref: "#", itemName: "Вакансии", spanValue: '15'},{itemAddClass: "", itemHref: "#", itemName: "Отрасли"}];
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#", itemName: "Вакансии"},{itemAddClass: "", itemHref: "#", itemName: "Отрасли"}];
+
+block content
+	.container.container--left
+		.title Бэйджи и другие элементы
+		
+		.section-ui
+			+link-icon('Санкт-Петербург-Переславль-Залесский-Суппер-Пуппер')
+		pre.
+			+link-icon('Санкт-Петербург')
+		.section-ui
+			+brand-logo('../../img/ic-svg/brand-logo-big.svg')
+		pre.
+			+brand-logo('../../img/ic-svg/brand-logo-big.svg')
+
+		.section-ui
+		+address-badge('Пл. Ленина' ,'3км')
+		pre.
+			+address-badge('Пл. Ленина' ,'3км')
+
+		.section-ui
+			.title-5 цвета для веток метро
+			+color-marker('red')
+			+color-marker('green')
+			+double-marker('#FF0032','#125BC2')
+		pre.
+			+color-marker('red')
+			+color-marker('green')
+			+double-marker('#FF0032','#125BC2')
+		
+		.section-ui
+			.title-5 меню навигационное
+			+nav-menu(menuLinks)
+			
+		pre.
+			+nav-menu(menuLinks)
+			
+			var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#", itemName: "Вакансии", spanValue: '15'},{itemAddClass: "", itemHref: "#", itemName: "Отрасли"}];
+		.section-ui
+			.title-5 меню навигационное с числовым значением справа
+			+nav-menu(menuLinksCount)
+			
+		pre.
+			+nav-menu(menuLinksCount)
+			
+			var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#", itemName: "Вакансии", spanValue: '15'},{itemAddClass: "", itemHref: "#", itemName: "Отрасли"}];
+			
+		.section-ui
+			.title-5 tag-filter
+			+tag-filter('Информационные технологии', 'Интернет', 'Связь')
+				
+			+tag-filter('дизайнер')
+				
+		pre.
+			+tag-filter('Информационные технологии', 'Интернет', 'Связь')		
+				
+			+tag-filter('дизайнер')
+				
+		.section-ui
+			.title-5 split-text
+			+split-text('','ВебИнвест','Информационные технологии')
+				
+			pre.
+				+split-text('','ВебИнвест','Информационные технологии')
+			.section-ui
+				.title-4.text-left vacancy-serp
+			
+				+vacancy-serp('9522 Вакансии', 'З/п ~ 45 350 р')
+			pre.
+				+vacancy-serp('9522 Вакансии', 'З/п ~ 45 350 р')

@@ -1,0 +1,181 @@
+
+.vacance-description{	
+	background-color: $white;
+	padding-top: 31px;
+	padding-left: 32px;
+	padding-right: 24px;
+	position: relative;
+
+	@media #{$md}{
+		padding-top: 48px;
+		padding-left: 50px;
+		padding-right: 45px;
+	} 
+	.respond-block{
+		height:auto;
+		.icon-favorite{display: none;}
+	}
+}
+.vacance-description__head--top{
+	align-items: center;
+	justify-content: space-between;
+	font-size: 12px;
+	color: $greyText;
+}
+
+.vacance-description__fixed-block{
+	padding-top: 16px;
+	padding-bottom: 16px;
+	flex-direction:column;
+	@media #{$lg}{
+		flex-direction:row;
+		align-items: center;
+	}
+}
+.reference-link{
+	display: flex;
+	align-items: center;
+	&:hover {
+		color: $greyText;
+  		opacity: 0.8;
+	}
+}
+.reference-text{
+	display: none;
+	margin-right: 8px;
+	@media #{$lg} {display: inline-block;}
+	
+}
+.reference:hover {opacity: 0.8;}
+
+.vacance-description .split-text{
+	margin-bottom: 0;
+	.split-text__item::after{top:10px;}
+}
+
+.vacance-description__title{
+	font-size: 18px;
+	color:$basicText;
+	font-weight: 700;
+	display: block;
+	padding-right: 16px;
+	
+}
+.vacance-description__paycheck{
+	font-size: 18px;
+	color: $basicText;	
+	margin-bottom: 16px;
+	@media #{$lg} {margin-bottom: 0px;;}
+}
+.vacancy-serp--vacance-description li{font-size: 16px;}
+
+
+// tabs
+.vacance-tabs{
+	padding-top: 28px;
+	height: 100%;
+
+}
+
+.vacance-tabs__content{
+	display: flex;
+	height: 100%;
+		
+	padding-top: 24px;
+	padding-right: 8px;
+	overflow-y: auto; 
+}
+.vacance-tabs__content-item{display: none;}
+.vacance-tabs__content-item--active{display: block;}
+
+// Модификатор карточек Похожих вакансий для Search-result
+.vacance-tabs__content-item {
+	.job-vacancy-card .vacance-card__description, 
+	.job-section-vacancy-cards__title {
+		display: none;
+	}
+	 
+	.job-section-vacancy-cards {padding-top: 0;}
+	.job-description-wrapper {padding-top: 0;}
+}
+
+
+.vacance-description__respond-block{
+	position: relative;		
+	background-color: $white;	
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	//-width: 100%;
+	
+	// & .btn-semi-rounded-blue{
+	// 	margin-right: 24px;
+	// }
+	
+	& .icon-favorite{
+		display: inline-block;
+		@media #{$lg}{display: none;}
+	}
+	@media #{$lg}{justify-content: flex-end;}
+}
+// выпадающее меню
+.vacance-description-dropdown{
+	display: none;
+	//width: 100%;
+	width: 278px;
+	padding-left: 16px;
+	padding-right: 16px;
+	background-color: $white;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px 0px $bg-shadow;
+	position: absolute;
+	top:0px;
+	right:0px;
+    z-index: 1000;
+
+}
+.vacance-description-dropdown--show{display: block;}
+
+.vacance-description-dropdown-item{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding-bottom: 19px;
+	padding-top: 19px;
+	border-bottom:1px solid $silverLight;
+	&:hover{
+		opacity: 0.7;
+	}
+}
+
+.vacance-description-dropdown-item:last-child{border-bottom: 0px}
+.vacance-description-dropdown-item .icon-favorite--black-border{
+	padding-bottom: 2px;
+	margin-right: 16px;
+}
+
+.vacance-description-dropdown-icon{
+	min-width: 24px;
+	margin-right: 16px;
+	text-align: center;
+
+}
+.icon-down--rotate{transform: rotate(180deg);}
+@media #{$lg}{
+	.vacance-description__btn-block{
+		justify-content: flex-end;
+	}
+
+
+}
+.search-result__item-description{
+	position: relative;
+	overflow-y: auto;
+	width: 100%;
+}
+// .vacance-description-substicky{
+// 	padding-top: 0;
+// 	padding-bottom: 40px;
+// }
+

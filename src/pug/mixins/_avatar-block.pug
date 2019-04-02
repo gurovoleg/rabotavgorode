@@ -1,0 +1,20 @@
+mixin avatar-block(avatarLetter, topText, bottomText,avatarImg)
+	.avatar-block.d-flex&attributes(attributes)
+		if avatarImg
+			.round-icon.round-icon--user(style="background-image: url(../img/person-icons/"+ avatarImg +");")
+		else
+			+round-icon--card(avatarLetter)
+		.avatar-block-info
+			.avatar-block-info__top.text-body #{topText}
+			.avatar-block-info__bottom.text-body-grey #{bottomText}
+
+mixin avatarBlock(objectData)
+	.avatar-block.d-flex&attributes(attributes)
+		if objectData.avatarImg
+			.round-icon.round-icon--user(style="background-image: url(../img/person-icons/"+ objectData.avatarImg +");")
+		else
+			+round-icon--card(objectData.avatarLetter)
+		.avatar-block-info
+			.avatar-block-info__top.text-body #{objectData.topText}
+			.avatar-block-info__bottom.text-body-grey #{objectData.bottomText}
+

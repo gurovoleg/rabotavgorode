@@ -1,0 +1,12 @@
+mixin viewContacts(dataObject, contactsObject)
+	.view-contacts
+		.view-contacts__logo
+			img(src='../img/avatar/'+ dataObject.logo, alt='icon')
+		.view-contacts__name #{dataObject.name}
+		.view-contacts__position #{dataObject.position}
+		each contact in contactsObject
+			.view-contacts__info-block
+				.view-contacts__info-icon
+					img(src='../img/ic-svg/'+ contact.icon, alt='icon')
+				.view-contacts__info-text 
+					a(href= contact.link) #{contact.text}

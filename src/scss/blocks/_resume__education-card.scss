@@ -1,0 +1,35 @@
+
+.education-card__period:first-of-type{
+	margin-bottom: 8px;
+	color: $greyText;
+	
+	.split-text__item{margin-right: 0;}
+		display: none;
+		@media #{$md}{
+			font-size: 18px;
+			display: flex;
+			max-width: 120px;
+		}
+}
+.split-text--education-title{
+	margin-bottom: 8px;
+	.split-text__item{
+	color: $basicText;
+	font-weight: 700;
+	font-size: 18px;
+	&:after{
+		background-color:$basicText;
+		top:13px;
+		}
+	}
+}
+.split-text--education-type{
+	margin-bottom: 8px;
+	.split-text__item{font-size: 18px;}
+	
+}
+.split-text--education-type+.education-card__period{
+	font-size: 16px;
+	display: block;
+	@media #{$md}{display: none;}
+}

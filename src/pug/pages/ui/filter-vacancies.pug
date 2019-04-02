@@ -1,0 +1,95 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Фильтр вакансий (mobile and tablet)';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+	.title Фильтр вакансий
+
+	form.filter-vacancies(id="filter-vacancies" style="border:1px dashed lightgrey;width:375px;display:block;")
+		.filter-vacancies__wrapper
+			
+			.filter-vacancies__header
+				.filter-vacancies__title Фильтры
+				.filter-vacancies__clean-button
+					+button("Очистить","#!")(id="filter-vacancies-clear")
+			
+			.filter-vacancies__block
+				.filter-vacancies__block-title Оклад
+				+input-number ("От 30 000 руб.", "input-field--modificator", 10000, 1000000, 10000)
+			
+			.filter-vacancies__block
+				.filter-vacancies__block-title Расположение
+				+button("Выберите расположение", "#!", "filter-vacancies-position-open")
+				
+			.filter-vacancies__block
+				.filter-vacancies__block-title Отрасли
+				+tag-filter('Информационные технологии', 'Интернет', 'Связь')
+				+button("Выберите отрасль", "#!", "filter-vacancies-sectors-open pt-15 d-block")
+			
+			.filter-vacancies__block
+				.filter-vacancies__block-title Опыт работы
+				+checkbox-reverse('Начальный уровень', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Специалист', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Эксперт', 'big')(class="check-box__label--flex")
+			
+			.filter-vacancies__block
+				.filter-vacancies__block-title Тип занятости
+				+checkbox-reverse('Полная', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Неполная', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Вахтовая', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Сменная', 'big')(class="check-box__label--flex")
+				+checkbox-reverse('Удаленная', 'big')(class="check-box__label--flex")
+
+		.filter-vacancies__button
+			+button('Найдено 25 333 вакансий', '#', 'btn-semi-rounded-blue')(class="btn-semi-rounded-blue--w100" id="filter-vacancies-submit")
+
+	br
+	.section-ui
+		p Подключение блока с фильтром:
+		pre.
+			include ../sections/filter-vacancies.pug
+
+		p Код:
+		pre.
+			form.filter-vacancies(id="filter-vacancies" style="border:1px dashed lightgrey;width:375px;display:block;")
+				.filter-vacancies__wrapper
+					
+					.filter-vacancies__header
+						.filter-vacancies__title Фильтры
+						.filter-vacancies__clean-button
+							+button("Очистить","#!")(id="filter-vacancies-clear")
+					
+					.filter-vacancies__block
+						.filter-vacancies__block-title Оклад
+						+input-number ("От 30 000 руб.", "input-field--modificator", 10000, 1000000, 10000)
+					
+					.filter-vacancies__block
+						.filter-vacancies__block-title Расположение
+						+button("Выберите расположение", "#!", "filter-vacancies-position-open")
+						
+					.filter-vacancies__block
+						.filter-vacancies__block-title Отрасли
+						+tag-filter('Информационные технологии', 'Интернет', 'Связь')
+						+button("Выберите отрасль", "#!", "filter-vacancies-sectors-open pt-15")
+					
+					.filter-vacancies__block
+						.filter-vacancies__block-title Опыт работы
+						+checkbox-reverse('Начальный уровень', 'big')(class="check-box__label--flex")
+						+checkbox-reverse('Специалист', 'big')(class="check-box__label--flex")
+						+checkbox-reverse('Эксперт', 'big')(class="check-box__label--flex")
+					
+					.filter-vacancies__block
+						.filter-vacancies__block-title Тип занятости
+						+checkbox-reverse('Полная', 'big')(class="check-box__label--flex")
+						+checkbox-reverse('Неполная', 'big')(class="check-box__label--flex")
+						+checkbox-reverse('Вахтовая', 'big')(class="check-box__label--flex")
+						+checkbox-reverse('Сменная', 'big')(class="check-box__label--flex")
+						+checkbox-reverse('Удаленная', 'big')(class="check-box__label--flex")
+
+				.filter-vacancies__button
+					+button('Найдено 25 333 вакансий', '#', 'btn-semi-rounded-blue')(class="btn-semi-rounded-blue--w100" id="filter-vacancies-submit")
+
+

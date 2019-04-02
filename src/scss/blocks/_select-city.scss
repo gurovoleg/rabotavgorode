@@ -1,0 +1,18 @@
+/*иконка геолокации+название города*/
+.select-city{  
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+
+
+.select-city__value{color: $basicText;}
+.select-city:hover{text-decoration: none;}
+.select-city:hover .select-city__value {color: $linkHover;}
+.select-city:hover .ic-city{fill: $linkHover;}
+.select-city:active{text-decoration: none;}
+.select-city:active .select-city__value {color: $linkPressed;}
+.select-city:active .ic-city{fill: $linkPressed;}
+.select-city__icon{ margin-right: 10px;}

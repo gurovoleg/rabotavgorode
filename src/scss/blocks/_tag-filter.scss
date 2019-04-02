@@ -1,0 +1,48 @@
+.tag-filter{
+  margin: 0;
+  padding: 0;  
+  display: inline-block;  
+  list-style-type: none;
+  padding: 2px 8px;
+  background-color: $bg-light-gray;
+  border-radius: 6px;
+
+  max-width: 100%;
+
+}
+.tag-filter-item{
+  position: relative;
+  margin-right: 14px;
+  display: inline;
+}
+
+.tag-filter-item:last-of-type{
+  //margin-right: 11px;
+  margin-right: 6px;
+}
+
+.tag-filter-item:not(:nth-last-child(1)):after{
+  content: "/";
+  width: 3px;
+  position: absolute;
+  right: -9px;
+  top: 0px;
+}
+.tag-filter .icon-close svg {
+ 
+ 
+  width: 11px;
+  height: 11px;
+ 
+}
+.tag-filter .icon-close path{fill: $greyText;}
+.tag-filter .icon-close:hover path{fill: $linkHover;}
+.tag-filter .icon-close:active path{fill: $linkPressed;} 
+
+
+.tag-filter__text-box {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+

@@ -1,0 +1,445 @@
+.bg-header {
+	background-color: $white;
+	position:relative;
+	border-bottom: 1px solid $silver;
+}
+
+.header {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+
+	@media #{$hd} {
+		max-width: 1920px;
+	}
+}
+
+.header--border-none {
+	border:none;
+}
+
+.header-main {
+	display: flex;	
+	align-items:center;
+	flex-wrap: nowrap;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 24px;
+	min-height: 64px;
+
+	@media #{$md} {padding-left: 32px;}
+	@media #{$xl} {
+		padding-left: 16px;
+		padding-right: 32px;
+		height: 80px;
+	}
+}
+
+.header-main__logo {
+	cursor: pointer; 
+	margin-right: 30px;
+	
+	@media #{$md} {padding-left: 16px;}
+		
+	@media #{$xl} {
+		order:1;
+		padding-left: 0;
+	}
+}
+
+.header-main__search {
+	flex: 0 0 100%;
+	margin-top: 24px;
+	position: relative;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@media #{$md} {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	@media #{$xl} {
+		flex: 0 0 auto;
+		padding: 0;
+		width: 739px;
+		order:2;
+		margin-top: 0;
+	}
+	@media #{$hd} {width: 1000px;}
+}
+
+// Бейдж с вакансией располагам абсолютом в инпут 
+.tag-filter--absolute {
+	position: absolute;
+	top: 24px;
+	left:12px;
+	transform:translateY(-50%);
+	z-index:150;
+}
+
+.search-form {
+	position: relative;
+}
+
+.search-form__group {
+	display: flex;
+}
+
+.input-container {
+	position: relative;
+	flex:1 0 auto;
+}
+
+.input-container:nth-child(2) {
+	display: none;
+	width: 194px;
+	flex:0 0 auto;		
+	@media #{$md} {display: flex;}
+}
+
+.input-container--last-input {
+	width: 242px !important;
+}
+
+.input-container:nth-child(3) {
+	display: none;
+	width: 242px;
+	flex:0 0 auto;
+
+	@media #{$md} {display: flex;}
+}
+
+.input__search-button {
+	position: relative;
+	height: 48px;
+	width: 48px;
+	background: $blue;
+	border-radius: 0 8px 8px 0;
+	cursor: pointer;
+	transition:0.2s;
+
+	&:hover {background-color: $btn-hover;}
+	&:active {background-color: $btn-active;}
+}
+
+// Иконка поиск задаем абсолют
+.icon-search--absolute {
+	position: absolute;
+	top:50%;left:50%;
+	transform:translate(-50%,-50%);
+}
+
+// .search-job[type="text"]::placeholder {padding-left: 25px;}
+
+.search-job {
+	border: 1px solid $lightGrey;
+	padding: 11px 40px;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	z-index: 120;
+	flex:1 0 auto;
+	
+	&:hover {
+		border:1px solid $greyText;
+		outline:none;
+	}
+
+	&:focus {
+		border: 2px solid $blue;
+		padding:10px 39px;
+		cursor: text;
+		outline:none;
+		&::placeholder {
+			padding-left: 0;
+		}
+	}
+}
+
+
+
+// Иконка фильтр задаем абсолют
+.icon-filter--absolute {
+	position: absolute;
+	right:12px;
+	top:50%;right:12px;
+	transform:translateY(-50%);
+	z-index: 120;
+	
+	@media #{$md} {display: none;}
+
+}
+
+.search-job__name {
+	width: 100%;
+	border-radius: 8px;
+	transition: padding-left 0.2s;
+	@media #{$md} {
+		border-radius: 8px 0px 0px 8px;
+		border-right:none;
+	}
+
+	&:focus {padding-left: 16px;}
+	
+}
+
+.search-job__sallary-from {
+	// width: calc(100% - 48px);
+	border-right:none;
+	padding-left: 11px;
+	padding-right: 45px;
+	transition: 0.2s;
+
+	&:focus {
+		padding-left: 34px;
+		padding-right: 44px;		
+	}
+}
+
+.search-job__sallary-to {
+	// width: calc(100% - 48px);
+	border-right:none;
+	padding-left: 11px;
+	padding-right: 45px;
+	transition: 0.2s;
+
+	&:focus {
+		padding-left: 34px;
+		padding-right: 44px;		
+	}
+}
+
+.search-job__sallary-to:focus ~ .search-job__sallary-to-text-before,
+.search-job__sallary-from:focus ~ .search-job__sallary-from-text-before {
+	left:12px;
+	color:$greyMarker;
+}
+
+.search-job__name:focus ~ .tag-filter__search-icon {
+	opacity:0;
+	left:0px;
+	transition:all 0.2s;
+}
+
+.search-job__sallary-from-text-before, 
+.search-job__sallary-from-text-after,
+.search-job__sallary-to-text-before,
+.search-job__sallary-to-text-after   {
+	position:absolute;
+	top:50%; 
+	z-index: 140;
+	transform:translateY(-50%);
+	color:$greyMarker;
+	line-height: 1;
+}	
+.search-job__sallary-from-text-before,
+.search-job__sallary-to-text-before {
+	left:0px;
+	color:transparent;
+	transition:all 0.2s;
+}
+
+.search-job__sallary-to-text-after,
+.search-job__sallary-from-text-after {
+	left:154px;
+}
+
+.header-main__city {
+	display: flex;
+	overflow: hidden;
+	margin-right: 6px;
+	@media #{$md}{margin-right: 40px;}
+	@media #{$xl} {
+		order:3;
+		margin-left: auto;
+		// margin-left: 80px;
+		// margin-right: auto;
+	}
+
+}
+
+.header-main__buttons {
+	display: flex;
+	align-items:center;
+	margin-left: auto;
+	
+	@media #{$md} {padding-right: 16px;}
+		
+	@media #{$xl} {
+		order:4;
+		padding-right: 0;
+		margin-left: 0px;
+	}
+}
+
+
+// Блок с навигацией
+.header-nav {
+	margin-top: 20px;
+	padding-left: 16px;
+	padding-right: 16px;
+	
+	@media #{$md} {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	
+	@media #{$xl} {
+		margin-top: 28px;
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+}
+
+// Класс для ширины кнопки
+.btn--full-width {
+	width: 100%;
+	display: block;
+
+	@media #{$sm} {
+		display: none;
+	}
+}
+
+.btn-rounded-gray--show {
+	display: none;
+	margin-right: 16px;
+
+	@media #{$sm} {
+		display: block;
+	}
+}
+
+.header-main__buttons {
+	.icon-favorite {
+		//-margin-right: 21px;
+		margin-right: 13px;
+		svg path {fill: $greyText;}
+		@media #{$sm}{margin-right: 21px;}
+	}
+}
+.header-main__buttons .icon-favorite:hover path{ 
+	stroke: $greyText;
+	opacity: 0.7;
+}
+
+.logo-group {
+	position: relative;
+}
+.header-main__logo .arrow {
+	position: absolute;
+	top: 0;
+	left: 28px;
+}
+
+.container-aside--no-padding {
+	padding-bottom: 0;
+	padding-top: 0;
+
+}
+// иконка search
+.tag-filter {
+	cursor: default;
+}
+.tag-filter__search-icon {
+	position: absolute;
+	// background-color: $white;
+	background-color: transparent;
+	z-index: 140;
+	transition: all 0.2s;
+}
+.tag-filter--close {
+	cursor: pointer;
+}
+// выпадабщий поиск
+.input-container__dropdown {
+	display: none;
+	position: absolute;
+	background-color: $white;
+	width: 100%;
+	top: 23px;
+	z-index: 110;
+	padding-top: 23px;
+	overflow: auto;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.24);
+	border-radius: 0 0 8px 8px;
+	@media #{$sm} {
+		max-height: 500px;
+	}
+}
+.input-container__dropdown--history {
+	display: none;
+}
+.input-container__dropdown--history--show {
+	display: block;
+}
+.input-container__dropdown-title {
+	list-style: none;
+	line-height: normal;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.4);
+	padding-top: 11px;
+	padding-left: 0;
+	margin-bottom: 5px;
+	p {
+		padding-left: 12px;
+		margin-bottom: 11px;
+		&:not(:first-child) {
+			margin-top: 11px;
+		}
+	}
+}
+.input-container__dropdown-item {
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	color: $black;
+	cursor: pointer;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 18px;
+	padding-left: 12px;
+	&:hover {
+		background-color: #EDF4FF;
+	}
+}
+.input-container__dropdown-item--right {
+	line-height: normal;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0.4);
+}
+.input-container__dropdown--search {
+	display: none;
+}
+.input-container__dropdown--search--show {
+	display: block;
+
+}
+// только для UI-kit
+.main-menu-header-ui-kit {
+	position: absolute;
+	.main-menu {
+		top: 220px;
+		right: 0;
+	}
+}
+
+//- цвет Работодателя для элементов в шапке Работодателя 
+// .bg-header--employer{ 
+// 	.btn-square-grey{background-color: $employerBg;} 
+// 	.logo-icon path {fill: $employer;} 
+// 	.nav-menu-item-active{border-color: $employer; } 
+// 	.btn-rounded-blue, 
+// 	.round-icon, 
+// 	.input__search-button {background-color: $employer;} 
+
+
+// 	.tag-filter {background-color: $employerBg;} 
+// 	.btn-rounded-gray{ 
+// 	background-color: $employerBg; 
+
+// 	} 
+// 	.btn.btn-rounded-blue {color: $white;} 
+// 	.btn {color: $employer;} 
+// }

@@ -1,0 +1,41 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Рейтинг - Like/Dislike';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		
+		.section-ui
+			.title Рейтинг - Like/Dislike
+
+			+rating-like(222, 555)
+			+rating-like(222, 555, 'like')
+			+rating-like(222, 555, 'dislike')
+
+		pre.
+			+rating-like(222, 555)
+			+rating-like(222, 555, 'like')
+			+rating-like(222, 555, 'dislike')
+
+			Миксин:
+
+			mixin rating-like(value1, value2, activeItem)
+				.rating-like-wrapper
+					.rating-like-block
+						if activeItem == "like"
+							+icon-like.icon-like--absolute
+							span.rating-like__value.rating__value--active=value1
+						else
+							+icon-like.icon-like--absolute.icon-like--gray
+							span.rating-like__value=value1
+					.rating-dislike-block
+						if activeItem == "dislike"
+							+icon-dislike.icon-dislike--absolute.icon-dislike--blue
+							span.rating-dislike__value.rating__value--active=value2
+						else
+							+icon-dislike.icon-dislike--absolute
+							span.rating-dislike__value=value2
+
+			

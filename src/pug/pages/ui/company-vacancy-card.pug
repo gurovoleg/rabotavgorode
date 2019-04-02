@@ -1,0 +1,57 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Компания - карточка вакансии - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Компания - карточка вакансии
+
+		+company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.', 'Санкт-Петербург', 'Информационные технологии')
+
+		pre +company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.', 'Санкт-Петербург', 'Информационные технологии')
+
+		br
+		
+		+company-vacancy-card(false, 'Менеджер по продажам первичной недвижимости', 'от 85 000 до 255 000 руб', '', 'Информационные технологии')
+
+		pre +company-vacancy-card(false, 'Менеджер по продажам первичной недвижимости', 'от 85 000 до 255 000 руб', '', 'Информационные технологии') 
+
+		br
+
+		+company-vacancy-card(false, 'Менеджер по продажам первичной недвижимости', 'от 85 000 до 255 000 руб', 'Санкт-Петербург')
+
+		pre +company-vacancy-card(false, 'Менеджер по продажам первичной недвижимости', 'от 85 000 до 255 000 руб', 'Санкт-Петербург') 
+
+		br
+		
+		+company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.')
+
+		pre +company-vacancy-card(false, 'Ассистент отдела недвижимости', 'до 35 000 руб.')
+
+		br
+
+		+company-vacancy-card(true, 'Ассистент отдела недвижимости', 'до 35 000 руб.')
+
+		pre +company-vacancy-card(true, 'Ассистент отдела недвижимости', 'до 35 000 руб.')
+
+		pre.
+			Миксин:
+
+			currentRegion = true/false (параметер для отображения факансий в формате текущего региона)
+						
+			mixin company-vacancy-card(currentRegion, title, sallary, city, section) 
+				.company-vacancy-card
+					if currentRegion == true
+						.company-vacancy-card__title.company-vacancy-card__title--current-region= title
+						.company-vacancy-card__sallary.company-vacancy-card__sallary--current-region= sallary	
+					else
+						.company-vacancy-card__title= title
+						.company-vacancy-card__sallary= sallary
+						if city != "" 
+							.company-vacancy-card__city= city
+						if section != "" 
+							.company-vacancy-card__section= section
+		

@@ -1,0 +1,52 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Миксин шапки ';
+	- var pageClass = 'body--dashboard';
+
+	- var DataHeaderFull = {modif: 'full', personStatus: '', city:'Санкт-Петербург', loggedPerson:{letters: 'LB', image: ''}, inputNumber: '2' };
+
+	- var DataHeaderLihgt = {modif: '', personStatus: '',city:'Санкт-Петербург-Петербург',  loggedPerson:{letters: 'LB', image: ''} };
+
+	- var DataHeaderLihgt2 = {modif: '', personStatus: '', lightHeaderBtn:{btnText:'Зарегистрироваться',btnHref: '#', btnClass:'' } };
+	
+block content
+	
+		.title Миксин для Шапки
+		
+		.seciont-ui
+			.title-5 Шапка с инпутами
+			+pageHeader(DataHeaderFull)
+			pre.
+					 +pageHeader(DataHeaderFull)
+			
+				Объект для шапки с инпутами:
+					DataHeaderFull = {
+					modif: 'full', 
+					personStatus: '', 
+					city:'Санкт-Петербург', 
+					loggedPerson:{letters: 'LB', image: ''}, 
+					inputNumber: '2' };
+
+		
+		.seciont-ui
+			+pageHeader(DataHeaderLihgt)
+			pre.
+				 +pageHeader(DataHeaderLihgt)
+				 Объект для шапки с инпутами:
+					DataHeaderLihgt = {
+					modif: '', 
+					personStatus: '',
+					city:'Санкт-Петербург-Петербург',  
+					loggedPerson:{letters: 'LB', image: ''} 
+					};
+
+		.seciont-ui
+			+pageHeader(DataHeaderLihgt2)
+			pre.
+				 +pageHeader(DataHeaderLihgt2)
+				Объект для шапки с инпутами:
+					DataHeaderLihgt2 = {
+					modif: '', 
+					personStatus: '', lightHeaderBtn:{btnText:'Зарегистрироваться',btnHref: '#', btnClass:'' } 
+					};

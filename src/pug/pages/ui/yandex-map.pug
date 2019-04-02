@@ -1,0 +1,40 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Яндекс карта';
+	- var pageClass = 'body--dashboard';
+
+block content
+		.container.container--left
+		.title Яндекс карта
+		
+		//- Футер
+		.section-ui(style="width: 100%; height: 500px;")
+			#map.middle-map
+		.section-ui
+			pre.
+				#map.middle-map
+			p Добавление маркеров на карту происходит через файл middle-map.js, путем добавления новой точки
+			pre.
+				product1 = new ymaps.Placemark([55.788368, 37.508930], { // Координаты метки объекта
+				// Содержание метки
+				balloonContentHeader: '<strong><a href="#">Product designer</a></strong>',
+				balloonContentBody: '150 000 Р',
+				balloonContentFooter: 'Веб инвест &#8226; Информационные технологии',
+				}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#imageWithContent',
+					// Своё изображение иконки метки.
+					iconImageHref: 'img/map-icons/white.png',
+					// Размеры метки.
+					iconImageSize: [48, 48],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-24, -24],
+					// Смещение слоя с содержимым относительно слоя с картинкой.
+					iconContentOffset: [15, 15],
+					// Макет содержимого.
+					iconContentLayout: iconWhite
+					}); // Тип метки
+			p Изображение иконок-маркеров находится в папке img/map-icons

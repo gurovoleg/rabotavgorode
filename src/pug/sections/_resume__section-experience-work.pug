@@ -1,0 +1,14 @@
+- var positionCard = {title: 'Должность', sectorSplit:{modif:'sector', items:['Компания', 'Отрасль', 'Город']}, periodSplit:{modif:'period', items:['Октябрь 2012 — Январь 2014', '1 год 3 месяца'] },siteLink:'companydomain.com', text:'Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.'};
+
+
+.page-section#resume-expirience
+	.page-section-top.d-flex
+		.section-title Опыт работы
+		.work-total-time.text-body-grey 6 лет 11 месяцев
+	+position-card(positionCard)
+	+position-card(positionCard)
+	+position-card(positionCard)
+	+position-card(positionCard)
+	+position-card(positionCard)
+	+button('Смотреть все', '#', 'btn-link')
+

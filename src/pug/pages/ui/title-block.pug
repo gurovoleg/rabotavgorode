@@ -1,0 +1,11 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Блок под шапкой';
+	- var pageClass = 'body--dashboard';
+
+block content
+		.container.container--left
+		.title Блок под шапкой
+		.section-ui
+			include ./../../sections/title-block.pug

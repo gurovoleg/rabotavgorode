@@ -1,0 +1,25 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Авторизация';
+	- var pageClass = 'index-page';
+	//-HEADER
+	- var HeaderAutorize = {modif: '', personStatus: '', lightHeaderBtn:{btnText:'Зарегистрироваться',btnHref: 'auth-registration.html' } }
+
+block content
+	.autorization-wrapper
+
+		//-+authorize-header('Вход', 'Зарегистрироваться', 'auth-registration.html')
+		+pageHeader(HeaderAutorize)
+
+		.bg-logo-menu-dropdown.bg-logo-menu-dropdown--small-header
+			.container-aside.container-aside--no-padding.authorize-header--dropdown
+				include ../sections/_main-menu--page-auth.pug
+		
+		.autorization
+			.autorization-block
+				.autorization-block-wrapper
+					.authorize-block__title Вход
+					include ../sections/_autorization.pug
+					include ../sections/_social-icons.pug
+			.autorization-advblock ADV-BLOCK

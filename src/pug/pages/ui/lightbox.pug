@@ -1,0 +1,41 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'lightbox - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+		.container.container--left
+			.title Lightbox для изображений
+		
+			+button('Открыть', '#', 'lightbox-open')
+			.section-ui
+			
+				include ../../sections/_lightbox.pug
+
+			pre.
+				
+				Подключение: include ../../sections/_lightbox.pug
+
+				Структура блока:
+				
+				.bg-lightbox
+					.lightbox__close-button
+						+icon-close(class="icon-close--absolute")
+					.lightbox-container
+						
+						+lightbox-item('sample1.jpg', 'Название фото/документа')
+						+lightbox-item('sample1.jpg', 'Название фото/документа')
+							
+					.lightbox__navigation
+						+arrow--custom(style='width:14px;height: 24px;').arrow--left.arrow--white
+						+arrow--custom(style='width:14px;height: 24px;').arrow--right.arrow--white
+
+				Миксин для элементов Lightbox:
+				
+				mixin lightbox-item(fileName, label)
+					.lightbox-block
+						a(href="#!").lightbox-block__image
+							img(src="../../img/photo/potfolio/" + fileName) 
+						.lightbox-block__label=label 

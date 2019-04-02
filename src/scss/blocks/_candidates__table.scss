@@ -1,0 +1,150 @@
+.table{
+	.rating-stars__item{padding-right:0px;}		
+	 i.rating-star{
+			width: 20px;
+			height: 20px;
+		}
+	.rating-star svg {
+			width: 13px;
+			height: 13px;
+		}
+	.round-icon{color: $employer;}
+}
+.table-row-large--desktop{
+	cursor: pointer;
+	min-width: 1520px;
+	display: none;
+	padding-left: 16px;
+	padding-right: 16px;
+	height: 88px;
+	padding-top: 16px;
+	background-color: $white;
+	border-bottom: 1px solid $silver;
+	align-items:flex-start;
+	@media #{$md}{display: flex;}
+	.avatar-block-info__top,
+	.person-phone,
+	.table-item--vacancy-name{padding-bottom: 4px;}
+	.table-item--icons-box{
+		align-self: flex-start;
+		width: 90px;		
+		.table-item-dots{display: block;}
+
+		.dropdown-list{
+			left:auto;
+			right:0;
+		}
+	}
+	.table-item--check{max-width: 48px;}
+	.table-item--status{width: auto;}
+	.table-item--contacts,
+	.table-item--vacancy-name{
+		white-space: nowrap;
+  		overflow: hidden;
+   		text-overflow: ellipsis;
+	}
+	.table-item--candidate{width:365px;}
+	.table-item--contacts{width:250px;}
+	.table-item--status{width:180px;}
+	.table-item--vacancy{width:270px;}
+	.table-item--recruter{width:180px;}
+	.table-item--rating{width:115px;}
+}
+.status-item{
+	padding-right: 16px;
+	display:flex;
+	align-items:center;
+	.status-item-text{
+		font-size: 16px;
+		color: $basicText;
+		padding-left: 10px;
+	}
+	.color-marker{
+		min-width: 8px;
+		margin: 0;
+	}
+}
+.table-item--contacts,
+.table-item--status{
+	flex-direction: column;
+}
+.id-number{
+	padding-top: 4px;
+	padding-left: 18px;
+}
+
+.avatar-block-info__top{font-weight: 700;}
+
+//-элементы для моби и планш версии
+.table-row-large--mobile{
+	cursor:pointer;
+	height: 102px;
+	padding-left: 16px;
+	padding-right: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex:1 0 auto;
+	@media #{$md}{display: none;}
+	.avatar-block-info__top{font-size: 18px;}
+	background-color: $white;
+	border-bottom: 1px solid $silver;
+		
+}
+.table-row-mobile--column{flex-grow:2;}
+	
+.rating-mobile{display: flex;}
+
+.table-item-mobile--subcolumn{
+	display: flex;
+	justify-content: space-between;
+}
+.subcolumn-items-left{
+	width: 100%;
+	@media #{$sm}{width: 50%;}
+}
+.subcolumn-items-right{width: 50%;}
+.subcolumn-items-right{
+	display: none;
+	@media #{$sm}{display: block;}
+	@media #{$md}{display: none;}
+}
+
+//-шапка таблицы на десктопе
+.table-row-large--desktop.table-item--header{
+	display: none;
+	@media #{$md}{
+	cursor: default;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	.table-item{
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		color: $greyText;
+	}
+	span.tick{
+		display: inline-flex;
+		padding-left: 10px;
+	}
+	.table-item--contacts,
+	.table-item--status{flex-direction: row;}
+	}
+	
+	.table-item--candidate{padding-left: 60px;}
+	.dropdown-list-name{
+		//-align-items: center;
+		display: flex;
+		.arrow--down-small{top: 0;}
+	}
+	&:hover{background-color: $white;}
+}
+
+.table-row-large--desktop:hover,
+.table-row-large--mobile:hover{
+	background-color: $tableRowActive;
+}
+

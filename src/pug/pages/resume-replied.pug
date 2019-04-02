@@ -1,0 +1,84 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = "Resume replied";
+	- var pageClass = 'index-page theme--employer';
+	
+	//- Header
+	- var Header = {modif: '', personStatus: '', city:'',  inputNumber: '', loggedPerson: {letters:'AS', image:''} };
+	//- Navigation
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#resume-about", itemName: 'О себе'},{itemAddClass: "", itemHref: "#resume-expirience", itemName: "Опыт"},{itemAddClass: "", itemHref: "#resume-education", itemName: "Образование"}, {itemAddClass: "", itemHref: "#resume-other", itemName: "Другое"}];
+	//- Title-block
+	- var viewResume = {title: 'Менеджер по продажам', pay: '150 000 Р', userInfo: 'Константин, 33 года', location: 'Купчино, г. Санкт-Петербург', splitTextObject: {modif: "", items: ['123 Просмотра  (+45)', '21 августа']}, splitUserObject: {modif: "", items: ['7 лет опыта', 'Эксперт', 'Неполное высшее']}, badgeLetter: 'ВИ', Items: ['Главная', 'Работа', 'Вакансия'], imgBg: 'bg-resume-header-vip.png'};
+
+	//- Карточки
+	- var resumeCard = {cardHeader: {title: 'Менеджер по продажам недвижимости', salary: '150 000 Р', published: '2д'}, aspirantInfo:{name:'Константин', age:'33 года'}, aspirantAddress:{metroLine: 'blueMarker', metroStation: 'Купчино', cityName: 'Санкт-Петербург' },personLetters:'AS', vipObject:{color:'yellow', title:'Pro'}, splitTextObject:{modif: "resume-card", items: ["7 лет опыта","Эксперт", "Неполное высшее"]}, badgeObjects:{badgeType:"big", items:['Премиум сегмент','Переговоры','Проведение корпоративов','Открываю пиво глазом']}, jobElmts:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, jobPlaceItems:{it1:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, it2:{title:'Руководитель отдела продаж недвижимости', splitElemts: {modif:'job-info', items:['Лен Строй','3 года 9 месяцев']}}}};
+
+block content
+	
+	//- Header + Выпадающее меню из логотипа
+	+pageHeader(Header)
+	.bg-logo-menu-dropdown.bg-logo-menu-dropdown--small-header
+		include ../sections/_main-menu.pug
+
+	//- Title-block
+	//- +resume-description__header(viewResume, 'resume', 'vip')
+	+resume-description__header(viewResume, 'resume')
+
+	.container
+		//- Навигация для Mobile/Tablet
+		.row
+			.offset-sm-1.col-sm-10.offset-md-0.col-md-12.col--border-top
+				+nav-menu(menuLinks)(class="nav-menu--resume-fix" id="resume-nav-menu")
+
+		.row
+			
+			//- Mobile/ Tablet
+			.offset-sm-1.col-sm-10.d-md-none
+				include ../sections/_resume__about.pug
+				include ../sections/_resume__section-experience-work.pug
+				include ../sections/_resume__skills.pug
+				include ../sections/_resume__section-education.pug
+				include ../sections/_resume__other.pug
+								
+	//-Портфолио для Mobile/Tablet вне сетки
+	.d-md-none
+		include ../sections/_resume__portfolio-slider.pug
+
+	.container
+		.row
+			//- Mobile/ Tablet
+			.offset-sm-1.col-sm-10.d-md-none
+				+showContacts('sign')
+				+showContacts('unsign')
+				include ../sections/_resume__similar-resumes.pug
+				include ../sections/_resume__tags-block.pug
+
+			//- Desktop
+			.d-none.d-md-block.col-md-8.col--padding
+				include ../sections/_resume__section-experience-work.pug
+				include ../sections/_resume__section-education.pug
+				include ../sections/_resume__portfolio-slider.pug
+				+showContacts('unsign')
+				+showContacts('sign')
+				include ../sections/_resume__similar-resumes.pug
+				include ../sections/_resume__tags-block.pug
+				
+			.d-none.d-md-block.col-md-4
+				include ../sections/_resume__responding-panel.pug
+				include ../sections/_resume__about.pug
+				include ../sections/_resume__skills.pug
+				include ../sections/_resume__other.pug
+
+	
+	//- Блок с кнопкой Сохранить для Mobile/Tablet
+	.resume__footer
+		.container
+			.row
+				.offset-sm-1.col-sm-10
+					.respond-block-wrapper
+
+						+respond-block('resume respond-block__btn', 'Сохранить', '#!', 'Скачать', 'icon-download')(data-dropdownId="#resume__footer-dropdown")
+
+		//-Выпадашка
+		+respond-block-dropdown('footer', 'menu1')(id="resume__header-dropdown")

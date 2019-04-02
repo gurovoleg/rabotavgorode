@@ -1,0 +1,75 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Areas контент таба Отрасли';
+	- var pageClass = 'body--dashboard';
+	- var listItems = {vacancyCount: '12 Вакансии', vacancyPay: 'ЗП ~  34 567 Р'};
+
+block content
+	.container.container--left
+				
+		.section-ui
+			.title-5 Areas контент таба Отрасли
+			
+			//- Обертка .areas-tabs-container задается на самой странице. Через нее задаются отступы.
+			.areas-tabs-container
+				.row
+					.col-sm-10.offset-sm-1.col-md-12.offset-md-0
+						//-блок с бейджами
+						include ../../sections/_areas__badges-block.pug
+						//-алфавит
+						+areas-companies-alphabet('ru', '')
+				.row
+					.col-sm-5.offset-sm-1.col-md-4.offset-md-0
+						.areas-companies__list
+							+areas-companies__list('Автомобильный бизнес', '', listItems)
+							+areas-companies__list('', 'Специализация Х', listItems)
+							+areas-companies__list('','Специализация Х', listItems)
+							+areas-companies__list('','Специализация Х', listItems)
+							+areas-companies__list('','Специализация Х', listItems)
+							a(href="#!").areas-companies__more Смотреть все
+					.col-sm-5.offset-sm-1.col-md-4.offset-md-0
+						.areas-companies__list
+							+areas-companies__list('Автомобильный бизнес', '', listItems)
+							+areas-companies__list('', 'Специализация Х', listItems)
+							+areas-companies__list('','Специализация Х', listItems)
+							+areas-companies__list('','Специализация Х', listItems)
+							+areas-companies__list('','Специализация Х', listItems)
+					.d-none.d-md-block.col-md-4.offset-md-0
+						.areas-companies__list
+							+areas-companies__list('Автомобильный бизнес', '', listItems)
+							+areas-companies__list('', 'Специализация Х', listItems)
+							+areas-companies__list('','Специализация Х', listItems)
+							+areas-companies__list('','Специализация Х', listItems)
+							+areas-companies__list('','Специализация Х', listItems)
+		pre.
+		
+			.row
+				.col-sm-10.offset-sm-1.col-md-12.offset-md-0
+					//-блок с бейджами
+					include ../../sections/_areas__badges-block.pug
+					//-алфавит
+					+areas-companies-alphabet('ru', '')
+			.row
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('', 'Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						a(href="#!").areas-companies__more Смотреть все
+				.col-sm-5.offset-sm-1.col-md-4.offset-md-0
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('', 'Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+				.d-none.d-md-block.col-md-4.offset-md-0
+					.areas-companies__list
+						+areas-companies__list('Автомобильный бизнес', '', listItems)
+						+areas-companies__list('', 'Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)
+						+areas-companies__list('','Специализация Х', listItems)

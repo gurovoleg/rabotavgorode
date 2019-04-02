@@ -1,0 +1,39 @@
+.rating-like-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.rating-like-block {
+	position:relative;
+}
+
+.icon-like--absolute {
+	position:absolute;
+	top:-2px;
+}
+
+.rating-dislike-block{
+	position:relative;
+	margin-left: 10px;
+}
+
+.icon-dislike--absolute {
+	position:absolute;
+	top: 2px;
+}
+
+.rating-like__value {
+	margin-left: 30px;
+	color:$gray;
+}
+
+.rating-dislike__value {
+	margin-left: 30px;
+	color:$gray;
+}
+
+// Модификатор
+.rating__value--active {
+	color:$blue; 
+}
+

@@ -1,0 +1,200 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Search results';
+	- var pageClass = 'index-page';
+
+	//-ШАПКА
+	- var HeaderSR = {modif: 'full', personStatus: '', city:'Санкт-Петербург',  inputNumber: '2', loggedPerson: {letters: 'AS'}, image: ''  };
+	//-нав-меню
+	-var TabsToggle = [{itemAddClass: "nav-menu-item-active", itemHref: "#",dataAttr: 'one', itemName: "Описание"},{itemAddClass: "", itemHref: "#",dataAttr: 'two', itemName: "Компания"}, {itemAddClass: "", itemHref: "#",dataAttr: 'three', itemName: "Расположение"}];
+	//-объекты для карточки*
+	- var vacance_card_map = {addClass: "middle-map-cards", title: "Chief designer of the product in the field of perfumery", datePosted: "21.01.2018", salary: "150 000", companyLetter: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"big", items: ["CJM", "User Stories","CJM", "User Stories","CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }};
+
+			//-VIP-карточка list and map
+	- var vacance_card_map_vip = {addClass: "middle-map-cards", title: "Chief designer of the product in the field of perfumery", datePosted: "21.01.2018", salary: "150 000", companyLetter: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"big", items: ["CJM", "User Stories","CJM", "User Stories","CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vipObject: {color:"yellow",title:"VIP"}};
+
+	//-карточка grid
+	- var vacance_card_grid = {addClass: "vacance-card--grid", title: "Product designer", datePosted: "21.01.2018", salary: "150 000", companyLetter: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories","CJM", "User Stories","CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }};
+	//-VIP-карточка grid Gosuslugi.ru
+	- var vacance_card_grid_vip = {addClass: "vacance-card--grid vacance-card-border--green", title: "Chief designer of the product in the field of perfumery", datePosted: "21.01.2018", salary: "150 000", companyLetter: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vipObject: {color:"green",title:"Gosuslugi.ru"}};
+	//-VIP-карточка grid VIP
+	- var vacance_card_grid_vipYellow = {addClass: "vacance-card--grid vacance-card-border--yellow", title: "Product designer", datePosted: "21.01.2018", salary: "150 000", companyLetter: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vipObject: {color:"yellow",title:"VIP"}};
+		//-end объекты для карточки*
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#search-results-tabs__vacancies", itemName: "Вакансии"},{itemAddClass: "", itemHref: "#search-results-tabs__areas", itemName: "Отрасли"},{itemAddClass: "", itemHref: "#search-results-tabs__companies", itemName: "Компании"}, {itemAddClass: "", itemHref: "#search-results-tabs__cities", itemName: "Города"},{itemAddClass: "", itemHref: "#search-results-tabs__metro", itemName: "Метро"}];
+
+block content
+	
+	//- Header + Выпадающее меню из логотипа
+	+pageHeader(HeaderSR)
+	.bg-logo-menu-dropdown
+		include ../sections/_main-menu.pug
+		
+	//- Фильтр Вакансии (мобильный вариант)
+	include ../sections/filter-vacancies.pug
+
+	//- Фильтр Отрасли
+	+filter-sectors
+
+	//- Фильтр Расположение
+	include ../sections/_filter-vacancies-position.pug
+
+	//- Выбор города
+	include ../sections/_city-selection.pug
+	
+	
+	//- Контейнер с вкладками
+	.search-results-tabs-container#search-results-tabs-container
+
+		//- вкладка Вакансии
+		.search-results-tabs__vacancies#search-results-tabs__vacancies
+			.container-main
+				//- .container-aside.container-aside--modificator
+				#container-title.container-title.container-title--list
+					include ../sections/title-block.pug
+				
+				//- Обертка для контента + боковая панель Aside
+				.container-aside#container-aside.container-aside--list
+					
+					//- Основной контент
+					.container-content
+
+						//- Контенйер GRID
+						.search-result#search-result-grid
+							.row
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid_vip)
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid_vipYellow)
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid)
+								
+								.column
+									.vacance-card.vacance-card--grid
+										+subscribe('Подпишитесь на вакансии по запросу «дизайнер»', 'grid')
+								.column
+									.vacance-card.vacance-card--grid
+										+subscribe('Вы подписались на вакансии по запросу «Введенный запрос»', 'completed')
+								.column
+									.vacance-card.vacance-card--grid
+										+subscribe('Подпишитесь на вакансии по запросу «дизайнер»', 'user')
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid)
+								.column
+									+vacance-card(vacance_card_grid)
+						
+							include ../sections/_pagination.pug
+
+						//- Контенйер MAP
+						.search-result#search-result-map
+							//- Ряд
+							.row
+								
+								//- Колонка - основная
+								.search-result-list.search-result-list--map
+															
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.middle-map-cards-wrapper.search-result-list__item--vip
+										+vacance-card(vacance_card_map_vip,'list')
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.middle-map-cards-wrapper.search-result-list__item--vip
+										+vacance-card(vacance_card_map_vip,'list')
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.middle-map-cards-wrapper
+										+vacance-card(vacance_card_map,'list')
+									
+									.d-mobile-none
+										+subscribe('Подпишитесь на вакансии по запросу «дизайнер»')
+										+button('Показать еще вакансии', '#', 'btn-link btn--showmore-vacancies')
+									
+								//- Колонка - доп контент (карта)
+								.search-result__item-description.search-result__item-description--map
+									#map
+								
+								+button('Вернуться к списку', '#search-result-list', 'btn-square')(class="middle-map-mobilebutton" id="btn-list-view")
+								
+						//- Контейнер LIST
+						.search-result#search-result-list.search-result--show
+							
+							//- Ряд
+							.row
+								
+								//- Колонка - основная
+								.search-result-list
+									
+									.search-result-list__item
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.search-result-list__item--vip
+										+vacance-card(vacance_card_map_vip,'list')
+									.search-result-list__item
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item
+										+vacance-card(vacance_card_map,'list')
+									.search-result-list__item.search-result-list__item--vip
+										+vacance-card(vacance_card_map_vip,'list')
+
+									+subscribe('Подпишитесь на вакансии по запросу «дизайнер»')
+									+button('Показать еще вакансии', '#', 'btn-link btn--showmore-vacancies')
+									
+								//- Колонка - доп контеннт (описание)
+								.search-result__item-description
+									include ../sections/_vacance-description.pug				
+					//- Боковая панель Aside
+					aside.aside
+						//- .test-block Aside
+			
+		//- вкладка Отрасли
+		.search-results-tabs__areas#search-results-tabs__areas
+			include ../sections/_search-results-tabs__areas.pug
+		
+		//- вкладка Компании
+		.search-results-tabs__companies#search-results-tabs__companies
+			include ../sections/_search-results-tabs__companies.pug
+		//- вкладка Города
+		.search-results-tabs__cities#search-results-tabs__cities
+			include ../sections/_search-results-tabs__cities.pug
+		
+		//- вкладка Метро

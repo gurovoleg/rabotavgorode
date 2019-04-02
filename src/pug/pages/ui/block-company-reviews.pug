@@ -1,0 +1,15 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Блок отзывы';
+	- var pageClass = 'body--dashboard';
+	
+
+block content
+	.container.container--left
+		.title Блок отзывы
+		.section-ui
+			include ../../sections/_block-company-reviews.pug
+		
+		pre.
+			include ../../sections/_block-company-reviews.pug

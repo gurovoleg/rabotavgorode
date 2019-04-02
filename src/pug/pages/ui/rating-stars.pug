@@ -1,0 +1,47 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Рейтинг - Stars';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		
+		.section-ui
+			.title Рейтинг - Stars
+
+			+rating-stars-block("",'#1878FF', "empty", "empty", "empty", "empty", "empty")
+			pre.
+				+rating-stars-block("",'#1878FF', "empty", "empty", "empty", "empty", "empty")
+			
+			+rating-stars-block("",'#1878FF', "full", "full", "full", "full", "empty")
+			pre.
+				+rating-stars-block("",'#1878FF', "full", "full", "full", "full", "empty")
+			
+			+rating-stars-block("0%",'#1878FF', "empty", "empty", "empty", "empty", "empty")
+			pre.
+				+rating-stars-block("0%",'#1878FF', "empty", "empty", "empty", "empty", "empty")
+			
+			+rating-stars-block("50%",'#F45C01', "full", "full", "half", "empty", "empty")
+			pre.
+				+rating-stars-block("50%",'#F45C01', "full", "full", "half", "empty", "empty")
+			
+			+rating-stars-block("100%",'#F45C01', "full", "full", "full", "full", "full")
+			pre.
+				+rating-stars-block("100%",'#F45C01', "full", "full", "full", "full", "full")
+
+			br
+			pre.
+				Миксин:
+
+				mixin rating-stars-block(value, color, ...items)
+					.rating-stars(itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating")
+						if value != ""
+							.rating-stars__value(itemprop="ratingValue") \#{value}
+						.rating-stars__items-block
+							each item in items
+								.rating-stars__item
+									case item
+										when "full": +rating-star(color)
+										when "half": +rating-star(color,'#CBCBCB')
+										when "empty": +rating-star('#CBCBCB')

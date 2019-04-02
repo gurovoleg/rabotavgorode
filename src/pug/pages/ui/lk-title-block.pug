@@ -1,0 +1,20 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Вакансии Title block';
+	- var pageClass = 'body--dashboard';
+	
+	- var dataObject = {title:'Иностранные языки', dataSplitText:{splitText:{modif:'', items:['Английский','Немецкий']}, description:'говорю, пишу'}} ;
+
+	- var lkTitleBlock = {breadcrumb:['Главная','Личный кабинет'], title:'Вакансии в Санкт-Петербург',iconGroup:{iconName:'icon-download', iconText:'Отчет'},vacancySerp:['9522 вакансии'], btnGroup:{text:'Добавить вакансию', link:'#', modify:'btn-semi-rounded-blue'},  tagFilters:{item1:['Грузчик'],item2: ['Санкт-Петербург']}};
+	
+
+block content
+	.container.container--left 
+		
+		.section-ui.theme--employer
+			.title Вакансии Title block
+
+			include ../../sections/_lk-title-block.pug
+		pre.
+			include ../../sections/_lk-title-block.pug

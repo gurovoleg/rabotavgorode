@@ -1,0 +1,23 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Блок с кнопкой "Откликнуться"';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Блок с кнопкой "Откликнуться"
+		.section-ui(style="background-color: #eee; padding-top: 50px; padding-bottom: 50px; margin-top: 300px;")
+			.respond-block-wrapper
+				+respond-block('job-opening', 'Откликнуться', '#!', '', 'icon-favorite')(data-dropdownId="#job__footer-dropdown")
+				+respond-block-dropdown('footer')(id="job__footer-dropdown")
+		
+		pre.
+			.respond-block-wrapper
+				+respond-block('job-opening', 'Откликнуться', '#!', '', 'icon-favorite')(data-dropdownId="#job__footer-dropdown")
+				+respond-block-dropdown('footer')(id="job__footer-dropdown")
+
+		.title-5 Примечание:
+		p Параметр миксина - это модификатор, который создает классы, по которым можно стилизовать данный компонент:
+		p .respond-block--modif  и .respond-block-dropdown--modif,
+		p для данного случая это .respond-block--job-opening  и .respond-block-dropdown--footer

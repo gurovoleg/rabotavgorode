@@ -1,0 +1,39 @@
+.search-resume-filter__wrapper
+	.search-resume-filter__block
+		.search-resume-filter__block-title Образование
+		.search-resume-filter__block-list
+			+checkbox('Высшее', 'small', '')
+			+checkbox('Неоконченное высшее', 'small', '')
+			+checkbox('Среднее специальное', 'small', '')
+			+checkbox('Среднее', 'small', 'employer')
+
+	.search-resume-filter__block
+		.search-resume-filter__block-title Пол
+		.search-resume-filter__block-list
+			+checkbox('Мужской', 'small', '')
+			+checkbox('Женский', 'small', '')
+
+	.search-resume-filter__block
+		.search-resume-filter__block-title Возраст
+		.search-resume-filter__block-inputs
+			+input-text('От', '')
+			+input-text('До', '')
+
+	.search-resume-filter__block
+		.search-resume-filter__block-title Знание языков
+		.search-resume-filter__block-list
+			+checkbox('Английский', 'small', '')
+			+checkbox('Русский', 'small', '')
+			+checkbox('Среднее специальное ', 'small', '')
+			+checkbox('Среднее', 'small', '')
+			+button('Еще', '#', 'btn-link btn--padding-left')
+
+	.search-resume-filter__block
+		.search-resume-filter__block-title Водительские права
+		.search-resume-filter__block-list
+			+checkbox('A', 'small', '')
+			+checkbox('B', 'small', '')
+			+checkbox('C', 'small', '')
+			+checkbox('D', 'small', '')
+			+checkbox('E', 'small', '')
+			+checkbox('Есть свой автомобиль', 'small', '')

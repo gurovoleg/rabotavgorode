@@ -1,0 +1,360 @@
+// Для страницы Поиск Резюме
+.view-resume-header-block {
+	font-size: 18px;
+	line-height: 22px;
+	color: $basicText;
+	.reference-text {
+		display: flex;
+	}
+	.reference-link--desktop {
+		display: none;
+		@media #{$xl} {
+			display: flex;
+		}
+	}
+	.reference-link--mobile {
+		display: flex;
+		@media #{$xl} {
+			display: none;
+		}
+	}
+	.split-text:nth-last-child {
+		text-overflow: ellipsis;
+	}
+}
+.split-text--resume-title-block{
+	.split-text__item:after{top:9px;}
+}
+.view-resume-header__split-text-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 25px;
+	.split-text__item {
+		font-size: 12px;
+	}
+	.reference-text {
+		font-size: 12px;
+	}
+}
+.view-resume-header__title {
+	font-weight: 700;
+	padding-bottom: 8px;
+}
+.view-resume-header__pay {
+	padding-bottom: 16px;
+}
+.view-resume-header__button {
+	position: relative;
+	
+	margin-bottom: 24px;
+	.respond-block {
+		height: auto;
+	}
+}
+.view-resume-header__arrow {
+	vertical-align: middle;
+}
+.view-resume-header__user-block {
+	.split-text__item {
+		font-size: 16px;
+	}
+}
+.view-resume-header__user-info {
+	display: inline-block;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+
+.view-resume-header__split-text {
+	padding-bottom: 8px;
+}
+.view-resume-header__location {
+	display: flex;
+	align-items: center;
+	padding-bottom: 16px;
+	padding-top: 8px;
+}
+.view-resume-header__address {
+	font-size: 16px;
+}
+.view-resume-header__show-contacts {
+	font-size: 18px;
+	line-height: 22px;
+}
+.view-resume-header__respond-block {
+	display: block;
+}
+.respond-block-dropdown--view-resume {
+	top: 56px;
+	@media #{$xl} {
+		right: 0;
+	}
+}
+.view-resume-header__title-block {
+	@media #{$xl} {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.view-resume-header__user-badge {
+	display: none;
+	@media #{$xl} {
+		display: block;
+		.round-icon--user {
+			width: 80px;
+			height: 80px;
+			font-size: 32px;
+			vertical-align: middle;
+		}
+	}
+	.vip-badge {
+		display: inline-block;
+	}
+}
+.view-resume-header__user-content {
+	@media #{$xl} {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.view-resume-header-reference-text {
+	display: none;
+}
+
+// Для страницы Резюме
+
+.resume-header-block {
+	display: flex;
+	flex-direction: column;
+	font-size: 18px;
+	line-height: 22px;
+	color: $basicText;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: $platinum;
+	.reference-text {
+		display: flex;
+	}
+	.reference-link--desktop {
+		display: none;
+		@media #{$xl} {
+			display: flex;
+		}
+	}
+	.reference-link--mobile {
+		display: flex;
+		@media #{$xl} {
+			display: none;
+		}
+	}
+	.split-text:nth-last-child {
+		text-overflow: ellipsis;
+	}
+	
+}
+.resume-header-wrapper-bg {
+	background-color: $platinum;
+	width: 100%;
+	@media #{$md} {
+		background-color: transparent;
+	}
+}
+.resume-header__breadcrumb-split { 
+	padding-top: 16px;
+	.breadcrumb-list {
+		margin-bottom: 4px;
+	}
+	.breadcrumb-item {
+		font-size: 12px;
+	}
+	@media #{$sm} {
+		display: flex;
+		justify-content: space-between;
+	}
+	@media #{$xl} {
+		padding-top: 48px;
+	}
+}
+.resume-header__show-contacts-unsign {
+	padding-bottom: 40px;
+	.btn {
+		padding-bottom: 0;
+	}
+}
+.resume-header__user-badge {
+	margin-bottom: 24px;
+	display: flex;
+	justify-content: center;
+	height: 96px;
+	@media #{$xl} {
+		height: 128px;
+	}
+	.round-icon--user, img {
+		width: 96px;
+		height: 96px;
+		line-height: 64px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border: none;
+		font-size: 36px;
+		@media #{$xl} {
+			width: 128px;
+			height: 128px;
+			padding-top: 0;
+		}
+	}
+	.vip-badge {
+		display: inline-block;
+	}
+}
+.resume-header__user-avatar {
+	width: 96px;
+	height: 96px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	@media #{$xl} {
+		width: 128px;
+		height: 128px;
+	}
+}
+.resume-header__split-text-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 24px;
+	.split-text__item {
+		font-size: 12px;
+	}
+	.reference-text {
+		font-size: 12px;
+	}
+}
+.resume-header__title {
+	font-weight: 700;
+	padding-bottom: 8px;
+	font-size: 24px;
+	line-height: normal;
+	@media #{$xl} {
+		font-size: 32px;
+	}
+}
+.resume-header__pay {
+	padding-bottom: 16px;
+	font-size: 24px;
+	line-height: normal;
+	@media #{$xl} {
+		font-size: 32px;
+	}
+}
+.resume-header__button {
+	display: none;
+	position: relative;
+	// .btn {
+	// 	margin-right: 48px;
+	// }
+	margin-bottom: 24px;
+	.respond-block {
+		height: auto;
+	}
+	@media #{$md} {
+		display: flex;
+	}
+}
+.resume-header__arrow {
+	vertical-align: middle;
+}
+.resume-header__user-block {
+	.split-text__item {
+		font-size: 16px;
+	}
+}
+.resume-header__user-info {
+	display: inline-block;
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.resume-header__split-text {
+	padding-bottom: 8px;
+}
+.resume-header__location {
+	display: flex;
+	align-items: center;
+	padding-bottom: 16px;
+	padding-top: 8px;
+}
+.resume-header__address {
+	font-size: 16px;
+}
+.resume-header__show-contacts {
+	font-size: 18px;
+	line-height: 22px;
+	padding-bottom: 40px;
+}
+.resume-header__respond-block {
+	display: block;
+}
+.respond-block-dropdown--view-resume {
+	top: 56px;
+	@media #{$xl} {
+		right: 0;
+	}
+}
+.resume-header__title-block {
+	@media #{$md} {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.resume-header__user-content {
+	@media #{$xl} {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+.resume-header-reference-text {
+	display: none;
+	// &--mobile {
+	// 	display: block;
+	// 	@media #{$xl} {
+	// 		display: none;
+	// 	}
+	// }
+}
+.resume-header__unsign-text {
+	font-size: 16px;
+	color: $greyText;
+	padding-left: 14px;
+}
+.respond-block-dropdown--resume {
+	top: 67px;
+    right: 0;
+}
+.resume-header__link {
+	color: $greyText;
+}
+
+
+// для UI-kit
+.view-resume-ui-kit {
+	@media #{$sm} {
+		display: block;
+		width: 384px;
+	}
+	@media #{$xl} {
+		width: 630px;
+	}
+}
+
+// для UI-kit
+.view-resume-ui-kit {
+	@media #{$sm} {
+		display: block;
+		width: 384px;
+	}
+	@media #{$xl} {
+		width: 630px;
+	}
+}

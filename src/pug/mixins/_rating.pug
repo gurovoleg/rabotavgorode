@@ -1,0 +1,54 @@
+//- rating-mark
+mixin rating-mark(value1, value2)
+	.rating-mark(itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating")&attributes(attributes)
+		+icon-star
+		.rating-mark__value(itemprop="ratingValue") #{value1}
+		
+		if value2
+			.rating-mark__value.rating-mark__value--gray /#{value2}
+
+//- rating-like
+mixin rating-like(value1, value2, activeItem)
+	.rating-like-wrapper&attributes(attributes)
+		.rating-like-block
+			if activeItem == "like"
+				+icon-like.icon-like--absolute
+				span.rating-like__value.rating__value--active=value1
+			else
+				+icon-like.icon-like--absolute.icon-like--gray
+				span.rating-like__value=value1
+		.rating-dislike-block
+			if activeItem == "dislike"
+				+icon-dislike.icon-dislike--absolute.icon-dislike--blue
+				span.rating-dislike__value.rating__value--active=value2
+			else
+				+icon-dislike.icon-dislike--absolute
+				span.rating-dislike__value=value2
+-;
+
+// rating-star
+mixin rating-stars-block(value, color, ...items)
+	.rating-stars(itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating")
+		if value != ""
+			.rating-stars__value(itemprop="ratingValue") #{value}
+		.rating-stars__items-block
+			each item in items
+				.rating-stars__item
+					case item
+						when "full": +rating-star(color)
+						when "half": +rating-star(color,'#CBCBCB')
+						when "empty": +rating-star('#CBCBCB')
+-;
+//-миксин для рейтинга в таблице
+mixin rating-stars-custom(objRating)
+	.rating-stars.rating-stars--custom(itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating")
+		if objRating.value != ""
+			.rating-stars__value(itemprop="ratingValue") #{objRating.value}
+		.rating-stars__items-block
+			each item in objRating.items
+				.rating-stars__item
+					case item
+						when "full": +rating-star(objRating.color)
+						when "half": +rating-star(objRating.color,'#CBCBCB')
+						when "empty": +rating-star('#CBCBCB')
+

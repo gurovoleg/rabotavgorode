@@ -1,0 +1,65 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Кнопки
+
+		.section-ui
+			p Кнопка-ссылка
+			+button('Link', '#', 'btn-link')
+		pre.
+			+button('Link', '#', 'btn-link')
+		.section-ui
+			p Кнопка синяя круглая
+			+button('Войти', '#', 'btn-rounded-blue')
+		pre.
+			+button('Войти', '#', 'btn-rounded-blue')
+		.section-ui
+			p Кнопка серая круглая
+			+button('Зарегистрироваться', '#', 'btn-rounded-gray')
+		pre.
+			+button('Зарегистрироваться', '#', 'btn-rounded-gray')
+		.section-ui
+			p Кнопка серая полукруглая
+			+button('Выбрать файл', '#', 'btn-semi-rounded-gray')
+		pre.
+			+button('Выбрать файл', '#', 'btn-semi-rounded-gray')
+		.section-ui
+			p Кнопка синяя полукруглая
+			+button('Отправить резюме', '#', 'btn-semi-rounded-blue')
+		pre.
+			+button('Отправить резюме', '#', 'btn-semi-rounded-blue')
+		.section-ui
+			p Кнопка синяя квадратная
+			+button('Вернуться к списку', '#', 'btn-square')
+		pre.
+			+button('Вернуться к списку', '#', 'btn-square')
+		.section-ui
+			p Кнопка серая квадратная
+			+button('Зарегистрироваться', '#', 'btn-square-grey')
+		pre.
+			+button('Зарегистрироваться', '#', 'btn-square-grey')
+		.section-ui
+			p Кнопка для подписки
+			+button('', '#', 'btn-semi-rounded-blue btn--send', 'send')
+		pre.
+			+button('', '#', 'btn-semi-rounded-blue btn--send', 'send')
+		.section-ui
+			p Кнопка с иконкой стрелкой
+			+button('Назад', '#', 'btn', 'left')
+		pre.
+			+button('Назад', '#', 'btn', 'left')
+
+
+		//- .section-ui
+		//- 	+button('Назад', '#', 'btn--employer')
+		//- 	+button('Войти', '#', 'btn-rounded-blue btn--bg-employer')
+		//- 	+button('Зарегистрироваться', '#', 'btn-rounded-gray btn--employer-pink')
+		//- 	+button('Выбрать файл', '#', 'btn-semi-rounded-gray btn--employer-pink')
+		//- 	+button('Отправить резюме', '#', 'btn-semi-rounded-blue btn--bg-employer')
+		//- 	+button('Вернуться к списку', '#', 'btn-square btn--bg-employer')
+		//- 	+button('Зарегистрироваться', '#', 'btn-square-grey btn--employer-pink')

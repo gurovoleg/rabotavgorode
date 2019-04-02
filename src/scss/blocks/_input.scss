@@ -1,0 +1,87 @@
+.input-wrapper {
+	position: relative;
+	width: 100%;
+}
+.input-field {
+	outline: none;
+	border: 1px solid $lightGrey;
+	-webkit-border-radius: 8px;
+	        border-radius: 8px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-left: 16px;
+	cursor: text;
+	width: 100%;
+	&::placeholder {
+		font-size: 16px;
+		color: $greyText;
+		position: absolute;
+		left: 20px;
+		top: 12px;
+		cursor: text;
+		width: 343px;
+	}
+	&:focus {
+		border: 2px solid $blue;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 15px;
+		cursor: text;
+	}
+}
+
+.input-field--employer:focus {
+	border: 2px solid $employer;
+}
+
+.input-field--disabled {
+	opacity: 0.4;
+}
+
+.input-label {
+	display: block;
+	margin-bottom: 0!important;
+}
+.input-placeholder {
+	font-size: 16px;
+	color: $greyText;
+	position: absolute;
+	left: 20px;
+	top: 12px;
+	cursor: pointer;
+	width: 343px;
+}
+.input-error {
+	display: none;
+	// position: absolute;
+	&--registration {
+		display: none;
+		color: $greyText!important;
+		padding-top: 8px!important;
+	}
+}
+.d-none {
+	display: none;
+}
+.has-error {
+	border: 2px solid $textError;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.input-wrapper--error {
+	.input-error {
+		display: block;
+		font-size: 14px;
+		color: $textError;
+		padding-top: 16px;
+		width: 100%;
+	}
+	.input-field {
+		border: 2px solid $textError;
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 15px;
+	}
+}

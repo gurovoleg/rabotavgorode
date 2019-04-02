@@ -1,0 +1,53 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Пагинации';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title-2 Пагинация			
+			.section-ui.section-ui--fon-grey
+				include ../../sections/_pagination.pug
+			.section-ui
+				.title-5 вставить блок пагинации:
+			pre.
+				include ../../sections/_pagination.pug
+			.section-ui
+				.title-5 массив кнопок пагинации с номером страницы:				
+			pre.
+				var pageBtns = [
+				{href:'#', class1: '', class2: '', text: '1'},
+				{href:'#', class1: 'page-toggle__item-active', class2: '', text: '2'},
+				{href:'#', class1: '', class2: 'page-toggle__item--before', text: '3'}, 
+				{href:'#', class1: 'pagination__span', class2: '', text: '...'},
+				{href:'#', class1: '', class2: '', text: '15'},
+				{href:'#', class1: '', class2: 'page-toggle__item--before', text: '16'},
+				{href:'#', class1: '', class2: 'pagination__span', text: '...'},
+				{href:'#', class1: '', class2: '', text: '999'}
+				];
+			
+			.section-ui
+				.title-5 примечание:
+				p Элементу пагинации перед троеточием добавляем класс #[strong page-toggle__item--before]
+					
+				p Активному элементу пагинации добавляем класс #[strong page-toggle__item-active]
+				
+				p Элементу пагинации  #[strong "троеточие"] добавляем класс #[strong pagination__span]
+			.section-ui
+				.title-5 миксин:
+				pre.
+					mixin pagination(pageBtns)
+						.pagination
+							.pagination-row.pagination-row--nowrap								
+								+button('Загрузить еще', '#', 'page-toggle__item--more btn-semi-rounded-gray')
+								+dropdown('Показывать по ', '40', 'link', '', '20', '40', '100')(class="pagination-count")
+								
+							.pagination-row
+								.page-toggle
+									for buttons in pageToggle
+										+page-toggle(buttons)
+								
+								+button('Назад', '#', 'page-toggle__item--prev btn-semi-rounded-gray','left' )
+								+button('Вперед', '#', 'page-toggle__item--next btn-semi-rounded-gray','right' )

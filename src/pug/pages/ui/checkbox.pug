@@ -1,0 +1,71 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Чекбоксы - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Чекбоксы
+		
+		div
+			+checkbox-simple-big
+		pre.
+			+checkbox-simple-big
+		div
+			+checkbox-simple-small
+		pre.
+			+checkbox-simple-small
+		div
+			+checkbox('checkbox 1', 'big', 'employer')
+		pre.
+			+checkbox('checkbox 1', 'big', 'employer') // +checkbox(text,size), size=small/big (16/24px)
+		div
+			+checkbox('checkbox 2', 'small')
+		pre.
+			+checkbox('checkbox 2', small) // +checkbox(text,size), size=small/big (16/24px)
+		div
+			div(style="width:50%")
+				+checkbox-reverse('checkbox 2', 'small')
+		pre.
+			+checkbox-reverse('checkbox 2', small) // +checkbox(text,size), size=small/big (16/24px)	
+
+		pre.
+			Миксины:
+
+			mixin checkbox(text,size, color, textClass) 
+				label.check-box__label&attributes(attributes)
+					input.check-box(type='checkbox')
+					if color != '' && color != undefined
+						span.custom-check-box(class="custom-check-box--" + color + " custom-check-box--" + size)
+					else
+						span.custom-check-box(class="custom-check-box--" + size)
+					span(class="custom-check-box__label " + textClass) \#{text}
+			
+			mixin checkbox-reverse(text,size, color)
+				label.check-box__label&attributes(attributes)
+					input.check-box(type='checkbox')
+					span.custom-check-box__label.custom-check-box__label--no-margin.custom-check-box__label--margin-right #{text}
+					if color != '' && color != undefined
+						span.custom-check-box(class="custom-check-box--" + color + " custom-check-box--" + size)
+					else
+						span.custom-check-box(class="custom-check-box--" + size)
+
+			mixin checkbox-simple-big(color)
+				label.check-box__label&attributes(attributes)
+					input.check-box(type='checkbox')
+					if color != '' && color != undefined
+						span.custom-check-box(class="custom-check-box--" + color + " custom-check-box--big")
+					else
+						span.custom-check-box(class="custom-check-box--big")
+
+			mixin checkbox-simple-small(color)
+				label.check-box__label&attributes(attributes)
+					input.check-box(type='checkbox')
+					if color != '' && color != undefined
+						span.custom-check-box(class="custom-check-box--" + color + " custom-check-box--small")
+					else
+						span.custom-check-box(class="custom-check-box--small")
+
+

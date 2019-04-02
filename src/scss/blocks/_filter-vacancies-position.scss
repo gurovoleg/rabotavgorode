@@ -1,0 +1,53 @@
+.filter-vacancies-position__container {
+	position:fixed;
+	left:0;right:0;
+	top:0;
+	// bottom:0;
+	z-index: 2500;
+	// height: 100%;
+	display: none;
+
+    @media #{$sm} {
+		top:184px;
+		height: calc(100% - 184px); // 184px - bg-header разрешение 992px
+    }
+    @media #{$md} {
+		display: none;
+    }
+}
+
+.filter-vacancies-position__title-block {
+	background-color: $white;
+	padding: 28px 16px;
+	// height: 136px;
+	// border-bottom:1px solid $silver;
+}
+
+.filter-vacancies-position__title {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+.filter-vacancies-position__autocomplete-wrapper {
+	position:absolute;
+	z-index: 2600;
+	// left:16px;
+	// top:70px;
+	// width: calc(100% - 32px);
+	width: 100%;
+}
+
+.filter-vacancies-position__button {
+	height: 80px;
+	padding:16px;
+	background-color: $white;
+	position:fixed;
+	bottom:0;
+	left:0;right:0;
+}
+
+.filter-vacancies-position__map#filter-map {
+	height: 100vh;
+	width: 100%;
+}

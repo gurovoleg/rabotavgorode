@@ -1,0 +1,72 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Бейджики';
+	- var pageClass = 'body--dashboard';
+	- var Elmts = [{number:'1234', text:'Менеджер по продажам'}, {number:'1234', text:'Менеджер по продажам'}, {number:'1234', text:'Менеджер по продажам'}, {number:'1234', text:'Менеджер по продажам'}, {number:'1234', text:'Менеджер по продажам'}];
+
+block content
+	.container.container--left
+		.title Бейджики
+
+		.section-ui
+			+vip-badge('#FDCE14','#000', '#', 'VIP')
+		pre.
+			+vip-badge('#FDCE14','#000', '#', 'VIP)
+		.section-ui
+			+vip-badge('#00AE00', '#FFF', '#', 'Gdeuslugi.ru')
+		pre.
+			+vip-badge('#00AE00','#FFF', '#', 'Gdeuslugi.ru')
+		.section-ui
+			+badge('Figma')
+		pre.
+			+badge('Figma')
+
+		.section-ui
+			+badge-counter-item('1234', 'Менеджер по продажам')
+			+badge-counter-item('1234', 'Информационные технологии, Интернет, Связь')
+			
+		pre.
+			+badge-counter-item('1234', 'Менеджер по продажам')
+			+badge-counter-item('1234', 'Информационные технологии, Интернет, Связь')
+		
+		.section-ui
+			+badge--big('Figma')
+		pre.
+			+badge--big('Figma')
+		.section-ui
+			+round-icon--card('ВИ')
+		pre.
+			+round-icon--card('ВИ')
+		.section-ui
+			+round-icon--user('', 'placeholder.svg')
+		pre.
+			+round-icon--user('', 'placeholder.svg')
+
+		.section-ui
+			+round-icon--card('','alfa.svg')
+				
+		pre.
+			+round-icon--card('','alfa.svg')
+			
+		.section-ui
+			+round-icon--user('AS')
+		pre.
+			+round-icon--user('AS')
+		.section-ui
+			+round-icon--photo-camera
+		pre.
+			+round-icon--photo-camera
+		.section-ui
+			.icon-price 130 Р
+		pre.
+			.icon-price 130 Р
+		.section-ui
+			.icon-price.icon-price--blue 150 Р
+		pre.
+			.icon-price.icon-price--blue 150 Р
+		
+		.section-ui
+			.map-marker-count 25
+		pre.
+			.map-marker-count 25

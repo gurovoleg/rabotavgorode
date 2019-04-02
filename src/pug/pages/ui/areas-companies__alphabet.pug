@@ -1,0 +1,113 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Areas and Companies - Блок с алфавитом';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+				
+		.section-ui
+			.title Areas and Companies - Блок с алфавитом
+		.section-ui
+			+areas-companies-alphabet('ru', 'en', 'numb')
+
+		p Код
+		pre.
+			+areas-companies-alphabet('ru', 'en', 'numb')
+			ru - Русский алфавит
+			en - Английский алфавит
+			numb - Цифры
+		p Миксин
+		pre.
+			mixin areas-companies-alphabet(ru, en, numb)
+				.areas-companies-alphabet
+					a(href="#!").areas-companies-alphabet-item.areas-companies-alphabet-item--all Все
+					if numb
+						a(href="#!").areas-companies-alphabet-item  0-9
+					if ru
+						a(href="#!").areas-companies-alphabet-item  А
+						a(href="#!").areas-companies-alphabet-item  Б
+						a(href="#!").areas-companies-alphabet-item  В
+						a(href="#!").areas-companies-alphabet-item  Г
+						a(href="#!").areas-companies-alphabet-item  Д
+						a(href="#!").areas-companies-alphabet-item  Е
+						a(href="#!").areas-companies-alphabet-item  Ё
+						a(href="#!").areas-companies-alphabet-item  Ж
+						a(href="#!").areas-companies-alphabet-item  З
+						a(href="#!").areas-companies-alphabet-item  И
+						a(href="#!").areas-companies-alphabet-item  К
+						a(href="#!").areas-companies-alphabet-item  Л
+						a(href="#!").areas-companies-alphabet-item  М
+						a(href="#!").areas-companies-alphabet-item  Н
+						a(href="#!").areas-companies-alphabet-item  О
+						a(href="#!").areas-companies-alphabet-item  П
+						a(href="#!").areas-companies-alphabet-item  Р
+						a(href="#!").areas-companies-alphabet-item  С
+						a(href="#!").areas-companies-alphabet-item  Т
+						a(href="#!").areas-companies-alphabet-item  У
+						a(href="#!").areas-companies-alphabet-item  Ф
+						a(href="#!").areas-companies-alphabet-item  Х
+						a(href="#!").areas-companies-alphabet-item  Ц
+						a(href="#!").areas-companies-alphabet-item  Ч
+						a(href="#!").areas-companies-alphabet-item  Ш
+						a(href="#!").areas-companies-alphabet-item  Щ
+						a(href="#!").areas-companies-alphabet-item  Ь
+						a(href="#!").areas-companies-alphabet-item  Ы
+						a(href="#!").areas-companies-alphabet-item  Ъ
+						a(href="#!").areas-companies-alphabet-item  Э
+						a(href="#!").areas-companies-alphabet-item  Ю
+						a(href="#!").areas-companies-alphabet-item  Я
+					if en && ru
+						.areas-companies-alphabet--en
+							a(href="#!").areas-companies-alphabet-item  A
+							a(href="#!").areas-companies-alphabet-item  B
+							a(href="#!").areas-companies-alphabet-item  C
+							a(href="#!").areas-companies-alphabet-item  D
+							a(href="#!").areas-companies-alphabet-item  F
+							a(href="#!").areas-companies-alphabet-item  G
+							a(href="#!").areas-companies-alphabet-item  H
+							a(href="#!").areas-companies-alphabet-item  I
+							a(href="#!").areas-companies-alphabet-item  J
+							a(href="#!").areas-companies-alphabet-item  K
+							a(href="#!").areas-companies-alphabet-item  L
+							a(href="#!").areas-companies-alphabet-item  M
+							a(href="#!").areas-companies-alphabet-item  N
+							a(href="#!").areas-companies-alphabet-item  O
+							a(href="#!").areas-companies-alphabet-item  P
+							a(href="#!").areas-companies-alphabet-item  Q
+							a(href="#!").areas-companies-alphabet-item  R
+							a(href="#!").areas-companies-alphabet-item  S
+							a(href="#!").areas-companies-alphabet-item  T
+							a(href="#!").areas-companies-alphabet-item  U
+							a(href="#!").areas-companies-alphabet-item  V
+							a(href="#!").areas-companies-alphabet-item  W
+							a(href="#!").areas-companies-alphabet-item  X
+							a(href="#!").areas-companies-alphabet-item  Y
+							a(href="#!").areas-companies-alphabet-item  Z
+					if en && !ru
+						a(href="#!").areas-companies-alphabet-item  A
+						a(href="#!").areas-companies-alphabet-item  B
+						a(href="#!").areas-companies-alphabet-item  C
+						a(href="#!").areas-companies-alphabet-item  D
+						a(href="#!").areas-companies-alphabet-item  F
+						a(href="#!").areas-companies-alphabet-item  G
+						a(href="#!").areas-companies-alphabet-item  H
+						a(href="#!").areas-companies-alphabet-item  I
+						a(href="#!").areas-companies-alphabet-item  J
+						a(href="#!").areas-companies-alphabet-item  K
+						a(href="#!").areas-companies-alphabet-item  L
+						a(href="#!").areas-companies-alphabet-item  M
+						a(href="#!").areas-companies-alphabet-item  N
+						a(href="#!").areas-companies-alphabet-item  O
+						a(href="#!").areas-companies-alphabet-item  P
+						a(href="#!").areas-companies-alphabet-item  Q
+						a(href="#!").areas-companies-alphabet-item  R
+						a(href="#!").areas-companies-alphabet-item  S
+						a(href="#!").areas-companies-alphabet-item  T
+						a(href="#!").areas-companies-alphabet-item  U
+						a(href="#!").areas-companies-alphabet-item  V
+						a(href="#!").areas-companies-alphabet-item  W
+						a(href="#!").areas-companies-alphabet-item  X
+						a(href="#!").areas-companies-alphabet-item  Y
+						a(href="#!").areas-companies-alphabet-item  Z

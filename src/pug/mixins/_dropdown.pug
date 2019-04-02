@@ -1,0 +1,95 @@
+//--- Dropdown mixins 
+
+mixin dropdown(prename, name, itemType, size, ...items)
+	.dropdown&attributes(attributes)
+		if prename
+			span.dropdown-prename #{prename}&nbsp;
+
+		//- Например для Отраслей
+		if itemType == "empty"
+			.dropdown-list-wrapper
+				span.dropdown-list-name #{name}&nbsp;
+					+arrow(class="arrow--down-small")
+
+		else if itemType == "autocomplete"
+			.dropdown&attributes(attributes)
+				.dropdown-list-wrapper
+					span.dropdown-list-name.dropdown-toggle #{name}&nbsp;
+						+arrow(class="arrow--down-small")
+					.dropdown-list.dropdown-list--reset
+						include ../sections/_autocomplete.pug
+		
+		else if itemType == "view"
+			.dropdown-list-wrapper
+				//-span.dropdown-list-name.dropdown-toggle #{name}&nbsp;
+				span.dropdown-list-name.dropdown-toggle
+					span.dropdown-list-name__text#dropdown-view-text #{name}&nbsp;
+					+arrow(class="arrow--down-small")
+				.dropdown-list.dropdown-view
+					a(href="#search-result-list").dropdown-list__item список
+					a(href="#search-result-grid").dropdown-list__item плитка
+					a(href="#search-result-map").dropdown-list__item на карте
+
+		else
+			.dropdown-list-wrapper
+				//- span.dropdown-list-name.dropdown-toggle #{name}&nbsp;
+				span.dropdown-list-name.dropdown-toggle
+					span.dropdown-list-name__text #{name}&nbsp;
+					+arrow(class="arrow--down-small")
+				.dropdown-list
+					each item in items
+						case itemType
+							when "checkbox"
+								+checkbox(item, size)(class="dropdown-list__item")
+							when "reverse"
+								+checkbox-reverse(item,size)(class="dropdown-list__item d-flex justify-content-between align-items-center")
+							when "link"
+								a(href="#!").dropdown-list__item #{item}
+							default
+								.dropdown-list__item #{item}
+-;
+
+//-простая выпадашка для инпута на стр apply
+mixin dropdown-simple-list(modif, ...items)
+	.dropdown-list(class=" dropdown-simple-list--"+modif)&attributes(attributes)
+		each item in items
+			.dropdown-list__item #{item}
+
+-;
+
+//- Миксин для выпадашек на странице Кандидаты (Статус, звезды)
+mixin dropdown-select(obj)
+	if obj.typeMod == 'stars'
+		.dropdown-select.dropdown-select--max-width
+			.dropdown-select__current
+				.dropdown-select__item 
+					+rating-stars-block("", obj.color, obj.currentItem.star1, obj.currentItem.star2, obj.currentItem.star3, obj.currentItem.star4, obj.currentItem.star5)
+				+arrow(class="arrow--down")
+				.dropdown-select__list
+					each item in obj.items
+						.dropdown-select__item 
+							+rating-stars-block("", obj.color, item.star1, item.star2, item.star3, item.star4, item.star5)
+							
+	else if  obj.typeMod == 'input'
+		.dropdown-select
+			+inputField('input-simple', '', 'input-simple', '', obj.placeholder, '')
+			+arrow(class="arrow--down")
+			.dropdown-list(class="dropdown-simple-list--input")
+				each item in obj.items
+					.dropdown-list__item #{item}
+			
+	else
+		.dropdown-select
+			.dropdown-select__current
+				.dropdown-select__item 
+					if obj.currentItem.color
+						.item-marker(style="background-color:" + obj.currentItem.color)
+					span=obj.currentItem.text
+				+arrow(class="arrow--down")
+				.dropdown-select__list
+					each item in obj.items
+						.dropdown-select__item 
+							if obj.currentItem.color
+								.item-marker(style="background-color:" + item.color)
+							span=item.text
+-;

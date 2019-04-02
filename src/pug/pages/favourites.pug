@@ -1,0 +1,60 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = "Favourites";
+	- var pageClass = 'index-page theme--employer';
+	
+	//- Header
+	- var Header = {modif: '', personStatus: '', city:'Санкт-петербург',  inputNumber: '', loggedPerson: {letters:'AS', image:''} };
+
+	//- Карточки
+	- var resumeCard = {cardHeader: {title: 'Менеджер по продажам недвижимости', salary: '150 000 Р', published: '2д'}, aspirantInfo:{name:'Константин', age:'33 года'}, aspirantAddress:{metroLine: 'blueMarker', metroStation: 'Купчино', cityName: 'Санкт-Петербург' },personLetters:'AS', vipObject:{color:'yellow', title:'Pro'}, splitTextObject:{modif: "resume-card", items: ["7 лет опыта","Эксперт", "Неполное высшее"]}, actionLinks:{it1:'Сохранить ',it2:'Предложить вакансию'}, jobElmts:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, jobPlaceItems:{it1:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, it2:{title:'Руководитель отдела продаж недвижимости', splitElemts: {modif:'job-info', items:['Лен Строй','3 года 9 месяцев']}}}};
+
+block content
+	
+	.page-container
+
+		//- Header + Выпадающее меню из логотипа
+		.lk-header-wrapper
+			+pageHeader(Header)(id="lk-header")
+		.bg-logo-menu-dropdown.bg-logo-menu-dropdown--small-header
+			include ../sections/_main-menu.pug
+
+		//- Выбор города
+		include ../sections/_city-selection.pug
+
+		//- Боковое меню
+		+aside-menu(objCompanies)
+				
+		//- Контейнер для центрирования контента 
+		.lk-container
+			
+			.lk-title-block-container
+				//- Title-block
+				+lk-title-block({breadcrumb:['Главная','Личный кабинет'], title:'Избранное',vacancySerp:['9522 вакансии']})(class="lk-title-block--favourites")
+
+				//- Строка поиска
+				.search-form-wrapper
+					+search-form("Название или id резюме")
+			
+			//- Контент (Карточки)
+			.lk-content-container.lk-content-container--grid
+	
+				.column-wrapper
+					+resume-card(resumeCard, 'grid')
+				.column-wrapper
+					+resume-card(resumeCard, 'grid')
+				.column-wrapper
+					+resume-card(resumeCard, 'grid')
+				.column-wrapper
+					+resume-card(resumeCard, 'grid')
+				.column-wrapper
+					+resume-card(resumeCard, 'grid')
+				.column-wrapper
+					+resume-card(resumeCard, 'grid')
+				.column-wrapper
+					+resume-card(resumeCard, 'grid')
+				.column-wrapper
+					+resume-card(resumeCard, 'grid')
+
+				

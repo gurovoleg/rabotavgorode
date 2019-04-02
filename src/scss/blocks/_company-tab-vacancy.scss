@@ -1,0 +1,52 @@
+.container-main--vacancy-tab{
+	padding-top: 24px;
+	padding-bottom: 70px;	
+	@media #{$md}{padding-top: 40px;}
+	
+}
+.container-main--vacancy-tab .tag-filter{
+	display: none;
+	margin-bottom: 24px;
+	@media #{$md}{
+		display: inline-block;
+		margin-bottom: 32px;
+	}
+}
+
+.container-main--vacancy-tab .dropdown-block{
+	margin-bottom: 24px;
+	padding-left: 8px;
+	@media #{$md}{margin-bottom: 34px}
+}
+
+.dropdown-block .dropdown{ 
+	margin-right: 24px;
+
+}
+
+ 
+.vacancy-tab__title {
+	margin-bottom: 16px;
+	@media #{$md}{margin-bottom: 40px;}
+}
+
+ .vacancy-tab-button-wrapper {
+	border-bottom:1px solid $silver;
+	padding-bottom: 24px;
+
+}
+
+.vacancy-tab-contacts{
+	flex-direction: column;
+}
+.vacancy-tab-contacts .subscribe{
+	@media #{$md}{order: 2;}
+}
+
+.vacancy-tab-contacts .subscribe-input {
+	align-items: start;
+}
+.vacancy-tab-contacts .company-contact-person {
+	display: none;
+	@media #{$md}{display: block;}
+}

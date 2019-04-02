@@ -1,0 +1,17 @@
+.company-contact-person{
+	border-bottom: 1px solid $silver;
+	padding-bottom: 24px;
+
+	@media #{$md} {padding-bottom: 40px;}
+}
+.company-contact-person__title{
+	font-size: 24px;
+	line-height: 1;
+	font-weight: 700;
+	color: $black;
+	margin-bottom: 36px;
+}
+
+.company-contact-person__show {
+	margin-bottom: 40px;
+}

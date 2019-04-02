@@ -1,0 +1,68 @@
+/*COLORS*/
+.color {
+  display: inline-block;
+  margin-right: 40px;
+  margin-bottom: 60px;
+}
+.color-value {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 2px 10px -5px $black;
+  box-shadow: 0px 2px 10px -5px $black;
+  margin-bottom: 20px;
+}
+.color-name {
+  font-size: 14px;
+}
+/*COLORS*/
+
+/*LINK-COLOR*/
+.link-color-value {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.link-color-status {
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+.link-color-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.link-color {
+  width: 60px;
+  text-align: center;
+  margin-right: 60px;
+}
+.double-marker{
+  border-width:3px;
+  border-style:  solid;
+}
+/*colors for marker metro*/
+.color-marker--red{background-color: $red;}
+.color-marker--orange{background-color: $orange;}
+.color-marker--green{background-color: $green;}
+.color-marker--blue{background-color: $blue;}
+.color-marker--lightGreen{background-color: $lightGreen;}
+.color-marker--darkGreen{background-color: $darkGreen;}
+.color-marker--blueMarker{background-color: $blueMarker;}
+.color-marker--purpleMarker{background-color: $purpleMarker;}
+.color-marker--brounMarker{background-color: $brounMarker;}
+.color-marker--darkBlueMarker{background-color: $darkBlueMarker;}
+.color-marker--swampMarker{background-color: $swampMarker;}
+.color-marker--bordoMarker{background-color: $bordoMarker;}
+.color-marker--yellowMarker{background-color: $yellowMarker;}
+.color-marker--greyMarker{background-color: $greyMarker;}
+.color-marker--PinkMarker{background-color: $PinkMarker;}
+.color-marker--skyblueMarker{background-color: $skyblueMarker;}
+
+
+.color-marker--statusLightBlue{background-color: $statusLightBlue;}
+.color-marker--statusBlue{background-color: $statusBlue;}

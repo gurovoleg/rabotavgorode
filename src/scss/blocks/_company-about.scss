@@ -1,0 +1,23 @@
+.company-about {
+	border-bottom:1px solid $silver;
+	padding: 24px 0;
+
+	@media #{$md} {padding: 64px 0 40px 0;}
+	
+	p {
+		margin:0;
+		font-size: 18px;
+		color:$basicText;
+		line-height: 29px;
+	} 
+}
+
+.company-about__title {
+	display: none;
+	margin-bottom: 40px;
+
+	@media #{$md} {display: block;}
+}
+
+.company-about__text-block {}
+

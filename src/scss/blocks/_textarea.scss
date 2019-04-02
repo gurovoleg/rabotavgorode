@@ -1,0 +1,14 @@
+textarea {
+	display: block;
+	outline: none;
+	border-radius: 8px;
+	padding: 16px;
+	color: $basicText;
+	border: 1px solid $lightGrey;
+	width: 100%;
+	min-height: 80px;
+	&:focus {
+		border: 2px solid $blue;
+		padding: 15px;
+	}
+}

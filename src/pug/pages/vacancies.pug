@@ -1,0 +1,115 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = "Vacancies";
+	- var pageClass = 'index-page theme--employer';
+	
+	//- Header
+	- var Header = {modif: '', personStatus: '', city:'Санкт-петербург',  inputNumber: '', loggedPerson: {letters:'AS', image:''} };
+
+	//- Navigation
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#preview-feedback", itemName: "Кандидаты", spanValue: '2'},{itemAddClass: "", itemHref: "#preview-desc", itemName: "Описание"},{itemAddClass: "", itemHref: "#preview-service", itemName: "Услуги"},{itemAddClass: "", itemHref: "#preview-history", itemName: "История"},{itemAddClass: "", itemHref: "#preview-stats", itemName: "Статистика"}];
+
+	//- Предпросмотр вакансии Title-block
+	-var reviewObject = {splitTextObject: {modif: "", items: ['123 Просмотра (+45)', '21 августа']}, splitTextDescription: {modif: "", items: ['ВебИнвест', 'Санкт-Петербург']}, title: 'Fullstack Developer Ruby/React' };
+
+block content
+	
+	.page-container
+
+		//- Header + Выпадающее меню из логотипа
+		.lk-header-wrapper
+			+pageHeader(Header)(id="lk-header")
+		.bg-logo-menu-dropdown.bg-logo-menu-dropdown--small-header
+			include ../sections/_main-menu.pug
+
+		//- Выбор города
+		include ../sections/_city-selection.pug
+
+		//- Вертикальное выпадающее меню для таблицы (нажатие на троеточие)
+		include ../sections/_vacancies__table-dropdown.pug
+
+		//- Боковое меню
+		+aside-menu(objCompanies)
+
+
+		//- Preview block (Окно Предпросмотра)
+		.bg-preview
+			
+			.preview#preview-window
+				
+				include ../sections/_preview-header.pug
+				.preview-wrapper
+					+preview-title-block(reviewObject, '#!', '', 'green', 'Открыта')
+					+nav-menu(menuLinks)(id="lk-nav-menu")
+					
+				//- Контейнер с вкладками
+				.preview-tabs-container#preview-tabs-container
+					
+					//- Вкладка Отклики
+					.preview-tabs__feedback#preview-feedback
+						+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'new')
+						+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'accept')
+						+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'decline')
+						+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'new')
+						+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'accept')
+						+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'decline')
+						+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'new')
+						+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'accept')
+						+response-card('preview.png', 'Константин Константинопольский', 'Senior Front-end Developer', 'Санкт-Петербург', '19.10.18, 20:37', 'decline')
+
+					//- Вкладка Описание
+					.preview-tabs__desc#preview-desc
+						include ../sections/_job__description-block.pug	
+												
+					//- Вкладка Услуги
+					.preview-tabs__service#preview-service
+						+service-card('ic_free--custom', 'Обычное размещение', 'Бесплатно', 'Вакансия размещается на 30 дней','' )
+
+						+service-card('ic-refresh--custom', 'Автообновление вакансии', '150 руб в неделю', 'Автоматическое обновление даты публикации каждые 4 часа поднимает ваше резюме вверх .','Еще' )
+
+						+service-card('ic_flame--custom','Срочная вакансия', '500 руб разово', 'Вакансия размещается вначале результатов поиска. Выделяется пометкой «Срочная». Размещается на 7','' )
+						
+						+service-card('ic_mask--custom', 'Срочная вакансия', '500 руб разово', 'Вакансия размещается вначале результатов поиска по ключевым словам в выбранной отрасли.','' )
+
+						.preview_button-wrapper
+							+button("Оплатить", "#!", "btn-semi-rounded-blue control-disabled")
+
+					//- Вкладка История
+					.preview-tabs__history#preview-history
+						+history-card({splitText:{modif:'vacancies-page-tab',items:['29 Ноября 2018, 20:48','Левченко Ольга']}, historyText:'Передана другому менеджеру.'}) 
+
+						+history-card({splitText:{modif:'vacancies-page-tab',items:['24 Ноября 2018, 17:51','Шимкив Валентина']}, historyText:'Модератор подтвердил (IP: 109.252.81.127)'})
+
+						+history-card({splitText:{modif:'vacancies-page-tab',items:['29 Ноября 2018, 20:48','Левченко Ольга']}, historyText:'Восстановлена из архива (IP: 77.111.246.172) STANDARD. Old ID = 26876706'})
+
+						+history-card({splitText:{modif:'vacancies-page-tab',items:['29 Ноября 2018, 20:48','Левченко Ольга']}, historyText:'Утверждена премодератором (IP: 77.111.246.172)'})
+
+					//- Вкладка Статистика
+					.preview-tabs__stats#preview-stats
+							
+				
+		//- Контейнер для центрирования контента
+		.lk-container
+			
+			.lk-title-block-container
+				//- Title-block
+				include ../sections/_lk-title-block.pug
+				
+				//- Строка поиска
+				.search-form-wrapper
+					+search-form("Название или id вакансии")
+
+			//- Контент (Таблица)
+			.lk-content-container
+				include ../sections/_table.pug
+
+	//- Нижнее панель-меню для выбранных строк таблицы
+	.lk-bottom-menu
+		.lk-bottom-menu-content
+			.menu-selected.text-body-grey Выбрано #[span.selected-number 123] вакансии
+			.lk-bottom-menu__items.d-flex
+				+icon-menu-item('ic-refresh','Обновить')
+				+icon-menu-item('ic_copy','Дублировать')
+				+icon-menu-item('ic-eye','Снять с публикации')
+				+icon-menu-item('icon-star-custom','Повысить эффективность')

@@ -1,0 +1,37 @@
+.badges-block--skill{
+	padding-top: 24px;
+	@media #{$md}{padding-top: 40px;}
+}
+.badges-block-items{ 
+	display: flex;
+	align-items: center;
+	flex-wrap:wrap;
+	margin-bottom: 24px;
+	@media #{$md}{margin-bottom: 40px;}
+
+	.badge--skill{
+		font-size: 16px;
+		line-height: 19px;
+		padding-top: 2px;
+		height: 24px;
+		padding-bottom: 2px;
+		padding-left:8px;
+		padding-right:8px;
+		margin-bottom: 8px;
+		margin-right: 8px;
+		background-color: $lightBlue;
+		border: 0px;
+	}
+	
+	.badge--skill-item{margin-right: 0;}
+	
+}
+.badges-block__title{	
+	margin-bottom: 24px;
+	
+	@media #{$md}{margin-bottom: 40px;}
+}
+.btn--badges-skill{
+	font-size: 18px;
+	line-height: 22px;
+}

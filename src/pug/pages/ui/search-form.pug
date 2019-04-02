@@ -1,0 +1,18 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Строка поиска - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.title Строка поиска
+
+	.container.container--left
+		+search-form("Название или id резюме")
+
+		pre +search-form(placeholder) // placeholder = "Название или id резюме"
+
+						
+
+

@@ -1,0 +1,15 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Хлебные крошки';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Хлебные крошки
+		
+		.section-ui
+			.title-5 Хлебные крошки
+			+breadcrumb('Главная', 'Работа')
+		pre.
+			+breadcrumb('Главная', 'Работа')

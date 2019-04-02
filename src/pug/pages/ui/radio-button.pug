@@ -1,0 +1,37 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Радио кнопки - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.title Радио кнопки
+
+		.section-ui
+			+radio-button('radio-group1', 'radio 1', 'small', '', 'checked')(class='mr-20')
+			+radio-button('radio-group1', 'radio 2', 'big')
+		
+		pre.
+			+radio-button('radio-group1', 'radio 1', 'small', '', 'checked')(class='mr-20')
+			+radio-button('radio-group1', 'radio 2', 'big') 
+		
+		.section-ui
+			+radio-button('radio-group2', 'radio 1', 'small', 'employer', 'checked')(class='mr-20')
+			+radio-button('radio-group2', 'radio 2', 'big', 'employer')
+
+		pre.
+			+radio-button('radio-group2', 'radio 1', 'small', 'employer', 'checked')(class='mr-20')
+			+radio-button('radio-group2', 'radio 2', 'big', 'employer')
+		pre.
+			Миксин:
+
+			mixin radio-button(group, text, size, color, checked)
+				label.radio-button__label&attributes(attributes)
+					input.radio-button(type='radio' name=group checked=checked)
+					if color != '' && color != undefined
+						span.custom-radio-button(class="custom-radio-button--" + color + " custom-radio-button--" + size)
+					else 
+						span.custom-radio-button(class="custom-radio-button--" + size)
+					span.custom-radio-button__label \#{text}

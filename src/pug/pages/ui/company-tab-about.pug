@@ -1,0 +1,15 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Company таб - Описание';
+	- var pageClass = 'body--dashboard';
+		
+block content
+	.container.container--left
+		.title Company таб - Описание
+
+		.company-tabs-container
+			.company-tabs__about
+				include ../../sections/_company-tab-about.pug
+		pre.
+			include ../../sections/_company-tab-about.pug

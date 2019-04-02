@@ -1,0 +1,14 @@
+.resume__tags-block {
+	padding-bottom: 136px;
+	@media #{$md} {padding-bottom: 0;}
+	
+	.badges-block__title {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 16px;
+		@media #{$md} {
+			font-size: 24px;
+			margin-bottom: 24px;
+		}
+	}
+}

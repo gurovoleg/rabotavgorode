@@ -1,0 +1,49 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Job - список-меню - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+	- var items = { item1:{ name: 'Контакты', link: ''}, item2:{ name: 'Рейтинг', value: 67, ratingValue: 100, link: ''}, item3:{ name: 'Отзывы', value: 123, link: '#!'}, item4:{ name: 'Вакансии', value: 45, link: '#!'} };
+
+block content
+
+	.container.container--left
+		.title Список-меню компании
+		
+		.section-ui
+			+job-company-list(items)
+
+		.section-ui
+			p Подключение:
+			pre.
+				+job-company-list(items)	
+
+			p Миксин:
+			pre.
+				//- Миксин для Job-company__list-item
+				mixin job-company__list-item(name,value,ratingValue,link)
+					if link != ''
+						a(href=link).job-company__list-item
+							.job-company__list-item__name 
+								span #{name}
+								if ratingValue
+									+rating-mark(ratingValue)
+							.job-company__list-item__value #{value}
+					else
+						.job-company__list-item
+							.job-company__list-item__name 
+								span #{name}
+								if ratingValue
+									+rating-mark(ratingValue)
+							.job-company__list-item__value #{value}		
+
+
+				//-  Миксин Job-company-list (весь блок)
+				mixin job-company-list(items)
+					.job-company__list
+						each item in items
+							+job-company__list-item(item.name,item.value,item.ratingValue, item.link )
+
+			p Объект:
+			pre.
+				items = { item1:{ name: 'Контакты', link: '#!'}, item2:{ name: 'Рейтинг', value: 67, ratingValue: 100, link: ''}, item3:{ name: 'Отзывы', value: 123, link: '#!'}, item4:{ name: 'Вакансии', value: 45, link: '#!'} };

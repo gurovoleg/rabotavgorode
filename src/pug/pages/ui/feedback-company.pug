@@ -1,0 +1,50 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Отзыв о компании';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+	.title Отзыв о компании
+	
+	+feedback-company(true, 'Написать отзыв')
+
+	pre +feedback-company(true, 'Написать отзыв')
+
+	+feedback-company(false, 'Проголосовать')
+
+	pre +feedback-company(false, 'Проголосовать')
+
+	+feedback-company(false, 'Проголосовать', true)
+
+	pre +feedback-company(false, 'Проголосовать', true)
+
+
+
+	pre.
+		Миксин:
+
+		mixin feedback-company(enabled, buttonText, login)
+			.feedback-company
+				if enabled == true
+					.feedback-company__title Оставить отзыв о компании
+					+textarea('Расскажите о плюсах и минусах работы в компании ')
+					.feedback-company__button-block
+						+button( buttonText, '#', 'btn-semi-rounded-blue btn--min-width')
+						
+				else if enabled == false
+					.feedback-company__button-block
+						+button( buttonText, '#', 'btn-semi-rounded-blue btn--min-width control-disabled')
+						if login == true
+							.button-block__comment 
+								| Чтобы оставить отзыв, 
+								+button('войдите', '#')
+								|  на сайт или 
+								+button('зарегистрируйтесь.', '#')
+						else 
+							.button-block__comment Чтобы проголосовать, войдите на сайт. В резюме должен быть указан опыт работы в этой компании.
+
+
+
+	

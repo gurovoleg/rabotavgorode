@@ -1,0 +1,86 @@
+.bg-lightbox {
+	display: none;
+	position:fixed;
+	background-color: $bgTooltip;
+	top:0;bottom:0;
+	left:0;right:0;
+	z-index:2500;
+	padding:0 16px;
+		
+	// Задаем стрелкам симметричную кликабельную область
+	.arrow svg {
+		top:50%;left:50%;
+		transform:translate(-50%,-50%) rotate(-90deg) ;
+	}
+	.arrow--right svg {transform:translate(-50%,-50%) rotate(90deg);}
+}
+
+.lightbox__close-button {
+	position:absolute;
+	top:32px;
+	right:32px;
+	width: 32px;
+	height: 32px;
+	background-color: $bgLight;
+	border-radius: 50%;
+
+	.icon-close--absolute {
+		position:absolute;
+		top:50%;left:50%;
+		transform:translate(-50%,-50%);
+	}
+}
+
+.lightbox-container {
+	position:relative;
+	top:50%;left:50%;
+	transform:translate(-50%,-50%);
+	z-index:2501;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	padding: 48px 0; // для названия
+
+	@media #{$md} {max-width: 83%;} // в 10 колонках согласно сетке
+	@media #{$xl} {max-width: 1283px;} // макс ширина контейнера в сетке 
+}
+
+.lightbox-block {
+	flex:1 0 100%;
+	position: relative;
+	margin-right: 24px;
+}
+
+.lightbox-block__image img {
+	height: auto;
+	width: 100%;
+}
+
+.lightbox-block__label {
+	position:absolute;
+	color:$white;
+	padding-top: 24px;
+}
+
+.lightbox__navigation {
+	position:absolute;
+	bottom:20px; left:0;
+	display: flex;
+	width:100%;
+	justify-content: space-between;
+	padding: 0 80px;
+	
+	@media #{$sm} {padding: 0 180px;}
+	@media #{$md} {
+		top:50%;
+		bottom:auto;
+		transform:translateY(-50%);
+		padding: 0 43px;
+	}
+
+	.arrow path {fill: $white;}
+	.arrow {
+		width: 14px;
+		height: 24px;
+	}
+}

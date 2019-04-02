@@ -1,0 +1,24 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Вакансии.Таб История. Карточка';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.container.container--left
+		.ui-section
+			.title Вакансии.Таб История. Карточка
+			
+			+history-card({splitText:{modif:'vacancies-page-tab',items:['29 Ноября 2018, 20:48','Левченко Ольга']}, historyText:'Передана другому менеджеру. Левченко Ольга -> Кихтенко Артем Федорович'})
+			+history-card({splitText:{modif:'vacancies-page-tab',items:['24 Ноября 2018, 17:51','Шимкив Валентина']}, historyText:'Модератор подтвердил (IP: 109.252.81.127)'})
+			+history-card({splitText:{modif:'vacancies-page-tab',items:['29 Ноября 2018, 20:48','Левченко Ольга']}, historyText:'Восстановлена из архива (IP: 77.111.246.172) STANDARD. Old ID = 26876706'})
+			+history-card({splitText:{modif:'vacancies-page-tab',items:['29 Ноября 2018, 20:48','Левченко Ольга']}, historyText:'Утверждена премодератором (IP: 77.111.246.172)'})
+		pre.
+			+history-card({splitText:{modif:'vacancies-page-tab',items:['29 Ноября 2018, 20:48','Левченко Ольга']}, historyText:'Передана другому менеджеру. Левченко Ольга -> Кихтенко Артем Федорович'})
+
+			+history-card({splitText:{modif:'vacancies-page-tab',items:['24 Ноября 2018, 17:51','Шимкив Валентина']}, historyText:'Модератор подтвердил (IP: 109.252.81.127)'})
+
+			+history-card({splitText:{modif:'vacancies-page-tab',items:['29 Ноября 2018, 20:48','Левченко Ольга']}, historyText:'Восстановлена из архива (IP: 77.111.246.172) STANDARD. Old ID = 26876706'})
+			
+			+history-card({splitText:{modif:'vacancies-page-tab',items:['29 Ноября 2018, 20:48','Левченко Ольга']}, historyText:'Утверждена премодератором (IP: 77.111.246.172)'})

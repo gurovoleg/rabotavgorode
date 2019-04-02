@@ -1,0 +1,23 @@
+form(action="").apply-tab-form
+	+inputField('input-simple', '', 'input-simple', '', 'Имя', '').apply-tab-input
+	+inputField('input-simple', '', 'input-simple', '', 'Фамилия', '').apply-tab-input
+	+inputField('input-email', 'text', 'input-email', 'email', 'Электронная почта', 'Не найдено аккаунтов связанных с указанной электронной почтой').apply-tab-input
+	+inputField('input-checkfield', 'text', 'input-checkfield', 'checkField', 'Номер телефона', 'Пользователь с указанным телефоном уже зарегистрирован.', 'registration').apply-tab-input
+	p.apply-tab-title Загрузите резюме
+	.apply-tab-download
+		+button('Выбрать файл', '#', 'btn-semi-rounded-gray').apply-tab-btn-choose
+		//- кнопка выбрать файл
+		span.apply-tab-file doc, pdf, rtf не более 15 Мб
+		//- полоса загрузки
+		+progress-bar('apply-tab', '100%', '8px','rgba(0, 0, 0, 0.08)', '40%','#1878FF')
+		
+		//- информация о файле		
+		+choose-file('apply', 'Ivan_Petrov_Linkedin_CV_export.pdf', 'icon-close','icon-close--apply')
+	+textarea('Расскажите чем вас привлекла эта вакансия и почему вы хорошо подойдете на эту роль', 'text').apply-tab-textarea
+	+checkbox('Подписаться на похожие вакансии', 'big').apply-tab-checkbox
+	+button('Отправить резюме', '#', 'btn-semi-rounded-blue').apply-tab-btn-download
+	p.apply-tab-agreement Отправляя резюме, вы принимаете условия  
+		a(href="#!") Соглашения 
+		| и 
+		a(href="#!") Правила сайта
+

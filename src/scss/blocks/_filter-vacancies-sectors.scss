@@ -1,0 +1,294 @@
+// Vars
+$buttonBlockHeight:80px; // высота блока с кнопкой
+$headerColumnHeight:80px; // высота хедера колонки для мобилы
+
+// ------ ОСНОВНАЯ РАЗМЕТКА ------ //
+
+.bg-container {
+	position:fixed;
+	left:0;right:0;
+	top:0;
+	background-color: rgba(0,0,0,.16); 
+	z-index: 3000;
+	height: 100%;
+	display: none;
+	
+    @media #{$sm} {
+		top:195px;
+		height: calc(100% - 195px); // 195px - bg-header разрешение 768px
+    }
+    @media #{$xl} {
+		top:147px;
+		height: calc(100% - 147px); // 147px - bg-header разрешение 1440px
+    }
+	
+}
+
+// Модификатор для страницы Company
+.bg-container--page-company {
+    @media #{$sm} {
+		top:80px;
+		height: calc(100% - 80px); // 80px - bg-header разрешение 768px
+    }
+}
+
+
+.filter-main-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	right:0;
+	
+    @media #{$xl} {width: 50%;}
+}
+
+.row-container {
+	display: flex;
+	height: 100%;
+}
+
+.column-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: $bg;
+
+	position:absolute;
+    transition: right 0.3s;
+    right:-100vw;
+	
+	@media #{$sm} {
+		position:static;
+		flex: 0 0 50%;
+		max-width: 50%;	
+		background-color: $white;
+	}
+	@media #{$md} {right: 0;}
+}
+
+.flex-wrapper {
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+
+// ------ БЛОК ОТРАСЛИ ------ ///
+
+// Шапка
+.filter-vacancies-sectors__header {
+	height: $headerColumnHeight;
+	background-color: $white;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-bottom:1px solid $silver;
+
+	.header__arrow-down {
+		margin-left: 10px;
+	}
+}
+
+
+// Форма
+.filter-vacancies-sectors {
+	height: 100%;
+	overflow: hidden;
+}
+
+.filter-vacancies-sectors__title-block {
+	height: 80px;
+	padding: 0 16px;
+}
+
+.filter-vacancies-sectors__title {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1;
+
+}
+
+.filter-vacancies-sectors__title-buttons {
+	display: flex;
+}
+
+
+.filter-vacancies-sectors__list {
+	padding-bottom:28px;
+	overflow-y: auto;
+	height: calc(100% - #{$buttonBlockHeight + $headerColumnHeight}); 
+	
+	// @media #{$md} {height: calc(100% - 80px - #{$buttonBlockHeight});}
+	
+}
+
+.sectors-list__item {
+	display: flex;
+	align-items:center;
+	justify-content:flex-start;
+	cursor: pointer;
+
+	padding:0 16px 0;
+	height: 48px;
+	
+	&:hover, &:focus  {
+		background-color: $lightBlue;
+	}
+}
+
+.custom-check-box__label-block {
+	font-size: 16px;
+	text-align: left;
+	margin-left: 16px;
+	line-height: 1;
+	overflow: hidden;
+}
+
+.custom-check-box__label-name {
+	padding-top: 4px;
+	line-height: 20px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.custom-check-box__notification {
+	line-height: 20px;
+	color:$gray;
+	padding-bottom: 4px;
+	display: none;
+}
+
+.custom-check-box__notification--show {
+	display: block;
+}
+
+.filter-vacancies-sectors__button {
+	display: flex;
+	align-items: center;
+	padding:16px;
+	background-color: $white;
+	border-top:1px solid $silver;
+	position:fixed;
+	position:sticky;
+	bottom:0;
+	left:0;right:0;
+	height: $buttonBlockHeight;
+}
+
+.filter-vacancies-sectors__notification {
+	font-size: 16px;
+	line-height: 19px;
+	margin-left: 16px;
+
+	@media #{$md} {
+		margin-left: 32px;
+	}
+}
+
+// ------ БЛОК СПЕЦИАЛИЗАЦИЙ ------ //
+
+.sector-item-profile {}
+
+.sector-item-profile__list { 
+	// padding:0 16px; 
+	padding:0; 
+	overflow-y: auto;
+	height: calc(100% - #{$headerColumnHeight}); 
+	
+	@media #{$sm} {height: calc(100% - #{$buttonBlockHeight + $headerColumnHeight})}; 
+	// @media #{$md} {height: calc(100% - 80px - #{$buttonBlockHeight})}; 
+	
+}
+
+.sector-item-profile__header {
+	position:relative;
+	height: 80px;
+	background-color: $white;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-top: 28px;
+	text-align: center;
+	border-bottom:1px solid $silver;
+}
+
+.sector-item-profile__title {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1;
+	padding: 31px 16px;
+	height: 80px;
+
+	@media #{$sm} {
+		padding-top: 32px;		
+		padding-bottom: 32px;
+	}
+
+	span {
+		margin-left: 16px;
+		@media #{$sm} {margin-left: 0;}
+	}
+}
+
+.profile-list__item {
+	display: flex;
+	// width: 100%;
+	// padding-bottom: 24px;
+	cursor: pointer;
+	height: 48px;
+	padding: 0 16px;
+
+	&:hover, &:focus  {
+		background-color: $lightBlue;
+	}
+}
+
+// ---- МОДИФИКАТОРЫ ------ //
+
+.arrow--left-modificator {
+	vertical-align: text-top;
+	@media #{$sm} {display: none;}	
+}
+
+.arrow--left-modificator path {fill: $black;}
+
+.arrow-right--modificator {
+	margin-left: auto;
+	//padding-left: 16px;
+	padding-left: 14px;
+	@media #{$sm} {display: none;}
+}
+.arrow.arrow--right.arrow-right--modificator path {fill: $greyText;}
+
+
+// Показать основной контейнер
+.bg-container--show {
+	display: block;
+}
+
+// Модификатор колонки Специализации
+.column-container--profiles {
+	@media #{$sm} {border-left:1px solid $silver;}
+}
+
+// Показать колонку
+.column-container--slideIn {
+   	right: 0;
+}
+
+// Показать колонку налево
+.column-container--slideOut {
+   	right: 100vw;
+}
+
+
+.display-none {display: none;}
+.display-block {display: block;}
+
+.filter-vacancies-sectors__button--mobile-show {
+	@media #{$sm} {display: none;}
+}
+
+.filter-vacancies-sectors__button--mobile-none {
+	display: none;
+	@media #{$sm} {display: flex;}
+}

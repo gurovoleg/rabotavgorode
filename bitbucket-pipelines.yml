@@ -1,0 +1,10 @@
+image: ubuntu:16.04
+
+pipelines:
+  branches:
+    develop:
+    - step:
+        script:
+        - apt-get update -y
+        - apt-get install -y ssh
+        - ssh -tt $HOST  "cd /var/www/rabotavgorode_html/; sh deploy.sh ; exit; bash"

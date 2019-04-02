@@ -1,0 +1,121 @@
+/* base color */
+
+$black: #000;
+$white: #fff;
+$light-gray: #EDF4FF;
+
+// Цвет работодателя
+// $employer: #F45C01;
+// $employerBg:#fde5d6;
+// $employerHover: #CC4C00;
+// $employerActive: #A33D00;
+
+$employer: #2389A9;
+$employerBg:#D9E9ED;
+$employerHover: #44B7DB;
+$employerActive: #005A75;
+$employerAside: rgba(35, 137, 169, 0.08);
+
+/* buttons color */
+$btn: #1878FF;
+$btn-hover: #4F98FF;
+$btn-active: #125BC2;
+$platinum:#FCFBFA ;
+$aside:rgba(24, 120, 255, 0.08);
+
+
+/* цвета для текста*/
+$basicText: #333333;
+$greyText: #999999;
+$lightGrey:rgba(0,0,0, .16);
+$modal:rgba(0,0,0, .4);
+$silver:rgba(0,0,0, .08) ;
+$silverLight:rgba(0,0,0, .06);
+$shadowLight:rgba(0,0,0, .03);
+$textHover:rgba(0,0,0, .6);
+$textError:#EB5757;
+
+
+
+/* цвета для ссылок и кнопок*/
+$link:#1878FF ;
+$linkHover:#4F98FF;
+$linkPressed:#125BC2;
+$lightBlue: #EDF4FF;
+$reference: #BDBDBD;
+/* цвет для bg */
+$bg-light-gray: #E8F1FF;
+$bg-shadow:rgba(0,0,0, .24);
+$bg:#FCFBFA;
+$smoky:#D8D8D8;
+$bgTooltip: rgba(0,0,0,.8);
+$bgLight: rgba(255,255,255,.8);
+
+/*цвет для маркера цветной кружок*/
+$red: #FF0032;
+$orange: #FF7700;
+$green: #08AD60;
+$lightGreen: #A8C931;
+$darkGreen: #068A4B;
+$blueMarker: #0B8DEC;
+$purpleMarker:#BE1BDF;
+$brounMarker:#974C0D;
+$darkBlueMarker:#004F99;
+$swampMarker:#6B5529;
+$bordoMarker:#B32783;
+$yellowMarker:#FDCE14;
+$greyMarker:#A2A3A6;
+$PinkMarker:#E5B1E3;
+$skyblueMarker:#72CFED;
+
+
+/*цвет для заливки иконок*/
+$gray: #999999;
+$grey: #999999;
+$blue: #1878FF;
+
+$star: #CBCBCB;
+
+$priceShadow:#000e08;
+
+
+/*page avtorization*/
+$bgAvtiriz: #F2F2F2;
+
+/* цвета для вип-бейджиков*/
+$vip:#F2C94C;
+$greenBadge:#00AE00;
+
+
+/*icons social*/
+$vk: #416B9E;
+$fb: #3A5CA9;
+$ok: #FF9800;
+$gu: #00AE00;
+
+// notifications
+$notifyError:#EB5757;
+$notifySuccess:#47AB2F;
+$notifyAttention:#F2C94C;
+
+// status
+$accept:#47AB2F;
+
+//-таблица
+$tableRowActive: #F6FAFC;
+
+//-цвета статуса
+$statusBlue: #2F80ED;
+$statusLightBlue:#56CCF2;
+//-input
+$size: 24px;
+
+// Точки перелома
+// mobile 320-767
+$sm: '(min-width: 768px)';
+$md: '(min-width: 992px)';
+$lg: '(min-width: 1200px)';
+$xl: '(min-width: 1440px)';
+$hd: '(min-width: 1920px)';
+
+$tooltipIndent: 15px;

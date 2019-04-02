@@ -1,0 +1,31 @@
+.vacancy-serp{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-bottom: 4px;
+}
+.vacancy-serp-item {
+  display: inline-block;
+  position: relative;
+  margin-right: 22px;
+  font-size: 16px; 
+  color: $greyText;
+}
+.vacancy-serp-item:last-child{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.vacancy-serp-item:last-child { margin-right: 0;} 
+
+.vacancy-serp-item:not(:last-child):after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: $greyText;
+  right: -13px;
+  top: 10px;
+}

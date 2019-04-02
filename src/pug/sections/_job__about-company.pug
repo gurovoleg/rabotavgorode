@@ -1,0 +1,10 @@
+- var CompanyHeader = {BrandImg: 'brand-logo-big.svg', CompanyTitle:'Веб Инвест', CompanyDescrip: 'Информационные технологии', CompanySite: 'webinvestment.ru', Items:['Главная','Компании','Компании'], breadcrumbItems: ['Санкт-Петербург', 'Информационные технологии'], splitTextObject: {modif: "view-resume-header__breadcrumb", items: ['Санкт-Петербург', 'Информационные технологии']} };
+
+- var items = { item1:{ name: 'Контакты', link: '#!'}, item2:{ name: 'Рейтинг', value: 67, ratingValue: 100, link: ''}, item3:{ name: 'Отзывы', value: 123, link: '#!'}, item4:{ name: 'Вакансии', value: 45, link: '#!'} };
+
+	.job-about-company#job-about-company
+		+job__company-heading(CompanyHeader)
+		.job-about-company__info
+			+job-company-list(items)
+		.job-about-company__text Мы – американская компания со штаб-квартирой в Калифорнии, разрабатывающая одноимённый продукт для управления проектами и совместной работы. Мы создали о...
+			a(href="#").job-about-company__more Еще

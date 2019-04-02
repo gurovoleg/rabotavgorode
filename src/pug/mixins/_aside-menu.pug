@@ -1,0 +1,53 @@
+//- Объект с данными о компаниях
+-var objCompanies = {activeCompany: {name: 'W-Group Technology', amount: '1234,56 Р', logoLetters: 'WT', fileName: ''  },companies: [{name: 'Тинькофф', amount: '91 234,56 Р', logoLetters: '', fileName: 'tinkoff-small.svg'}, {name: 'ИП «Иванова»', amount: '0 Р', logoLetters: '', fileName: 'company-photo.jpg'}]};
+
+//- Миксин элемента списка меню
+mixin aside-menu-list__item(itemName, iconMixin, parms='width:24px; height:24px;')
+	.aside-menu-list__item&attributes(attributes)
+		a.menu-item__link(href="#!")
+			+#{iconMixin}(class="menu-item__icon" style=parms)
+			span.menu-item__name= itemName
+-;
+
+//- Миксин элемента списка компаний
+mixin menu-header__company(title, amount, companyLetters, filename) 
+	.menu-header__company&attributes(attributes)
+		+round-icon--user(companyLetters, filename)
+		.menu-block-wrapper
+			.company__title=title
+			.company__amount=amount
+-;	
+
+//- Миксин меню для работтодателя и соискателя
+mixin aside-menu(companies)
+	.aside-menu&attributes(attributes)
+		if companies
+			.aside-menu-header
+				.menu-current-company
+					+menu-header__company(companies.activeCompany.name, companies.activeCompany.amount, companies.activeCompany.logoLetters, companies.activeCompany.fileName)
+					+arrow(class="arrow--down arrow--black" id="aside-menu-company-toggle")
+				.menu-companies-block
+					each item in companies.companies
+						+menu-header__company(item.name, item.amount, item.logoLetters,item.fileName)
+
+		.aside-menu-list
+			+aside-menu-list__item('Панель управления', 'ic_dashboard')
+			+aside-menu-list__item('Вакансии', 'ic_check-list')
+			+aside-menu-list__item('Кандидаты', 'ic_worker')
+			+aside-menu-list__item('Избранное', 'icon-favorite')
+			+aside-menu-list__item('Подписки', 'mailing')
+			+aside-menu-list__item('Компания', 'ic_cash')
+			+aside-menu-list__item('Календарь', 'ic_calendar')
+			+aside-menu-list__item('Услуги', 'ic_service')
+			+aside-menu-list__item('Статистика', 'ic_diagram')
+			+aside-menu-list__item('Настройки', 'ic_settings')
+			+aside-menu-list__item('Настройки', 'ic_settings')
+			+aside-menu-list__item('Настройки', 'ic_settings')
+			+aside-menu-list__item('Настройки', 'ic_settings')
+
+		.aside-menu-footer
+			.aside-menu__username Константинова Татьяна
+			//- +aside-menu-list__item('Выход', 'logout', 'width:18px; height:18px;')
+			+aside-menu-list__item('Выход', 'logout')
+
+-;

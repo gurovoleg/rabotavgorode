@@ -1,0 +1,69 @@
+.radio-button {
+	display: none;	
+}
+
+.radio-button:checked ~ .custom-radio-button {
+	background-color: $blue;
+	border-color:$blue;
+}
+
+// Для работодателя другой цвет
+.radio-button:checked ~ .custom-radio-button--employer {
+	background-color: $employer;
+	border-color:$employer;
+}
+
+.radio-button__label {
+	margin:0;
+}
+
+.radio-button:checked ~ .custom-radio-button::after {
+	content: '';
+	position:absolute;
+	border-radius:50%;
+	top:50%;left:50%;
+	transform:translate(-50%,-50%);
+	background-color: $white;
+}
+
+.custom-radio-button {
+	display: inline-block;
+	position:relative;
+	border-radius:50%;
+	border: 1px solid $lightGrey;
+	background-color: $white;
+	vertical-align: bottom;
+	margin-right: 16px;
+	transition:all 0.2s;
+	cursor: pointer;
+}
+
+.custom-radio-button--small {
+	height: 16px;
+	width: 16px;
+	vertical-align: middle;
+
+	&:after {
+		width: 6px;
+		height: 6px;
+	}
+}
+
+.custom-radio-button--big {
+	height: 24px;
+	width: 24px;
+
+	&:after {
+		width: 8px;
+		height: 8px;
+	}
+}
+
+.custom-radio-button__label {
+	vertical-align: bottom;
+	cursor: pointer;
+}
+
+.custom-radio-button--disabled {
+	opacity: 0.4;
+}

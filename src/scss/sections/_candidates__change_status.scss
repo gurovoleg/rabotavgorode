@@ -1,0 +1,35 @@
+.close-preview {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+}
+.change-status__title {
+	font-size: 24px;
+	color: $basicText;
+	font-weight: 700;
+	padding-bottom: 24px;
+}
+.change-status__subtitle {
+	font-size: 16px;
+	color: $greyText;
+	padding-bottom: 8px;
+	line-height: normal;
+}
+.change-status__name {
+	font-size: 18px;
+	line-height: normal;
+	padding-bottom: 24px;
+}
+.change-status__cancel {
+	margin-left: 32px;
+	font-size: 18px;
+}
+.change-status__save {
+	padding: 9px 24px;
+	height: 40px;
+	line-height: normal;
+	font-size: 18px;
+}
+.preview--change-status {
+	z-index:3;
+}

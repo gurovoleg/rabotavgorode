@@ -1,0 +1,51 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Dropdown list';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title Выпадающий список
+		
+		.seciont-ui
+			+dropdown("Текст", "Имя списка", "", "", "item1", "item2")
+		pre.
+			+dropdown("Текст", "Имя списка", "", "", "item1", "item2")
+
+			Структура:
+			+dropdown(parm1, parm2, parm3, parm4, ...items)
+			
+			parm1 - Дополнительный текст перед именем списка
+			parm2 - Имя списка
+			parm3 - Тип данных: checkbox, reverse, link, autocomplete, view(готовая выпадашка для режимов отображения с Id), empty(например для фильтра с отраслями)
+			parm4 - Размер чексбокса: small/big
+
+		
+		.section-ui
+			p Различные варианты использования:
+			+dropdown("", "Тип занятости", "checkbox", "small", "Полная", "Неполная", "Вахтовая", "Сменная", "Удаленная")
+		pre.
+			+dropdown("", "Тип занятости", "checkbox", "small", "Полная", "Неполная", "Вахтовая", "Сменная", "Удаленная")
+		
+		.section-ui
+			+dropdown("", "Опыт работы", "checkbox", "small", "Без опыта", "Начальный", "Специалист","Эксперт")
+		pre.
+			+dropdown("", "Опыт работы", "checkbox", "small", "Без опыта", "Начальный", "Специалист","Эксперт")
+			
+		.section-ui
+			+dropdown("Сортировка", "по з/п", "link", "", "по з/п", "по соответствию", "по дате", "по удаленности")
+		pre.
+			+dropdown("Сортировка", "по з/п", "link", "", "по з/п", "по соответствию", "по дате", "по удаленности")
+			
+		.section-ui
+			+dropdown("Вид", "список", "view")
+		pre.
+			+dropdown("Вид", "список", "view")
+
+		.section-ui
+			+dropdown("", "Расположение", "autocomplete")
+		pre.
+			+dropdown("", "Расположение", "autocomplete")
+
+		

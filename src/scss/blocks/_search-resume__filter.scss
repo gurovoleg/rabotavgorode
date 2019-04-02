@@ -1,0 +1,41 @@
+.search-resume-filter__wrapper {
+	width: 216px;
+		
+	// Отступ у ссылки ЕЩЕ согласно чекбоксам 32px
+	.btn--padding-left {padding-left: 32px;}
+}
+
+.search-resume-filter__block {
+	padding-bottom: 32px;
+}
+
+.search-resume-filter__block-title {
+	font-size: 18px;
+	line-height: 22px;
+	font-weight: bold;
+}
+	
+.search-resume-filter__block-list {
+	padding-top: 24px;
+
+	.check-box__label,
+	.radio-button__label {
+		display: block;
+		padding-bottom: 20px;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.search-resume-filter__block-inputs {
+	display: flex;
+	padding-top: 8px;
+
+	.input-field {
+		height: 40px;
+		border-radius: 4px;
+	}
+	.input-wrapper:first-child {margin-right: 16px;}
+}

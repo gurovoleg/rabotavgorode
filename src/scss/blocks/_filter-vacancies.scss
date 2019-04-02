@@ -1,0 +1,132 @@
+.filter-vacancies {
+	position: relative;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 1001;
+	display: none;
+	
+	background-color: $bg;
+
+	@media #{$sm} {
+		background-color: $white;
+		width: 50%; 
+		right:0;
+		border-left:1px solid $silver;
+	}
+	@media #{$md} {display: none;}
+
+	.btn--padding-top {padding-top: 24px;}
+
+}
+
+.filter-vacancies--d-block {
+	display: block;
+	@media #{$md} {display: none;}
+}
+
+.filter-vacancies__wrapper {
+	background-color: $bg;	
+	padding: 28px 16px 0px 16px;
+	height: calc(100% - 318px);
+	overflow: auto;
+
+	@media #{$sm} {
+		background-color: $white;
+		padding: 28px 24px 0px; 
+		height: calc(100% - 263px);
+	}
+}
+
+// Модификатор для отображения на мобильном экране в режиме MAP 
+.filter-vacancies__wrapper--map {
+	height: calc(100% - 80px);
+	@media #{$sm} {
+		height: calc(100% - 263px);
+	}
+}
+
+.filter-vacancies__header {
+	display: flex;
+	align-items:center;
+	justify-content:space-between;
+	padding-bottom: 36px;
+}
+
+.filter-vacancies__title {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+
+.filter-vacancies__block{
+	margin-bottom: 28px;
+}
+
+.filter-vacancies__block-inputs {
+	display: flex;
+	padding-top: 8px;
+
+	.input-wrapper:first-child {
+		margin-right: 16px;
+		@media #{$sm} {margin-right: 21px;}
+	}
+}
+
+.filter-vacancies__block-title {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 12px;
+}
+
+.input-field--modificator {
+	border-radius: 4px;
+	line-height: 1;
+	padding:10px 12px;
+	height: 40px;
+
+	&:hover {
+		border:1px solid $greyText;
+		outline:none;
+	}
+
+	&:focus, &:active {
+		border:2px solid $blue;
+		outline: none;
+		padding:9px 11px;
+	}
+}
+
+.check-box__label--flex {
+	display: flex;
+	justify-content:space-between;
+	cursor: pointer;
+	padding-bottom: 24px;
+
+	&:first-of-type {
+		padding-top: 8px;
+	}
+	&:last-of-type {
+		padding-bottom: 0;
+	}
+}
+
+.filter-vacancies__button {
+	padding:16px;
+	background-color: $white;
+	border-top:1px solid $silver;
+	position:fixed;
+	position:sticky;
+	bottom:0px;
+	left:0;right:0;
+	height: 80px;
+	
+	@media #{$sm} {padding:16px 24px;}
+}
+
+.btn-semi-rounded-blue--full-width {
+	width:100%;
+	text-align: center;
+}

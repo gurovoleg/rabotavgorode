@@ -1,0 +1,29 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Блок с тегами';
+	- var pageClass = 'body--dashboard theme--employer';
+	- var badgesBlock = {title: 'Резюме по общему признаку',Items:[{text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}], btnText:'Смотреть все', btnClass:'btn-link btn--badges-skill'};
+	
+
+block content
+	.container.container--left
+		
+		.section-ui
+			.title Блок с тегами
+		.section-ui
+			include ../../sections/_resume__tags-block.pug
+			
+		p Код
+		pre.
+			include ../../sections/_resume__tags-block.pug
+		p Миксин
+		pre.
+			mixin badges-block(badgesGroup)
+				.badges-block&attributes(attributes)
+					.badges-block__title.heading-2 \#{badgesGroup.title}
+					+badges-block-items(...badgesGroup.Items)
+					+button(badgesGroup.btnText,'#',badgesGroup.btnClass)
+		p Объект
+		pre.
+			- var badgesBlock = {title: 'Резюме по общему признаку',Items:[{text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}, {text:'Длинныйтэг',modif: 'skill'}], btnText:'Смотреть все', btnClass:'btn-link btn--badges-skill'};

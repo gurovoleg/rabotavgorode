@@ -1,0 +1,165 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Search resume';
+	- var pageClass = 'theme--employer';
+
+	//- Навигация в шапке
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#search-resume-tabs__resumes", itemName: "Резюме"},{itemAddClass: "", itemHref: "#search-resume-tabs__areas", itemName: "Отрасли"},{itemAddClass: "", itemHref: "#search-resume-tabs__cities", itemName: "Города"}];
+
+	//- Навигация в описании резюме
+	- var deskriptionLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#search-resume-tabs__about", itemName: "О себе"},{itemAddClass: "", itemHref: "#search-resume-tabs__experience ", itemName: "Опыт"}, {itemAddClass: "", itemHref: "#search-resume-tabs__education", itemName: "Образование"}, {itemAddClass: "", itemHref: "#search-resume-tabs__another", itemName: "Другое"}];
+
+	//- Пагинация
+	-var pageBtns = {btn1:{href:'#', class1: '', class2: '', text: '1'}, btn2:{href:'#', class1: 'page-toggle__item-active', class2: '', text: '2'}, btn3:{href:'#', class1: '', class2: 'page-toggle__item--before', text: '3'}, btn4: {href:'#', class1: 'pagination__span', class2: '', text: '...'}, btn5:{href:'#', class1: '', class2: '', text: '15'}, btn6:{href:'#', class1: '', class2: 'page-toggle__item--before', text: '16'}, btn7:{href:'#', class1: '', class2: 'pagination__span', text: '...'}, btn8:{href:'#', class1: '', class2: '', text: '999'}};
+
+	//- Карточки
+	- var resumeCard = {cardHeader: {title: 'Менеджер по продажам недвижимости', salary: '150 000 Р', published: '2д'}, aspirantInfo:{name:'Константин', age:'33 года'}, aspirantAddress:{metroLine: 'blueMarker', metroStation: 'Купчино', cityName: 'Санкт-Петербург' },personLetters:'AS', vipObject:{color:'yellow', title:'Pro'}, splitTextObject:{modif: "resume-card", items: ["7 лет опыта","Эксперт", "Неполное высшее"]}, badgeObjects:{badgeType:"big", items:['Премиум сегмент','Переговоры','Проведение корпоративов','Открываю пиво глазом']}, jobElmts:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, jobPlaceItems:{it1:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, it2:{title:'Руководитель отдела продаж недвижимости', splitElemts: {modif:'job-info', items:['Лен Строй','3 года 9 месяцев']}}}};
+
+	//-Шапка
+	- var HeaderSR = {modif: 'full', personStatus: '', city:'Санкт-Петербург',  inputNumber: '3', loggedPerson: {letters: 'AS'}, image: '' };
+
+block content
+	
+	//- Обертка для модифифкации: цвет + отличия от Search-results
+	.search-resume-wrapper
+		
+		//- Header + Выпадающее меню из логотипа
+		+pageHeader(HeaderSR)
+		.bg-logo-menu-dropdown
+			include ../sections/_main-menu.pug
+			
+		//- Фильтры резюме (мобильный/планшет вариант)
+		include ../sections/filter-resumes.pug
+		
+		//- Фильтры - Расположение 
+		include ../sections/_filter-vacancies-position.pug
+
+		//- Фильтры - Отрасли
+		+filter-sectors
+
+		//- Фильтр боковой (от 992 до 1920)
+		.bg-search-resume__filter.bg-search-resume__filter--hide
+			+icon-close(class="icon-close--black icon-close--absolute" id="search-resume-filter-close")
+			include ../sections/_search-resume__filter.pug
+
+		//- Выбор города
+		include ../sections/_city-selection.pug
+
+		//- Модальное окно
+		include ../sections/_save-suggest-resume.pug
+		
+		
+		//- Контейнер с вкладками
+		.search-resume-tabs-container#search-resume-tabs-container
+
+			//- вкладка Резюме
+			.search-resume-tabs__resumes#search-resume-tabs__resumes
+				
+				.container-main
+					//- Title-block
+					#container-title.container-title.container-title--list.container-title--list-aside
+						include ../sections/_search-resume__title.pug
+					
+					//- Обертка для контента + боковая панель Aside
+					.container-aside#container-aside.container-aside--list
+										
+						//- Основной контент
+						.container-content
+
+							//- Контенйер GRID
+							.search-result#search-result-grid
+								.row
+									.column-2
+										+resume-card(resumeCard, 'grid')
+									.column-2
+										+resume-card(resumeCard, 'grid')
+									.column-2
+										+resume-card(resumeCard, 'grid')
+									.column-2
+										+resume-card(resumeCard, 'grid')
+									.column-2
+										+resume-card(resumeCard, 'grid')
+									.column-2
+										+resume-card(resumeCard, 'grid')
+									.column-2
+										+resume-card(resumeCard, 'grid')
+									.column-2
+										+resume-card(resumeCard, 'grid')
+									.column-2
+										+resume-card(resumeCard, 'grid')
+
+								+pagination(pageBtns)
+
+							//- Контенйер MAP
+							.search-result#search-result-map
+
+								.row
+									
+									//- Колонка - основная
+									.search-result-list.search-result-list--map
+																
+										.search-result-list__item.middle-map-cards-wrapper
+											+resume-card(resumeCard, 'map')
+										.search-result-list__item.middle-map-cards-wrapper
+											+resume-card(resumeCard, 'map')
+										.search-result-list__item.middle-map-cards-wrapper
+											+resume-card(resumeCard, 'map')
+										.search-result-list__item.middle-map-cards-wrapper
+											+resume-card(resumeCard, 'map')
+										.search-result-list__item.middle-map-cards-wrapper
+											+resume-card(resumeCard, 'map')
+										.search-result-list__item.middle-map-cards-wrapper
+											+resume-card(resumeCard, 'map')
+										
+										.d-mobile-none
+											+subscribe('Подпишитесь на резюме по запросу «дизайнер»')
+											+button('Показать еще резюме', '#', 'btn-link btn--showmore-vacancies')
+										
+									//- Колонка - доп контент (карта)
+									.search-result__item-description.search-result__item-description--map
+										#map
+									
+									+button('Вернуться к списку', '#search-result-list', 'btn-square')(class="middle-map-mobilebutton" id="btn-list-view")
+									
+							//- Контейнер LIST
+							.search-result#search-result-list.search-result--show
+								
+								.row
+									
+									//- Колонка - основная
+									.search-result-list
+										
+										.search-result-list__item
+											+resume-card(resumeCard, 'list')
+										.search-result-list__item
+											+resume-card(resumeCard, 'list')
+										.search-result-list__item
+											+resume-card(resumeCard, 'list')
+										.search-result-list__item
+											+resume-card(resumeCard, 'list')
+										.search-result-list__item
+											+resume-card(resumeCard, 'list')
+										.search-result-list__item
+											+resume-card(resumeCard, 'list')
+										.search-result-list__item
+											+resume-card(resumeCard, 'list')
+																			
+										+subscribe('Подпишитесь на резюме по запросу «дизайнер»')
+										+button('Показать еще резюме', '#', 'btn-link btn--showmore-vacancies')
+										
+									//- Колонка - доп контеннт (описание) 
+									.search-result__item-description
+										include ../sections/_search-resume__header-tabs.pug			
+						
+						//- Боковая панель Aside с фильтром
+						aside.aside--search-resume
+							include ../sections/_search-resume__filter.pug
+				
+			//- вкладка Отрасли
+			.search-resume-tabs__areas#search-resume-tabs__areas
+				include ../sections/_search-results-tabs__areas.pug
+			
+			//- вкладка Города
+			.search-resume-tabs__cities#search-resume-tabs__cities
+				include ../sections/_search-results-tabs__cities.pug

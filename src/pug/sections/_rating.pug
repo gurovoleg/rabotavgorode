@@ -1,0 +1,16 @@
+- var ratingObject = {ratingTitle:'Зарплата и социальный пакет', ratingSubtitle:'Зарплата, соцпакет, отпуск, языковые курсы, корпоративы, другие “плюшки”', ratingStars:['100%','#1878FF', 'full', 'full', 'full', 'full', 'full']};
+- var ratingObject2 = {ratingTitle:'Комфортные условия труда', ratingSubtitle:'Современный офис, хорошее рабочее место,  гибкий график работы', ratingStars:['65%','#1878FF', 'full', 'full', 'full', 'half', 'empty']};
+- var ratingObject3 = {ratingTitle:'Профессиональный и карьерный рост', ratingSubtitle:'Интересные  задачи, обучение за счет компании, помощь коллег и руководства', ratingStars:['82%','#1878FF', 'full', 'full', 'full', 'full', 'half']};
+- var ratingObject4 = {ratingTitle:'Атмосфера в коллективе', ratingSubtitle:'Хорошие отношения с коллегами, сотрудниками других служб и подразделений', ratingStars:['38%','#1878FF', 'full', 'full', 'half', 'empty', 'empty']};
+
+.rating
+	.rating-header
+		.rating-title Рейтинг
+		.rating-marks(itemprop="ratingCount") 44 оценки
+		+rating-mark(91, 100)
+	+raitingBlock(ratingObject)
+	+raitingBlock(ratingObject2)
+	+raitingBlock(ratingObject3)
+	+raitingBlock(ratingObject4)
+	+feedback-company(false, 'Проголосовать')
+	

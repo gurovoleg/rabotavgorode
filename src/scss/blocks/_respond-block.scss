@@ -1,0 +1,109 @@
+.respond-block-wrapper{position: relative;}
+
+.respond-block{
+	align-items: center;
+	display: flex;	
+	height: 80px;
+	// justify-content: flex-end;
+	//-& .btn {margin-right: 48px;}
+	//-& .icon-favorite {margin-right: 48px;}
+	// .btn {
+	// 	margin-right: 48px;
+	// }
+}
+// .btn--job-opening {margin-right: 48px;}
+.icon-favorite--job-opening {margin-right: 48px;}
+  // выпадающее меню
+ .respond-block-dropdown{
+	display: none;	
+	padding-left: 16px;
+	padding-right: 16px;
+	background-color: $white;	
+	position: absolute;
+	z-index: 1000;
+ 	
+ 	@media #{$sm}{
+ 		min-width: 280px;
+		border-radius: 10px;
+		box-shadow: 0px 2px 10px 0px $silver;	
+	}
+	
+}
+.respond-block-dropdown-item{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding-bottom: 19px;
+	padding-top: 19px;
+	border-bottom:1px solid $lightGrey;
+	&:hover{
+		opacity: 0.7;
+	}
+}
+
+.respond-block-dropdown--show{display: block;}
+
+.respond-block-dropdown-item{
+  	display: flex;
+  	align-items: center;
+
+}
+.respond-block-dropdown-item:last-child{border-bottom: 0px}
+
+.respond-block-dropdown .icon-favorite--black-border{
+ 	padding-bottom: 2px;
+ 	margin-right: 16px;
+  }
+  
+.respond-block-dropdown-icon{
+	min-width: 24px;
+	margin-right: 16px;
+	text-align: center;
+}
+.respond-block .icon-down--rotate{transform: rotate(180deg);}
+
+//-для страницы Job Opening
+.respond-block--job-opening{
+	background-color: $white;
+	border-bottom: 1px solid $silver;
+}
+.respond-block-dropdown--footer{
+	position: absolute;
+	 left:0;
+	 right:0;
+	 bottom:81px;
+	 border-radius: 0;
+	 box-shadow: 0 -1px 10px 0px $shadowLight;
+	 
+}
+
+.respond-block-dropdown--search-result{right: 0;}
+
+.respond-block-dropdown--title-sticky{
+	//-transform: translateY(20%);
+	width: 280px;
+}
+
+
+.respond-block-dropdown--title-sticky{
+	top:68px;
+	right: 0;
+}
+.respond-block__download-btn {
+	margin-right: 48px;
+	margin-left: 48px;
+	display: flex;
+	
+	@media #{$md} {
+		margin-right: 32px;
+		margin-left: 32px;
+	}
+
+	a {
+		padding-left: 16px;
+		color: $basicText;
+	}
+}
+
+//- Задаем отступ между кнопкой и иконкой
+.button-wrapper {padding-right: 24px;}

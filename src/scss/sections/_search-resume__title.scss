@@ -1,0 +1,15 @@
+.search-resume-title-block {
+}
+.search-resume-heading-1 {
+	padding-bottom: 8px;  
+}
+.search-resume-title-block__link {
+	display: none;
+	@media #{$md} {
+		display: block;
+		align-self: flex-end;
+	}
+	@media #{$hd} {
+		display: none;
+	}
+}

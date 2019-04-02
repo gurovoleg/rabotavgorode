@@ -1,0 +1,28 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'VIP компания - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.title VIP компания
+
+		.section-ui
+			+companies-vip-company("kontur.svg", 100, "123 Вакансии", " ~ з/п 100 000 Р")
+		pre.
+			+companies-vip-company("kontur.svg", 100, "123 Вакансии", " ~ з/п 100 000 Р")
+
+		br
+		.section-ui
+			p Мискин для компании:
+			pre.
+				mixin companies-vip-company(imgName, ratingValue, vacancyTotal, sallary)
+					.bg-vip-company
+						.vip-company__image(style="background-image: url('../img/company-logo-svg/" + imgName "'")
+						.vip-company__rating
+							+rating-mark(ratingValue)
+						.vip-company__vacancy-total=vacancyTotal 
+						.vip-company__sallary=sallary
+			
+				+companies-vip-company("kontur.svg", 100, "123 Вакансии", " ~ з/п 100 000 Р")

@@ -1,0 +1,23 @@
+.job-section-vacancy-cards{
+	padding-bottom: 40px;	
+	border-bottom: 1px solid $silverLight;
+	padding-top: 24px;
+	@media #{$md}{padding-top: 40px;}
+
+	.btn {font-size: 18px;}
+}
+
+.job-section-vacancy-cards__title{
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 8px;
+	font-weight: 700;
+	@media #{$sm}{margin-bottom: 25px;}
+	@media #{$md}{margin-bottom: 41px;}
+}
+
+.job-section-vacancy-cards__box .vacance-card:last-child{
+	border-bottom: 0px;
+	margin-bottom: 24px;
+	@media #{$sm}{margin-bottom: 40px;} 
+}

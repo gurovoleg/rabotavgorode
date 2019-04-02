@@ -1,0 +1,81 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Выпадашка "Изменить статус" - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+	-var objStatus = {typeMod:'text', currentItem: {color: '#F2994A', text:'Новый'}, items: [{color: '#F2C94C', text:'В работе'}, {color: '#2F80ED', text:'Собеседование'}, {color: '#56CCF2', text:'Согласование'}, {color: '#EB5757', text:'Отказ'}, {color: '#47AB2F', text:'Принят'}, {color: '#999999', text:'Резерв'}] };
+	
+	-var objStars = {typeMod:'stars', color: '#2389A9', currentItem: {star1:'full', star2:'full', star3:'full', star4:'full', star5:'full'}, items: [{star1:'full', star2:'full', star3:'full', star4:'full', star5:'empty'}, {star1:'full', star2:'full', star3:'full', star4:'empty', star5:'empty'}, {star1:'full', star2:'full', star3:'empty', star4:'empty', star5:'empty'}, {star1:'full', star2:'empty', star3:'empty', star4:'empty', star5:'empty'}] };
+
+	-var objInput = {typeMod:'input', placeholder: 'UI/UX дизайнер', items:['UI/UX дизайнер','WebDev-разработчик','UI/UX дизайнер','WebDev-разработчик']};
+
+block content
+
+	.container.container--left
+		.title Выпадашка "Изменить статус"
+		
+		.section-ui
+			+dropdown-select(objStatus)
+
+		pre.
+			+dropdown-select(objStatus)	
+
+			objStatus = {typeMod:'text', currentItem: {color: '#F2994A', text:'Новый'}, items: [{color: '#F2C94C', text:'В работе'}, {color: '#2F80ED', text:'Собеседование'}, {color: '#56CCF2', text:'Согласование'}, {color: '#EB5757', text:'Отказ'}, {color: '#47AB2F', text:'Принят'}, {color: '#999999', text:'Резерв'}] };
+
+		.section-ui
+			+dropdown-select(objStars)
+
+		pre.
+			+dropdown-select(objStars)		
+
+			objStars = {typeMod:'stars', color: '#2389A9', currentItem: {star1:'full', star2:'full', star3:'full', star4:'full', star5:'full'}, items: [{star1:'full', star2:'full', star3:'full', star4:'full', star5:'empty'}, {star1:'full', star2:'full', star3:'full', star4:'empty', star5:'empty'}, {star1:'full', star2:'full', star3:'empty', star4:'empty', star5:'empty'}, {star1:'full', star2:'empty', star3:'empty', star4:'empty', star5:'empty'}] };
+
+		.section-ui
+			+dropdown-select(objInput)
+
+		pre.
+			+dropdown-select(objInput)	
+
+			objInput = {typeMod:'input', placeholder: 'UI/UX дизайнер', items:['UI/UX дизайнер','WebDev-разработчик','UI/UX дизайнер','WebDev-разработчик']};
+
+		p Миксин:
+		pre.
+			mixin dropdown-select(obj)
+				if obj.typeMod == 'stars'
+					.dropdown-select.dropdown-select--max-width
+						.dropdown-select__current
+							.dropdown-select__item 
+								+rating-stars-block("", obj.color, obj.currentItem.star1, obj.currentItem.star2, obj.currentItem.star3, obj.currentItem.star4, obj.currentItem.star5)
+							+arrow(class="arrow--down")
+							.dropdown-select__list
+								each item in obj.items
+									.dropdown-select__item 
+										+rating-stars-block("", obj.color, item.star1, item.star2, item.star3, item.star4, item.star5)
+										
+				else if  obj.typeMod == 'input'
+					.dropdown-select
+						+inputField('input-simple', '', 'input-simple', '', obj.placeholder, '')
+						+arrow(class="arrow--down")
+						.dropdown-list(class="dropdown-simple-list--input")
+							each item in obj.items
+								.dropdown-list__item #{item}
+						
+				else
+					.dropdown-select
+						.dropdown-select__current
+							.dropdown-select__item 
+								if obj.currentItem.color
+									.item-marker(style="background-color:" + obj.currentItem.color)
+								span=obj.currentItem.text
+							+arrow(class="arrow--down")
+							.dropdown-select__list
+								each item in obj.items
+									.dropdown-select__item 
+										if obj.currentItem.color
+											.item-marker(style="background-color:" + item.color)
+										span=item.text
+
+
+
+	

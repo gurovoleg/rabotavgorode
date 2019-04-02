@@ -1,0 +1,27 @@
+.company-vacancies-region {
+	padding:24px 0;
+	border-bottom:1px solid $silver;
+
+	@media #{$md} {
+		padding:40px 0;
+	}
+
+	& .pagination{
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.btn {
+		font-size: 18px;
+	}
+}
+
+.company-vacancies-region__title {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 22px;
+	padding-bottom: 24px;
+	@media #{$md} {
+		font-size: 24px;
+	}
+}

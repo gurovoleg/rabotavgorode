@@ -1,0 +1,70 @@
+.dropdown-select {
+	position: relative;
+	background-color: $white;
+	height: 40px;
+	max-height: 40px;
+
+	
+	.arrow {
+		position:absolute;
+		top:8px; right:8px;
+		pointer-events:none;
+		z-index:5;
+	}
+
+	// Для выпадашки с инпутом добавить действие по иконке-стрелочке
+	.input-wrapper ~ .arrow {pointer-events:auto;}
+
+	.arrow path {fill:$black;}
+
+	.input-wrapper {z-index: 3;}
+	.input-field {
+		border-radius: 4px;
+		height: 40px;
+	}
+
+}
+
+.dropdown-select--max-width {max-width: 180px;}
+
+.dropdown-select__current {
+	background-color: inherit;
+	width: 100%;
+	border: 1px solid $lightGrey;
+	border-radius: 4px;
+	z-index: 10;
+}
+.dropdown-select__list {
+	display: none;
+	background-color: inherit;
+	border-radius: 4px;
+}
+
+.dropdown-select__item {
+	font-size: 16px;
+	line-height: 20px;
+	padding:10px 12px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+
+	&:hover {background-color: $aside;}
+
+	.item-marker {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		margin-right: 10px;
+	}
+
+	// Меняем размер и отступы для блока со звездами
+	.rating-stars__item {padding-right: 8px;} 
+	.rating-star {width: 16px;height: 16px;
+		svg path{width: 13px;height: 13px;}
+	}	
+}
+
+.dropdown-select--show {
+	.dropdown-select__list {display: block;}
+	.dropdown-select__current {position:absolute;}
+}

@@ -1,0 +1,16 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Индикатор в таблице ';
+	- var pageClass = 'body--dashboard';
+	- var dataIndicator = [{param1:'height:35px',param2:'height:25px'},{param1:'height:25px',param2:'height:20px'},{param1:'height:35px',param2:'height:15px'},{param1:'height:35px',param2:'height:25px'},{param1:'height:15px',param2:'height:10px'},{param1:'height:25px',param2:'height:15px'},{param1:'height:15px',param2:'height:5px'}]
+
+block content
+
+	.container.container--left
+		.ui-section
+			.title  Индикатор в таблице 
+		
+			include ./../../sections/_lk-table-indicator.pug
+		pre.
+			include ./../../sections/_lk-table-indicator.pug

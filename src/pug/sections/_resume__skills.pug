@@ -1,0 +1,11 @@
+- var skillsObject = { items: {title:'UI дизайн', stars: ["", "#2389A9", "full", "full", "full", "full", "full"]}, items2: {title:'UI дизайн', stars: ["", "#2389A9", "full", "full", "full", "full", "empty"]}, items3: {title:'Прототипирование', stars: ["", "#2389A9", "full", "full", "full", "empty", "empty"]}, items4: {title:'Фронт-енд разработка', stars: ["", "#2389A9", "full", "full", "empty", "empty", "empty"]}};
+- var badgeObject = { badgename1: 'JavaScript', badgename2: 'HTML 5sd', badgename3: 'CSS 12345', badgename4: 'JavaScript', badgename5: 'HTML 5sd', badgename6: 'CSS 12345'};
+
+.page-section
+	.resume-skills__title Навыки и знания
+	.resume-skills-content
+		+resumeSkills(skillsObject)
+		+button('Смотреть все', '#!', 'btn-link').resume-skills__btn-show
+		.resume-skills-content__badge
+			+resumeSkillsBadge(badgeObject)
+			+button('Свернуть', '#!', 'btn-link').resume-skills__btn-hide

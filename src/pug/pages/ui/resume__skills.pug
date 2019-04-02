@@ -1,0 +1,34 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Навыки и знания';
+	- var pageClass = 'body--dashboard theme--employer';
+	- var skillsObject = { items: {title:'UI дизайн', stars: ["", "#F45C01", "full", "full", "full", "full", "full"]}, items2: {title:'UI дизайн', stars: ["", "#F45C01", "full", "full", "full", "full", "empty"]}, items3: {title:'Прототипирование', stars: ["", "#F45C01", "full", "full", "full", "empty", "empty"]}, items4: {title:'Фронт-енд разработка', stars: ["", "#F45C01", "full", "full", "empty", "empty", "empty"]}};
+	- var badgeObject = { badgename1: 'JavaScript', badgename2: 'HTML 5sd', badgename3: 'CSS 12345', badgename4: 'JavaScript', badgename5: 'HTML 5sd', badgename6: 'CSS 12345'};
+
+block content
+	.container.container--left
+		.title Навыки и знания
+		.section-ui
+			include ../../sections/_resume__skills.pug
+
+		p Код
+		pre.
+			include ../../sections/_resume__skills.pug
+		p Миксин
+		pre.
+			mixin resumeSkills(dataObject)
+				each objectItem in dataObject
+					.resume-skills-content__item
+						.resume-skills-content__name \#{objectItem.title}
+						.resume-skills-content__rating
+							+rating-stars-block("", ...objectItem.stars)
+
+			mixin resumeSkillsBadge(dataObject)
+				.resume-skills-content__badge-skills
+					each items in dataObject
+						+badge--big(items)
+		p Объекты
+		pre.
+			- var skillsObject = { items: {title:'UI дизайн', stars: ["full", "full", "full", "full", "full"]}, items2: {title:'UI дизайн', stars: ["full", "full", "full", "full", "empty"]}, items3: {title:'Прототипирование', stars: ["full", "full", "full", "empty", "empty"]}, items4: {title:'Фронт-енд разработка', stars: ["full", "full", "empty", "empty", "empty"]}};
+			- var badgeObject = { badgename1: 'JavaScript', badgename2: 'HTML 5sd', badgename3: 'CSS 12345', badgename4: 'JavaScript', badgename5: 'HTML 5sd', badgename6: 'CSS 12345'};

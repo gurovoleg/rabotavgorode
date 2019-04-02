@@ -1,0 +1,114 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = "Candidates";
+	- var pageClass = 'index-page theme--employer';
+	
+	//- Header
+	- var Header = {modif: '', personStatus: '', city:'Санкт-петербург',  inputNumber: '', loggedPerson: {letters:'AS', image:''} };
+
+	//- Navigation
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#preview-resume", itemName: "Резюме"},{itemAddClass: "", itemHref: "#preview-vacancies", itemName: "В вакансиях", spanValue: '2'},{itemAddClass: "", itemHref: "#preview-history", itemName: "История"},{itemAddClass: "", itemHref: "#preview-comments", itemName: "Комментарии", spanValue: '2'}];
+
+	//- Предпросмотр вакансии Title-block
+	-var candidateObject = { splitTextDescription: {modif: "", items: ['Senior Front-end Developer']}, title: 'Константин Константинопольский', ratingStars: ['', '#2389A9', 'full', 'full', 'full', 'full', 'empty'], info: {pay: '100 000 руб', splitTextInfo: {modif: "", items: ['32 года', 'Санкт-Петербург']}, splitTextContscts: {modif: "", items: ['+7 (982) 555-22-44', 'kkkonstantinopolskiy@test.com']}} };
+	
+	//-объект для тайтл-блок
+	- var lkTitleBlock = {breadcrumb:['Главная','Личный кабинет'], title:'Кандидаты',iconGroup:{iconName:'icon-download', iconText:'Отчет'},vacancySerp:['9522 вакансии'], btnGroup:{text:'Добавить кандидата', link:'#', modify:'btn-semi-rounded-blue'},  tagFilters:{item1:['Грузчик'],item2: ['Санкт-Петербург']},filterView:'view'};
+
+	- var navMenuCandidates = [{itemAddClass: "nav-menu-item-active", itemHref: "#", itemName: "Все", spanValue: '123'},{itemAddClass: "", itemHref: "#", itemName: "Новые", spanValue: '123'},{itemAddClass: "", itemHref: "#", itemName: "В работе", spanValue: '123'},{itemAddClass: "", itemHref: "#", itemName: "Приглашенные", spanValue: '123'},{itemAddClass: "", itemHref: "#", itemName: "Отказ", spanValue: '123'},{itemAddClass: "", itemHref: "#", itemName: "Принят", spanValue: '123'},{itemAddClass: "", itemHref: "#", itemName: "Резерв", spanValue: '123'}];
+
+block content
+	
+	.page-container
+
+		//- Header + Выпадающее меню из логотипа 
+		.lk-header-wrapper
+			+pageHeader(Header)(id="lk-header")
+		.bg-logo-menu-dropdown.bg-logo-menu-dropdown--small-header
+			include ../sections/_main-menu.pug
+
+		//- Выбор города
+		include ../sections/_city-selection.pug
+
+		//- Вертикальное выпадающее меню для таблицы (нажатие на троеточие)
+		include ../sections/_vacancies__table-dropdown.pug
+
+		//- Боковое меню
+		+aside-menu(objCompanies)
+
+
+		//- Preview block (Окно Предпросмотра)
+		.bg-preview
+			//- Окно Изменить статус
+			include ../sections/_candidates__change-status.pug
+
+			
+			.preview#preview-window
+				
+				+preview-header({BtnText:'Изменить статус',BtnLink:'#open-change-status', BtnModif:'btn-semi-rounded-blue', Icons:{it1:{nameIcon:'icon-download', descrIcon:'Скачать'},it2:{nameIcon:'ic-delete', descrIcon:'Отказать'}}, Icon2:'icon-close', dropdownList:{modif:'preview-header', Items:[{boxModif: '', icName:'ic_copy', icText:'Дублировать'},{boxModif: 'icon-star', icName:'icon-star-custom', icText:'Повысить эффективность'}, {boxModif: '', icName:'icon-looks-two', icText:'Найти похожие резюме'},{boxModif: '', icName:'ic-refresh',  icText:'Обновить'},{boxModif: '', icName:'ic-eye', icText:'В архив'}]}})
+
+				.preview-wrapper
+					+preview-title-block(candidateObject, '#!', 'preview.png', 'blue', 'Интервью', 'd-flex')
+					+nav-menu(menuLinks)(id="lk-nav-menu")
+					
+				//- Контейнер с вкладками 
+				.preview-tabs-container#preview-tabs-container
+					
+					//- Вкладка Резюме
+					.preview-tabs__resume#preview-resume
+						.cover-letter__title Сопроводительное письмо
+						include ../sections/_resume__about.pug
+						include ../sections/_resume__section-experience-work.pug
+						include ../sections/_resume__skills.pug
+						include ../sections/_resume__section-education.pug
+						include ../sections/_resume__other.pug
+						include ../sections/_resume__portfolio-slider.pug
+
+					//- Вкладка в вакансии
+					.preview-tabs__vacancies#preview-vacancies
+						.preview-tabs-vacancies
+							+vacance-card--short({title:'Product designer',salary:'123 000', splitText:{modif:'responding-card', items:['Веб Инвест','Информационные технологии']}})(class="responding-panel__item")
+
+							+vacance-card--short({title:'Front-end developer',salary:'120 000', splitText:{modif:'responding-card', items:['Веб Инвест','Информационные технологии']}})(class="responding-panel__item")
+												
+					//- Вкладка История
+					.preview-tabs__history#preview-history
+						+responding-panel__item-child({date:'19.10.18', time:'20:37',type:'Отправлено сообщение',btn:{link:'#',text:'Показать',modify:'action-type'}, textClass:'text-body-grey', author:'Вы'})
+
+						+responding-panel__item-child({date:'19.10.18', time:'20:37',type:'Тестовое задание', textClass:'text-body-grey', author:'Йохансон Олофсон'})
+
+						+responding-panel__item-child({date:'19.10.18', time:'20:37',type:'Отклик', textClass:'text-body-grey', author:'Йохансон Олофсон'})
+
+					//- Вкладка Комментарии
+					.preview-tabs__comments#preview-comments
+						.field-group
+							+textarea('Запишите какими качествами вас привлек этот кандидат, чтобы легче вспомнить его потом. ', 'text')
+						+button('Написать комментарий', '#', 'btn-semi-rounded-blue btn--responding-panel')
+						+company-review({display: '',avatarImg:'company-photo.jpg', topText: 'Константин', bottomText: '21 сентября 2018' ,ratingType: 'dislike' , likeCount:'345', dislikeCount:'652', text: 'Отличный кандидат, в жизни лучше не встречал, рекомендую звать на интервью.'})(class="company-review--responding-panel")
+				
+		//- Контейнер для центрирования контента
+		.lk-container
+			
+			.lk-title-block-container
+				//- Title-block
+				+lk-title-block(lkTitleBlock)(class="lk-title-block--candidates")
+				//- Строка поиска
+				.search-form-wrapper.search-form-wrapper--candidates
+					+search-form("Название или id резюме")
+				//- Навигация
+				+nav-menu(navMenuCandidates)(class="nav-manu--no-border")
+
+			//- Контент (Таблица)
+			.lk-content-container.lk-content-container--no-top-padding
+				include ../sections/_candidates__table.pug
+				
+	//- Нижнее панель-меню для выбранных строк таблицы
+	.lk-bottom-menu
+		.lk-bottom-menu-content
+			.menu-selected.text-body-grey Выбрано #[span.selected-number 123] вакансии
+			.lk-bottom-menu__items.d-flex
+				+icon-menu-item('pencil','Изменить статус')
+				+icon-menu-item('icon-download','Скачать Word doc.')
+				+icon-menu-item('icon-printer','Распечатать')
+				+icon-menu-item('envelope','Отправить на Email')

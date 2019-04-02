@@ -1,0 +1,16 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Рейтинг';
+	- var pageClass = 'body--dashboard';
+	
+block content
+	.container.container--left
+		
+		
+		.title Рейтинг
+		.section-ui(style = "border: 1px dashed black")
+			include ../../sections/_rating.pug
+		pre.
+			include ../../sections/_rating.pug
+

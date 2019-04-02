@@ -1,0 +1,120 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = "Resume";
+	- var pageClass = 'index-page theme--employer';
+	
+	//- Header
+	- var Header = {modif: '', personStatus: '', city:'',  inputNumber: '', loggedPerson: {letters:'AS', image:''} };
+	//- Navigation
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#resume-about", itemName: 'О себе'},{itemAddClass: "", itemHref: "#resume-expirience", itemName: "Опыт"},{itemAddClass: "", itemHref: "#resume-education", itemName: "Образование"}, {itemAddClass: "", itemHref: "#resume-other", itemName: "Другое"}];
+	//- Title-block
+	- var viewResume = {title: 'Менеджер по продажам', pay: '150 000 Р', userInfo: 'Константин, 33 года', location: 'Купчино, г. Санкт-Петербург', splitTextObject: {modif: "resume-title-block", items: ['123 Просмотра  (+45)', '21 августа']}, splitUserObject: {modif: "", items: ['7 лет опыта', 'Эксперт', 'Неполное высшее']}, badgeLetter: 'ВИ', Items: ['Главная', 'Работа', 'Вакансия'], imgBg: 'bg-resume-header-vip.png', userPhoto: 'ava_card.png'};
+
+	//- Карточки
+	- var resumeCard = {cardHeader: {title: 'Менеджер по продажам недвижимости', salary: '150 000 Р', published: '2д'}, aspirantInfo:{name:'Константин', age:'33 года'}, aspirantAddress:{metroLine: 'blueMarker', metroStation: 'Купчино', cityName: 'Санкт-Петербург' },personLetters:'AS', vipObject:{color:'yellow', title:'Pro'}, splitTextObject:{modif: "resume-card", items: ["7 лет опыта","Эксперт", "Неполное высшее"]}, badgeObjects:{badgeType:"big", items:['Премиум сегмент','Переговоры','Проведение корпоративов','Открываю пиво глазом']}, jobElmts:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, jobPlaceItems:{it1:{title:'Региональный менеджер', splitElemts: {modif:'job-info', items:['Beб Инвест','3 года 3 месяца']}}, it2:{title:'Руководитель отдела продаж недвижимости', splitElemts: {modif:'job-info', items:['Лен Строй','3 года 9 месяцев']}}}};
+
+	//- Модальное окно
+	- var contacts = { logo: 'ava_card.png', name: 'Константин Константинопольский', position: 'менеджер по продажам' };
+	- var contactsObject = {contactObject1: {icon: "phone.svg", text: "+7 987 123-45-67", link: "tel:+7 987 123-45-67"}, contactObject2: {icon: "mail.svg", text: "username@domain.com", link: "mailto:username@domain.com"}, contactObject3: {icon: "web.svg", text: "mysitename.ru", link: "mysitename.ru"}, contactObject4: {icon: "telegram.svg", text: "Telegram", link: "#!"}, contactObject5: {icon: "whatsapp.svg", text: "Whatsapp", link: "#!"}  };
+	
+block content
+	+modalWindow().save-suggest-resume-modal#suggest-modal
+		.save-suggest-resume-block.search-resume-wrapper
+			.save-suggest-resume-title Предложить вакансию резюме «Дизайнер мобильных приложений» 
+			form(action="").save-suggest-resume-form
+				.save-suggest-resume-form__title Вакансия
+				.save-suggest-resume-form__group
+					+inputField('input-simple', '', 'input-simple', '', 'UI/UX дизайнер', '').save-suggest-resume-input
+					+arrow.arrow--down.arrow--save-suggest-resume-input
+					+dropdown-simple-list('input','UI/UX дизайнер','WebDev-разработчик' ).dropdown-simple-list--hidden.save-suggest-resume-form__dropdown.dropdown-list__item--employer
+				+textarea('Добрый день уважаемый, Имя Фамилия, Нам очень понравилось ваше резюме, мы оценили ваш опыт и профессиональные навыки. Пожалуйста ознакомьтесь с нашей вакансией. Будем рады видеть вас в нашей команде.', 'text').suggest-resume-textarea
+				+checkbox('Подписаться на похожие вакансии', 'big custom-check-box--employer').save-suggest-resume-checkbox
+				+button('Сохранить резюме', '#!', 'btn-semi-rounded-blue btn--bg-employer').save-suggest-resume-btn-send
+	+modalWindow()#contacts-modal
+		+viewContacts(contacts, contactsObject)
+	+modalWindow().save-suggest-resume-modal#save-modal
+		.save-suggest-resume-block.search-resume-wrapper
+			.save-suggest-resume-title Сохранить резюме «Дизайнер мобильных приложений»
+			form(action="").save-suggest-resume-form
+				.save-suggest-resume-form__group
+					+inputField('input-simple', '', 'input-simple', '', 'UI/UX дизайнер', '').save-suggest-resume-input
+					+arrow.arrow--down.arrow--save-suggest-resume-input
+					+dropdown-simple-list('input','UI/UX дизайнер','WebDev-разработчик','UI/UX дизайнер','WebDev-разработчик' ).dropdown-simple-list--hidden.save-suggest-resume-form__dropdown.dropdown-list__item--employer
+				+textarea('Расскажите чем вас привлекла эта вакансия и почему вы хорошо подойдете на эту роль', 'text').save-suggest-resume-textarea
+				+checkbox('Подписаться на похожие вакансии', 'big custom-check-box--employer').save-suggest-resume-checkbox
+				+button('Сохранить резюме', '#!', 'btn-semi-rounded-blue btn--bg-employer').save-suggest-resume-btn-send
+			.save-suggest-resume-unsign
+				.save-suggest-resume-unsign__text Создайте вакансию для которой подходит это резюме и соискатели сами найдут вас. Соискатели чаще соглашаются на собеседование заранее ознакомившись с вакансией.
+				+button('Создать вакансию', '#suggest-modal', 'btn-semi-rounded-blue btn-semi-rounded-blue--bg modal-window-button').save-suggest-resume-btn-create
+				span.save-suggest-resume-unsign__subtext или
+				.save-suggest-resume-unsign__favourite
+					a(href='#').save-suggest-resume-unsign__link
+						+icon-favorite
+						span.save-suggest-resume-unsign__text-caption Добавить в избранное
+	
+	include ../sections/_lightbox.pug
+
+	//- Header + Выпадающее меню из логотипа
+	+pageHeader(Header)
+	.bg-logo-menu-dropdown.bg-logo-menu-dropdown--small-header
+		include ../sections/_main-menu.pug
+
+	//- Title-block
+	+resume-description__header(viewResume, 'resume', 'vip')
+	//- +resume-description__header(viewResume, 'resume')
+
+	.container
+		//- Навигация для Mobile/Tablet
+		.row
+			.offset-sm-1.col-sm-10.offset-md-0.col-md-12.col--border-top
+				+nav-menu(menuLinks)(class="nav-menu--resume-fix" id="resume-nav-menu")
+
+		.row
+			
+			//- Mobile/ Tablet
+			.offset-sm-1.col-sm-10.d-md-none
+				include ../sections/_resume__about.pug
+				include ../sections/_resume__section-experience-work.pug
+				include ../sections/_resume__skills.pug
+				include ../sections/_resume__section-education.pug
+				include ../sections/_resume__other.pug
+								
+	//-Портфолио для Mobile/Tablet вне сетки
+	.d-md-none
+		include ../sections/_resume__portfolio-slider.pug
+
+	.container
+		.row
+			//- Mobile/ Tablet
+			.offset-sm-1.col-sm-10.d-md-none
+				+showContacts('sign')
+				+showContacts('unsign')
+				include ../sections/_resume__similar-resumes.pug
+				include ../sections/_resume__tags-block.pug
+
+			//- Desktop
+			.d-none.d-md-block.col-md-8.col--padding
+				include ../sections/_resume__section-experience-work.pug
+				include ../sections/_resume__section-education.pug
+				include ../sections/_resume__portfolio-slider.pug
+				+showContacts('unsign')
+				+showContacts('sign')
+				include ../sections/_resume__similar-resumes.pug
+				include ../sections/_resume__tags-block.pug
+				
+			.d-none.d-md-block.col-md-4
+				include ../sections/_resume__about.pug
+				include ../sections/_resume__skills.pug
+				include ../sections/_resume__other.pug
+
+	
+	//- Блок с кнопкой Сохранить для Mobile/Tablet
+	.resume__footer
+		.container
+			.row
+				.offset-sm-1.col-sm-10
+					.respond-block-wrapper
+						+respond-block('resume respond-block__btn', 'Сохранить', '#!', '', 'icon-download')(data-dropdownId="#resume__footer-dropdown")
+		//-Выпадашка
+		+respond-block-dropdown('footer', 'menu1')(id="resume__footer-dropdown")

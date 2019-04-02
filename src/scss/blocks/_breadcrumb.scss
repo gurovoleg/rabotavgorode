@@ -1,0 +1,50 @@
+/*хлебные крошки*/
+.breadcrumb-list{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 8px;
+  display: flex;
+  @media #{$xl} {margin-bottom: 16px;}
+}
+.breadcrumb-item-link{color: $greyText;}  
+
+.breadcrumb-item {
+  display: inline-block;
+  position: relative;
+  margin-right: 22px;
+  font-size: 14px; 
+  
+}
+.breadcrumb-item:last-child{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+.breadcrumb-item-link:hover{
+  color: $greyText !important;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.breadcrumb-item:last-child {  
+  text-decoration: none;
+  cursor: default;
+  margin-right: 0;
+}
+.breadcrumb-item:not(:last-child):hover {
+  color: $black;
+}
+.breadcrumb-item:last-child:hover {
+  color: $greyText;
+  text-decoration: none;
+  cursor: default;
+}
+.breadcrumb-item:not(:last-child):after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: $greyText;
+  right: -13px;
+  top: 9px;
+}

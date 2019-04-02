@@ -1,0 +1,18 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Секция Другое';
+	- var pageClass = 'body--dashboard';
+	
+	- var dataObject = {title:'Иностранные языки', dataSplitText:{splitText:{modif:'', items:['Английский','Немецкий']}, description:'говорю, пишу'}} ;
+
+
+block content
+	.container.container--left 
+		
+		.section-ui
+			.title Секция Другое
+
+			include ../../sections/_resume__other.pug
+		pre.
+			include ../../sections/_resume__other.pug

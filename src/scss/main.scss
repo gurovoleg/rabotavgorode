@@ -1,0 +1,174 @@
+// Reboot and Grid
+@import "libs/bootstrap-reboot.scss";
+
+// Base
+@import "base/_mixins.scss";
+@import "base/_variables.scss";
+@import "base/_base.scss";
+
+// Blocks
+@import "blocks/_badge-counter.scss";
+@import "blocks/_breadcrumb.scss";
+@import "blocks/_buttons.scss";
+@import "blocks/_card.scss";
+@import "blocks/_colors.scss";
+@import "blocks/_checkbox.scss";
+@import "blocks/_input.scss";
+@import "blocks/_icons-svg.scss";
+@import "blocks/_pagination.scss";
+@import "blocks/_radio-button.scss";
+@import "blocks/_city-block.scss";
+@import "blocks/_nav-menu.scss";
+@import "blocks/_autocomplete.scss";
+@import "blocks/_select-city.scss";
+@import "blocks/_tag-filter.scss";
+@import "blocks/_titles.scss";
+@import "blocks/_typografy.scss";
+@import "blocks/_vacance-card.scss";
+@import "blocks/_split-text.scss";
+@import "blocks/_vacancy-serp.scss";
+@import "blocks/_badges.scss";
+@import "blocks/_main-menu.scss";
+@import "blocks/_filter-vacancies.scss";
+@import "blocks/_filter-vacancies-sectors.scss";
+@import "blocks/_filter-vacancies-position.scss";
+@import "blocks/_title-block.scss";
+@import "blocks/_authorize-form.scss";
+@import "blocks/_social-icons.scss";
+@import "blocks/_registration-social.scss";
+@import "blocks/_registration-phone.scss";
+@import "blocks/_recover-password-email.scss";
+@import "blocks/_dropdown.scss";
+@import "blocks/_notifications.scss";
+@import "blocks/_rating-mark.scss";
+@import "blocks/_rating-like.scss";
+@import "blocks/_rating-stars.scss";
+@import "blocks/_company-banner.scss";
+@import "blocks/_avatar-block.scss";
+@import "blocks/_rating-block.scss";
+@import "blocks/_company-review.scss";
+@import "blocks/_page-header.scss";
+@import "blocks/_contact-person.scss";
+@import "blocks/_textarea.scss";
+@import "blocks/_tooltip.scss";
+@import "blocks/_company-tab-vacancy.scss";
+@import "blocks/_rating.scss";
+@import "blocks/_company-tab-reviews.scss";
+@import "blocks/_feedback-company.scss";
+@import "blocks/_company-vacancy-card.scss";
+@import "blocks/_company-vacancies-current-region.scss";
+@import "blocks/_company-about.scss";
+@import "blocks/_city-selection.scss";
+@import "blocks/_modal-window.scss";
+@import "blocks/_company-modal.scss";
+@import "blocks/_job__heading.scss";
+@import "blocks/_areas-companies-alphabet.scss";
+@import "blocks/_areas-companies-list.scss";
+@import "blocks/_brand-logo-bgstyle.scss";
+@import "blocks/_apply__tab.scss";
+@import "blocks/_apply-header.scss";
+@import "blocks/_lightbox.scss";
+@import "blocks/_resume__view-contacts.scss";
+@import "blocks/_resume__show-contacts.scss";
+@import "blocks/_resume__respond-panel.scss";
+@import "blocks/_data-time-choose.scss";
+
+
+
+// Blocks Page Job
+@import "blocks/_job__company-list.scss";
+@import "blocks/_job__vacancy-card.scss";
+@import "blocks/_respond-block.scss";
+
+// Blocks Page Areas/Companies
+@import "blocks/_companies__vip-company.scss";
+
+// Blocks Page Search-resume
+@import "blocks/_search-resume__filter.scss";
+@import "blocks/_search-resume__resume-card.scss";
+
+// Blocks Page Resume
+@import "blocks/_resume__position-card.scss";
+@import "blocks/_resume__education-card.scss";
+
+@import "blocks/_aside-menu.scss";
+@import "blocks/_preview.scss";
+
+// Blocks Vacancies
+@import "blocks/_vacancies__tab-service-card.scss";
+@import "blocks/_vacancies__tab-response-card.scss";
+@import "blocks/_table.scss";
+
+
+@import "blocks/_vacancies__tab-history-card.scss";
+@import "blocks/_lk-table-indicator.scss";
+@import "blocks/_search-form.scss";
+@import "blocks/_dropdown-icons.scss";
+
+// Blocks Candidates
+@import "blocks/_candidates__table.scss";
+@import "blocks/_dropdown-select.scss";
+
+// Sections
+@import "sections/_ui-nav-panel.scss"; // Left panel in documentation
+@import "sections/_vacance-description.scss"; 
+@import "sections/_header.scss";
+@import "sections/_footer.scss";
+@import "sections/_vacance-description.scss";
+@import "sections/_subscribe.scss";
+@import "sections/_middle-map.scss";
+@import "sections/_block-company-reviews.scss";
+
+@import "sections/_job__about-company.scss";
+@import "sections/_job-badges.scss";
+@import "sections/_job__section-vacancy-cards.scss";
+@import "sections/_job__description-block.scss";
+@import "sections/_job__title-block.scss"; 
+
+@import "sections/_areas__badges-block.scss";
+@import "sections/_areas-companies__title-block.scss";
+@import "sections/_companies-slider.scss";
+
+@import "sections/_search-resume__title.scss";
+@import "sections/_resume-description__header.scss";
+@import "sections/_search-resume__resume-description.scss";
+@import "sections/save-suggest-resume.scss";
+@import "sections/_preview-title-block.scss";
+@import "sections/_candidates__change_status.scss";
+
+
+//-@import "sections/_resume__title-block.scss";
+@import "sections/_resume__section-experience-work.scss";
+
+@import "sections/_resume__other.scss";
+
+@import "sections/_resume__skills.scss";
+@import "sections/_resume__tags-block.scss";
+
+@import "sections/_resume__portfolio-slider.scss";
+
+@import "sections/_lk-title-block.scss";
+@import "sections/_lk-bottom-menu.scss";
+@import "sections/_preview-header.scss";
+
+
+// Pages
+@import "pages/search-results.scss";
+@import "pages/autorization.scss";
+@import "pages/company.scss";
+@import "pages/job.scss";
+@import "pages/areas.scss";
+@import "pages/cities.scss";
+@import "pages/companies.scss";
+@import "pages/apply.scss";
+@import "pages/search-resume.scss";
+@import "pages/resume.scss";
+@import "pages/vacancies.scss";
+@import "pages/candidates.scss";
+@import "pages/favourites.scss";
+
+
+// Utils - Always Last - !IMPORTANT
+@import "utils/_margins.scss";
+@import "utils/_paddings.scss";
+@import "utils/_utils.scss";

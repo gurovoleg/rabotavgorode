@@ -1,0 +1,262 @@
+$headerHeight: 80px; 
+
+.aside-menu {
+	display: none;
+
+	position:fixed;
+	z-index: 201;
+	bottom:0;
+	top: $headerHeight;
+	background-color: $bg;
+
+	flex-direction: column;
+	overflow:hidden;
+
+	transition-property: width, background-color;
+	transition-duration: 0.2s, 0.1s;
+	transition-delay: 0s, 0.2s;
+	
+	// padding: 24px 16px 32px;
+	padding: 24px 0 32px;
+	width: 100%;
+		
+	@media #{$md} {
+		display: flex;
+		width: 56px;
+	}
+	@media #{$hd} {
+		width: 240px;
+		background-color: $white;
+		box-shadow: 0px 0px 2px 0px $silver;
+	}
+}
+
+.aside-menu:hover {
+	@media #{$md} {
+		width: 240px;
+		transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+		background-color: $white;
+		box-shadow: 4px 0px 10px -4px $silver;
+		
+		// Показываем имя пользователя
+		.aside-menu__username {
+			opacity:1;
+			transition: opacity 0.1s linear 0.15s;
+			border-top:1px solid $silver;
+		}
+		
+		// Добавляем нижнюю границу
+		.aside-menu-header::after {border-bottom: 1px solid $silver;}
+
+		// Показываем иконку-стрелочку
+		.arrow {
+			opacity:1;
+			transition-property: opacity;
+			transition-delay:0.2s;
+		}
+	}
+	@media #{$hd} {box-shadow: 0px 0px 2px 0px $silver;}
+}
+
+// HEADER
+.aside-menu-header {
+	position:relative;
+	margin-bottom: 16px;
+}
+
+// Только для задания бордера
+.aside-menu-header::after {
+	position:absolute;
+	content:'';
+	width: calc(100% - 32px);
+	margin:0 16px;
+	padding-top: 16px;
+	border-bottom: 1px solid $silver;
+
+	@media #{$sm} {
+		margin:0 80px;
+		width: calc(100% - 160px);
+	}
+	@media #{$md} {
+		margin:0 16px;
+		width: calc(100% - 32px);
+		border:none;
+	}
+	@media #{$hd} {border-bottom: 1px solid $silver;}
+}
+
+.menu-header__company {
+	display: flex;
+	align-items: center;
+	padding:0px 16px;
+	height: 48px;
+	cursor: pointer;
+
+	@media #{$sm} {padding:0px 80px;}
+	@media #{$md} {padding:0px 16px;}
+
+	&:hover {background-color: $aside;}
+	
+	// Модификация аватарки компании
+	.round-icon {
+		width: 24px;
+		height: 24px;
+		font-size: 12px;
+		line-height: 25px;
+		color:$link;
+		background-color: $bg-light-gray;
+		border:none;
+		background-size: contain;
+	}
+
+}
+
+.menu-current-company {
+	position:relative;
+	.arrow svg {
+		width: 8px;
+		height: 4px;
+	}
+
+	.arrow {
+		position:absolute;
+		top:50%;
+		right: 16px;
+		transform:translateY(-50%);
+		display: block;
+		pointer-events:none;
+
+		@media #{$sm} {right: 80px;}
+		@media #{$md} {
+			opacity:0;
+			right: 16px;
+		}
+		@media #{$hd} {opacity:1;}
+	}
+}
+
+.menu-companies-block {display: none;}
+
+// Блок с названием и суммой
+.menu-block-wrapper{
+	margin-left: 16px;
+	white-space: nowrap;	
+	cursor: pointer;
+	
+	.company__title {
+		font-size: 16px;
+		line-height: 20px;
+		color: $basicText;
+
+		text-overflow: ellipsis;
+		overflow: hidden;
+
+		@media #{$md} {max-width: 150px;}
+
+	}
+
+	.company__amount {
+		font-size: 14px;
+		line-height: 18px;
+		color: $grey;
+	}
+}
+
+
+
+// MAIN
+.aside-menu-list {
+	flex:1 0 0%;
+	width: 150%; // Убираем скролл за родителя (240px)
+	overflow-y:auto;
+	overflow-x:hidden;
+
+	@media #{$md} {width: 270px;}
+}
+
+.aside-menu-list__item {
+	white-space: nowrap;
+	
+	&:first-child {margin-top: 0px;}
+
+	.icon-favorite path {
+		fill: $grey;
+		stroke-width:0px;
+	}	
+}
+
+.aside-menu-list__item {
+	
+	&:hover {background-color: $aside;}
+
+	.menu-item__link {
+		display: flex;
+		height: 48px;
+		padding:0 16px;
+		align-items: center;
+		@media #{$sm} {padding:0 80px;}
+		@media #{$md} {padding:0 16px;}
+
+		
+	}	
+
+	.menu-item__name {
+		position:relative;
+		font-size: 18px;
+		line-height: 22px;
+		margin-left: 16px;
+		color:$basicText;
+		transition:0.3s;
+	}
+
+}
+
+// Меняем цвет текста по ховеру: иконка и текст;
+.aside-menu-list__item {
+	.menu-item__link:hover .menu-item__name,
+	.menu-item__link:hover .menu-item__icon path{
+		fill: $link;
+		color:$link;
+		transition:0.2s;
+	}	
+} 
+
+// FOOTER
+.aside-menu-footer {
+	flex:0 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	
+	// @media #{$md} {min-width: 200px;}
+	
+	.aside-menu-list__item {
+		margin: 24px 0 0;
+		display: flex;
+	}
+	.menu-item__link {flex:1 0 auto;}
+	
+}
+
+.aside-menu__username {
+	opacity:1;
+	font-size: 18px;
+	line-height: 22px;
+	color: $basicText;
+	font-weight: bold;
+	padding-top: 24px;
+	// padding: 24px 16px 0px;
+	margin: 0 16px;
+	border-top:1px solid $silver;
+	
+	@media #{$sm} {margin: 0 80px;}
+	@media #{$md} {
+		margin: 0 16px;
+		border:none;
+		opacity:0;
+	}
+	@media #{$hd} {
+		border-top:1px solid $silver;
+		opacity:1;
+	}
+}

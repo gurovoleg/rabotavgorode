@@ -1,0 +1,88 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = "Страница - Описание ваканcии (Job opening)";
+
+	- var JobHeader = {modif: 'job',  lightHeaderBtn:{btnText:'Войти',btnHref: '#', btnClass: 'btn-rounded-blue'} };
+	
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#job-description", itemName: "Описание"},{itemAddClass: "", itemHref: "#job-about-company", itemName: "Компания"}, {itemAddClass: "", itemHref: "#job-location", itemName: "Расположение"}];
+	- var badgesBlock = {title: 'Вакансии для дизайнеров с навыками',Items:[{text:'Пиво',modif: 'skill'}, {text:'Отдых',modif: 'skill'}, {text:'Баня',modif: 'skill'}, {text:'Шашлык',modif: 'skill'}, {text:'Пиво',modif: 'skill'}, {text:'Отдых',modif: 'skill'}, {text:'Баня',modif: 'skill'}, {text:'Шашлык',modif: 'skill'}, {text:'Пиво',modif: 'skill'}, {text:'Отдых',modif: 'skill'}, {text:'Сериалы',modif: 'skill'}, {text:'Отдых',modif: 'skill'}], btnText:'Смотреть все', btnClass:'btn--badges-skill'};
+	- var CompanyHeader = {BrandImg: 'brand-logo-big.svg', CompanyTitle:'Веб Инвест', CompanyDescrip: 'Информационные технологии', CompanySite: 'webinvestment.ru', Items:['Главная','Компании','Компании'], breadcrumbItems: ['Санкт-Петербург', 'Информационные технологии'], splitTextObject: {modif: "", items: ['Санкт-Петербург', 'Информационные технологии']} };
+	
+
+block content
+	
+	+modalWindow().apply-page-modal#window-modal
+		.apply-page
+			//- Заголовок
+			include ../sections/_apply-header.pug
+			//- Контейнер для табов
+			.apply-tabs-container#apply-tabs-container
+				//- Вкладка Выбрать резюме
+				.apply-tabs__choose#apply-tabs__choose 
+					include ../sections/_apply-tab-choose.pug
+
+				//- Вкладка Загрузить резюме
+				.apply-tabs__download#apply-tabs__download 
+					include ../sections/_apply-tab-download.pug
+		.apply-notify
+			include ../sections/_apply-notify.pug
+
+	//- Шапка + выпадающее меню из логотипа 
+	//-+page-header('job', '', 'Войти', '', 'btn-rounded-blue')
+	+pageHeader(JobHeader)
+	.bg-logo-menu-dropdown.bg-logo-menu-dropdown--small-header
+		include ../sections/_main-menu.pug
+
+	
+	//- У контейнера серху отступ на высоту зафиксированной шапки
+	.container.container--padding-top
+		
+		//- Title-block (Блок под шапкой)
+		include ../sections/_job__title-block.pug	
+
+		//- Навигация
+		.row
+			.offset-sm-1.col-sm-10
+				+nav-menu(menuLinks)(class="nav-menu--job-fix" id="job-nav-menu")
+
+		//- Main content
+		.row
+			.offset-sm-1.col-sm-10.offset-md-0.col-md-8
+				//- Блок Описание и Расположение
+				include ../sections/_job__description-block.pug
+
+				//- Блок Компания на Mobile/Tablet
+				.d-md-none
+					include ../sections/_job__about-company.pug
+
+				//- Блок Похожие вакансии
+				include ../sections/_job__section-vacancy-cards.pug
+
+				//- Блок Вакансии с навыками
+				+badges-block(badgesBlock).badges-block--skill
+				
+			
+			.offset-sm-1.col-sm-10.offset-md-0.col-md-4
+				
+				//- Блок Компания на Desktop
+				.d-none.d-md-block
+					include ../sections/_job__about-company.pug
+				
+				//- Баннер
+				.job-banner-block
+					.job-banner-block__content
+						
+				
+				//- Блок Вакансии с навыками
+				//- +badges-block(badgesBlock).badges-block--skill
+
+	//- Блок с кнопкой Откликнуться для Mobile/Tablet
+	.job__footer
+		.container
+			.row
+				.offset-sm-1.col-sm-10
+					.respond-block-wrapper
+						+respond-block('job-opening', 'Откликнуться', '#!', '', 'icon-favorite')(data-dropdownId="#job__footer-dropdown")
+		//- //-Выпадашка
+		+respond-block-dropdown('footer')(id="job__footer-dropdown")

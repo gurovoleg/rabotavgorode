@@ -1,0 +1,142 @@
+// Контейнер для блока
+.container-title {
+	background-color: $bg;
+	padding: 0 16px;
+	margin: 0 auto;
+	width: 100%;
+
+	@media #{$md} {padding: 0 32px;}
+	@media #{$xl} {padding: 0 80px;}
+	@media #{$hd} {max-width:1920px;}
+}
+
+.container-title--list {
+	padding: 0 16px;
+
+	@media #{$sm} {padding: 0 0 0 16px;}
+	@media #{$md} {padding: 0 32px;}
+	@media #{$xl} {padding: 0 80px;}
+}
+
+.container-title--map {
+	padding: 0;
+
+	@media #{$sm} {padding: 0 0 0 16px;}
+	@media #{$md} {padding: 0 32px;}
+	@media #{$xl} {padding: 0 80px 0 80px;}
+	// @media #{$ud} {padding: 0 0 0 80px}
+}
+
+// Классы для Title block с боковой панелью Aside
+.container-title--list-aside,
+.container-title--map-aside {
+	@media #{$hd} {padding-right: 360px;}
+}
+
+// Основной контент
+.title-block{
+	position: relative;
+	background-color: $platinum;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	width: 100%;
+	border-bottom:1px solid $silver;
+	
+	@media #{$sm}{
+		padding-top: 28px; 
+	}
+
+	@media #{$md}{
+
+		padding-top: 48px;
+	}
+	
+}
+
+.breadcrumb-list--title-block{
+	padding: 0;
+	margin: 0;
+	margin-bottom: 12px;
+
+	@media #{$md} {
+
+		margin-bottom: 22px;
+	}
+}
+
+.title-block__vacancy-serp{
+	margin: 0;
+	padding: 0;
+
+	// margin-bottom: 16px;	
+	& li{font-size: 16px;}
+
+	@media #{$md}{
+
+		// margin-bottom: 24px;
+	}
+
+}
+.title-block__heading{
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+  	color: $basicText;
+  	font-weight: 700;
+  	padding-bottom: 8px;
+  	
+   @media #{$md} {font-size: 32px;}
+	margin-bottom: 16px;
+}
+
+.title-block__tag-filters{	
+	display: none;
+	@media #{$md}{
+		display: flex;
+		flex-wrap:wrap;
+		align-items: center;	
+		margin-bottom: 16px;	
+		margin-top: 24px;
+	}
+} 
+.title-block__tag-filters .tag-filter{
+	margin-right: 16px;
+	margin-bottom: 8px;
+	&:last-of-type {margin-right: 24px;}
+} 
+
+// Выпадающие меню
+.title-block__dropdown-menu{
+	display: flex;
+	justify-content: space-between;
+	padding-top: 16px;
+	flex-direction:column;
+
+	@media #{$md} {padding-top: 0px;}
+	@media #{$xl} {flex-direction:row;}
+
+}
+
+.title-block__dropdown-menu-left{
+	display: flex;
+	order:2;	 	
+}
+
+.title-block__dropdown-menu-right{
+	display: none;
+	order:1;
+	margin-bottom: 24px;
+
+	@media #{$md}{display: flex;}	
+	@media #{$xl}{margin-bottom: 0;}	
+}
+
+.result-item__icon--round{top: 15px;}
+.round-icon--red{
+	width: 18px;
+	height: 18px;
+	font-size: 12px;
+	padding-top: 0;
+	color:$white;
+	background-color: $red;
+}

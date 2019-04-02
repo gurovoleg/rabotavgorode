@@ -1,0 +1,113 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Средняя часть - Карта';
+	- var pageClass = 'body--dashboard';
+		//-карточка list and map
+	- var vacance_card_map = {addClass: "middle-map-cards", title: "Product designer", datePosted: "21.01.2018", salary: "150 000", companyName: "ВИ", splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: { badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }};
+
+block content
+	.container.container--left
+	.title Средняя часть - Карта
+
+	.container-main
+		.container-aside.container-aside--list
+			.container-content
+				.search-result.middle-map-wrapper.search-result--show
+					.header-main.middle-map--header
+						.header-main__logo
+							.logo-group
+								+logo-icon
+								+arrow(class="arrow--down")
+						.header-main__city
+							+link-icon('Санкт-Петербург')
+						.header-main__buttons
+							+button('Войти', '#', 'btn-rounded-blue')
+					.header-main__search.middle-map--header-search
+						
+						+tag-filter('дизайнер')
+							
+						//- Форма поиска с микроразметкой
+						div(itemscope itemtype="http://schema.org/WebSite")
+							meta(itemprop="url" content="https://spb.rabotavgorode.ru/")
+							form.search-form(itemprop="potentialAction" itemscope itemtype="http://schema.org/SearchAction")
+								meta(itemprop="target" content="https://spb.rabotavgorode.ru/search?q={текст_запроса}")
+								
+								//-flex container
+								.search-form__group
+									.input-container
+										input(itemprop="query-input" type="text" name="" required).search-job.search-job__name
+										.icon-filter.icon-filter--absolute
+											+icon-filter
+									.input-container
+										input(type="number" name="job-sallary" value="30000" min="100000" max="1000000" step="10000").search-job.search-job__sallary
+										.input__search-button
+											.icon-search.icon-search--absolute
+												+icon-search
+										span.search-job__sallary-text-before от
+										span.search-job__sallary-text-after руб
+
+					.row.middle-map
+						.search-result-list.search-result-list--map
+							
+							.search-result-list__item.middle-map-cards-wrapper
+								+vacance-card(vacance_card_map, 'list')
+							.search-result-list__item.middle-map-cards-wrapper
+								+vacance-card(vacance_card_map, 'list')
+							.search-result-list__item.middle-map-cards-wrapper
+								+vacance-card(vacance_card_map, 'list')
+							
+							.middle-map-mobilebutton
+								+button('Вернуться к списку', '#', 'btn-square')
+							
+							//- form.subscribe.middle-map-subscribe
+							//- 	.subscribe-title Подпишитесь на вакансии по запросу «дизайнер»
+							//- 	.subscribe-input
+							//- 		.input-wrapper
+							//- 			label.input-label(for="input-email")
+							//- 				input.input-field(type="text" id="input-email" data-type="email" placeholder="Email")
+							//- 				span.input-error Неверный формат email
+							//- 		.subscribe-button
+							//- 			+button('Подписаться', '#', 'btn-semi-rounded-blue')
+							//- 	.subscribe-link
+							//- 		+button('Показать еще вакансий', '#', 'btn-link')
+						.search-result__item-description.search-result__item-description--map
+							#map.middle-map
+	//- script(src="../js/middle-map.js")
+							
+
+	br
+	.section-ui
+		p Подключение блока с фильтром:
+		pre.
+			include ../sections/filter-vacancies.pug
+
+		p Код:
+		pre.
+			form.filter-vacancies(id="filter-vacancies" style="border:1px dashed)
+	.section-ui
+		p Добавление маркеров на карту происходит через файл middle-map.js, путем добавления новой точки
+		pre.
+			product1 = new ymaps.Placemark([55.788368, 37.508930], { // Координаты метки объекта
+			// Содержание метки
+			balloonContentHeader: '<strong><a href="#">Product designer</a></strong>',
+			balloonContentBody: '150 000 Р',
+			balloonContentFooter: 'Веб инвест &#8226; Информационные технологии',
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#imageWithContent',
+				// Своё изображение иконки метки.
+				iconImageHref: 'img/map-icons/white.png',
+				// Размеры метки.
+				iconImageSize: [48, 48],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				iconImageOffset: [-24, -24],
+				// Смещение слоя с содержимым относительно слоя с картинкой.
+				iconContentOffset: [15, 15],
+				// Макет содержимого.
+				iconContentLayout: iconWhite
+				}); // Тип метки
+		p Изображение иконок-маркеров находится в папке img/map-icons
+

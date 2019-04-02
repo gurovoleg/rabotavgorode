@@ -1,0 +1,53 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Title-block';
+	- var pageClass = 'body--dashboard';
+	-var reviewObject = {splitTextObject: {modif: "", items: ['123 Просмотра (+45)', '21 августа']}, splitTextDescription: {modif: "", items: ['ВебИнвест', 'Санкт-Петербург']}, title: 'Fullstack Developer Ruby/React' };
+
+block content
+
+	.container.container--left
+		.title Title-block
+		.section-ui(style="border: 1px dashed black;")
+			+preview-title-block(reviewObject, '#!', '', 'green', 'Открыта')
+		p Код
+		pre.
+			+preview-title-block(reviewObject, '#!', '', 'green', 'Открыта')
+		p Миксин
+		pre.
+			mixin preview-title-block(dataObject, referenceLink, imgAvatar, markerColor, statusText)
+				.preview-title-block
+					.split-text-block
+						if dataObject.splitTextObject
+							+split-text-object(dataObject.splitTextObject).split-text-preview
+							.reference-block
+						a(href='#').reference-link.reference-link--desktop
+							span.reference-text.text-caption Открыть в новом окне
+							+reference
+					.preview-title-header
+						.preview-title-wrapper
+							.preview-title \#{dataObject.title}
+							+split-text-object(dataObject.splitTextDescription).split-text-preview-description
+						if imgAvatar
+							.preview-avatar
+								img(src="../../img/avatar/"+imgAvatar, alt= imgAvatar)
+					.review-status
+						if dataObject.ratingStars
+							.preview-rating-stars
+								+rating-stars-block(...dataObject.ratingStars).rating-stars-preview
+						+color-marker(markerColor)
+						span.status-text= statusText
+					if dataObject.info
+						.review-info-block
+							.review-info
+								.review-info__pay \#{dataObject.info.pay}
+								.review-info__age-location
+									+split-text-object(dataObject.info.splitTextInfo)
+								.review-info__contacts
+									+split-text-object(dataObject.info.splitTextContscts)
+							.preview-avatar--mobile
+									img(src="../../img/avatar/"+imgAvatar, alt= imgAvatar)
+		p Объект для страницы Вакансии
+		pre.
+			-var reviewObject = {splitTextObject: {modif: "", items: ['123 Просмотра (+45)', '21 августа']}, splitTextDescription: {modif: "", items: ['ВебИнвест', 'Санкт-Петербург']}, title: 'Fullstack Developer Ruby/React' };

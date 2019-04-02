@@ -1,0 +1,145 @@
+.preview-title-block {
+
+	.split-text-block {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 24px;
+		// line-height: normal;
+	}
+	
+	.preview-title {
+		font-size: 24px;
+		font-weight: 700;
+		padding-bottom: 8px;
+		line-height: normal;
+		@media #{$sm} {
+			padding-right: 96px;
+		}
+		@media #{$md} {
+			font-size: 32px;
+		}
+	}
+	
+	.status-text {
+		padding-left: 10px;
+		padding-right: 24px;
+	}
+	.reference-text {
+		display: none;
+		align-content: center;
+
+		@media #{$sm} {
+			display: flex;
+		}
+	}
+
+	.color-marker {
+		width: 10px;
+		height: 10px;
+		margin-right: 0;	
+	}
+}
+
+.split-text-preview {
+	.split-text__item {
+		font-size: 14px;
+	}
+	.split-text:not(:last-child):after {
+		top: 6px;
+		background-color: $basicText;
+	}
+	.split-text__item:not(:last-child):after {
+		top: 9px;
+	}
+}
+.split-text-preview-description {
+	padding-bottom: 16px;
+	.split-text__item {
+		font-size: 18px;
+		color: $basicText;
+		line-height: normal;
+		white-space: inherit;
+		@media #{$md} {font-size: 24px;}
+	}
+	.split-text__item:not(:last-child):after {
+		background-color: $basicText;
+		@media #{$md} {top: 13px;}
+	}
+}
+.preview-title-header {
+	display: flex;
+	justify-content: space-between;
+	@media #{$sm} {position: relative;}
+}
+.preview-avatar {
+	display: none;
+	@media #{$sm} {
+		display: block;
+		border-radius: 96px;
+		min-width: 96px;
+		position: absolute;
+		right: 0;
+		img {
+			width: 96px;
+			height: 96px;
+		}
+	}
+	&--mobile {
+		display: block;
+		min-width: 64px;
+		height: 64px;
+		margin-top: 16px;
+		img {
+			width: 64px;
+			height: 64px;
+		}
+		@media #{$sm} {display: none;}
+	}
+}
+.review-status {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	.rating-stars__item:not(:last-child) {
+		padding-right: 0;
+	}
+	.rating-star svg {
+		width: 16px;
+		height: 16px;
+	}
+}
+.preview-rating-stars {
+	order: 0;
+	margin-right: 24px;
+	@media #{$sm} {order: 2;}
+}
+.review-info {
+	position: relative;
+	min-width: 264px;
+	.split-text__item {
+		font-size: 16px;
+		color: $basicText;
+		line-height: normal;
+	}
+	.split-text__item:not(:last-child):after {
+		background-color: $basicText;
+		top: 9px;
+	}
+}
+.review-info__pay {
+	font-size: 16px;
+	margin-top: 16px;
+	@media #{$sm} {margin-top: 32px;}
+}
+.review-info__pay, .review-info__age-location {
+	padding-bottom: 16px;
+}
+.review-info-block {
+	display: flex;
+}
+.review-info__contacts {
+	.split-text {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

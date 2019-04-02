@@ -1,0 +1,28 @@
+//--- Миксины для инпутов ---// 
+mixin input-text(placeholder, className)
+	.input-wrapper&attributes(attributes)
+		label.input-label
+			input.input-field(type="text" class=className  placeholder=placeholder)
+
+mixin input-number(placeholder, className, min, max, step)
+	.input-wrapper
+		label.input-label
+			input.input-field(type="number" placeholder=placeholder  class=className min=min max=max step=step)
+
+mixin inputField(attrFor, attrType, attrId, attrDataType, attrPlaceholder, error, registration)
+	.input-wrapper&attributes(attributes)
+		label.input-label(for= attrFor)
+			input.input-field(type= attrType id= attrId data-type= attrDataType placeholder= attrPlaceholder)
+			span.input-error= error
+			if registration
+				span.input-error.input-error--registration
+					a(href="#!") Войти 
+					| или 
+					a(href="#!") Воccтановить пароль
+
+
+mixin inputPass(attrFor, attrType, attrId, attrDataType, attrPlaceholder, error)
+	.input-wrapper&attributes(attributes)
+		+inputField(attrFor, attrType, attrId, attrDataType, attrPlaceholder, error)
+		+icon-eye(class="icon-eye--show")
+

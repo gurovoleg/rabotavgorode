@@ -1,0 +1,44 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Выбор города - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+	- var cities1 = ['Москва','Санкт-Петербург','Новосибирск','Екатеринбург','Нижний Новгород','Казань','Челябинск','Омск',];
+
+block content
+
+	.container.container--left
+		.title Выбор города
+		
+		.section-ui
+
+			+button("Открыть", "#!", "")(id="city-selection__open-button")
+
+			pre +button("Открыть", "#!", "")(id="city-selection__open-button")
+
+			include ../../sections/_city-selection.pug
+
+		.section-ui
+			p Подключение:	
+			pre include ../../sections/_city-selection.pug
+
+		.section-ui
+			p Код:	
+			pre.
+				- var cities1 = ['Москва','Санкт-Петербург','Новосибирск','Екатеринбург','Нижний Новгород','Казань','Челябинск','Омск',];
+
+				.bg-city-selection
+					.city-selection-wrapper
+						+icon-close(class="icon-close--black icon-close--absolute" id="citi-selection__close-button")
+						
+						.city-selection__header
+							.city-selection__header-title Работа в городе
+							+input-text('Введите город', 'input--city-celection-mod')
+						
+						.city-selection__block
+							+city-selection-block('Популярные города', cities1)
+							+city-selection-block('Центр', cities1)
+							+city-selection-block('Центр', cities1)
+
+
+

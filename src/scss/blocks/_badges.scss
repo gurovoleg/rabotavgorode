@@ -1,0 +1,166 @@
+/*vip-badge*/
+.vip-badge {
+  display: inline-block;
+  font-size: 14px; 
+  //color: $black;
+  padding: 0px 8px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  height: 20px;
+
+}
+.vip-badge:hover{
+  text-decoration: none;
+  color: $black; 
+  opacity: 0.8;
+}
+.vip-badge--green:hover{color: $white; }
+/*badge and badge--big*/
+.badge {
+  display: inline-block;
+  //padding-top: 1px;
+  //padding-bottom: 2px;
+  padding-left: 7px;
+  padding-right: 7px;  
+  border: 1px solid $lightGrey;
+  font-size: 14px;
+  line-height: 1.4;
+  height: 21px;
+  border-radius: 6px;
+  background-color: $white;
+  white-space: nowrap;
+  color: $black;
+  & a{color: $black;}
+	  &:hover a{
+	    text-decoration: none;
+	    // color: $linkHover;
+    }
+    &:active a{
+       text-decoration: none;
+        // color: $linkPressed;
+    }
+}
+.badge--big {
+  font-size: 16px;
+  padding: 0px 13px;
+  border-radius: 30px;
+  height: 24px;
+}
+
+/* круглые иконки на карточке и в кабинете пользователя*/
+.round-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  //-padding-top: 8px;
+  line-height: 2.5;
+  flex-shrink:0;
+  justify-content: center;
+}
+.round-icon--card {
+  color: $blue;
+  border: 1px solid $lightGrey;
+  background-color: $white;
+  &:hover{text-decoration: none;}
+}
+.round-icon.round-icon--card.round-icon--flex{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.round-icon-img{
+  margin:auto;
+}
+.round-icon--user {
+  color: $white;
+  cursor:pointer;
+  background-color: $blue;
+  &:hover{opacity: 0.8;}
+}
+.round-icon--user{   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.round-icon--company-alfa{padding-top: 5px;}
+.round-icon-letter--company-alfa{
+  font-size: 20px;
+  font-weight: 700;  
+  border-bottom: 2px solid red;
+  line-height: 0;
+}
+.round-icon--photo-camera{
+  padding-top: 0;
+  display: flex;
+  border-radius: 50%;  
+  width: 64px;
+  height: 64px;
+  background-color: $light-gray;
+  .photo-camera{margin: auto;}
+}
+/* бейджики на карте с ценами*/
+.icon-price {
+  display: inline-block;
+  position: relative;
+  font-size: 16px;
+  padding: 1px 8px;
+  background-color: $white;
+  border-radius: 6px;
+  -webkit-box-shadow: 1px 4px 24px -7px $priceShadow;
+  box-shadow: 1px 4px 24px -7px $priceShadow;
+  white-space: nowrap;
+}
+.icon-price--blue {
+  background-color: $blue;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: $white;
+}
+.icon-price--blue:after,
+.icon-price:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 5px solid $white;
+  border-bottom: 0px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.icon-price--blue:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 5px solid $blue;
+  border-bottom: 0px;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.map-marker-count {
+  display: inline-block;
+  color: $black;
+  font-size: 16px;
+  padding: 0px 7px;
+  border: 1px solid $blue;
+  border-radius: 15px;
+  background-color: $white;
+}

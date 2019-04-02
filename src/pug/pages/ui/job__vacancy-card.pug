@@ -1,0 +1,42 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточка- похожие вакансии';
+	- var pageClass = 'body--dashboard';
+	- var jobOpening_vacancy_card = {addClass: "job-vacancy-card", title: "Дизайнер продукта в Музыку", datePosted: "", salary: "150 000", companyLetter: "", companyIconSrc: 'alfa.svg', splitTextObject: { modif: "", items: ["ВебИнвест","Информационные технологии"]}, badgeObject: {badgeType:"", items: ["CJM", "User Stories"] }, addressObject:{ marker_color: "red", street: "Пл. Ленина", addressInfo: "3км" }, vacanceDescription: " Wrike – американская компания со штаб-квартирой в Калифорнии, разрабатывающая одноимённый продукт для управления проектами и совместной работы. Мы создали один из лучших инструментов, который позволя..."};
+
+block content
+
+	.container.container--left
+	
+	.section-ui
+		.title-1 Карточка- похожие вакансии
+		+vacance-card(jobOpening_vacancy_card,'list')
+
+	.title-5 Добавить карточку
+	pre.
+		+vacance-card(jobOpening_vacancy_card,'list')
+
+	.title-5 Объект для карточки
+	pre.
+		- var jobOpening_vacancy_card = {
+			addClass: "job-vacancy-card",
+			title: "Дизайнер продукта в Музыку", 
+			datePosted: "", 
+			salary: "150 000", 
+			companyLetter: "", 
+			companyIconSrc: 'alfa.svg', 
+			splitTextObject: { 
+				modif: "", 
+				items: ["ВебИнвест","Информационные технологии"]
+			}, 
+			badgeObject: {
+				badgeType:"", items: ["CJM", "User Stories"] 
+			}, 
+			addressObject: { 
+				marker_color: "red", 
+				street: "Пл. Ленина", 
+				addressInfo: "3км"
+			},
+			vacanceDescription: "Wrike – американская компания со штаб-квартирой в Калифорнии, разрабатывающая одноимённый продукт для управления проектами и совместной работы. Мы создали один из лучших инструментов, который позволя..."
+		};

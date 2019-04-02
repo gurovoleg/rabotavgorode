@@ -1,0 +1,55 @@
+mixin respond-block(modif, btnName, btnLink, text, mixinName)
+	.respond-block(class="respond-block--"+ modif)&attributes(attributes)
+		if mixinName != '' && mixinName != undefined
+			+button(btnName, btnLink, 'btn-semi-rounded-blue btn--'+ modif)
+			.respond-block__download-btn
+				+#{mixinName}
+		else
+			.button-wrapper
+				+button(btnName, btnLink, 'btn-semi-rounded-blue btn--'+ modif)
+
+			if text
+				a(href="#!") text
+		+arrow(class="respond-block-arrow--down arrow--down")
+-;
+
+//- Миксин для выпадающего меню в respond-block
+mixin respond-block-dropdown(modif, menuType)
+	.respond-block-dropdown(class="respond-block-dropdown--"+ modif)&attributes(attributes)
+		
+		.respond-block-dropdown-item.respond-block-dropdown-item-favor
+			+icon-favorite.respond-block-dropdown-icon.icon-favorite--black-border
+			span.text-action Добавить в избранное
+
+		.respond-block-dropdown-item
+			+icon-printer.respond-block-dropdown-icon
+			span.text-action Распечатать
+
+		.respond-block-dropdown-item
+			+icon-complaint.respond-block-dropdown-icon
+			span.text-action Пожаловаться
+		
+		//- Для страницы Резюме
+		if menuType == 'menu1'
+			.respond-block-dropdown-item.respond-block-dropdown-item-favor
+				+icon-download.respond-block-dropdown-icon
+				span.text-action Скачать Word.doc
+			.respond-block-dropdown-item
+				+icon-label.respond-block-dropdown-icon
+				span.text-action Предложить вакансию
+			
+			.respond-block-dropdown-item
+				+icon-looks-two.respond-block-dropdown-icon
+				span.text-action Найти похожие резюме
+		
+		//- Default Для страницы Вакансий
+		else if menuType == undefined || menuType == ''
+			.respond-block-dropdown-item
+				+icon-download.respond-block-dropdown-icon
+				span.text-action Сохранить в PDF
+
+			.respond-block-dropdown-item
+				+icon-share.respond-block-dropdown-icon
+				span.text-action Поделиться			
+-;
+

@@ -1,0 +1,39 @@
+.apply-tabs-container{
+	width: 100%;
+	@media #{$sm} {
+		max-width: 421px;
+	}
+	@media #{$md} {
+		width:  inherit;
+	}
+}
+.apply-page {
+	padding-left: 16px;
+	padding-right: 16px;
+	@media #{$sm} {
+		padding-left: 79px;
+		padding-right: 79px;
+	}
+	@media #{$md} {
+		padding-left: inherit;
+		padding-right: inherit;
+	}
+}
+.apply-page-modal {
+	.modal-window {
+		@media #{$md} {
+			left: 50%;
+			right: 480px;
+			top: 10%;
+			bottom: 10%;
+			width: 480px;
+			transform: translate(-240px, 0);
+			min-height: 65%;
+		}
+	}
+}
+.apply-notify {
+	display: none;
+	padding-left: 16px;
+	padding-right: 16px;
+}

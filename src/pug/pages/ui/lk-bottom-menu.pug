@@ -1,0 +1,27 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Панель меню с иконками(внизу страницы)';
+	- var pageClass = 'body--dashboard';
+	
+block content
+	.container.container--left
+		.title Панель меню с иконками(внизу страницы)
+		.section-ui.bottom-menu-preview
+
+			.lk-bottom-menu.lk-bottom-menu--vacancies
+				.menu-selected.text-body-grey Выбрано #[span.selected-number 123] вакансии
+				.lk-bottom-menu__items.d-flex
+					+icon-menu-item('ic-refresh','Обновить')
+					+icon-menu-item('ic_copy','Дублировать')
+					+icon-menu-item('ic-eye','Снять с публикации')
+					+icon-menu-item('icon-star-custom','Повысить эффективность')
+		pre.
+
+			.lk-bottom-menu.lk-bottom-menu--vacancies
+				.menu-selected.text-body-grey Выбрано \#[span.selected-number 123] вакансии
+				.lk-bottom-menu__items.d-flex
+					+icon-menu-item('ic-refresh','Обновить')
+					+icon-menu-item('ic_copy','Дублировать')
+					+icon-menu-item('ic-eye','Снять с публикации')
+					+icon-menu-item('icon-star-custom','Повысить эффективность')		

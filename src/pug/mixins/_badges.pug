@@ -1,0 +1,91 @@
+//-vip badge for ui-kit
+mixin vip-badge(bgColor, color, href, text)
+	a.vip-badge(href=""+ href style="background-color:"+ bgColor + "; color:"+ color +";") #{text}
+
+//-vip badge for object
+mixin vip-badge-color(argumentObj)
+	a.vip-badge(href="#" class=" vip-badge--"+ argumentObj.vipObject.color) #{argumentObj.vipObject.title}
+	
+//-badge одиночный
+mixin badge(text)
+	a(href="#" ).badge #{text}
+
+
+//-badge с модификатором  для группы 
+mixin badge-item(data)
+	a.badge(href="#" class=" badge--"+ data.modif) #{data.text}
+
+//-job-opening группа бейджиков	
+mixin badges-block-items(...items)
+	.badges-block-items
+		each item in items
+			+badge-item(item)
+
+//-job-opening  Блок Бейджи с заголовком и ссылкой
+mixin badges-block(badgesGroup)
+	.badges-block&attributes(attributes)
+		.badges-block__title.heading-2 #{badgesGroup.title}
+		+badges-block-items(...badgesGroup.Items)
+		+button(badgesGroup.btnText,'#',badgesGroup.btnClass)
+
+
+
+//-badge--big
+mixin badge--big(text)
+	a(href="#").badge.badge--big&attributes(attributes) #{text}
+
+
+//-круглая иконка фирмы на карточке
+mixin round-icon--card(companyLetter, iconSrc)
+	if companyLetter ==''
+		a(href="#").round-icon.round-icon--card.round-icon--flex
+			img.round-icon-img(src=" ../img/company-icons/"+ iconSrc)
+	else
+		a(href="#").round-icon.round-icon--card&attributes(attributes)
+			span(class="round-icon-letter") #{companyLetter}
+
+
+//-круглая иконка в личном кабинете пользователя
+mixin round-icon--user(text, imgSrc)
+	if text !==''
+		.round-icon.round-icon--user&attributes(attributes) #{text}
+	else
+		.round-icon.round-icon--user(style="background-image: url(../img/person-icons/"+ imgSrc +");")&attributes(attributes)
+
+
+//- mixin round-icon--user(text)
+//- 	.round-icon.round-icon--user&attributes(attributes) #{text}
+
+//-круглая иконка с фотокамерой
+mixin round-icon--photo-camera
+	.round-icon.round-icon--photo-camera&attributes(attributes)
+		+photo-camera
+
+
+
+//-бейдж с цифрой
+mixin badge-counter-item( number, text)
+	.badge-counter-item&attributes(attributes)
+		.badge-counter-item__content
+			span.badge-counter-item__text #{text}
+			span.badge-counter-item__number #{number}
+
+//-бейджи с цифрой	блок		
+mixin badges-counter(modif, Items)
+	.badges-counter(class=" badges-counter--"+ modif)
+		each item in Items
+			+badge-counter-item(item.number, item.text)
+
+//-миксин  группа бейджиков для объекта
+mixin badge-group-object(argumentObj)
+	.badge-group(class=" badge-group--"+ argumentObj.badgeType)
+		each item in argumentObj.items 
+			.badge-group-item(class=" badge badge--"+ argumentObj.badgeType)
+				a(href="#")= item
+
+//-миксин  группа бейджиков вне миксина карточки
+mixin badge-group(modif, ...items)
+	.badge-group(class=" badge-group--"+ modif)
+		each item in items
+			.badge-group-item.badge
+				a(href="#")= item

@@ -1,0 +1,21 @@
+.block-company-reviews{
+	padding-top: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid $silver;
+	@media #{$md}{
+		padding-bottom: 40px;
+	}
+}
+.company-review:last-of-type{
+	border-bottom-width: 0;	
+}
+.block-company-reviews__title{
+	font-size: 18px;
+	font-weight: 700;
+	color: $black;
+	@media #{$md}{
+		margin-bottom: 16px;
+		font-size: 24px;
+	}
+	
+}

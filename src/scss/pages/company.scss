@@ -1,0 +1,43 @@
+.d-md-none {
+	@media #{$md} {display: none !important;}
+}
+
+.d-md-block {
+	display: none;
+
+	@media #{$md} {display: block;}
+}
+
+.company-tabs-container {
+	.subscribe {
+		padding: 24px 0;
+		@media #{$md} {padding:40px 0;}
+	
+	&-title{
+		@media #{$md} {
+			font-size: 24px;
+			padding-bottom: 40px; 
+		}
+	}
+
+	}
+}
+
+.company-tabs__about {
+	padding-bottom: 70px;
+	
+	@media #{$sm} {padding-bottom: 170px;}
+
+	.company-contact-person {
+		padding-top: 24px;
+		
+		@media #{$md} {padding-top: 64px;}
+
+		.btn {font-size: 18px;	}
+
+	}
+}
+
+.button--padding-top {
+	padding-top: 20px;
+}

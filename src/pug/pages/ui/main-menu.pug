@@ -1,0 +1,19 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Выпадающее меню из логотипа';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+				
+		.section-ui
+			.title-5 Выпадающее меню из логотипа
+			.header-main
+				.header-main__logo
+					.logo-group
+						+logo-icon
+						+arrow(class="arrow--down")
+					//- обертка .main-menu-ui-kit только для UI-kit
+					.main-menu-ui-kit
+						include ../../sections/_main-menu.pug

@@ -1,0 +1,27 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Шапка';
+	- var pageClass = 'body--dashboard';
+	- var menuLinks = [{itemAddClass: "nav-menu-item-active", itemHref: "#", itemName: "Вакансии"},{itemAddClass: "", itemHref: "#", itemName: "Отрасли"}, {itemAddClass: "", itemHref: "#", itemName: "Компании"}, {itemAddClass: "", itemHref: "#", itemName: "Города"}];
+	- var HeaderSR = {modif: 'full', personStatus: '', city:'Санкт-Петербург',  inputNumber: '2' };
+
+block content
+		.title Шапка (без фильтра вакансий и отраслей)
+		//- .container.container--left
+		p Блоки с фильтрами подключаются на странице отдельно вне блока с шапкой
+		p Актуальное изображение шапки и корреткную работу выпадающего меню можно посмотреть, убрав левый сайдбар у UI-kit (скрыть/показать навигацию)
+		
+		+pageHeader(HeaderSR)
+		//- .main-menu-header-ui-kit - тестовый класс для UI KIT
+		.bg-logo-menu-dropdown.main-menu-header-ui-kit 
+			.container-aside.container-aside--no-padding
+				include ../../sections/_main-menu.pug
+
+		pre.
+			include ../sections/header.pug
+
+			//- Dropdown из логотипа (.main-menu-header-ui-kit - тестовый класс для UI KIT)
+			.bg-logo-menu-dropdown.main-menu-header-ui-kit 
+				.container-aside.container-aside--no-padding
+					include ../../sections/_main-menu.pug

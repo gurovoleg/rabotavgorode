@@ -1,0 +1,22 @@
+.rating-stars {
+	display: flex;
+}
+
+.rating-stars__value {
+	min-width: 64px;
+	color:$basicText;
+}
+
+.rating-stars__items-block {
+	display: flex;
+}
+
+.rating-stars__item {
+	padding-right: 24px;
+	line-height: 1;
+	font-size: 0px;
+
+	&:last-child {
+		padding-right: 0;
+	}
+}
