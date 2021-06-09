@@ -1,0 +1,224 @@
+<!-- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.-->
+<!-- Миксин title block для Компаний/Отраслей/Городов-->
+<!--apply page выбранный файл-->
+<!-- Показать контакты со страницы Resume-Page-->
+<!-- rating-star-->
+<!-- rating-star-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=375,initial-scale=1, shrink-to-fit=no" />
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<title>Блок отзывы</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../css/main.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../libs/custom-grid/custom-grid-dynamic.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../libs/custom-grid/custom-grid-static.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../fonts/proximaNova.css?timestamp=#{time}" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body class="body--dashboard">
+	<div class="clear"></div>
+	<div class="left-panel blue-skin" id="ui-navifation">
+		<div class="content-wrapper">
+			<div class="left-panel__section">
+				<div class="title-2">UI-KIT и PUG фреймворк</div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Документация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="docs.html">Документация</a><a class="left-panel-nav__link" href="docs-codestyle.html">Оформление кода</a><a class="left-panel-nav__link" href="docs-styleguide.html">Работа со стилями</a><a class="left-panel-nav__link" href="docs-general-recomendations.html">Общие рекомендации</a><a class="left-panel-nav__link" href="docs-workflow.html">Workflow</a><a class="left-panel-nav__link" href="docs-customer-reqiuriements.html">Требования заказчика</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">База</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="grid.html">Сетка</a><a class="left-panel-nav__link" href="colors.html">Цвета</a><a class="left-panel-nav__link" href="typografy.html">Типографика</a><a class="left-panel-nav__link" href="breadcrumb.html">Хлебные крошки</a><a class="left-panel-nav__link" href="elements.html">Элементы</a><a class="left-panel-nav__link" href="badges.html">Бейджи</a><a class="left-panel-nav__link" href="pagination.html">Пагинация</a><a class="left-panel-nav__link" href="icons-svg.html">Иконки</a><a class="left-panel-nav__link" href="modal-window.html">Модальное окно</a><a class="left-panel-nav__link" href="tooltip.html">Tooltip</a><a class="left-panel-nav__link" href="lightbox.html">Lightbox для фотографий</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Формы</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="buttons.html">Кнопки</a><a class="left-panel-nav__link" href="radio-button.html">Радио кнопки</a><a class="left-panel-nav__link" href="checkbox.html">Чекбоксы</a><a class="left-panel-nav__link" href="input.html">Инпуты</a><a class="left-panel-nav__link" href="textarea.html">Textarea</a><a class="left-panel-nav__link" href="autocomplete.html">Поиск (autocomplete)</a><a class="left-panel-nav__link" href="search-form.html">Строка поиска</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Кандидаты</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="preview-title-block__candidate.html">Preview - Title-block</a><a class="left-panel-nav__link" href="candidates__table.html">Таблица</a><a class="left-panel-nav__link" href="data-time-choose.html">Дата и время</a><a class="left-panel-nav__link" href="dropdown-select.html">Выпадашка 'Изменить статус'</a><a class="left-panel-nav__link" href="candidates__change_status.html">Изменить статус</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Вакансии</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="preview-title-block__vacancy.html">Preview - Title-block</a><a class="left-panel-nav__link" href="vacancies__tab-service-card.html">Таб 'Услуги' - Карточка</a><a class="left-panel-nav__link" href="vacancies__tab-history-card.html">Таб 'История' - Карточка</a><a class="left-panel-nav__link" href="vacancies__tab-response-card.html">Таб 'Отлики' - Карточка</a><a class="left-panel-nav__link" href="table.html">Таблица</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - ЛК - Работодателя</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="aside-menu.html">Боковое меню</a><a class="left-panel-nav__link" href="lk-title-block.html">Title block</a><a class="left-panel-nav__link" href="lk-bottom-menu.html">Панель меню с иконками(внизу)</a><a class="left-panel-nav__link" href="lk-table-indicator.html">Индикатор в таблице</a><a class="left-panel-nav__link" href="vacancies__table-dropdown.html">Выпадающее меню в таблице</a><a class="left-panel-nav__link" href="preview-header.html">Превью блок - шапка</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Резюме</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="resume__position-card.html">Карточка Должность</a><a class="left-panel-nav__link" href="resume__section-experience-work.html">Секция Опыт работы</a><a class="left-panel-nav__link" href="resume__education-card.html">Карточка Образование</a><a class="left-panel-nav__link" href="resume__section-education.html">Секция Образование</a><a class="left-panel-nav__link" href="resume__title-block.html">Title-block</a><a class="left-panel-nav__link" href="resume__other.html">Секция Другое</a><a class="left-panel-nav__link" href="resume__skills.html">Навыки и знания</a><a class="left-panel-nav__link" href="resume__tags-block.html">Блок с тегами</a><a class="left-panel-nav__link" href="resume__portfolio-slider.html">Портфолио</a><a class="left-panel-nav__link" href="resume__view-contacts.html">Просмотр контактов</a><a class="left-panel-nav__link" href="resume__show-contacts.html">Показать контакты</a><a class="left-panel-nav__link" href="respond-block-resume.html">Respond блок с кнопкой скачать</a><a class="left-panel-nav__link" href="resume__responding-panel.html">Панель откликнувшегося кандидата</a><a class="left-panel-nav__link" href="resume__footer.html">Сохранить в футере</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Поиск резюме</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="search-resume__filter.html">Фильтр боковой</a><a class="left-panel-nav__link" href="filter-resumes.html">Фильтр резюме</a><a class="left-panel-nav__link" href="search-resume__block.html">Block</a><a class="left-panel-nav__link" href="search-resume__view-resume-header.html">Шапка в Просмотр Резюме</a><a class="left-panel-nav__link" href="search-resume__title.html">Заголовок страницы</a><a class="left-panel-nav__link" href="search-resume__header-tabs.html">Описание резюме</a><a class="left-panel-nav__link" href="search-resume__resume-card.html">Карточка резюме</a><a class="left-panel-nav__link" href="save-suggest-resume.html">Сохранить резюме, Предложить вакансию</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Отклинуться на вакансию (Apply)</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="apply__header.html">Заголовок с табами</a><a class="left-panel-nav__link" href="apply__tab-choose.html">Таб выбрать резюме</a><a class="left-panel-nav__link" href="apply__tab-download.html">Таб загрузить резюме</a><a class="left-panel-nav__link" href="apply__notify.html">Сообщение об отправке резюме</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Отрасли и Компании (Areas and Companies)</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="areas-companies__alphabet.html">Блок с алфавитом</a><a class="left-panel-nav__link" href="areas-companies__title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="companies__vip-company.html">VIP компания</a><a class="left-panel-nav__link" href="companies__slider.html">Слайдер VIP компании</a><a class="left-panel-nav__link" href="areas__badges-block.html">Блок с бейджами</a><a class="left-panel-nav__link" href="areas__tabs-areas.html">Контент таб Отрасли</a><a class="left-panel-nav__link" href="areas-companies__list.html">Отрасли/Компании. Блок. Список</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Job opening</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="job__heading.html">Заголовок о компании</a><a class="left-panel-nav__link" href="job__about-company.html">Секция О компании</a><a class="left-panel-nav__link" href="job__title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="job__description-block.html">Описание позиции</a><a class="left-panel-nav__link" href="job-badges.html">Блок Бэйджи</a><a class="left-panel-nav__link" href="job__vacancy-card.html">Карточка похожие вакансии</a><a class="left-panel-nav__link" href="job__section-vacancy-cards.html">Секция карточек вакансий</a><a class="left-panel-nav__link" href="respond-block.html">Блок с кнопкой &quot;Откликнуться&quot;</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Search Results</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="dropdown.html">Выпадающий список</a><a class="left-panel-nav__link" href="vacance-card.html">Карточка вакансии</a><a class="left-panel-nav__link" href="main-menu.html">Выпадающее меню из логотипа</a><a class="left-panel-nav__link" href="filter-vacancies.html">Фильтр вакансий</a><a class="left-panel-nav__link" href="filter-vacancies-sectors.html">Фильтр вакансий - отрасли</a><a class="left-panel-nav__link" href="title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="vacance-description.html">Описание вакансии</a><a class="left-panel-nav__link" href="social-icons.html">Социальные иконки - стр Авторизация, Регистрация</a><a class="left-panel-nav__link" href="notifications.html">Уведомления</a><a class="left-panel-nav__link" href="city-selection.html">Выбор города</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Company</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="avatar-block.html">Аватар + информация</a><a class="left-panel-nav__link" href="contact-person.html">Контактное лицо</a><a class="left-panel-nav__link" href="company-banner.html">Баннер инфо о компании</a><a class="left-panel-nav__link" href="rating-mark.html">Rating - Оценка (91/100)</a><a class="left-panel-nav__link" href="rating-like.html">Rating - Like/Dislike</a><a class="left-panel-nav__link" href="rating-stars.html">Rating - Stars</a><a class="left-panel-nav__link" href="company-review.html">Отзыв</a><a class="left-panel-nav__link" href="feedback-company.html">Отзыв о компании</a><a class="left-panel-nav__link" href="block-company-reviews.html">Блок отзывов</a><a class="left-panel-nav__link" href="rating-block.html">Блок с отзывом для рейтинга</a><a class="left-panel-nav__link" href="rating.html">Рейтинг</a><a class="left-panel-nav__link" href="company-vacancy-card.html">Карточка вакансии</a><a class="left-panel-nav__link" href="company-vacancies-current-region.html">Вакансии компании в текущем регионе</a><a class="left-panel-nav__link" href="company-tab-vacancy.html">Таб Вакансии - середина</a><a class="left-panel-nav__link" href="company-tab-reviews.html">Таб Отзывы - середина</a><a class="left-panel-nav__link" href="company-tab-about.html">Таб Описание - середина</a><a class="left-panel-nav__link" href="company-about.html">О компании</a><a class="left-panel-nav__link" href="company-modal.html">Company - Модальное окно</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Авторизация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="authorize-form.html">Авторизация - форма</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Регистрация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="registration-form.html">Регистрация - форма</a><a class="left-panel-nav__link" href="registration-social.html">Регистрация через соцсети - середина</a><a class="left-panel-nav__link" href="registration-phone.html">Регистрация по номеру телефона - середина</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Восстановление пароля</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="recover-password-email.html">Восстановление пароля по email- середина</a><a class="left-panel-nav__link" href="social-icons.html">Социальные иконки-стр Авторизация</a><a class="left-panel-nav__link" href="yandex-map.html">Яндекс карта</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Секции</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="header-user-panel.html">Шапки миксин</a><a class="left-panel-nav__link" href="footer.html">Футер</a><a class="left-panel-nav__link" href="subscribe.html">Подписка</a><a class="left-panel-nav__link" href="vacance-description.html">Описание вакансии</a><a class="left-panel-nav__link" href="middle-map.html">Средняя часть - Карта</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Страницы</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="../favourites.html">Избранное</a><a class="left-panel-nav__link" href="../candidates.html">Кандидаты</a><a class="left-panel-nav__link" href="../vacancies.html">Вакансии</a><a class="left-panel-nav__link" href="../resume.html">Резюме</a><a class="left-panel-nav__link" href="../resume-replied.html">Резюме с откликом</a><a class="left-panel-nav__link" href="../search-resume.html">Поиск резюме</a><a class="left-panel-nav__link" href="../apply.html">Откликнуться на вакансию</a><a class="left-panel-nav__link" href="../cities.html">Города</a><a class="left-panel-nav__link" href="../areas.html">Отрасли</a><a class="left-panel-nav__link" href="../companies.html">Компании</a><a class="left-panel-nav__link" href="../company.html">О компании</a><a class="left-panel-nav__link" href="../job.html">Описание вакансии (Job opening)</a><a class="left-panel-nav__link" href="../main.html">Главная</a><a class="left-panel-nav__link" href="../search-results.html">Search results</a><a class="left-panel-nav__link" href="../search-results-aside.html">Search results-aside</a><a class="left-panel-nav__link" href="../auth-autorization.html">Страница авторизации</a><a class="left-panel-nav__link" href="../auth-registration.html">Страница регистрации</a><a class="left-panel-nav__link" href="../auth-recovery-password.html">Страница восстановления пароля</a><a class="left-panel-nav__link" href="../auth-recovery-password-reset.html">Страница сброса пароля (email)</a><a class="left-panel-nav__link" href="../auth-recovery-password-reset-phone.html">Страница сброса пароля (телефон)</a><a class="left-panel-nav__link" href="../auth-password-create.html">Страница создания пароля</a><a class="left-panel-nav__link" href="../auth-registration-social.html">Регистрация через социальные сети</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="ui-nav-toggle">Скрыть/Показать навигацию</div>
+	<div class="container container--left">
+		<div class="title">Блок отзывы</div>
+		<div class="section-ui">
+			<div class="block-company-reviews">
+				<div class="block-company-reviews__title">Отзывы</div>
+				<div class="company-review">
+					<div class="company-review__head d-flex">
+						<div class="avatar-block d-flex"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+							<div class="avatar-block-info">
+								<div class="avatar-block-info__top text-body">Константин</div>
+								<div class="avatar-block-info__bottom text-body-grey">21 сентября 2018</div>
+							</div>
+						</div>
+						<div class="rating-like-wrapper   rating-like--visible">
+							<div class="rating-like-block"><i class="icon-like icon-like--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+									</svg></i><span class="rating-like__value rating__value--active">345</span></div>
+							<div class="rating-dislike-block"><i class="icon-dislike icon-dislike--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+									</svg></i><span class="rating-dislike__value">652</span></div>
+						</div>
+					</div>
+					<div class="company-review__box">
+						<div class="company-review-text paragrafe">Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. </div><a class="text-action link-more link-more--hide" href="#">Еще</a>
+					</div>
+				</div>
+				<div class="company-review">
+					<div class="company-review__head d-flex">
+						<div class="avatar-block d-flex"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+							<div class="avatar-block-info">
+								<div class="avatar-block-info__top text-body">Константин</div>
+								<div class="avatar-block-info__bottom text-body-grey">21 сентября 2018</div>
+							</div>
+						</div>
+						<div class="rating-like-wrapper   rating-like--visible">
+							<div class="rating-like-block"><i class="icon-like icon-like--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+									</svg></i><span class="rating-like__value rating__value--active">345</span></div>
+							<div class="rating-dislike-block"><i class="icon-dislike icon-dislike--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+									</svg></i><span class="rating-dislike__value">652</span></div>
+						</div>
+					</div>
+					<div class="company-review__box">
+						<div class="company-review-text paragrafe">Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. </div><a class="text-action link-more link-more--hide" href="#">Еще</a>
+					</div>
+				</div>
+				<div class="company-review">
+					<div class="company-review__head d-flex">
+						<div class="avatar-block d-flex"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+							<div class="avatar-block-info">
+								<div class="avatar-block-info__top text-body">Константин</div>
+								<div class="avatar-block-info__bottom text-body-grey">21 сентября 2018</div>
+							</div>
+						</div>
+						<div class="rating-like-wrapper   rating-like--visible">
+							<div class="rating-like-block"><i class="icon-like icon-like--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+									</svg></i><span class="rating-like__value rating__value--active">345</span></div>
+							<div class="rating-dislike-block"><i class="icon-dislike icon-dislike--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+									</svg></i><span class="rating-dislike__value">652</span></div>
+						</div>
+					</div>
+					<div class="company-review__box">
+						<div class="company-review-text paragrafe">Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. </div><a class="text-action link-more link-more--hide" href="#">Еще</a>
+					</div>
+				</div><a class="btn undefined text-action read-all-reviews" href="#!">Читать все 123 отзыва</a>
+			</div>
+		</div>
+		<pre>include ../../sections/_block-company-reviews.pug</pre>
+	</div>
+	<script src="../libs/jquery/jquery.min.js"></script>
+	<script src="../libs/jquery.nicescroll.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/input.js"></script>
+	<script src="../js/autocomplete.js"></script>
+	<script src="../js/title-block.js"></script>
+	<script src="../js/main-menu.js"></script>
+	<script src="../js/pagination.js"></script>
+	<script src="../js/filter-vacancies.js"></script>
+	<script src="../js/filter-vacancies-sectors.js"></script>
+	<script src="../js/vacance-description.js"></script>
+	<script src="../js/vacance-card.js"></script>
+	<script src="../js/middle-map.js"></script>
+	<script src="../js/header.js"></script>
+	<script src="../js/authorize-form.js"></script>
+	<script src="../js/dropdown.js"></script>
+	<script src="../js/company.js"></script>
+	<script src="../js/company-review.js"></script>
+	<script src="../js/modal-window.js"></script>
+	<script src="../js/company-modal.js"></script>
+	<script src="../js/section-footer-dropdown.js"></script>
+	<script src="../js/job__description-block.js"></script>
+	<script src="../js/city-selection.js"></script>
+	<script src="../js/job.js"></script>
+	<script src="../js/areas.js"></script>
+	<script src="../js/companies.js"></script>
+	<script src="../js/apply.js"></script>
+	<script src="../js/search-resume.js"></script>
+	<script src="../js/lightbox.js"></script>
+	<script src="../js/resume.js"></script>
+	<script src="../js/vacancies-tab-service.js"></script>
+	<script src="../js/aside-menu.js"></script>
+	<script src="../js/table.js"></script>
+	<script src="../js/preview-header-dropdown.js"></script>
+	<script src="../js/dropdown-select.js"></script>
+	<script src="../js/candidates.js"></script>
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

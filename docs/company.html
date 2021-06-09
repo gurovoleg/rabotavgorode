@@ -1,0 +1,1319 @@
+<!-- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.-->
+<!-- Миксин title block для Компаний/Отраслей/Городов-->
+<!--apply page выбранный файл-->
+<!-- Показать контакты со страницы Resume-Page-->
+<!-- rating-star-->
+<!-- rating-star-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=375,initial-scale=1, shrink-to-fit=no" />
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Страница - О компании</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="./libs/custom-grid/custom-grid-dynamic.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="./libs/custom-grid/custom-grid-static.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="./fonts/proximaNova.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="./css/main.css?timestamp=#{time}" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body>
+	<div class="bg-modal-window" id="window-modal">
+		<div class="modal-window">
+			<div class="bg-modal-main">
+				<div class="company-modal" itemscope="itemscope" itemtype="http://schema.org/Organization">
+					<div class="comany-modal-info">
+						<div class="company-modal-logo">
+							<div class="brand-logo__img company-modal-logo__img" style="background-image: url(../img/ic-svg/brand-logo-big.svg"></div>
+						</div>
+						<div class="company-modal-title" itemprop="name">Название компании</div>
+						<div class="company-modal-site">mysitename.ru</div>
+					</div>
+					<div class="comany-modal-contacts" itemscope="itemscope" itemtype="http://schema.org/Person">
+						<div class="company-modal-name" itemprop="name">Константин Константинопольский</div>
+						<div class="company-modal-position" itemprop="jobTitle">Старший рекрутер</div>
+						<div class="company-modal-phone" itemprop="telephone">+7 987 123-45-67</div>
+						<div class="company-modal-address-block" itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+							<div class="company-modal-street" itemprop="streetAddress">Свердловская набережная, 44Д,</div>
+							<div class="company-modal-city" itemprop="addressLocality">Санкт-Петербург</div>
+							<div class="company-modal-metro">
+								<div class="color-marker color-marker--red"></div>
+								<div class="address-badge">
+									<div class="card-address"><span class="card-address-street">Пл. Ленина,3км</span><span class="card-address-distance"></span></div>
+								</div>
+							</div>
+							<div class="company-modal-map" id="companyMap"></div>
+						</div>
+					</div>
+				</div>
+			</div><i class="icon-close modal-window-close" id="modal-window-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+				</svg></i>
+		</div>
+	</div>
+	<div class="bg-container bg-container--page-company">
+		<div class="filter-main-container">
+			<form class="filter-vacancies-sectors" id="filter-vacancies-sectors" method="">
+				<div class="row-container">
+					<div class="column-container" id="column-container-selectors">
+						<div class="filter-vacancies-sectors__title-block flex-wrapper">
+							<div class="filter-vacancies-sectors__title">Отрасли</div>
+							<div class="filter-vacancies-sectors__title-buttons"><a class="btn  btn--pr-30" href="#!" id="filter-vacancies-sectors-clear">Очистить</a><i class="icon-close icon-close--black filter-vacancies-sectors-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+									</svg></i></div>
+						</div>
+						<div class="filter-vacancies-sectors__list">
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Автомобильный бизнес</div>
+									<div class="custom-check-box__notification custom-check-box__notification--show">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Административный персонал</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Банки, Инвестиции, Лизинг</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Безопасность</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Бухгалтерия, Учет, Финансы</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Высший менеджмент</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Добыча cырья</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Закупки</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Инсталляция и Сервис</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Информационные технологии, Интернет, Связь</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Искусство, Развлечения, Масс-медиа</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Консультирование</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Маркетинг, Реклама, PR</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Медицина, Фармацевтика, Красота</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Наука, Образование</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Начало карьеры, Студенты</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Некоммерческие организации</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Персонал для дома</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Продажи</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Производство</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Рабочие специальности</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Спортивные клубы, Фитнес</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Страхование</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Строительство, Недвижимость</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Транспорт</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+							<div class="sectors-list__item"><label class="check-box__label"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--small"></span></label>
+								<div class="custom-check-box__label-block">
+									<div class="custom-check-box__label-name">Управление персоналом, HR</div>
+									<div class="custom-check-box__notification">Выбрана 1 специализация</div>
+								</div><i class="arrow arrow--right arrow-right--modificator"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="filter-vacancies-sectors__button filter-vacancies-sectors__button--mobile-show"><a class="btn btn-semi-rounded-blue filter-vacancies-sectors-close" href="#">Применить</a>
+							<div class="filter-vacancies-sectors__notification">Выбрано 56&nbsp;Специализаций</div>
+						</div>
+					</div>
+					<div class="column-container column-container--profiles" id="column-container-profiles">
+						<div class="sector-item-profile__title"> <i class="arrow arrow--left arrow--left-modificator" id="header__arrow-back"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+								</svg></i><span>Специализации</span></div>
+						<div class="sector-item-profile__list">
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Все</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Автомобильный бизнес</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Административный персонал</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Банки, Инвестиции, Лизинг</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Безопасность</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Бухгалтерия, Учет, Финансы</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Высший менеджмент</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Добыча cырья</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Закупки</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Инсталляция и Сервис</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Информационные технологии, Интернет, Связь</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Искусство, Развлечения, Масс-медиа</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Консультирование</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Маркетинг, Реклама, PR</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Медицина, Фармацевтика, Красота</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Наука, Образование</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Начало карьеры, Студенты</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Некоммерческие организации</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Персонал для дома</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Продажи</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Производство</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Рабочие специальности</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Спортивные клубы, Фитнес</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Страхование</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Строительство, Недвижимость</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Транспорт</span></label></div>
+							<div class="profile-list__item"><label class="check-box__label check-box__label--flex-start"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--label--nowrap custom-check-box--small"></span><span class="custom-check-box__label undefined">Управление персоналом, HR</span></label></div>
+						</div>
+					</div>
+				</div>
+				<div class="filter-vacancies-sectors__button filter-vacancies-sectors__button--mobile-none"><a class="btn btn-semi-rounded-blue filter-vacancies-sectors-close" href="#">Применить</a>
+					<div class="filter-vacancies-sectors__notification">Выбрано 56&nbsp;Специализаций</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="bg-header bg-header--basic  bg-header--company-page bg-header--undefined">
+		<div class="header d-flex header--content"><i class="logo-icon"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M8.60748 15.5276C8.98146 15.5276 9.32419 15.7361 9.49587 16.0684L13.315 23.459C13.4867 23.7913 13.8294 24 14.2034 24H19.8023C19.9115 24 20 23.9114 20 23.8022C20 23.7834 19.9973 23.7646 19.992 23.7466C19.9882 23.7336 19.983 23.7209 19.9766 23.709L15.3232 15.0149C15.0511 14.5066 15.2683 13.8794 15.7646 13.5859C16.7804 12.9849 17.559 12.2585 18.1005 11.4065C18.799 10.3076 19.1482 8.9231 19.1482 7.25269C19.1482 4.94507 18.3191 3.15942 16.661 1.89551C15.0028 0.631836 12.703 0 9.7615 0H1C0.447716 0 0 0.447754 0 1V23C0 23.5522 0.447716 24 1 24H4.97956C5.53185 24 5.97955 23.5522 5.97955 23V16.5276C5.97955 15.9751 6.42727 15.5276 6.97955 15.5276H8.60748ZM9.67376 11H6V4H9.67376C10.766 4 11.5934 4.31201 12.156 4.93628C12.7187 5.5603 13 6.4209 13 7.51758C13 8.61426 12.7214 9.46875 12.1643 10.0813C11.6072 10.6938 10.777 11 9.67376 11Z"></path>
+				</svg></i><i class="arrow arrow--down"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+				</svg></i>
+			<div class="header__user-panel d-flex"><i class="icon-favorite icon-favorite--bg-header--basic"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+					</svg></i><i class="notify"><i class="icon-notify"><svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.5 20C9.6 20 10.5 19.1 10.5 18H6.5C6.5 19.1 7.4 20 8.5 20ZM15 14V8.5C15 5.43 12.87 2.86 10 2.18V1.5C10 0.67 9.33 0 8.5 0C7.67 0 7 0.67 7 1.5V2.18C4.13 2.86 2 5.43 2 8.5V14L0 16V17H17V16L15 14Z"></path>
+						</svg></i>
+					<div class="notify-marker"></div>
+				</i>
+				<div class="round-icon round-icon--user">LB</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-logo-menu-dropdown bg-logo-menu-dropdown--small-header">
+		<div class="main-menu">
+			<div class="main-menu-block">
+				<ul class="main-menu__title">Соискателю<li class="main-menu__item"><a class="main-menu__link" href="">Создать резюме</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Поиск работы</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Каталог компаний</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Продвижение резюме</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block">
+				<ul class="main-menu__title">Работодателю<li class="main-menu__item"><a class="main-menu__link" href="">Разместить вакансию</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Поиск сотрудника</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Тарифы</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block">
+				<ul class="main-menu__title">Сервисы<li class="main-menu__item"><a class="main-menu__link" href="">Производственный календарь</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Должностные инструкции</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Статистика ЗП</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block main-menu-block__desktop">
+				<ul class="main-menu__title">Rabotavgorode<li class="main-menu__item"><a class="main-menu__link" href="">О нас</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Наши вакансии</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Блог</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Реклама на сайте</a></li>
+				</ul>
+				<ul class="main-menu__title main-menu__second">
+					<li class="main-menu__item"><a class="main-menu__link" href="">API</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Правила работы с сайтом</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Контакты</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block">
+				<ul class="main-menu__title-support">
+					<li class="main-menu__item"><a class="main-menu__link" href="">Служба поддержки</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block main-menu-block__social-icon">
+				<div class="main-menu__social-icon">
+					<div class="main-menu__social-icon-item"><i class="vk-grey"><svg class="social-icon-item" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item" fill-rule="evenodd" clip-rule="evenodd" d="M25.4034 1.0157C25.5841 0.430218 25.4034 0 24.5432 0H21.6988C20.9756 0 20.6421 0.371645 20.4613 0.781459C20.4613 0.781459 19.0148 4.2065 16.9657 6.43129C16.3027 7.0753 16.0014 7.2802 15.6397 7.2802C15.459 7.2802 15.1877 7.0753 15.1877 6.48986V1.0157C15.1877 0.313121 14.9873 0 14.3846 0H9.91481C9.46285 0 9.19103 0.326083 9.19103 0.635125C9.19103 1.30116 10.2155 1.45475 10.3212 3.3283V7.39735C10.3212 8.28947 10.1553 8.45122 9.79368 8.45122C8.82941 8.45122 6.48383 5.01088 5.09268 1.07423C4.82004 0.309077 4.5466 0 3.81965 0H0.975236C0.162548 0 0 0.371645 0 0.781459C0 1.51333 0.96432 5.14327 4.49003 9.94414C6.84048 13.2228 10.1521 15 13.1656 15C14.9736 15 15.1973 14.6053 15.1973 13.9253V11.4474C15.1973 10.6579 15.3686 10.5003 15.9411 10.5003C16.363 10.5003 17.0862 10.7052 18.7738 12.286C20.7024 14.1595 21.0203 15 22.1051 15H24.9495C25.7622 15 26.1686 14.6053 25.9342 13.8263C25.6777 13.0499 24.7569 11.9234 23.535 10.5881C22.872 9.82704 21.8776 9.00742 21.5763 8.5975C21.1544 8.07064 21.2749 7.8364 21.5763 7.36806C21.5763 7.36806 25.0418 2.62572 25.4034 1.0157Z" fill="#999999"></path>
+							</svg></i></div>
+					<div class="main-menu__social-icon-item"><i class="fb-grey"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item"="" d="M10 7.00006H6.65083V5.00006C6.65083 3.96806 6.73064 3.31806 8.13587 3.31806H9.91069V0.138063C9.04703 0.0440625 8.17862 -0.0019375 7.30926 6.25e-05C4.73159 6.25e-05 2.85036 1.65706 2.85036 4.69906V7.00006H0V11.0001L2.85036 10.9991V20.0001H6.65083V10.9971L9.5639 10.9961L10 7.00006Z" fill="#999999"></path>
+							</svg></i></div>
+					<div class="main-menu__social-icon-item"><i class="instgr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item" d="M5 0C2.239 0 0 2.239 0 5V13C0 15.761 2.239 18 5 18H13C15.761 18 18 15.761 18 13V5C18 2.239 15.761 0 13 0H5ZM15 2C15.552 2 16 2.448 16 3C16 3.552 15.552 4 15 4C14.448 4 14 3.552 14 3C14 2.448 14.448 2 15 2ZM9 4C11.761 4 14 6.239 14 9C14 11.761 11.761 14 9 14C6.239 14 4 11.761 4 9C4 6.239 6.239 4 9 4ZM9 6C8.20435 6 7.44129 6.31607 6.87868 6.87868C6.31607 7.44129 6 8.20435 6 9C6 9.79565 6.31607 10.5587 6.87868 11.1213C7.44129 11.6839 8.20435 12 9 12C9.79565 12 10.5587 11.6839 11.1213 11.1213C11.6839 10.5587 12 9.79565 12 9C12 8.20435 11.6839 7.44129 11.1213 6.87868C10.5587 6.31607 9.79565 6 9 6Z" fill="#999999"></path>
+							</svg></i></div>
+					<div class="main-menu__social-icon-item"><i class="tweet"><svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item" d="M24 2.30078C23.1016 2.69922 22.1992 3 21.1992 3.10156C22.1992 2.5 23 1.5 23.3984 0.398438C22.3984 1 21.3984 1.39844 20.3008 1.60156C19.3008 0.601563 18 0 16.6016 0C13.8984 0 11.6992 2.19922 11.6992 4.89844C11.6992 5.30078 11.6992 5.69922 11.8008 6C7.69922 5.80078 4.10156 3.89844 1.69922 0.898438C1.19922 1.60156 1 2.5 1 3.39844C1 5.10156 1.89844 6.60156 3.19922 7.5C2.39844 7.39844 1.60156 7.19922 1 6.89844C1 6.89844 1 6.89844 1 7C1 9.39844 2.69922 11.3984 4.89844 11.8008C4.5 11.8984 4.10156 12 3.60156 12C3.30078 12 3 12 2.69922 11.8984C3.30078 13.8984 5.10156 15.3008 7.30078 15.3008C5.60156 16.6016 3.5 17.3984 1.19922 17.3984C0.800781 17.3984 0.398438 17.3984 0 17.3008C2.19922 18.6992 4.80078 19.5 7.5 19.5C16.6016 19.5 21.5 12 21.5 5.5C21.5 5.30078 21.5 5.10156 21.5 4.89844C22.5 4.19922 23.3008 3.30078 24 2.30078Z" fill="#999999"></path>
+							</svg></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="company-banner-wrapper company-banner--vip" style="background-image: url('../img/bg/bg-company-banner-vip.png')">
+		<div class="container">
+			<div class="row">
+				<div class="col"><a class=" btn btn-link" href="#"><i class="arrow arrow--left"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+							</svg></i><span>Назад</span></a>
+					<ol class="breadcrumb-list company-banner-breadcrumb company-banner-breadcrumb--light" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-item-link" itemprop="item" href="#"><span itemprop="name">Главная</span></a>
+							<meta itemprop="position" content="1" />
+						</li>
+						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-item-link" itemprop="item" href="#"><span itemprop="name">Компании</span></a>
+							<meta itemprop="position" content="2" />
+						</li>
+						<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-item-link" itemprop="item" href="#"><span itemprop="name">Компании</span></a>
+							<meta itemprop="position" content="3" />
+						</li>
+					</ol>
+				</div>
+				<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-12">
+					<div class="company-banner">
+						<div class="company-banner-logo">
+							<div class="brand-logo__img" style="background-image: url(../img/ic-svg/brand-logo-big.svg"></div>
+						</div>
+						<div class="company-banner__info" itemscope="itemscope" itemtype="http://schema.org/LocalBusiness">
+							<h1 class="heading-1 company-banner__title" itemprop="name">ВебИнвест<div class="rating-mark company-banner__rate" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating"><i class="icon-star"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.99923 11.954L12.6342 14.7515L11.4042 9.47897L15.4992 5.93147L10.1067 5.47397L7.99923 0.501465L5.89173 5.47397L0.499229 5.93147L4.59423 9.47897L3.36423 14.7515L7.99923 11.954Z" fill="#999999"></path>
+										</svg></i>
+									<div class="rating-mark__value" itemprop="ratingValue">100</div>
+								</div>
+							</h1>
+							<div class="company-banner__subtitle">
+								<div class="split-text  split-text--">
+									<div class="split-text__item">Санкт-Петербург</div>
+									<div class="split-text__item">Информационные технологии</div>
+								</div>
+							</div><a class="company-banner__site" href="">webinvestment.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-12">
+				<div class="nav-menu" id="company-nav-menu"><a class="nav-menu-item nav-menu-item-active" href="#company-tabs__about" data-pill="undefined"><span class="nav-menu-item__name">Описание</span></a><a class="nav-menu-item" href="#company-tabs__vacancies" data-pill="undefined"><span class="nav-menu-item__name">Вакансии</span></a><a class="nav-menu-item" href="#company-tabs__reviews" data-pill="undefined"><span class="nav-menu-item__name">Отзывы</span></a></div>
+			</div>
+		</div>
+		<div class="company-tabs-container" id="company-tabs-container">
+			<div class="company-tabs__about" id="company-tabs__about">
+				<div class="row">
+					<div class="offset-sm-1 col-sm-10 d-md-none">
+						<div class="company-about">
+							<h2 class="company-about__title heading-2">О компании</h2>
+							<div class="company-about__text-block">
+								<p>Компания «МИР недвижимости» занимает лидирующие позиции в сфере продаж строящегося жилья Санкт-Петербурга. Мы являемся стратегическими партнерами и лучшим отделом продаж по версии компаний ЛСР, Северный Город и других ведущих застройщиков города.</p>
+								<p>Мы создаем собственные креативные идеи во всех направлениях своего бизнеса, в связи с этим мы успешнее и быстрее других реагируем на изменчивую ситуацию в экономике; За 8 лет успешной работы компании, мы продаем порядка 100 000 м2 жилья ежегодно; Тысячи семей из разных городов России, приобретают недвижимость Санкт-Петербурга благодаря нашей компании; Наш ипотечный центр признан лучшим партнером Сбербанка в России в 2014, 2015 и 2016 годах;</p>
+								<p>Мы являемся стратегическими партнерами и лучшим отделом продаж, по версии компании ЛСР, Северный Город и других ведущих застройщиков города Санкт-Петербурга; Наши сотрудники - это сплоченная команда профессионалов, ориентированных на результат и личностный рост;</p>
+								<p>Мы ценим каждого сотрудника, уважая в нем личность, профессионала и коллегу; У нас создан собственный обучающий центр и система наставничества для подготовки Специалистов по продажам первичной недвижимости, в связи с этим нашим кандидатам не обязательно иметь опыт продаж в сфере недвижимости.</p>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="rating-header">
+								<div class="rating-title">Рейтинг</div>
+								<div class="rating-marks" itemprop="ratingCount">44 оценки</div>
+								<div class="rating-mark" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating"><i class="icon-star"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.99923 11.954L12.6342 14.7515L11.4042 9.47897L15.4992 5.93147L10.1067 5.47397L7.99923 0.501465L5.89173 5.47397L0.499229 5.93147L4.59423 9.47897L3.36423 14.7515L7.99923 11.954Z" fill="#999999"></path>
+										</svg></i>
+									<div class="rating-mark__value" itemprop="ratingValue">91</div>
+									<div class="rating-mark__value rating-mark__value--gray">/100</div>
+								</div>
+							</div>
+							<div class="rating-block">
+								<div class="rating-block__title">Зарплата и социальный пакет</div>
+								<div class="rating-block_subtitle">Зарплата, соцпакет, отпуск, языковые курсы, корпоративы, другие “плюшки”</div>
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__value" itemprop="ratingValue">100%</div>
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+							<div class="rating-block">
+								<div class="rating-block__title">Комфортные условия труда</div>
+								<div class="rating-block_subtitle">Современный офис, хорошее рабочее место, гибкий график работы</div>
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__value" itemprop="ratingValue">65%</div>
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="#CBCBCB"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+							<div class="rating-block">
+								<div class="rating-block__title">Профессиональный и карьерный рост</div>
+								<div class="rating-block_subtitle">Интересные задачи, обучение за счет компании, помощь коллег и руководства</div>
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__value" itemprop="ratingValue">82%</div>
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="#CBCBCB"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+							<div class="rating-block">
+								<div class="rating-block__title">Атмосфера в коллективе</div>
+								<div class="rating-block_subtitle">Хорошие отношения с коллегами, сотрудниками других служб и подразделений</div>
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__value" itemprop="ratingValue">38%</div>
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="#CBCBCB"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+							<div class="feedback-company">
+								<div class="feedback-company__button-block"><a class="btn btn-semi-rounded-blue btn--min-width control-disabled" href="#">Проголосовать</a>
+									<div class="button-block__comment">Чтобы проголосовать, войдите на сайт. В резюме должен быть указан опыт работы в этой компании.</div>
+								</div>
+							</div>
+						</div>
+						<div class="block-company-reviews">
+							<div class="block-company-reviews__title">Отзывы</div>
+							<div class="company-review">
+								<div class="company-review__head d-flex">
+									<div class="avatar-block d-flex"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+										<div class="avatar-block-info">
+											<div class="avatar-block-info__top text-body">Константин</div>
+											<div class="avatar-block-info__bottom text-body-grey">21 сентября 2018</div>
+										</div>
+									</div>
+									<div class="rating-like-wrapper   ">
+										<div class="rating-like-block"><i class="icon-like icon-like--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+												</svg></i><span class="rating-like__value rating__value--active">345</span></div>
+										<div class="rating-dislike-block"><i class="icon-dislike icon-dislike--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+												</svg></i><span class="rating-dislike__value">652</span></div>
+									</div>
+								</div>
+								<div class="company-review__box">
+									<div class="company-review-text paragrafe">Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. </div><a class="text-action link-more link-more--hide" href="#">Еще</a>
+								</div>
+							</div><a class="btn undefined text-action read-all-reviews" href="#!">Читать все 123 отзыва</a>
+						</div>
+						<div class="company-vacancies-region">
+							<div class="company-vacancies-region__title">Вакансии компании в текущем регионе</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Ассистент отдела недвижимости</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">до 35 000 руб.</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Директор по маркетингу</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">з/п не указана</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Личный помощник Генерального Директора</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">до 60 000 руб.</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Менеджер по продажам первичной недвижимости</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">от 85 000 до 255 000 руб</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Руководитель направления продаж недвижимости</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">от 40 000 до 90 000 руб</div>
+							</div><a class="btn undefined" href="#!">Смотреть все вакансии</a>
+						</div>
+						<form class="subscribe subscribe--padding-fix ">
+							<div class="subscribe-title">Подпишитесь на вакансии компании</div>
+							<div class="subscribe-input">
+								<div class="input-wrapper">
+									<div class="input-wrapper"><label class="input-label" for="input-email"><input class="input-field" type="text" id="input-email" data-type="email" placeholder="Email" /><span class="input-error">Неверный формат email</span></label></div>
+								</div>
+								<div class="subscribe-button"><a class="btn btn-semi-rounded-blue" href="#">Подписаться</a></div>
+							</div>
+						</form>
+						<div class="company-contact-person">
+							<div class="company-contact-person__title">Контактное лицо</div>
+							<div class="avatar-block d-flex company-contact-person__show"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+								<div class="avatar-block-info">
+									<div class="avatar-block-info__top text-body">Старший рекрутер</div>
+									<div class="avatar-block-info__bottom text-body-grey"></div>
+								</div>
+							</div><a class="btn undefined modal-window-button" href="#window-modal">Показать контакты</a>
+						</div>
+					</div>
+					<div class="col-md-7 d-md-block">
+						<div class="company-about">
+							<h2 class="company-about__title heading-2">О компании</h2>
+							<div class="company-about__text-block">
+								<p>Компания «МИР недвижимости» занимает лидирующие позиции в сфере продаж строящегося жилья Санкт-Петербурга. Мы являемся стратегическими партнерами и лучшим отделом продаж по версии компаний ЛСР, Северный Город и других ведущих застройщиков города.</p>
+								<p>Мы создаем собственные креативные идеи во всех направлениях своего бизнеса, в связи с этим мы успешнее и быстрее других реагируем на изменчивую ситуацию в экономике; За 8 лет успешной работы компании, мы продаем порядка 100 000 м2 жилья ежегодно; Тысячи семей из разных городов России, приобретают недвижимость Санкт-Петербурга благодаря нашей компании; Наш ипотечный центр признан лучшим партнером Сбербанка в России в 2014, 2015 и 2016 годах;</p>
+								<p>Мы являемся стратегическими партнерами и лучшим отделом продаж, по версии компании ЛСР, Северный Город и других ведущих застройщиков города Санкт-Петербурга; Наши сотрудники - это сплоченная команда профессионалов, ориентированных на результат и личностный рост;</p>
+								<p>Мы ценим каждого сотрудника, уважая в нем личность, профессионала и коллегу; У нас создан собственный обучающий центр и система наставничества для подготовки Специалистов по продажам первичной недвижимости, в связи с этим нашим кандидатам не обязательно иметь опыт продаж в сфере недвижимости.</p>
+							</div>
+						</div>
+						<div class="company-vacancies-region">
+							<div class="company-vacancies-region__title">Вакансии компании в текущем регионе</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Ассистент отдела недвижимости</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">до 35 000 руб.</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Директор по маркетингу</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">з/п не указана</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Личный помощник Генерального Директора</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">до 60 000 руб.</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Менеджер по продажам первичной недвижимости</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">от 85 000 до 255 000 руб</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title company-vacancy-card__title--current-region" href="#!">Руководитель направления продаж недвижимости</a>
+								<div class="company-vacancy-card__sallary company-vacancy-card__sallary--current-region">от 40 000 до 90 000 руб</div>
+							</div><a class="btn undefined" href="#!">Смотреть все вакансии</a>
+						</div>
+						<div class="block-company-reviews">
+							<div class="block-company-reviews__title">Отзывы</div>
+							<div class="company-review">
+								<div class="company-review__head d-flex">
+									<div class="avatar-block d-flex"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+										<div class="avatar-block-info">
+											<div class="avatar-block-info__top text-body">Константин</div>
+											<div class="avatar-block-info__bottom text-body-grey">21 сентября 2018</div>
+										</div>
+									</div>
+									<div class="rating-like-wrapper   ">
+										<div class="rating-like-block"><i class="icon-like icon-like--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+												</svg></i><span class="rating-like__value rating__value--active">345</span></div>
+										<div class="rating-dislike-block"><i class="icon-dislike icon-dislike--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+												</svg></i><span class="rating-dislike__value">652</span></div>
+									</div>
+								</div>
+								<div class="company-review__box">
+									<div class="company-review-text paragrafe">Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. </div><a class="text-action link-more link-more--hide" href="#">Еще</a>
+								</div>
+							</div><a class="btn undefined text-action read-all-reviews" href="#!">Читать все 123 отзыва</a>
+						</div>
+						<form class="subscribe subscribe--padding-fix ">
+							<div class="subscribe-title">Подпишитесь на вакансии компании</div>
+							<div class="subscribe-input">
+								<div class="input-wrapper">
+									<div class="input-wrapper"><label class="input-label" for="input-email"><input class="input-field" type="text" id="input-email" data-type="email" placeholder="Email" /><span class="input-error">Неверный формат email</span></label></div>
+								</div>
+								<div class="subscribe-button"><a class="btn btn-semi-rounded-blue" href="#">Подписаться</a></div>
+							</div>
+						</form>
+					</div>
+					<div class="offset-md-1 col-md-4 d-md-block">
+						<div class="company-contact-person">
+							<div class="company-contact-person__title">Контактное лицо</div>
+							<div class="avatar-block d-flex company-contact-person__show"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+								<div class="avatar-block-info">
+									<div class="avatar-block-info__top text-body">Старший рекрутер</div>
+									<div class="avatar-block-info__bottom text-body-grey"></div>
+								</div>
+							</div><a class="btn undefined modal-window-button" href="#window-modal">Показать контакты</a>
+						</div>
+						<div class="rating">
+							<div class="rating-header">
+								<div class="rating-title">Рейтинг</div>
+								<div class="rating-marks" itemprop="ratingCount">44 оценки</div>
+								<div class="rating-mark" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating"><i class="icon-star"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.99923 11.954L12.6342 14.7515L11.4042 9.47897L15.4992 5.93147L10.1067 5.47397L7.99923 0.501465L5.89173 5.47397L0.499229 5.93147L4.59423 9.47897L3.36423 14.7515L7.99923 11.954Z" fill="#999999"></path>
+										</svg></i>
+									<div class="rating-mark__value" itemprop="ratingValue">91</div>
+									<div class="rating-mark__value rating-mark__value--gray">/100</div>
+								</div>
+							</div>
+							<div class="rating-block">
+								<div class="rating-block__title">Зарплата и социальный пакет</div>
+								<div class="rating-block_subtitle">Зарплата, соцпакет, отпуск, языковые курсы, корпоративы, другие “плюшки”</div>
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__value" itemprop="ratingValue">100%</div>
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+							<div class="rating-block">
+								<div class="rating-block__title">Комфортные условия труда</div>
+								<div class="rating-block_subtitle">Современный офис, хорошее рабочее место, гибкий график работы</div>
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__value" itemprop="ratingValue">65%</div>
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="#CBCBCB"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+							<div class="rating-block">
+								<div class="rating-block__title">Профессиональный и карьерный рост</div>
+								<div class="rating-block_subtitle">Интересные задачи, обучение за счет компании, помощь коллег и руководства</div>
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__value" itemprop="ratingValue">82%</div>
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="#CBCBCB"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+							<div class="rating-block">
+								<div class="rating-block__title">Атмосфера в коллективе</div>
+								<div class="rating-block_subtitle">Хорошие отношения с коллегами, сотрудниками других служб и подразделений</div>
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__value" itemprop="ratingValue">38%</div>
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="#CBCBCB"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+							<div class="feedback-company">
+								<div class="feedback-company__button-block"><a class="btn btn-semi-rounded-blue btn--min-width control-disabled" href="#">Проголосовать</a>
+									<div class="button-block__comment">Чтобы проголосовать, войдите на сайт. В резюме должен быть указан опыт работы в этой компании.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="company-tabs__vacancies" id="company-tabs__vacancies">
+				<div class="container-main container-main--vacancy-tab">
+					<div class="row">
+						<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-12">
+							<h2 class="vacancy-tab__title heading-2"> Вакансии в компании <span>«Веб Инвест»</span></h2>
+							<div class="tag-filter">
+								<div class="d-flex">
+									<div class="tag-filter__text-box">
+										<div class="tag-filter-item">Информационные технологии</div>
+										<div class="tag-filter-item">Интернет</div>
+										<div class="tag-filter-item">Связь</div>
+									</div><i class="icon-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+										</svg></i>
+								</div>
+							</div>
+							<div class="dropdown-block d-flex">
+								<div class="dropdown">
+									<div class="dropdown-list-wrapper"><span class="dropdown-list-name dropdown-toggle"><span class="dropdown-list-name__text">Город&nbsp;</span><i class="arrow arrow--down-small"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+												</svg></i></span>
+										<div class="dropdown-list"><a class="dropdown-list__item" href="#!">Москва</a><a class="dropdown-list__item" href="#!">Санкт-Петербугр</a><a class="dropdown-list__item" href="#!">Уфа</a><a class="dropdown-list__item" href="#!">Екатеринбург</a><a class="dropdown-list__item" href="#!">Петропавловск-Камчатский</a></div>
+									</div>
+								</div>
+								<div class="dropdown filter-vacancies-sectors-open">
+									<div class="dropdown-list-wrapper"><span class="dropdown-list-name">Отрасли&nbsp;<i class="arrow arrow--down-small"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+												</svg></i></span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-4">
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title" href="#!">Ассистент отдела недвижимости</a>
+								<div class="company-vacancy-card__sallary">до 35 000 руб.</div>
+								<div class="company-vacancy-card__city"></div>
+								<div class="company-vacancy-card__section"></div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title" href="#!">Ассистент отдела недвижимости</a>
+								<div class="company-vacancy-card__sallary">до 35 000 руб.</div>
+								<div class="company-vacancy-card__city"></div>
+								<div class="company-vacancy-card__section"></div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title" href="#!">Менеджер по продажам первичной недвижимости</a>
+								<div class="company-vacancy-card__sallary">от 85 000 до 255 000 руб</div>
+								<div class="company-vacancy-card__section">Информационные технологии</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title" href="#!">Менеджер по продажам первичной недвижимости</a>
+								<div class="company-vacancy-card__sallary">от 85 000 до 255 000 руб</div>
+								<div class="company-vacancy-card__section">Информационные технологии</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title" href="#!">Ассистент отдела недвижимости</a>
+								<div class="company-vacancy-card__sallary">до 35 000 руб.</div>
+								<div class="company-vacancy-card__city">Санкт-Петербург</div>
+								<div class="company-vacancy-card__section">Информационные технологии</div>
+							</div>
+						</div>
+						<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-4">
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title" href="#!">Ассистент отдела недвижимости</a>
+								<div class="company-vacancy-card__sallary">до 35 000 руб.</div>
+								<div class="company-vacancy-card__city">Санкт-Петербург</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title" href="#!">Ассистент отдела недвижимости</a>
+								<div class="company-vacancy-card__sallary">до 35 000 руб.</div>
+								<div class="company-vacancy-card__city">Санкт-Петербург</div>
+								<div class="company-vacancy-card__section">Информационные технологии</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title" href="#!">Ассистент отдела недвижимости</a>
+								<div class="company-vacancy-card__sallary">до 35 000 руб.</div>
+								<div class="company-vacancy-card__city">Санкт-Петербург</div>
+								<div class="company-vacancy-card__section">Информационные технологии</div>
+							</div>
+							<div class="company-vacancy-card"><a class="company-vacancy-card__title" href="#!">Ассистент отдела недвижимости</a>
+								<div class="company-vacancy-card__sallary">до 35 000 руб.</div>
+								<div class="company-vacancy-card__city">Санкт-Петербург</div>
+								<div class="company-vacancy-card__section">Информационные технологии</div>
+							</div>
+						</div>
+						<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-4">
+							<div class="vacancy-tab-contacts d-flex">
+								<div class="company-contact-person">
+									<div class="company-contact-person__title">Контактное лицо</div>
+									<div class="avatar-block d-flex company-contact-person__show"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+										<div class="avatar-block-info">
+											<div class="avatar-block-info__top text-body">Старший рекрутер</div>
+											<div class="avatar-block-info__bottom text-body-grey"></div>
+										</div>
+									</div><a class="btn undefined modal-window-button" href="#window-modal">Показать контакты</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-8">
+							<div class="vacancy-tab-button-wrapper"><a class="btn undefined" href="#!">Загрузить еще</a></div>
+							<form class="subscribe">
+								<div class="subscribe-title">Подпишитесь на вакансии компании</div>
+								<div class="subscribe-input">
+									<div class="input-wrapper">
+										<div class="input-wrapper"><label class="input-label" for="input-email"><input class="input-field" type="text" id="input-email" data-type="email" placeholder="Email" /><span class="input-error">Неверный формат email</span></label></div>
+									</div>
+									<div class="subscribe-button"><a class="btn btn-semi-rounded-blue" href="#">Подписаться</a></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="company-tabs__reviews company-middle-reviews-wrapper" id="company-tabs__reviews">
+				<div class="row">
+					<div class="offset-sm-1 col-sm-10 col-md-4 company-middle-reviews-items">
+						<div class="company-middle-reviews-feedback">
+							<div class="feedback-company">
+								<div class="feedback-company__button-block"><a class="btn btn-semi-rounded-blue btn--min-width control-disabled" href="#">Написать отзыв</a>
+									<div class="button-block__comment"> Чтобы оставить отзыв, <a class="btn btn-link" href="#">войдите</a> на сайт или <a class="btn btn-link" href="#">зарегистрируйтесь.</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="company-middle-reviews-rating">
+							<div class="rating">
+								<div class="rating-header">
+									<div class="rating-title">Рейтинг</div>
+									<div class="rating-marks" itemprop="ratingCount">44 оценки</div>
+									<div class="rating-mark" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating"><i class="icon-star"><svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M7.99923 11.954L12.6342 14.7515L11.4042 9.47897L15.4992 5.93147L10.1067 5.47397L7.99923 0.501465L5.89173 5.47397L0.499229 5.93147L4.59423 9.47897L3.36423 14.7515L7.99923 11.954Z" fill="#999999"></path>
+											</svg></i>
+										<div class="rating-mark__value" itemprop="ratingValue">91</div>
+										<div class="rating-mark__value rating-mark__value--gray">/100</div>
+									</div>
+								</div>
+								<div class="rating-block">
+									<div class="rating-block__title">Зарплата и социальный пакет</div>
+									<div class="rating-block_subtitle">Зарплата, соцпакет, отпуск, языковые курсы, корпоративы, другие “плюшки”</div>
+									<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+										<div class="rating-stars__items-block">
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="rating-block">
+									<div class="rating-block__title">Комфортные условия труда</div>
+									<div class="rating-block_subtitle">Современный офис, хорошее рабочее место, гибкий график работы</div>
+									<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+										<div class="rating-stars__items-block">
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="#CBCBCB"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="rating-block">
+									<div class="rating-block__title">Профессиональный и карьерный рост</div>
+									<div class="rating-block_subtitle">Интересные задачи, обучение за счет компании, помощь коллег и руководства</div>
+									<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+										<div class="rating-stars__items-block">
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="rating-block">
+									<div class="rating-block__title">Атмосфера в коллективе</div>
+									<div class="rating-block_subtitle">Хорошие отношения с коллегами, сотрудниками других служб и подразделений</div>
+									<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+										<div class="rating-stars__items-block">
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#1878FF"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="#CBCBCB"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+											<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+														<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+													</svg></i></div>
+										</div>
+									</div>
+								</div>
+								<div class="company-middle-reviews-feedback--login">
+									<div class="feedback-company">
+										<div class="feedback-company__title">Оставить отзыв о компании</div><textarea class="feedback-company__textarea" placeholder="Расскажите о плюсах и минусах работы в компании "></textarea>
+										<div class="feedback-company__button-block"><a class="btn btn-semi-rounded-blue btn--min-width" href="#">Написать отзыв</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-7 company-middle-reviews-items">
+						<h2 class="company-middle-reviews__title heading-2">Отзывы о компании «Веб Инвест»</h2>
+						<div class="company-middle-reviews-block">
+							<div class="block-company-reviews">
+								<div class="block-company-reviews__title">Отзывы</div>
+								<div class="company-review">
+									<div class="company-review__head d-flex">
+										<div class="avatar-block d-flex"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+											<div class="avatar-block-info">
+												<div class="avatar-block-info__top text-body">Константин</div>
+												<div class="avatar-block-info__bottom text-body-grey">21 сентября 2018</div>
+											</div>
+										</div>
+										<div class="rating-like-wrapper   rating-like--visible">
+											<div class="rating-like-block"><i class="icon-like icon-like--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+													</svg></i><span class="rating-like__value rating__value--active">345</span></div>
+											<div class="rating-dislike-block"><i class="icon-dislike icon-dislike--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+													</svg></i><span class="rating-dislike__value">652</span></div>
+										</div>
+									</div>
+									<div class="company-review__box">
+										<div class="company-review-text paragrafe">Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. </div><a class="text-action link-more link-more--hide" href="#">Еще</a>
+									</div>
+								</div>
+								<div class="company-review">
+									<div class="company-review__head d-flex">
+										<div class="avatar-block d-flex"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+											<div class="avatar-block-info">
+												<div class="avatar-block-info__top text-body">Константин</div>
+												<div class="avatar-block-info__bottom text-body-grey">21 сентября 2018</div>
+											</div>
+										</div>
+										<div class="rating-like-wrapper   rating-like--visible">
+											<div class="rating-like-block"><i class="icon-like icon-like--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+													</svg></i><span class="rating-like__value rating__value--active">345</span></div>
+											<div class="rating-dislike-block"><i class="icon-dislike icon-dislike--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+													</svg></i><span class="rating-dislike__value">652</span></div>
+										</div>
+									</div>
+									<div class="company-review__box">
+										<div class="company-review-text paragrafe">Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. </div><a class="text-action link-more link-more--hide" href="#">Еще</a>
+									</div>
+								</div>
+								<div class="company-review">
+									<div class="company-review__head d-flex">
+										<div class="avatar-block d-flex"><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter">ВИ</span></a>
+											<div class="avatar-block-info">
+												<div class="avatar-block-info__top text-body">Константин</div>
+												<div class="avatar-block-info__bottom text-body-grey">21 сентября 2018</div>
+											</div>
+										</div>
+										<div class="rating-like-wrapper   rating-like--visible">
+											<div class="rating-like-block"><i class="icon-like icon-like--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M14.7616 6.19604C15.0461 6.32471 15.2981 6.51245 15.4996 6.74585C15.7021 6.98071 15.8486 7.25586 15.929 7.552C16.0092 7.8479 16.0211 8.15747 15.964 8.45825L14.8677 14.2917C14.7772 14.7705 14.5165 15.2036 14.1309 15.5159C13.7452 15.8279 13.2589 15.9993 12.7565 16H6.44897C5.87878 16 5.33191 15.7805 4.92883 15.3899C4.52563 14.999 4.29907 14.4692 4.29907 13.9167V7.26245C4.29626 7.16724 4.32715 7.07397 4.3866 6.99829C4.44604 6.92236 4.53052 6.86865 4.62585 6.84595C7.73889 6 8.02686 3.85425 8.02686 2.55835C8.02686 1.8999 8.02686 1 9.02869 1C9.18872 1.00195 9.34729 1.02124 9.50171 1.05688C9.68494 1.09937 9.86218 1.16504 10.0289 1.25293C10.3361 1.41504 10.5979 1.64697 10.7916 1.9292C11.5182 2.90405 11.7074 4.45825 11.3204 6H13.8529C14.167 6.00024 14.4772 6.06714 14.7616 6.19604ZM0.503784 6.48804C0.826294 6.17554 1.26367 6 1.71985 6C2.17603 6 2.6134 6.17554 2.93591 6.48804C3.25854 6.80078 3.4397 7.22461 3.4397 7.66675V14.3333C3.4397 14.7754 3.25854 15.1992 2.93591 15.512C2.6134 15.8245 2.17603 16 1.71985 16C1.26367 16 0.826294 15.8245 0.503784 15.512C0.181152 15.1992 0 14.7754 0 14.3333V7.66675C0 7.22461 0.181152 6.80078 0.503784 6.48804Z"></path>
+													</svg></i><span class="rating-like__value rating__value--active">345</span></div>
+											<div class="rating-dislike-block"><i class="icon-dislike icon-dislike--absolute"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.503784 9.51196C0.826294 9.82446 1.26367 10 1.71985 10C2.17603 10 2.6134 9.82446 2.93591 9.51196C3.25854 9.19922 3.4397 8.77539 3.4397 8.33325V1.66675C3.4397 1.22461 3.25854 0.800781 2.93591 0.488037C2.6134 0.175537 2.17603 0 1.71985 0C1.26367 0 0.826294 0.175537 0.503784 0.488037C0.181152 0.800781 0 1.22461 0 1.66675V8.33325C0 8.53687 0.0384521 8.73657 0.111328 8.92334C0.196777 9.14233 0.329712 9.34326 0.503784 9.51196ZM15.3311 9.42822C15.3905 9.37354 15.4468 9.31543 15.4996 9.25415C15.7021 9.01929 15.8486 8.74414 15.929 8.448C16.0092 8.1521 16.0211 7.84253 15.964 7.54175L14.8677 1.70825C14.7772 1.22949 14.5165 0.796387 14.1309 0.484131C13.7452 0.172119 13.2589 0.000732422 12.7565 0H6.44897C5.87878 0 5.33191 0.219482 4.92883 0.610107C4.52563 1.00098 4.29907 1.53076 4.29907 2.08325V8.73755C4.29626 8.83276 4.32715 8.92603 4.3866 9.00171C4.44604 9.07764 4.53052 9.13135 4.62585 9.15405C7.73889 10 8.02686 12.1458 8.02686 13.4417C8.02686 14.1001 8.02686 15 9.02869 15C9.37842 14.9958 9.72168 14.9089 10.0289 14.7471C10.3361 14.585 10.5979 14.353 10.7916 14.0708C11.5182 13.0959 11.7074 11.5417 11.3204 10H13.8529C14.167 9.99976 14.4772 9.93286 14.7616 9.80396C14.9716 9.70898 15.1638 9.58203 15.3311 9.42822Z"></path>
+													</svg></i><span class="rating-dislike__value">652</span></div>
+										</div>
+									</div>
+									<div class="company-review__box">
+										<div class="company-review-text paragrafe">Работаю в компании 2 года, работал изначально в ночь и меня все устраивало, потом ночи убрали ну да ладно. Устраивался на работу потому что там график как говорили будут подстраивать под тебя 2/2 , 3/2. Все хорошо, но в один прекрасный день пришел новый директор и зам. И график просто убили, люди начали увольняться , но увы лента не держится за сотрудников. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi commodi eveniet provident atque dolores debitis qui necessitatibus amet repellendus facere. </div><a class="text-action link-more link-more--hide" href="#">Еще</a>
+									</div>
+								</div><a class="btn undefined text-action read-all-reviews" href="#!">Читать все 123 отзыва</a>
+							</div>
+						</div>
+						<div class="company-middle-reviews-subscribe">
+							<form class="subscribe">
+								<div class="subscribe-title">Подпишитесь на новые отзывы о компании «Название компании»</div>
+								<div class="subscribe-input">
+									<div class="input-wrapper">
+										<div class="input-wrapper"><label class="input-label" for="input-email"><input class="input-field" type="text" id="input-email" data-type="email" placeholder="Email" /><span class="input-error">Неверный формат email</span></label></div>
+									</div>
+									<div class="subscribe-button"><a class="btn btn-semi-rounded-blue" href="#">Подписаться</a></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-footer">
+		<div class="container">
+			<div class="row">
+				<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-12">
+					<div class="footer">
+						<div class="footer-block">
+							<ul class="footer__title">Соискателю<li class="footer__item"><a class="footer__link" href="">Создать резюме</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Поиск работы</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Каталог компаний</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Продвижение резюме</a></li>
+							</ul>
+						</div>
+						<div class="footer-block">
+							<ul class="footer__title">Работодателю<li class="footer__item"><a class="footer__link" href="">Разместить вакансию</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Поиск сотрудника</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Тарифы</a></li>
+							</ul>
+						</div>
+						<div class="footer-block">
+							<ul class="footer__title">Сервисы<li class="footer__item"><a class="footer__link" href="">Производственный календарь</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Должностные инструкции</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Статистика ЗП</a></li>
+							</ul>
+						</div>
+						<div class="footer-block footer-block--ipad footer-block--desktop">
+							<ul class="footer__title footer__first-block">Rabotavgorode<li class="footer__item"><a class="footer__link" href="">О нас</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Наши вакансии</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Блог</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Реклама на сайте</a></li>
+							</ul>
+							<ul class="footer__title footer__second-block">
+								<li class="footer__item"><a class="footer__link" href="">API</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Правила&nbsp;работы&nbsp;с&nbsp;сайтом</a></li>
+								<li class="footer__item"><a class="footer__link" href="">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="footer-block footer-block__support">
+							<ul class="footer__title-support">
+								<li class="footer__item footer__link--special"><a class="footer__link" href="">Служба поддержки</a></li>
+							</ul>
+						</div>
+						<div class="footer-block footer-block__social-icon">
+							<div class="footer__social-icons-item"><i class="vk-grey"><svg class="social-icon-item" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="social-icon-item" fill-rule="evenodd" clip-rule="evenodd" d="M25.4034 1.0157C25.5841 0.430218 25.4034 0 24.5432 0H21.6988C20.9756 0 20.6421 0.371645 20.4613 0.781459C20.4613 0.781459 19.0148 4.2065 16.9657 6.43129C16.3027 7.0753 16.0014 7.2802 15.6397 7.2802C15.459 7.2802 15.1877 7.0753 15.1877 6.48986V1.0157C15.1877 0.313121 14.9873 0 14.3846 0H9.91481C9.46285 0 9.19103 0.326083 9.19103 0.635125C9.19103 1.30116 10.2155 1.45475 10.3212 3.3283V7.39735C10.3212 8.28947 10.1553 8.45122 9.79368 8.45122C8.82941 8.45122 6.48383 5.01088 5.09268 1.07423C4.82004 0.309077 4.5466 0 3.81965 0H0.975236C0.162548 0 0 0.371645 0 0.781459C0 1.51333 0.96432 5.14327 4.49003 9.94414C6.84048 13.2228 10.1521 15 13.1656 15C14.9736 15 15.1973 14.6053 15.1973 13.9253V11.4474C15.1973 10.6579 15.3686 10.5003 15.9411 10.5003C16.363 10.5003 17.0862 10.7052 18.7738 12.286C20.7024 14.1595 21.0203 15 22.1051 15H24.9495C25.7622 15 26.1686 14.6053 25.9342 13.8263C25.6777 13.0499 24.7569 11.9234 23.535 10.5881C22.872 9.82704 21.8776 9.00742 21.5763 8.5975C21.1544 8.07064 21.2749 7.8364 21.5763 7.36806C21.5763 7.36806 25.0418 2.62572 25.4034 1.0157Z" fill="#999999"></path>
+									</svg></i></div>
+							<div class="footer__social-icons-item"><i class="fb-grey"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="social-icon-item"="" d="M10 7.00006H6.65083V5.00006C6.65083 3.96806 6.73064 3.31806 8.13587 3.31806H9.91069V0.138063C9.04703 0.0440625 8.17862 -0.0019375 7.30926 6.25e-05C4.73159 6.25e-05 2.85036 1.65706 2.85036 4.69906V7.00006H0V11.0001L2.85036 10.9991V20.0001H6.65083V10.9971L9.5639 10.9961L10 7.00006Z" fill="#999999"></path>
+									</svg></i></div>
+							<div class="footer__social-icons-item"><i class="instgr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="social-icon-item" d="M5 0C2.239 0 0 2.239 0 5V13C0 15.761 2.239 18 5 18H13C15.761 18 18 15.761 18 13V5C18 2.239 15.761 0 13 0H5ZM15 2C15.552 2 16 2.448 16 3C16 3.552 15.552 4 15 4C14.448 4 14 3.552 14 3C14 2.448 14.448 2 15 2ZM9 4C11.761 4 14 6.239 14 9C14 11.761 11.761 14 9 14C6.239 14 4 11.761 4 9C4 6.239 6.239 4 9 4ZM9 6C8.20435 6 7.44129 6.31607 6.87868 6.87868C6.31607 7.44129 6 8.20435 6 9C6 9.79565 6.31607 10.5587 6.87868 11.1213C7.44129 11.6839 8.20435 12 9 12C9.79565 12 10.5587 11.6839 11.1213 11.1213C11.6839 10.5587 12 9.79565 12 9C12 8.20435 11.6839 7.44129 11.1213 6.87868C10.5587 6.31607 9.79565 6 9 6Z" fill="#999999"></path>
+									</svg></i></div>
+							<div class="footer__social-icons-item"><i class="tweet"><svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="social-icon-item" d="M24 2.30078C23.1016 2.69922 22.1992 3 21.1992 3.10156C22.1992 2.5 23 1.5 23.3984 0.398438C22.3984 1 21.3984 1.39844 20.3008 1.60156C19.3008 0.601563 18 0 16.6016 0C13.8984 0 11.6992 2.19922 11.6992 4.89844C11.6992 5.30078 11.6992 5.69922 11.8008 6C7.69922 5.80078 4.10156 3.89844 1.69922 0.898438C1.19922 1.60156 1 2.5 1 3.39844C1 5.10156 1.89844 6.60156 3.19922 7.5C2.39844 7.39844 1.60156 7.19922 1 6.89844C1 6.89844 1 6.89844 1 7C1 9.39844 2.69922 11.3984 4.89844 11.8008C4.5 11.8984 4.10156 12 3.60156 12C3.30078 12 3 12 2.69922 11.8984C3.30078 13.8984 5.10156 15.3008 7.30078 15.3008C5.60156 16.6016 3.5 17.3984 1.19922 17.3984C0.800781 17.3984 0.398438 17.3984 0 17.3008C2.19922 18.6992 4.80078 19.5 7.5 19.5C16.6016 19.5 21.5 12 21.5 5.5C21.5 5.30078 21.5 5.10156 21.5 4.89844C22.5 4.19922 23.3008 3.30078 24 2.30078Z" fill="#999999"></path>
+									</svg></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/jquery.nicescroll.js"></script>
+	<script src="js/middle-map.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/input.js"></script>
+	<script src="js/autocomplete.js"></script>
+	<script src="js/title-block.js"></script>
+	<script src="js/main-menu.js"></script>
+	<script src="js/filter-vacancies.js"></script>
+	<script src="js/filter-vacancies-sectors.js"></script>
+	<script src="js/filter-vacancies-position.js"></script>
+	<script src="js/vacance-description.js"></script>
+	<script src="js/vacance-card.js"></script>
+	<script src="js/pagination.js"></script>
+	<script src="js/search-results.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/authorize-form.js"></script>
+	<script src="js/dropdown.js"></script>
+	<script src="js/company.js"></script>
+	<script src="js/company-review.js"></script>
+	<script src="js/modal-window.js"></script>
+	<script src="js/company-modal.js"></script>
+	<script src="js/job__description-block.js"></script>
+	<script src="js/city-selection.js"></script>
+	<script src="js/section-footer-dropdown.js"></script>
+	<script src="js/job.js"></script>
+	<script src="js/areas.js"></script>
+	<script src="js/cities.js"></script>
+	<script src="js/companies.js"></script>
+	<script src="js/apply.js"></script>
+	<script src="js/search-resume.js"></script>
+	<script src="js/search-resume-filter.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/resume.js"></script>
+	<script src="js/vacancies-tab-service.js"></script>
+	<script src="js/aside-menu.js"></script>
+	<script src="js/table.js"></script>
+	<script src="js/vacancy.js"></script>
+	<script src="js/preview-header-dropdown.js"></script>
+	<script src="js/dropdown-select.js"></script>
+	<script src="js/candidates.js"></script>
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

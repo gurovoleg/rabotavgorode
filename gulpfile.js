@@ -35,7 +35,7 @@ var rev = require('gulp-rev');
 gulp.task('server', function() {
 
 	browserSync.init({
-		server: { baseDir: './build/'},
+		server: { baseDir: './docs/'},
 	});
 
 	// Параметр для Emitty
@@ -91,7 +91,7 @@ gulp.task('styles', function() {
 		cascade: false
 	}))
 	.pipe(sourcemaps.write())
-	.pipe(gulp.dest('./build/css'))
+	.pipe(gulp.dest('./docs/css'))
 	.pipe(browserSync.stream());
 });
 
@@ -114,7 +114,7 @@ gulp.task('styles', function() {
 // 	}))
 // 	.pipe(pug())
 // 	.pipe(htmlbeautify(htmlbeautifyOptions))
-// 	.pipe(gulp.dest('./build'));
+// 	.pipe(gulp.dest('./docs'));
 // });
 
 
@@ -142,7 +142,7 @@ gulp.task('pug', () =>
 				.pipe(gulpif(global.watch, emitty.filter(global.emittyChangedFile)))
 				.pipe(pug())
 				.pipe(htmlbeautify(htmlbeautifyOptions))
-				.pipe(gulp.dest('./build'))
+				.pipe(gulp.dest('./docs'))
 				.on('end', resolve)
 				.on('error', reject);
 				// .pipe(browserSync.stream({once:true}));
@@ -165,7 +165,7 @@ gulp.task('pug-start', function() {
 	}))
 	.pipe(pug())
 	.pipe(htmlbeautify(htmlbeautifyOptions))
-	.pipe(gulp.dest('./build'));
+	.pipe(gulp.dest('./docs'));
 
 });
 
@@ -216,71 +216,71 @@ gulp.task('svg', function() {
 		}
 	}))
 	.pipe(rename('sprite.svg'))
-	.pipe(gulp.dest('./build/img'));
+	.pipe(gulp.dest('./docs/img'));
 });
 
 gulp.task('copy:libs', function(callback) {
 
     gulp.src('node_modules/jquery/dist/**/*.*')
-		.pipe(gulp.dest('./build/libs/jquery'));
+		.pipe(gulp.dest('./docs/libs/jquery'));
 
 	gulp.src('node_modules/bootstrap-4-grid/css/**/*.*')
-		.pipe(gulp.dest('./build/libs/bootstrap-4-grid'))
+		.pipe(gulp.dest('./docs/libs/bootstrap-4-grid'))
 
 	gulp.src('node_modules/normalize.css/normalize.css')
-		.pipe(gulp.dest('./build/libs/normalize-css/'))
+		.pipe(gulp.dest('./docs/libs/normalize-css/'))
 
 	callback()
 });
 
 gulp.task('copy:libs-local', function(callback) {
 	gulp.src('./src/libs/**/*.*')
-		.pipe(gulp.dest('./build/libs/'))
+		.pipe(gulp.dest('./docs/libs/'))
 	callback()
 });
 
 gulp.task('copy:img', function() {
 	return gulp.src(['./src/img/**/*.*', '!./src/img/svg-for-sprites/**/*.svg'], {since: gulp.lastRun('copy:img')})
-		.pipe(gulp.dest('./build/img'))
+		.pipe(gulp.dest('./docs/img'))
 		.pipe(browserSync.stream());
 });
 
 gulp.task('copy:js', function() {
 	return gulp.src('./src/js/**/*.*', {since: gulp.lastRun('copy:js')})
-		.pipe(gulp.dest('./build/js'))
+		.pipe(gulp.dest('./docs/js'))
 		.pipe(browserSync.stream());
 });
 
 gulp.task('copy:fonts', function() {
 	return gulp.src('./src/fonts/**/*.*', {since: gulp.lastRun('copy:fonts')})
-		.pipe(gulp.dest('./build/fonts'))
+		.pipe(gulp.dest('./docs/fonts'))
 		.pipe(browserSync.stream());
 });
 
-gulp.task('clean:build', function() {
-    return del('./build');
+gulp.task('clean:docs', function() {
+    return del('./docs');
 });
 
-gulp.task('copy:build:files', function(callback) {
+gulp.task('copy:docs:files', function(callback) {
     gulp.src('./src/php/**/*.*')
-        .pipe(gulp.dest('./build/php/'))
+        .pipe(gulp.dest('./docs/php/'))
     gulp.src('./src/files/**/*.*')
-        .pipe(gulp.dest('./build/files/'))
+        .pipe(gulp.dest('./docs/files/'))
 	gulp.src('./src/fonts/**/*.*')
-	    .pipe(gulp.dest('./build/fonts/'))
+	    .pipe(gulp.dest('./docs/fonts/'))
 	callback()
 });
 
 //--- gulp 4 ---///
 gulp.task('default',
-    gulp.series('clean:build',
+    gulp.series('clean:docs',
     	gulp.parallel('styles', 'pug-start', 'svg', 'copy:libs', 'copy:libs-local', 'copy:img', 'copy:fonts', 'copy:js'),
        	'server'
 	)
 );
 
-gulp.task('build',
-	gulp.series('clean:build',
+gulp.task('docs',
+	gulp.series('clean:docs',
 		gulp.parallel('styles', 'pug-start', 'svg', 'copy:libs', 'copy:libs-local', 'copy:img', 'copy:fonts', 'copy:js')
 	)
 );
@@ -288,7 +288,7 @@ gulp.task('build',
 //--- gulp 3 ---///
 // gulp.task('default', function(callback){
 //     runSequence(
-//     	'clean:build',
+//     	'clean:docs',
 //     	['styles', 'pug', 'svg', 'copy:libs', 'copy:libs-local', 'copy:img', 'copy:fonts', 'copy:js'],
 //     	'server',
 // 		callback

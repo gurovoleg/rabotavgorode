@@ -1,0 +1,128 @@
+<!-- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.-->
+<!-- Миксин title block для Компаний/Отраслей/Городов-->
+<!--apply page выбранный файл-->
+<!-- Показать контакты со страницы Resume-Page-->
+<!-- rating-star-->
+<!-- rating-star-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=375,initial-scale=1, shrink-to-fit=no" />
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Откликнуться на вакансию</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="./libs/custom-grid/custom-grid-dynamic.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="./libs/custom-grid/custom-grid-static.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="./fonts/proximaNova.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="./css/main.css?timestamp=#{time}" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body><a class="btn undefined modal-window-button" href="#window-modal">Откликнуться на вакансию</a>
+	<div class="bg-modal-window apply-page-modal" id="window-modal">
+		<div class="modal-window">
+			<div class="bg-modal-main">
+				<div class="apply-page">
+					<div class="apply-header">
+						<div class="apply-header__title">Откликнуться на вакансию «Дизайнер мобильных приложений»</div>
+						<div class="apply-header__menu">
+							<div class="nav-menu" id="apply-header-menu"><a class="nav-menu-item nav-menu-item-active" href="#apply-tabs__choose" data-pill="undefined"><span class="nav-menu-item__name">Выбрать резюме</span></a><a class="nav-menu-item" href="#apply-tabs__download " data-pill="undefined"><span class="nav-menu-item__name">Загрузить резюме</span></a></div>
+						</div>
+					</div>
+					<div class="apply-tabs-container" id="apply-tabs-container">
+						<div class="apply-tabs__choose" id="apply-tabs__choose">
+							<form class="apply-tab-form" action="">
+								<div class="apply-tab-form__group">
+									<div class="input-wrapper apply-tab-input apply-tab-input--choose"><label class="input-label" for="input-simple"><input class="input-field" type="" id="input-simple" data-type="" placeholder="UI/UX дизайнер" /><span class="input-error"></span></label></div><i class="arrow arrow--down arrow--apply-input"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+										</svg></i>
+									<div class="dropdown-list  dropdown-simple-list--input dropdown-simple-list--hidden">
+										<div class="dropdown-list__item">UI/UX дизайнер</div>
+										<div class="dropdown-list__item">WebDev-разработчик</div>
+										<div class="dropdown-list__item">Супер-пупер программист</div>
+									</div>
+								</div><textarea class="apply-tab-textarea" name="text" placeholder="Расскажите чем вас привлекла эта вакансия и почему вы хорошо подойдете на эту роль"></textarea><label class="check-box__label apply-tab-checkbox"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--big"></span><span class="custom-check-box__label undefined">Подписаться на похожие вакансии</span></label><a class="btn btn-semi-rounded-blue apply-tab-btn-send" href="#!">Отправить резюме</a>
+							</form>
+							<div class="text-action text-action--resume">Создайте резюме и работадатели сами найдут вас. Работодатели чаще приглашают на собеседование кандидатов чей опыт и образование им известны.</div><a class="btn btn-semi-rounded-gray" href="#!">Создать резюме</a>
+							<div class="text-action text-action--resume"><a class="text-action" href="#">Войдите</a> или <a class="text-action" href="#">Зарегистрируйтесь</a> чтобы создать резюме</div>
+						</div>
+						<div class="apply-tabs__download" id="apply-tabs__download">
+							<form class="apply-tab-form" action="">
+								<div class="input-wrapper apply-tab-input"><label class="input-label" for="input-simple"><input class="input-field" type="" id="input-simple" data-type="" placeholder="Имя" /><span class="input-error"></span></label></div>
+								<div class="input-wrapper apply-tab-input"><label class="input-label" for="input-simple"><input class="input-field" type="" id="input-simple" data-type="" placeholder="Фамилия" /><span class="input-error"></span></label></div>
+								<div class="input-wrapper apply-tab-input"><label class="input-label" for="input-email"><input class="input-field" type="text" id="input-email" data-type="email" placeholder="Электронная почта" /><span class="input-error">Не найдено аккаунтов связанных с указанной электронной почтой</span></label></div>
+								<div class="input-wrapper apply-tab-input"><label class="input-label" for="input-checkfield"><input class="input-field" type="text" id="input-checkfield" data-type="checkField" placeholder="Номер телефона" /><span class="input-error">Пользователь с указанным телефоном уже зарегистрирован.</span><span class="input-error input-error--registration"><a href="#!">Войти </a>или <a href="#!">Воccтановить пароль</a></span></label></div>
+								<p class="apply-tab-title">Загрузите резюме</p>
+								<div class="apply-tab-download"><a class="btn btn-semi-rounded-gray apply-tab-btn-choose" href="#">Выбрать файл</a><span class="apply-tab-file">doc, pdf, rtf не более 15 Мб</span>
+									<div class="progress-bar  progress-barapply-tab"><svg width="100%" height="8px">
+											<rect width="100%" height="8px" x="0" y="0" rx="4" ry="4" fill="rgba(0, 0, 0, 0.08)"></rect>
+											<rect width="40%" height="8px" x="0" y="0" rx="4" ry="4" fill="#1878FF"></rect>
+										</svg></div>
+									<div class="choose-file  choose-file--apply"><span>Ivan_Petrov_Linkedin_CV_export.pdf</span><i class="icon-close  icon-close--apply"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+											</svg></i></div>
+								</div><textarea class="apply-tab-textarea" name="text" placeholder="Расскажите чем вас привлекла эта вакансия и почему вы хорошо подойдете на эту роль"></textarea><label class="check-box__label apply-tab-checkbox"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--big"></span><span class="custom-check-box__label undefined">Подписаться на похожие вакансии</span></label><a class="btn btn-semi-rounded-blue apply-tab-btn-download" href="#">Отправить резюме</a>
+								<p class="apply-tab-agreement">Отправляя резюме, вы принимаете условия <a href="#!">Соглашения </a>и <a href="#!">Правила сайта</a></p>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="apply-notify">
+					<h1 class="heading-1 apply-notify__title">Отклик отправлен работодателю</h1>
+					<div class="text-action text-action--notify">Работодатель свяжется с вами, если ваша кандидатура заинтересует его, а пока отправьте больше откликов, так вы скорее найдете работу.</div><a class="btn btn-semi-rounded-blue" href="apply.html">Вернуться к поиску</a>
+				</div>
+			</div><i class="icon-close modal-window-close" id="modal-window-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+				</svg></i>
+		</div>
+	</div>
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/jquery.nicescroll.js"></script>
+	<script src="js/middle-map.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/input.js"></script>
+	<script src="js/autocomplete.js"></script>
+	<script src="js/title-block.js"></script>
+	<script src="js/main-menu.js"></script>
+	<script src="js/filter-vacancies.js"></script>
+	<script src="js/filter-vacancies-sectors.js"></script>
+	<script src="js/filter-vacancies-position.js"></script>
+	<script src="js/vacance-description.js"></script>
+	<script src="js/vacance-card.js"></script>
+	<script src="js/pagination.js"></script>
+	<script src="js/search-results.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/authorize-form.js"></script>
+	<script src="js/dropdown.js"></script>
+	<script src="js/company.js"></script>
+	<script src="js/company-review.js"></script>
+	<script src="js/modal-window.js"></script>
+	<script src="js/company-modal.js"></script>
+	<script src="js/job__description-block.js"></script>
+	<script src="js/city-selection.js"></script>
+	<script src="js/section-footer-dropdown.js"></script>
+	<script src="js/job.js"></script>
+	<script src="js/areas.js"></script>
+	<script src="js/cities.js"></script>
+	<script src="js/companies.js"></script>
+	<script src="js/apply.js"></script>
+	<script src="js/search-resume.js"></script>
+	<script src="js/search-resume-filter.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/resume.js"></script>
+	<script src="js/vacancies-tab-service.js"></script>
+	<script src="js/aside-menu.js"></script>
+	<script src="js/table.js"></script>
+	<script src="js/vacancy.js"></script>
+	<script src="js/preview-header-dropdown.js"></script>
+	<script src="js/dropdown-select.js"></script>
+	<script src="js/candidates.js"></script>
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

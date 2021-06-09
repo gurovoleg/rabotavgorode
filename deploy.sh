@@ -2,4 +2,4 @@
 git reset --hard HEAD
 git pull origin develop
 npm i
-./node_modules/gulp/bin/gulp.js build
+./node_modules/gulp/bin/gulp.js docs

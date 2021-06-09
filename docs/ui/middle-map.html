@@ -1,0 +1,342 @@
+<!-- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.-->
+<!-- Миксин title block для Компаний/Отраслей/Городов-->
+<!--apply page выбранный файл-->
+<!-- Показать контакты со страницы Resume-Page-->
+<!-- rating-star-->
+<!-- rating-star-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=375,initial-scale=1, shrink-to-fit=no" />
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<title>Средняя часть - Карта</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../css/main.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../libs/custom-grid/custom-grid-dynamic.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../libs/custom-grid/custom-grid-static.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../fonts/proximaNova.css?timestamp=#{time}" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body class="body--dashboard">
+	<div class="clear"></div>
+	<div class="left-panel blue-skin" id="ui-navifation">
+		<div class="content-wrapper">
+			<div class="left-panel__section">
+				<div class="title-2">UI-KIT и PUG фреймворк</div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Документация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="docs.html">Документация</a><a class="left-panel-nav__link" href="docs-codestyle.html">Оформление кода</a><a class="left-panel-nav__link" href="docs-styleguide.html">Работа со стилями</a><a class="left-panel-nav__link" href="docs-general-recomendations.html">Общие рекомендации</a><a class="left-panel-nav__link" href="docs-workflow.html">Workflow</a><a class="left-panel-nav__link" href="docs-customer-reqiuriements.html">Требования заказчика</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">База</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="grid.html">Сетка</a><a class="left-panel-nav__link" href="colors.html">Цвета</a><a class="left-panel-nav__link" href="typografy.html">Типографика</a><a class="left-panel-nav__link" href="breadcrumb.html">Хлебные крошки</a><a class="left-panel-nav__link" href="elements.html">Элементы</a><a class="left-panel-nav__link" href="badges.html">Бейджи</a><a class="left-panel-nav__link" href="pagination.html">Пагинация</a><a class="left-panel-nav__link" href="icons-svg.html">Иконки</a><a class="left-panel-nav__link" href="modal-window.html">Модальное окно</a><a class="left-panel-nav__link" href="tooltip.html">Tooltip</a><a class="left-panel-nav__link" href="lightbox.html">Lightbox для фотографий</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Формы</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="buttons.html">Кнопки</a><a class="left-panel-nav__link" href="radio-button.html">Радио кнопки</a><a class="left-panel-nav__link" href="checkbox.html">Чекбоксы</a><a class="left-panel-nav__link" href="input.html">Инпуты</a><a class="left-panel-nav__link" href="textarea.html">Textarea</a><a class="left-panel-nav__link" href="autocomplete.html">Поиск (autocomplete)</a><a class="left-panel-nav__link" href="search-form.html">Строка поиска</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Кандидаты</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="preview-title-block__candidate.html">Preview - Title-block</a><a class="left-panel-nav__link" href="candidates__table.html">Таблица</a><a class="left-panel-nav__link" href="data-time-choose.html">Дата и время</a><a class="left-panel-nav__link" href="dropdown-select.html">Выпадашка 'Изменить статус'</a><a class="left-panel-nav__link" href="candidates__change_status.html">Изменить статус</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Вакансии</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="preview-title-block__vacancy.html">Preview - Title-block</a><a class="left-panel-nav__link" href="vacancies__tab-service-card.html">Таб 'Услуги' - Карточка</a><a class="left-panel-nav__link" href="vacancies__tab-history-card.html">Таб 'История' - Карточка</a><a class="left-panel-nav__link" href="vacancies__tab-response-card.html">Таб 'Отлики' - Карточка</a><a class="left-panel-nav__link" href="table.html">Таблица</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - ЛК - Работодателя</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="aside-menu.html">Боковое меню</a><a class="left-panel-nav__link" href="lk-title-block.html">Title block</a><a class="left-panel-nav__link" href="lk-bottom-menu.html">Панель меню с иконками(внизу)</a><a class="left-panel-nav__link" href="lk-table-indicator.html">Индикатор в таблице</a><a class="left-panel-nav__link" href="vacancies__table-dropdown.html">Выпадающее меню в таблице</a><a class="left-panel-nav__link" href="preview-header.html">Превью блок - шапка</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Резюме</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="resume__position-card.html">Карточка Должность</a><a class="left-panel-nav__link" href="resume__section-experience-work.html">Секция Опыт работы</a><a class="left-panel-nav__link" href="resume__education-card.html">Карточка Образование</a><a class="left-panel-nav__link" href="resume__section-education.html">Секция Образование</a><a class="left-panel-nav__link" href="resume__title-block.html">Title-block</a><a class="left-panel-nav__link" href="resume__other.html">Секция Другое</a><a class="left-panel-nav__link" href="resume__skills.html">Навыки и знания</a><a class="left-panel-nav__link" href="resume__tags-block.html">Блок с тегами</a><a class="left-panel-nav__link" href="resume__portfolio-slider.html">Портфолио</a><a class="left-panel-nav__link" href="resume__view-contacts.html">Просмотр контактов</a><a class="left-panel-nav__link" href="resume__show-contacts.html">Показать контакты</a><a class="left-panel-nav__link" href="respond-block-resume.html">Respond блок с кнопкой скачать</a><a class="left-panel-nav__link" href="resume__responding-panel.html">Панель откликнувшегося кандидата</a><a class="left-panel-nav__link" href="resume__footer.html">Сохранить в футере</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Поиск резюме</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="search-resume__filter.html">Фильтр боковой</a><a class="left-panel-nav__link" href="filter-resumes.html">Фильтр резюме</a><a class="left-panel-nav__link" href="search-resume__block.html">Block</a><a class="left-panel-nav__link" href="search-resume__view-resume-header.html">Шапка в Просмотр Резюме</a><a class="left-panel-nav__link" href="search-resume__title.html">Заголовок страницы</a><a class="left-panel-nav__link" href="search-resume__header-tabs.html">Описание резюме</a><a class="left-panel-nav__link" href="search-resume__resume-card.html">Карточка резюме</a><a class="left-panel-nav__link" href="save-suggest-resume.html">Сохранить резюме, Предложить вакансию</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Отклинуться на вакансию (Apply)</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="apply__header.html">Заголовок с табами</a><a class="left-panel-nav__link" href="apply__tab-choose.html">Таб выбрать резюме</a><a class="left-panel-nav__link" href="apply__tab-download.html">Таб загрузить резюме</a><a class="left-panel-nav__link" href="apply__notify.html">Сообщение об отправке резюме</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Отрасли и Компании (Areas and Companies)</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="areas-companies__alphabet.html">Блок с алфавитом</a><a class="left-panel-nav__link" href="areas-companies__title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="companies__vip-company.html">VIP компания</a><a class="left-panel-nav__link" href="companies__slider.html">Слайдер VIP компании</a><a class="left-panel-nav__link" href="areas__badges-block.html">Блок с бейджами</a><a class="left-panel-nav__link" href="areas__tabs-areas.html">Контент таб Отрасли</a><a class="left-panel-nav__link" href="areas-companies__list.html">Отрасли/Компании. Блок. Список</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Job opening</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="job__heading.html">Заголовок о компании</a><a class="left-panel-nav__link" href="job__about-company.html">Секция О компании</a><a class="left-panel-nav__link" href="job__title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="job__description-block.html">Описание позиции</a><a class="left-panel-nav__link" href="job-badges.html">Блок Бэйджи</a><a class="left-panel-nav__link" href="job__vacancy-card.html">Карточка похожие вакансии</a><a class="left-panel-nav__link" href="job__section-vacancy-cards.html">Секция карточек вакансий</a><a class="left-panel-nav__link" href="respond-block.html">Блок с кнопкой &quot;Откликнуться&quot;</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Search Results</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="dropdown.html">Выпадающий список</a><a class="left-panel-nav__link" href="vacance-card.html">Карточка вакансии</a><a class="left-panel-nav__link" href="main-menu.html">Выпадающее меню из логотипа</a><a class="left-panel-nav__link" href="filter-vacancies.html">Фильтр вакансий</a><a class="left-panel-nav__link" href="filter-vacancies-sectors.html">Фильтр вакансий - отрасли</a><a class="left-panel-nav__link" href="title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="vacance-description.html">Описание вакансии</a><a class="left-panel-nav__link" href="social-icons.html">Социальные иконки - стр Авторизация, Регистрация</a><a class="left-panel-nav__link" href="notifications.html">Уведомления</a><a class="left-panel-nav__link" href="city-selection.html">Выбор города</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Company</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="avatar-block.html">Аватар + информация</a><a class="left-panel-nav__link" href="contact-person.html">Контактное лицо</a><a class="left-panel-nav__link" href="company-banner.html">Баннер инфо о компании</a><a class="left-panel-nav__link" href="rating-mark.html">Rating - Оценка (91/100)</a><a class="left-panel-nav__link" href="rating-like.html">Rating - Like/Dislike</a><a class="left-panel-nav__link" href="rating-stars.html">Rating - Stars</a><a class="left-panel-nav__link" href="company-review.html">Отзыв</a><a class="left-panel-nav__link" href="feedback-company.html">Отзыв о компании</a><a class="left-panel-nav__link" href="block-company-reviews.html">Блок отзывов</a><a class="left-panel-nav__link" href="rating-block.html">Блок с отзывом для рейтинга</a><a class="left-panel-nav__link" href="rating.html">Рейтинг</a><a class="left-panel-nav__link" href="company-vacancy-card.html">Карточка вакансии</a><a class="left-panel-nav__link" href="company-vacancies-current-region.html">Вакансии компании в текущем регионе</a><a class="left-panel-nav__link" href="company-tab-vacancy.html">Таб Вакансии - середина</a><a class="left-panel-nav__link" href="company-tab-reviews.html">Таб Отзывы - середина</a><a class="left-panel-nav__link" href="company-tab-about.html">Таб Описание - середина</a><a class="left-panel-nav__link" href="company-about.html">О компании</a><a class="left-panel-nav__link" href="company-modal.html">Company - Модальное окно</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Авторизация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="authorize-form.html">Авторизация - форма</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Регистрация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="registration-form.html">Регистрация - форма</a><a class="left-panel-nav__link" href="registration-social.html">Регистрация через соцсети - середина</a><a class="left-panel-nav__link" href="registration-phone.html">Регистрация по номеру телефона - середина</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Восстановление пароля</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="recover-password-email.html">Восстановление пароля по email- середина</a><a class="left-panel-nav__link" href="social-icons.html">Социальные иконки-стр Авторизация</a><a class="left-panel-nav__link" href="yandex-map.html">Яндекс карта</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Секции</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="header-user-panel.html">Шапки миксин</a><a class="left-panel-nav__link" href="footer.html">Футер</a><a class="left-panel-nav__link" href="subscribe.html">Подписка</a><a class="left-panel-nav__link" href="vacance-description.html">Описание вакансии</a><a class="left-panel-nav__link" href="middle-map.html">Средняя часть - Карта</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Страницы</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="../favourites.html">Избранное</a><a class="left-panel-nav__link" href="../candidates.html">Кандидаты</a><a class="left-panel-nav__link" href="../vacancies.html">Вакансии</a><a class="left-panel-nav__link" href="../resume.html">Резюме</a><a class="left-panel-nav__link" href="../resume-replied.html">Резюме с откликом</a><a class="left-panel-nav__link" href="../search-resume.html">Поиск резюме</a><a class="left-panel-nav__link" href="../apply.html">Откликнуться на вакансию</a><a class="left-panel-nav__link" href="../cities.html">Города</a><a class="left-panel-nav__link" href="../areas.html">Отрасли</a><a class="left-panel-nav__link" href="../companies.html">Компании</a><a class="left-panel-nav__link" href="../company.html">О компании</a><a class="left-panel-nav__link" href="../job.html">Описание вакансии (Job opening)</a><a class="left-panel-nav__link" href="../main.html">Главная</a><a class="left-panel-nav__link" href="../search-results.html">Search results</a><a class="left-panel-nav__link" href="../search-results-aside.html">Search results-aside</a><a class="left-panel-nav__link" href="../auth-autorization.html">Страница авторизации</a><a class="left-panel-nav__link" href="../auth-registration.html">Страница регистрации</a><a class="left-panel-nav__link" href="../auth-recovery-password.html">Страница восстановления пароля</a><a class="left-panel-nav__link" href="../auth-recovery-password-reset.html">Страница сброса пароля (email)</a><a class="left-panel-nav__link" href="../auth-recovery-password-reset-phone.html">Страница сброса пароля (телефон)</a><a class="left-panel-nav__link" href="../auth-password-create.html">Страница создания пароля</a><a class="left-panel-nav__link" href="../auth-registration-social.html">Регистрация через социальные сети</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="ui-nav-toggle">Скрыть/Показать навигацию</div>
+	<div class="container container--left"></div>
+	<div class="title">Средняя часть - Карта</div>
+	<div class="container-main">
+		<div class="container-aside container-aside--list">
+			<div class="container-content">
+				<div class="search-result middle-map-wrapper search-result--show">
+					<div class="header-main middle-map--header">
+						<div class="header-main__logo">
+							<div class="logo-group"><i class="logo-icon"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M8.60748 15.5276C8.98146 15.5276 9.32419 15.7361 9.49587 16.0684L13.315 23.459C13.4867 23.7913 13.8294 24 14.2034 24H19.8023C19.9115 24 20 23.9114 20 23.8022C20 23.7834 19.9973 23.7646 19.992 23.7466C19.9882 23.7336 19.983 23.7209 19.9766 23.709L15.3232 15.0149C15.0511 14.5066 15.2683 13.8794 15.7646 13.5859C16.7804 12.9849 17.559 12.2585 18.1005 11.4065C18.799 10.3076 19.1482 8.9231 19.1482 7.25269C19.1482 4.94507 18.3191 3.15942 16.661 1.89551C15.0028 0.631836 12.703 0 9.7615 0H1C0.447716 0 0 0.447754 0 1V23C0 23.5522 0.447716 24 1 24H4.97956C5.53185 24 5.97955 23.5522 5.97955 23V16.5276C5.97955 15.9751 6.42727 15.5276 6.97955 15.5276H8.60748ZM9.67376 11H6V4H9.67376C10.766 4 11.5934 4.31201 12.156 4.93628C12.7187 5.5603 13 6.4209 13 7.51758C13 8.61426 12.7214 9.46875 12.1643 10.0813C11.6072 10.6938 10.777 11 9.67376 11Z"></path>
+									</svg></i><i class="arrow arrow--down"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+									</svg></i></div>
+						</div>
+						<div class="header-main__city"><a class="link-icon" href="#"><i class="icon-location"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="ic-location" d="M11.9343 0.0724471C11.8657 -0.000149832 11.76 -0.0203818 11.6705 0.0217483L0.135441 5.4439C0.0427143 5.4877 -0.0114344 5.58791 0.00204463 5.69169C0.0155237 5.79546 0.093377 5.87782 0.194005 5.89496L5.36788 6.78302L5.95933 11.7905C5.97188 11.8948 6.04974 11.9788 6.15083 11.9964C6.16407 11.9988 6.17709 12 6.1901 12C6.27725 12 6.35882 11.9498 6.39833 11.8677L11.9759 0.343793C12.0196 0.253582 12.0028 0.144806 11.9343 0.0724471Z"></path>
+									</svg></i><span class="link-icon__value">Санкт-Петербург</span></a></div>
+						<div class="header-main__buttons"><a class="btn btn-rounded-blue" href="#">Войти</a></div>
+					</div>
+					<div class="header-main__search middle-map--header-search">
+						<div class="tag-filter">
+							<div class="d-flex">
+								<div class="tag-filter__text-box">
+									<div class="tag-filter-item">дизайнер</div>
+								</div><i class="icon-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div itemscope="itemscope" itemtype="http://schema.org/WebSite">
+							<meta itemprop="url" content="https://spb.rabotavgorode.ru/" />
+							<form class="search-form" itemprop="potentialAction" itemscope="itemscope" itemtype="http://schema.org/SearchAction">
+								<meta itemprop="target" content="https://spb.rabotavgorode.ru/search?q={текст_запроса}" />
+								<div class="search-form__group">
+									<div class="input-container"><input class="search-job search-job__name" itemprop="query-input" type="text" name="" required="required" />
+										<div class="icon-filter icon-filter--absolute"><i class="icon-filter"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path opacity="0.01" fill-rule="evenodd" clip-rule="evenodd" d="M0 24L0 0H24V24H0Z" fill="#D8D8D8"></path>
+													<rect width="20" height="2" rx="1" transform="matrix(1 0 0 -1 2 13)"></rect>
+													<rect width="20" height="2" rx="1" transform="matrix(1 0 0 -1 2 7)"></rect>
+													<rect width="4" height="4" rx="2" transform="matrix(1 0 0 -1 2 8)"></rect>
+													<rect width="4" height="4" rx="2" transform="matrix(1 0 0 -1 18 14)"></rect>
+													<rect width="20" height="2" rx="1" transform="matrix(1 0 0 -1 2 19)"></rect>
+													<rect width="4" height="4" rx="2" transform="matrix(1 0 0 -1 10 20)"></rect>
+												</svg></i></div>
+									</div>
+									<div class="input-container"><input class="search-job search-job__sallary" type="number" name="job-sallary" value="30000" min="100000" max="1000000" step="10000" />
+										<div class="input__search-button">
+											<div class="icon-search icon-search--absolute"><i class="icon-search"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0428 9.43408H10.7205L15 13.7222L13.7222 15L9.43396 10.7205V10.043L9.20239 9.80273C8.22473 10.6433 6.95544 11.1492 5.57458 11.1492C2.49573 11.1492 0 8.65356 0 5.57471C0 2.49561 2.49573 0 5.57458 0C8.65356 0 11.1492 2.49561 11.1492 5.57471C11.1492 6.95532 10.6432 8.22461 9.80273 9.20239L10.0428 9.43408ZM1 5.5C1 7.98999 3.01001 10 5.5 10C7.98999 10 10 7.98999 10 5.5C10 3.01001 7.98999 1 5.5 1C3.01001 1 1 3.01001 1 5.5Z"></path>
+													</svg></i></div>
+										</div><span class="search-job__sallary-text-before">от</span><span class="search-job__sallary-text-after">руб</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="row middle-map">
+						<div class="search-result-list search-result-list--map">
+							<div class="search-result-list__item middle-map-cards-wrapper">
+								<div class="vacance-card vacance-card--list  middle-map-cards">
+									<div class="vacance-card__flex-block vacance-card__flex-block--nowrap">
+										<div class="vacance-card__title"><a class="vacance-card__title-link" href="#">Product designer</a></div>
+										<div class="vacance-card-date" itemprop="datePosted">21.01.2018</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+											</svg></i>
+									</div>
+									<div class="vacance-card__flex-block vacance-card__flex-block--special">
+										<div class="vacance-card__salary" itemprop="salaryCurrency">150 000 Р</div>
+										<div class="split-text  split-text--">
+											<div class="split-text__item">ВебИнвест</div>
+											<div class="split-text__item">Информационные технологии</div>
+										</div>
+									</div>
+									<div class="vacance-card__flex-block vacance-card__flex-block--nowrap vacance-card__flex-col">
+										<div class="vacance-card__address">
+											<div class="color-marker color-marker--red"></div>
+											<div class="address-badge">
+												<div class="card-address"><span class="card-address-street">Пл. Ленина</span><span class="card-address-distance">3км</span></div>
+											</div>
+										</div>
+										<div class="vacance-card__badge-block">
+											<div class="badge-group  badge-group--">
+												<div class="badge-group-item  badge badge--"><a href="#">CJM</a></div>
+												<div class="badge-group-item  badge badge--"><a href="#">User Stories</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="vacance-card__description"></div><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter"></span></a>
+								</div>
+							</div>
+							<div class="search-result-list__item middle-map-cards-wrapper">
+								<div class="vacance-card vacance-card--list  middle-map-cards">
+									<div class="vacance-card__flex-block vacance-card__flex-block--nowrap">
+										<div class="vacance-card__title"><a class="vacance-card__title-link" href="#">Product designer</a></div>
+										<div class="vacance-card-date" itemprop="datePosted">21.01.2018</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+											</svg></i>
+									</div>
+									<div class="vacance-card__flex-block vacance-card__flex-block--special">
+										<div class="vacance-card__salary" itemprop="salaryCurrency">150 000 Р</div>
+										<div class="split-text  split-text--">
+											<div class="split-text__item">ВебИнвест</div>
+											<div class="split-text__item">Информационные технологии</div>
+										</div>
+									</div>
+									<div class="vacance-card__flex-block vacance-card__flex-block--nowrap vacance-card__flex-col">
+										<div class="vacance-card__address">
+											<div class="color-marker color-marker--red"></div>
+											<div class="address-badge">
+												<div class="card-address"><span class="card-address-street">Пл. Ленина</span><span class="card-address-distance">3км</span></div>
+											</div>
+										</div>
+										<div class="vacance-card__badge-block">
+											<div class="badge-group  badge-group--">
+												<div class="badge-group-item  badge badge--"><a href="#">CJM</a></div>
+												<div class="badge-group-item  badge badge--"><a href="#">User Stories</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="vacance-card__description"></div><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter"></span></a>
+								</div>
+							</div>
+							<div class="search-result-list__item middle-map-cards-wrapper">
+								<div class="vacance-card vacance-card--list  middle-map-cards">
+									<div class="vacance-card__flex-block vacance-card__flex-block--nowrap">
+										<div class="vacance-card__title"><a class="vacance-card__title-link" href="#">Product designer</a></div>
+										<div class="vacance-card-date" itemprop="datePosted">21.01.2018</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+											</svg></i>
+									</div>
+									<div class="vacance-card__flex-block vacance-card__flex-block--special">
+										<div class="vacance-card__salary" itemprop="salaryCurrency">150 000 Р</div>
+										<div class="split-text  split-text--">
+											<div class="split-text__item">ВебИнвест</div>
+											<div class="split-text__item">Информационные технологии</div>
+										</div>
+									</div>
+									<div class="vacance-card__flex-block vacance-card__flex-block--nowrap vacance-card__flex-col">
+										<div class="vacance-card__address">
+											<div class="color-marker color-marker--red"></div>
+											<div class="address-badge">
+												<div class="card-address"><span class="card-address-street">Пл. Ленина</span><span class="card-address-distance">3км</span></div>
+											</div>
+										</div>
+										<div class="vacance-card__badge-block">
+											<div class="badge-group  badge-group--">
+												<div class="badge-group-item  badge badge--"><a href="#">CJM</a></div>
+												<div class="badge-group-item  badge badge--"><a href="#">User Stories</a></div>
+											</div>
+										</div>
+									</div>
+									<div class="vacance-card__description"></div><a class="round-icon round-icon--card" href="#"><span class="round-icon-letter"></span></a>
+								</div>
+							</div>
+							<div class="middle-map-mobilebutton"><a class="btn btn-square" href="#">Вернуться к списку</a></div>
+						</div>
+						<div class="search-result__item-description search-result__item-description--map">
+							<div class="middle-map" id="map"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><br />
+	<div class="section-ui">
+		<p>Подключение блока с фильтром:</p>
+		<pre>include ../sections/filter-vacancies.pug
+</pre>
+		<p>Код:</p>
+		<pre>form.filter-vacancies(id="filter-vacancies" style="border:1px dashed)</pre>
+	</div>
+	<div class="section-ui">
+		<p>Добавление маркеров на карту происходит через файл middle-map.js, путем добавления новой точки</p>
+		<pre>product1 = new ymaps.Placemark([55.788368, 37.508930], { // Координаты метки объекта
+// Содержание метки
+balloonContentHeader: '<strong><a href="#">Product designer</a></strong>',
+balloonContentBody: '150 000 Р',
+balloonContentFooter: 'Веб инвест &#8226; Информационные технологии',
+}, {
+	// Опции.
+	// Необходимо указать данный тип макета.
+	iconLayout: 'default#imageWithContent',
+	// Своё изображение иконки метки.
+	iconImageHref: 'img/map-icons/white.png',
+	// Размеры метки.
+	iconImageSize: [48, 48],
+	// Смещение левого верхнего угла иконки относительно
+	// её "ножки" (точки привязки).
+	iconImageOffset: [-24, -24],
+	// Смещение слоя с содержимым относительно слоя с картинкой.
+	iconContentOffset: [15, 15],
+	// Макет содержимого.
+	iconContentLayout: iconWhite
+	}); // Тип метки</pre>
+		<p>Изображение иконок-маркеров находится в папке img/map-icons</p>
+	</div>
+	<script src="../libs/jquery/jquery.min.js"></script>
+	<script src="../libs/jquery.nicescroll.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/input.js"></script>
+	<script src="../js/autocomplete.js"></script>
+	<script src="../js/title-block.js"></script>
+	<script src="../js/main-menu.js"></script>
+	<script src="../js/pagination.js"></script>
+	<script src="../js/filter-vacancies.js"></script>
+	<script src="../js/filter-vacancies-sectors.js"></script>
+	<script src="../js/vacance-description.js"></script>
+	<script src="../js/vacance-card.js"></script>
+	<script src="../js/middle-map.js"></script>
+	<script src="../js/header.js"></script>
+	<script src="../js/authorize-form.js"></script>
+	<script src="../js/dropdown.js"></script>
+	<script src="../js/company.js"></script>
+	<script src="../js/company-review.js"></script>
+	<script src="../js/modal-window.js"></script>
+	<script src="../js/company-modal.js"></script>
+	<script src="../js/section-footer-dropdown.js"></script>
+	<script src="../js/job__description-block.js"></script>
+	<script src="../js/city-selection.js"></script>
+	<script src="../js/job.js"></script>
+	<script src="../js/areas.js"></script>
+	<script src="../js/companies.js"></script>
+	<script src="../js/apply.js"></script>
+	<script src="../js/search-resume.js"></script>
+	<script src="../js/lightbox.js"></script>
+	<script src="../js/resume.js"></script>
+	<script src="../js/vacancies-tab-service.js"></script>
+	<script src="../js/aside-menu.js"></script>
+	<script src="../js/table.js"></script>
+	<script src="../js/preview-header-dropdown.js"></script>
+	<script src="../js/dropdown-select.js"></script>
+	<script src="../js/candidates.js"></script>
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

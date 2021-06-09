@@ -1,0 +1,313 @@
+<!-- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.-->
+<!-- Миксин title block для Компаний/Отраслей/Городов-->
+<!--apply page выбранный файл-->
+<!-- Показать контакты со страницы Resume-Page-->
+<!-- rating-star-->
+<!-- rating-star-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=375,initial-scale=1, shrink-to-fit=no" />
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<title>Блок под шапкой- title-block</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../css/main.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../libs/custom-grid/custom-grid-dynamic.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../libs/custom-grid/custom-grid-static.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../fonts/proximaNova.css?timestamp=#{time}" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body class="body--dashboard">
+	<div class="clear"></div>
+	<div class="left-panel blue-skin" id="ui-navifation">
+		<div class="content-wrapper">
+			<div class="left-panel__section">
+				<div class="title-2">UI-KIT и PUG фреймворк</div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Документация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="docs.html">Документация</a><a class="left-panel-nav__link" href="docs-codestyle.html">Оформление кода</a><a class="left-panel-nav__link" href="docs-styleguide.html">Работа со стилями</a><a class="left-panel-nav__link" href="docs-general-recomendations.html">Общие рекомендации</a><a class="left-panel-nav__link" href="docs-workflow.html">Workflow</a><a class="left-panel-nav__link" href="docs-customer-reqiuriements.html">Требования заказчика</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">База</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="grid.html">Сетка</a><a class="left-panel-nav__link" href="colors.html">Цвета</a><a class="left-panel-nav__link" href="typografy.html">Типографика</a><a class="left-panel-nav__link" href="breadcrumb.html">Хлебные крошки</a><a class="left-panel-nav__link" href="elements.html">Элементы</a><a class="left-panel-nav__link" href="badges.html">Бейджи</a><a class="left-panel-nav__link" href="pagination.html">Пагинация</a><a class="left-panel-nav__link" href="icons-svg.html">Иконки</a><a class="left-panel-nav__link" href="modal-window.html">Модальное окно</a><a class="left-panel-nav__link" href="tooltip.html">Tooltip</a><a class="left-panel-nav__link" href="lightbox.html">Lightbox для фотографий</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Формы</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="buttons.html">Кнопки</a><a class="left-panel-nav__link" href="radio-button.html">Радио кнопки</a><a class="left-panel-nav__link" href="checkbox.html">Чекбоксы</a><a class="left-panel-nav__link" href="input.html">Инпуты</a><a class="left-panel-nav__link" href="textarea.html">Textarea</a><a class="left-panel-nav__link" href="autocomplete.html">Поиск (autocomplete)</a><a class="left-panel-nav__link" href="search-form.html">Строка поиска</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Кандидаты</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="preview-title-block__candidate.html">Preview - Title-block</a><a class="left-panel-nav__link" href="candidates__table.html">Таблица</a><a class="left-panel-nav__link" href="data-time-choose.html">Дата и время</a><a class="left-panel-nav__link" href="dropdown-select.html">Выпадашка 'Изменить статус'</a><a class="left-panel-nav__link" href="candidates__change_status.html">Изменить статус</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Вакансии</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="preview-title-block__vacancy.html">Preview - Title-block</a><a class="left-panel-nav__link" href="vacancies__tab-service-card.html">Таб 'Услуги' - Карточка</a><a class="left-panel-nav__link" href="vacancies__tab-history-card.html">Таб 'История' - Карточка</a><a class="left-panel-nav__link" href="vacancies__tab-response-card.html">Таб 'Отлики' - Карточка</a><a class="left-panel-nav__link" href="table.html">Таблица</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - ЛК - Работодателя</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="aside-menu.html">Боковое меню</a><a class="left-panel-nav__link" href="lk-title-block.html">Title block</a><a class="left-panel-nav__link" href="lk-bottom-menu.html">Панель меню с иконками(внизу)</a><a class="left-panel-nav__link" href="lk-table-indicator.html">Индикатор в таблице</a><a class="left-panel-nav__link" href="vacancies__table-dropdown.html">Выпадающее меню в таблице</a><a class="left-panel-nav__link" href="preview-header.html">Превью блок - шапка</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Резюме</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="resume__position-card.html">Карточка Должность</a><a class="left-panel-nav__link" href="resume__section-experience-work.html">Секция Опыт работы</a><a class="left-panel-nav__link" href="resume__education-card.html">Карточка Образование</a><a class="left-panel-nav__link" href="resume__section-education.html">Секция Образование</a><a class="left-panel-nav__link" href="resume__title-block.html">Title-block</a><a class="left-panel-nav__link" href="resume__other.html">Секция Другое</a><a class="left-panel-nav__link" href="resume__skills.html">Навыки и знания</a><a class="left-panel-nav__link" href="resume__tags-block.html">Блок с тегами</a><a class="left-panel-nav__link" href="resume__portfolio-slider.html">Портфолио</a><a class="left-panel-nav__link" href="resume__view-contacts.html">Просмотр контактов</a><a class="left-panel-nav__link" href="resume__show-contacts.html">Показать контакты</a><a class="left-panel-nav__link" href="respond-block-resume.html">Respond блок с кнопкой скачать</a><a class="left-panel-nav__link" href="resume__responding-panel.html">Панель откликнувшегося кандидата</a><a class="left-panel-nav__link" href="resume__footer.html">Сохранить в футере</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Поиск резюме</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="search-resume__filter.html">Фильтр боковой</a><a class="left-panel-nav__link" href="filter-resumes.html">Фильтр резюме</a><a class="left-panel-nav__link" href="search-resume__block.html">Block</a><a class="left-panel-nav__link" href="search-resume__view-resume-header.html">Шапка в Просмотр Резюме</a><a class="left-panel-nav__link" href="search-resume__title.html">Заголовок страницы</a><a class="left-panel-nav__link" href="search-resume__header-tabs.html">Описание резюме</a><a class="left-panel-nav__link" href="search-resume__resume-card.html">Карточка резюме</a><a class="left-panel-nav__link" href="save-suggest-resume.html">Сохранить резюме, Предложить вакансию</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Отклинуться на вакансию (Apply)</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="apply__header.html">Заголовок с табами</a><a class="left-panel-nav__link" href="apply__tab-choose.html">Таб выбрать резюме</a><a class="left-panel-nav__link" href="apply__tab-download.html">Таб загрузить резюме</a><a class="left-panel-nav__link" href="apply__notify.html">Сообщение об отправке резюме</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Отрасли и Компании (Areas and Companies)</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="areas-companies__alphabet.html">Блок с алфавитом</a><a class="left-panel-nav__link" href="areas-companies__title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="companies__vip-company.html">VIP компания</a><a class="left-panel-nav__link" href="companies__slider.html">Слайдер VIP компании</a><a class="left-panel-nav__link" href="areas__badges-block.html">Блок с бейджами</a><a class="left-panel-nav__link" href="areas__tabs-areas.html">Контент таб Отрасли</a><a class="left-panel-nav__link" href="areas-companies__list.html">Отрасли/Компании. Блок. Список</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Job opening</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="job__heading.html">Заголовок о компании</a><a class="left-panel-nav__link" href="job__about-company.html">Секция О компании</a><a class="left-panel-nav__link" href="job__title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="job__description-block.html">Описание позиции</a><a class="left-panel-nav__link" href="job-badges.html">Блок Бэйджи</a><a class="left-panel-nav__link" href="job__vacancy-card.html">Карточка похожие вакансии</a><a class="left-panel-nav__link" href="job__section-vacancy-cards.html">Секция карточек вакансий</a><a class="left-panel-nav__link" href="respond-block.html">Блок с кнопкой &quot;Откликнуться&quot;</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Search Results</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="dropdown.html">Выпадающий список</a><a class="left-panel-nav__link" href="vacance-card.html">Карточка вакансии</a><a class="left-panel-nav__link" href="main-menu.html">Выпадающее меню из логотипа</a><a class="left-panel-nav__link" href="filter-vacancies.html">Фильтр вакансий</a><a class="left-panel-nav__link" href="filter-vacancies-sectors.html">Фильтр вакансий - отрасли</a><a class="left-panel-nav__link" href="title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="vacance-description.html">Описание вакансии</a><a class="left-panel-nav__link" href="social-icons.html">Социальные иконки - стр Авторизация, Регистрация</a><a class="left-panel-nav__link" href="notifications.html">Уведомления</a><a class="left-panel-nav__link" href="city-selection.html">Выбор города</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Company</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="avatar-block.html">Аватар + информация</a><a class="left-panel-nav__link" href="contact-person.html">Контактное лицо</a><a class="left-panel-nav__link" href="company-banner.html">Баннер инфо о компании</a><a class="left-panel-nav__link" href="rating-mark.html">Rating - Оценка (91/100)</a><a class="left-panel-nav__link" href="rating-like.html">Rating - Like/Dislike</a><a class="left-panel-nav__link" href="rating-stars.html">Rating - Stars</a><a class="left-panel-nav__link" href="company-review.html">Отзыв</a><a class="left-panel-nav__link" href="feedback-company.html">Отзыв о компании</a><a class="left-panel-nav__link" href="block-company-reviews.html">Блок отзывов</a><a class="left-panel-nav__link" href="rating-block.html">Блок с отзывом для рейтинга</a><a class="left-panel-nav__link" href="rating.html">Рейтинг</a><a class="left-panel-nav__link" href="company-vacancy-card.html">Карточка вакансии</a><a class="left-panel-nav__link" href="company-vacancies-current-region.html">Вакансии компании в текущем регионе</a><a class="left-panel-nav__link" href="company-tab-vacancy.html">Таб Вакансии - середина</a><a class="left-panel-nav__link" href="company-tab-reviews.html">Таб Отзывы - середина</a><a class="left-panel-nav__link" href="company-tab-about.html">Таб Описание - середина</a><a class="left-panel-nav__link" href="company-about.html">О компании</a><a class="left-panel-nav__link" href="company-modal.html">Company - Модальное окно</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Авторизация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="authorize-form.html">Авторизация - форма</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Регистрация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="registration-form.html">Регистрация - форма</a><a class="left-panel-nav__link" href="registration-social.html">Регистрация через соцсети - середина</a><a class="left-panel-nav__link" href="registration-phone.html">Регистрация по номеру телефона - середина</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Восстановление пароля</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="recover-password-email.html">Восстановление пароля по email- середина</a><a class="left-panel-nav__link" href="social-icons.html">Социальные иконки-стр Авторизация</a><a class="left-panel-nav__link" href="yandex-map.html">Яндекс карта</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Секции</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="header-user-panel.html">Шапки миксин</a><a class="left-panel-nav__link" href="footer.html">Футер</a><a class="left-panel-nav__link" href="subscribe.html">Подписка</a><a class="left-panel-nav__link" href="vacance-description.html">Описание вакансии</a><a class="left-panel-nav__link" href="middle-map.html">Средняя часть - Карта</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Страницы</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="../favourites.html">Избранное</a><a class="left-panel-nav__link" href="../candidates.html">Кандидаты</a><a class="left-panel-nav__link" href="../vacancies.html">Вакансии</a><a class="left-panel-nav__link" href="../resume.html">Резюме</a><a class="left-panel-nav__link" href="../resume-replied.html">Резюме с откликом</a><a class="left-panel-nav__link" href="../search-resume.html">Поиск резюме</a><a class="left-panel-nav__link" href="../apply.html">Откликнуться на вакансию</a><a class="left-panel-nav__link" href="../cities.html">Города</a><a class="left-panel-nav__link" href="../areas.html">Отрасли</a><a class="left-panel-nav__link" href="../companies.html">Компании</a><a class="left-panel-nav__link" href="../company.html">О компании</a><a class="left-panel-nav__link" href="../job.html">Описание вакансии (Job opening)</a><a class="left-panel-nav__link" href="../main.html">Главная</a><a class="left-panel-nav__link" href="../search-results.html">Search results</a><a class="left-panel-nav__link" href="../search-results-aside.html">Search results-aside</a><a class="left-panel-nav__link" href="../auth-autorization.html">Страница авторизации</a><a class="left-panel-nav__link" href="../auth-registration.html">Страница регистрации</a><a class="left-panel-nav__link" href="../auth-recovery-password.html">Страница восстановления пароля</a><a class="left-panel-nav__link" href="../auth-recovery-password-reset.html">Страница сброса пароля (email)</a><a class="left-panel-nav__link" href="../auth-recovery-password-reset-phone.html">Страница сброса пароля (телефон)</a><a class="left-panel-nav__link" href="../auth-password-create.html">Страница создания пароля</a><a class="left-panel-nav__link" href="../auth-registration-social.html">Регистрация через социальные сети</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="ui-nav-toggle">Скрыть/Показать навигацию</div>
+	<div class="bg-header bg-header--basic  bg-header--job bg-header--undefined">
+		<div class="header d-flex header--content"><i class="logo-icon"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M8.60748 15.5276C8.98146 15.5276 9.32419 15.7361 9.49587 16.0684L13.315 23.459C13.4867 23.7913 13.8294 24 14.2034 24H19.8023C19.9115 24 20 23.9114 20 23.8022C20 23.7834 19.9973 23.7646 19.992 23.7466C19.9882 23.7336 19.983 23.7209 19.9766 23.709L15.3232 15.0149C15.0511 14.5066 15.2683 13.8794 15.7646 13.5859C16.7804 12.9849 17.559 12.2585 18.1005 11.4065C18.799 10.3076 19.1482 8.9231 19.1482 7.25269C19.1482 4.94507 18.3191 3.15942 16.661 1.89551C15.0028 0.631836 12.703 0 9.7615 0H1C0.447716 0 0 0.447754 0 1V23C0 23.5522 0.447716 24 1 24H4.97956C5.53185 24 5.97955 23.5522 5.97955 23V16.5276C5.97955 15.9751 6.42727 15.5276 6.97955 15.5276H8.60748ZM9.67376 11H6V4H9.67376C10.766 4 11.5934 4.31201 12.156 4.93628C12.7187 5.5603 13 6.4209 13 7.51758C13 8.61426 12.7214 9.46875 12.1643 10.0813C11.6072 10.6938 10.777 11 9.67376 11Z"></path>
+				</svg></i><i class="arrow arrow--down"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+				</svg></i><a class="btn btn-rounded-blue" href="#">Войти</a></div>
+	</div>
+	<div class="bg-logo-menu-dropdown bg-logo-menu-dropdown--small-header">
+		<div class="main-menu">
+			<div class="main-menu-block">
+				<ul class="main-menu__title">Соискателю<li class="main-menu__item"><a class="main-menu__link" href="">Создать резюме</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Поиск работы</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Каталог компаний</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Продвижение резюме</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block">
+				<ul class="main-menu__title">Работодателю<li class="main-menu__item"><a class="main-menu__link" href="">Разместить вакансию</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Поиск сотрудника</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Тарифы</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block">
+				<ul class="main-menu__title">Сервисы<li class="main-menu__item"><a class="main-menu__link" href="">Производственный календарь</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Должностные инструкции</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Статистика ЗП</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block main-menu-block__desktop">
+				<ul class="main-menu__title">Rabotavgorode<li class="main-menu__item"><a class="main-menu__link" href="">О нас</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Наши вакансии</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Блог</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Реклама на сайте</a></li>
+				</ul>
+				<ul class="main-menu__title main-menu__second">
+					<li class="main-menu__item"><a class="main-menu__link" href="">API</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Правила работы с сайтом</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Контакты</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block">
+				<ul class="main-menu__title-support">
+					<li class="main-menu__item"><a class="main-menu__link" href="">Служба поддержки</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block main-menu-block__social-icon">
+				<div class="main-menu__social-icon">
+					<div class="main-menu__social-icon-item"><i class="vk-grey"><svg class="social-icon-item" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item" fill-rule="evenodd" clip-rule="evenodd" d="M25.4034 1.0157C25.5841 0.430218 25.4034 0 24.5432 0H21.6988C20.9756 0 20.6421 0.371645 20.4613 0.781459C20.4613 0.781459 19.0148 4.2065 16.9657 6.43129C16.3027 7.0753 16.0014 7.2802 15.6397 7.2802C15.459 7.2802 15.1877 7.0753 15.1877 6.48986V1.0157C15.1877 0.313121 14.9873 0 14.3846 0H9.91481C9.46285 0 9.19103 0.326083 9.19103 0.635125C9.19103 1.30116 10.2155 1.45475 10.3212 3.3283V7.39735C10.3212 8.28947 10.1553 8.45122 9.79368 8.45122C8.82941 8.45122 6.48383 5.01088 5.09268 1.07423C4.82004 0.309077 4.5466 0 3.81965 0H0.975236C0.162548 0 0 0.371645 0 0.781459C0 1.51333 0.96432 5.14327 4.49003 9.94414C6.84048 13.2228 10.1521 15 13.1656 15C14.9736 15 15.1973 14.6053 15.1973 13.9253V11.4474C15.1973 10.6579 15.3686 10.5003 15.9411 10.5003C16.363 10.5003 17.0862 10.7052 18.7738 12.286C20.7024 14.1595 21.0203 15 22.1051 15H24.9495C25.7622 15 26.1686 14.6053 25.9342 13.8263C25.6777 13.0499 24.7569 11.9234 23.535 10.5881C22.872 9.82704 21.8776 9.00742 21.5763 8.5975C21.1544 8.07064 21.2749 7.8364 21.5763 7.36806C21.5763 7.36806 25.0418 2.62572 25.4034 1.0157Z" fill="#999999"></path>
+							</svg></i></div>
+					<div class="main-menu__social-icon-item"><i class="fb-grey"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item"="" d="M10 7.00006H6.65083V5.00006C6.65083 3.96806 6.73064 3.31806 8.13587 3.31806H9.91069V0.138063C9.04703 0.0440625 8.17862 -0.0019375 7.30926 6.25e-05C4.73159 6.25e-05 2.85036 1.65706 2.85036 4.69906V7.00006H0V11.0001L2.85036 10.9991V20.0001H6.65083V10.9971L9.5639 10.9961L10 7.00006Z" fill="#999999"></path>
+							</svg></i></div>
+					<div class="main-menu__social-icon-item"><i class="instgr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item" d="M5 0C2.239 0 0 2.239 0 5V13C0 15.761 2.239 18 5 18H13C15.761 18 18 15.761 18 13V5C18 2.239 15.761 0 13 0H5ZM15 2C15.552 2 16 2.448 16 3C16 3.552 15.552 4 15 4C14.448 4 14 3.552 14 3C14 2.448 14.448 2 15 2ZM9 4C11.761 4 14 6.239 14 9C14 11.761 11.761 14 9 14C6.239 14 4 11.761 4 9C4 6.239 6.239 4 9 4ZM9 6C8.20435 6 7.44129 6.31607 6.87868 6.87868C6.31607 7.44129 6 8.20435 6 9C6 9.79565 6.31607 10.5587 6.87868 11.1213C7.44129 11.6839 8.20435 12 9 12C9.79565 12 10.5587 11.6839 11.1213 11.1213C11.6839 10.5587 12 9.79565 12 9C12 8.20435 11.6839 7.44129 11.1213 6.87868C10.5587 6.31607 9.79565 6 9 6Z" fill="#999999"></path>
+							</svg></i></div>
+					<div class="main-menu__social-icon-item"><i class="tweet"><svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item" d="M24 2.30078C23.1016 2.69922 22.1992 3 21.1992 3.10156C22.1992 2.5 23 1.5 23.3984 0.398438C22.3984 1 21.3984 1.39844 20.3008 1.60156C19.3008 0.601563 18 0 16.6016 0C13.8984 0 11.6992 2.19922 11.6992 4.89844C11.6992 5.30078 11.6992 5.69922 11.8008 6C7.69922 5.80078 4.10156 3.89844 1.69922 0.898438C1.19922 1.60156 1 2.5 1 3.39844C1 5.10156 1.89844 6.60156 3.19922 7.5C2.39844 7.39844 1.60156 7.19922 1 6.89844C1 6.89844 1 6.89844 1 7C1 9.39844 2.69922 11.3984 4.89844 11.8008C4.5 11.8984 4.10156 12 3.60156 12C3.30078 12 3 12 2.69922 11.8984C3.30078 13.8984 5.10156 15.3008 7.30078 15.3008C5.60156 16.6016 3.5 17.3984 1.19922 17.3984C0.800781 17.3984 0.398438 17.3984 0 17.3008C2.19922 18.6992 4.80078 19.5 7.5 19.5C16.6016 19.5 21.5 12 21.5 5.5C21.5 5.30078 21.5 5.10156 21.5 4.89844C22.5 4.19922 23.3008 3.30078 24 2.30078Z" fill="#999999"></path>
+							</svg></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container container--padding-top">
+		<div class="row">
+			<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-12">
+				<div class="job-title-block"><a class=" btn btn--job btn-link" href="#"><i class="arrow arrow--left"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+							</svg></i><span>Назад</span></a>
+					<div class="job-title-block__row d-flex">
+						<div class="job-title-block__row-item">
+							<ol class="breadcrumb-list" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-item-link" itemprop="item" href="#"><span itemprop="name">Главная</span></a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-item-link" itemprop="item" href="#"><span itemprop="name">Работа</span></a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-item-link" itemprop="item" href="#"><span itemprop="name">Вакансии</span></a>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ol>
+						</div>
+						<div class="job-title-block__row-item">
+							<div class="split-text  split-text--vacance-description-head">
+								<div class="split-text__item">123 Просмотра (+45)</div>
+								<div class="split-text__item">21 августа</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="job-title-sticky-wrapper">
+			<div class="row job-title-sticky">
+				<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-8 job-title-block__row-item">
+					<div class="job-title-sticky__title">UI / UX дизайнер мобильных приложений</div>
+					<div class="job-title-sticky__paycheck">150 000 Р</div>
+				</div>
+				<div class="col-md-4">
+					<div class="job-title-block__respond-block">
+						<div class="respond-block respond-block--title-sticky modal-window-button" data-dropdownId="#job__header-dropdown"><a class="btn btn-semi-rounded-blue btn--title-sticky modal-window-button" href="#window-modal">Откликнуться</a>
+							<div class="respond-block__download-btn"><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i></div><i class="arrow respond-block-arrow--down arrow--down"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+								</svg></i>
+						</div>
+						<div class="respond-block-dropdown respond-block-dropdown--title-sticky job-title-dropdown" id="job__header-dropdown">
+							<div class="respond-block-dropdown-item respond-block-dropdown-item-favor"><i class="icon-favorite respond-block-dropdown-icon icon-favorite--black-border"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i><span class="text-action">Добавить в избранное</span></div>
+							<div class="respond-block-dropdown-item"><i class="icon-printer respond-block-dropdown-icon"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M17 5H3C1.34 5 0 6.34 0 8V14H4V18H16V14H20V8C20 6.34 18.66 5 17 5ZM14 16H6V11H14V16ZM17 9C16.45 9 16 8.55 16 8C16 7.45 16.45 7 17 7C17.55 7 18 7.45 18 8C18 8.55 17.55 9 17 9ZM16 0H4V4H16V0Z" fill="black"></path>
+									</svg></i><span class="text-action">Распечатать</span></div>
+							<div class="respond-block-dropdown-item"><i class="icon-complaint respond-block-dropdown-icon"><svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9.4 2L9 0H0V17H2V10H7.6L8 12H15V2H9.4Z" fill="black"></path>
+									</svg></i><span class="text-action">Пожаловаться</span></div>
+							<div class="respond-block-dropdown-item"><i class="icon-download respond-block-dropdown-icon"><svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14 6H10V0H4V6H0L7 13L14 6ZM0 15V17H14V15H0Z" fill="black"></path>
+									</svg></i><span class="text-action">Сохранить в PDF</span></div>
+							<div class="respond-block-dropdown-item"><i class="icon-share respond-block-dropdown-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g opacity="0.64">
+											<path d="M18 16.08C17.24 16.08 16.56 16.38 16.04 16.85L8.91 12.7C8.96 12.47 9 12.24 9 12C9 11.76 8.96 11.53 8.91 11.3L15.96 7.19C16.5 7.69 17.21 8 18 8C19.66 8 21 6.66 21 5C21 3.34 19.66 2 18 2C16.34 2 15 3.34 15 5C15 5.24 15.04 5.47 15.09 5.7L8.04 9.81C7.5 9.31 6.79 9 6 9C4.34 9 3 10.34 3 12C3 13.66 4.34 15 6 15C6.79 15 7.5 14.69 8.04 14.19L15.16 18.35C15.11 18.56 15.08 18.78 15.08 19C15.08 20.61 16.39 21.92 18 21.92C19.61 21.92 20.92 20.61 20.92 19C20.92 17.39 19.61 16.08 18 16.08Z" fill="black"></path>
+										</g>
+									</svg></i><span class="text-action">Поделиться </span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-12">
+				<div class="job-title-block--sub">
+					<div class="job-title-block__row d-flex">
+						<ul class="vacancy-serp vacancy-serp--job">
+							<li class="vacancy-serp-item">Полная занятость</li>
+							<li class="vacancy-serp-item">Уровень эксперт</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum reprehenderit quasi hic, quo placeat. Magni a accusamus iste veniam dolores odit harum? Consequatur iusto quam dolores itaque vel cumque in. </p>
+			</div>
+		</div>
+		<pre>include ../../sections/_job__title-block.pug</pre>
+	</div>
+	<script src="../libs/jquery/jquery.min.js"></script>
+	<script src="../libs/jquery.nicescroll.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/input.js"></script>
+	<script src="../js/autocomplete.js"></script>
+	<script src="../js/title-block.js"></script>
+	<script src="../js/main-menu.js"></script>
+	<script src="../js/pagination.js"></script>
+	<script src="../js/filter-vacancies.js"></script>
+	<script src="../js/filter-vacancies-sectors.js"></script>
+	<script src="../js/vacance-description.js"></script>
+	<script src="../js/vacance-card.js"></script>
+	<script src="../js/middle-map.js"></script>
+	<script src="../js/header.js"></script>
+	<script src="../js/authorize-form.js"></script>
+	<script src="../js/dropdown.js"></script>
+	<script src="../js/company.js"></script>
+	<script src="../js/company-review.js"></script>
+	<script src="../js/modal-window.js"></script>
+	<script src="../js/company-modal.js"></script>
+	<script src="../js/section-footer-dropdown.js"></script>
+	<script src="../js/job__description-block.js"></script>
+	<script src="../js/city-selection.js"></script>
+	<script src="../js/job.js"></script>
+	<script src="../js/areas.js"></script>
+	<script src="../js/companies.js"></script>
+	<script src="../js/apply.js"></script>
+	<script src="../js/search-resume.js"></script>
+	<script src="../js/lightbox.js"></script>
+	<script src="../js/resume.js"></script>
+	<script src="../js/vacancies-tab-service.js"></script>
+	<script src="../js/aside-menu.js"></script>
+	<script src="../js/table.js"></script>
+	<script src="../js/preview-header-dropdown.js"></script>
+	<script src="../js/dropdown-select.js"></script>
+	<script src="../js/candidates.js"></script>
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

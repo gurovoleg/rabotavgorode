@@ -1,0 +1,2001 @@
+<!-- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.-->
+<!-- Миксин title block для Компаний/Отраслей/Городов-->
+<!--apply page выбранный файл-->
+<!-- Показать контакты со страницы Resume-Page-->
+<!-- rating-star-->
+<!-- rating-star-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=375,initial-scale=1, shrink-to-fit=no" />
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Resume</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="./libs/custom-grid/custom-grid-dynamic.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="./libs/custom-grid/custom-grid-static.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="./fonts/proximaNova.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="./css/main.css?timestamp=#{time}" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body class="index-page theme--employer">
+	<div class="bg-modal-window save-suggest-resume-modal" id="suggest-modal">
+		<div class="modal-window">
+			<div class="bg-modal-main">
+				<div class="save-suggest-resume-block search-resume-wrapper">
+					<div class="save-suggest-resume-title">Предложить вакансию резюме «Дизайнер мобильных приложений» </div>
+					<form class="save-suggest-resume-form" action="">
+						<div class="save-suggest-resume-form__title">Вакансия</div>
+						<div class="save-suggest-resume-form__group">
+							<div class="input-wrapper save-suggest-resume-input"><label class="input-label" for="input-simple"><input class="input-field" type="" id="input-simple" data-type="" placeholder="UI/UX дизайнер" /><span class="input-error"></span></label></div><i class="arrow arrow--down arrow--save-suggest-resume-input"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+								</svg></i>
+							<div class="dropdown-list  dropdown-simple-list--input dropdown-simple-list--hidden save-suggest-resume-form__dropdown dropdown-list__item--employer">
+								<div class="dropdown-list__item">UI/UX дизайнер</div>
+								<div class="dropdown-list__item">WebDev-разработчик</div>
+							</div>
+						</div><textarea class="suggest-resume-textarea" name="text" placeholder="Добрый день уважаемый, Имя Фамилия, Нам очень понравилось ваше резюме, мы оценили ваш опыт и профессиональные навыки. Пожалуйста ознакомьтесь с нашей вакансией. Будем рады видеть вас в нашей команде."></textarea><label class="check-box__label save-suggest-resume-checkbox"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--big custom-check-box--employer"></span><span class="custom-check-box__label undefined">Подписаться на похожие вакансии</span></label><a class="btn btn-semi-rounded-blue btn--bg-employer save-suggest-resume-btn-send" href="#!">Сохранить резюме</a>
+					</form>
+				</div>
+			</div><i class="icon-close modal-window-close" id="modal-window-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+				</svg></i>
+		</div>
+	</div>
+	<div class="bg-modal-window" id="contacts-modal">
+		<div class="modal-window">
+			<div class="bg-modal-main">
+				<div class="view-contacts">
+					<div class="view-contacts__logo"><img src="../img/avatar/ava_card.png" alt="icon" /></div>
+					<div class="view-contacts__name">Константин Константинопольский</div>
+					<div class="view-contacts__position">менеджер по продажам</div>
+					<div class="view-contacts__info-block">
+						<div class="view-contacts__info-icon"><img src="../img/ic-svg/phone.svg" alt="icon" /></div>
+						<div class="view-contacts__info-text"> <a href="tel:+7 987 123-45-67">+7 987 123-45-67</a></div>
+					</div>
+					<div class="view-contacts__info-block">
+						<div class="view-contacts__info-icon"><img src="../img/ic-svg/mail.svg" alt="icon" /></div>
+						<div class="view-contacts__info-text"> <a href="mailto:username@domain.com">username@domain.com</a></div>
+					</div>
+					<div class="view-contacts__info-block">
+						<div class="view-contacts__info-icon"><img src="../img/ic-svg/web.svg" alt="icon" /></div>
+						<div class="view-contacts__info-text"> <a href="mysitename.ru">mysitename.ru</a></div>
+					</div>
+					<div class="view-contacts__info-block">
+						<div class="view-contacts__info-icon"><img src="../img/ic-svg/telegram.svg" alt="icon" /></div>
+						<div class="view-contacts__info-text"> <a href="#!">Telegram</a></div>
+					</div>
+					<div class="view-contacts__info-block">
+						<div class="view-contacts__info-icon"><img src="../img/ic-svg/whatsapp.svg" alt="icon" /></div>
+						<div class="view-contacts__info-text"> <a href="#!">Whatsapp</a></div>
+					</div>
+				</div>
+			</div><i class="icon-close modal-window-close" id="modal-window-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+				</svg></i>
+		</div>
+	</div>
+	<div class="bg-modal-window save-suggest-resume-modal" id="save-modal">
+		<div class="modal-window">
+			<div class="bg-modal-main">
+				<div class="save-suggest-resume-block search-resume-wrapper">
+					<div class="save-suggest-resume-title">Сохранить резюме «Дизайнер мобильных приложений»</div>
+					<form class="save-suggest-resume-form" action="">
+						<div class="save-suggest-resume-form__group">
+							<div class="input-wrapper save-suggest-resume-input"><label class="input-label" for="input-simple"><input class="input-field" type="" id="input-simple" data-type="" placeholder="UI/UX дизайнер" /><span class="input-error"></span></label></div><i class="arrow arrow--down arrow--save-suggest-resume-input"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+								</svg></i>
+							<div class="dropdown-list  dropdown-simple-list--input dropdown-simple-list--hidden save-suggest-resume-form__dropdown dropdown-list__item--employer">
+								<div class="dropdown-list__item">UI/UX дизайнер</div>
+								<div class="dropdown-list__item">WebDev-разработчик</div>
+								<div class="dropdown-list__item">UI/UX дизайнер</div>
+								<div class="dropdown-list__item">WebDev-разработчик</div>
+							</div>
+						</div><textarea class="save-suggest-resume-textarea" name="text" placeholder="Расскажите чем вас привлекла эта вакансия и почему вы хорошо подойдете на эту роль"></textarea><label class="check-box__label save-suggest-resume-checkbox"><input class="check-box" type="checkbox" /><span class="custom-check-box custom-check-box--big custom-check-box--employer"></span><span class="custom-check-box__label undefined">Подписаться на похожие вакансии</span></label><a class="btn btn-semi-rounded-blue btn--bg-employer save-suggest-resume-btn-send" href="#!">Сохранить резюме</a>
+					</form>
+					<div class="save-suggest-resume-unsign">
+						<div class="save-suggest-resume-unsign__text">Создайте вакансию для которой подходит это резюме и соискатели сами найдут вас. Соискатели чаще соглашаются на собеседование заранее ознакомившись с вакансией.</div><a class="btn btn-semi-rounded-blue btn-semi-rounded-blue--bg modal-window-button save-suggest-resume-btn-create" href="#suggest-modal">Создать вакансию</a><span class="save-suggest-resume-unsign__subtext">или</span>
+						<div class="save-suggest-resume-unsign__favourite"><a class="save-suggest-resume-unsign__link" href="#"><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i><span class="save-suggest-resume-unsign__text-caption">Добавить в избранное</span></a></div>
+					</div>
+				</div>
+			</div><i class="icon-close modal-window-close" id="modal-window-close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+				</svg></i>
+		</div>
+	</div>
+	<div class="bg-lightbox">
+		<div class="lightbox__close-button"><i class="icon-close icon-close--absolute"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="ic-close ic-close--undefined" d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"></path>
+				</svg></i></div>
+		<div class="lightbox-container">
+			<div class="lightbox-block"><a class="lightbox-block__image" href="#!">
+					<picture>
+						<source srcset="../../img/photo/portfolio/mobile/sample1.jpg" media="(max-width: 991px)" />
+						<source srcset="../../img/photo/portfolio/sample1.jpg" media="(min-width: 992px)" /><img src="../../img/photo/portfolio/sample1.jpg" /></picture>
+				</a>
+				<div class="lightbox-block__label">Название фото/документа</div>
+			</div>
+			<div class="lightbox-block"><a class="lightbox-block__image" href="#!">
+					<picture>
+						<source srcset="../../img/photo/portfolio/mobile/sample1.jpg" media="(max-width: 991px)" />
+						<source srcset="../../img/photo/portfolio/sample1.jpg" media="(min-width: 992px)" /><img src="../../img/photo/portfolio/sample1.jpg" /></picture>
+				</a>
+				<div class="lightbox-block__label">Название фото/документа</div>
+			</div>
+		</div>
+		<div class="lightbox__navigation"><i class="arrow arrow--left"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+				</svg></i><i class="arrow arrow--right"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+				</svg></i></div>
+	</div>
+	<div class="bg-header bg-header--basic  bg-header-- bg-header--">
+		<div class="header d-flex header--content"><i class="logo-icon"><svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M8.60748 15.5276C8.98146 15.5276 9.32419 15.7361 9.49587 16.0684L13.315 23.459C13.4867 23.7913 13.8294 24 14.2034 24H19.8023C19.9115 24 20 23.9114 20 23.8022C20 23.7834 19.9973 23.7646 19.992 23.7466C19.9882 23.7336 19.983 23.7209 19.9766 23.709L15.3232 15.0149C15.0511 14.5066 15.2683 13.8794 15.7646 13.5859C16.7804 12.9849 17.559 12.2585 18.1005 11.4065C18.799 10.3076 19.1482 8.9231 19.1482 7.25269C19.1482 4.94507 18.3191 3.15942 16.661 1.89551C15.0028 0.631836 12.703 0 9.7615 0H1C0.447716 0 0 0.447754 0 1V23C0 23.5522 0.447716 24 1 24H4.97956C5.53185 24 5.97955 23.5522 5.97955 23V16.5276C5.97955 15.9751 6.42727 15.5276 6.97955 15.5276H8.60748ZM9.67376 11H6V4H9.67376C10.766 4 11.5934 4.31201 12.156 4.93628C12.7187 5.5603 13 6.4209 13 7.51758C13 8.61426 12.7214 9.46875 12.1643 10.0813C11.6072 10.6938 10.777 11 9.67376 11Z"></path>
+				</svg></i><i class="arrow arrow--down"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+				</svg></i>
+			<div class="header__user-panel d-flex"><i class="icon-favorite icon-favorite--bg-header--basic"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+					</svg></i><i class="notify"><i class="icon-notify"><svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M8.5 20C9.6 20 10.5 19.1 10.5 18H6.5C6.5 19.1 7.4 20 8.5 20ZM15 14V8.5C15 5.43 12.87 2.86 10 2.18V1.5C10 0.67 9.33 0 8.5 0C7.67 0 7 0.67 7 1.5V2.18C4.13 2.86 2 5.43 2 8.5V14L0 16V17H17V16L15 14Z"></path>
+						</svg></i>
+					<div class="notify-marker"></div>
+				</i>
+				<div class="round-icon round-icon--user">AS</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-logo-menu-dropdown bg-logo-menu-dropdown--small-header">
+		<div class="main-menu">
+			<div class="main-menu-block">
+				<ul class="main-menu__title">Соискателю<li class="main-menu__item"><a class="main-menu__link" href="">Создать резюме</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Поиск работы</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Каталог компаний</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Продвижение резюме</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block">
+				<ul class="main-menu__title">Работодателю<li class="main-menu__item"><a class="main-menu__link" href="">Разместить вакансию</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Поиск сотрудника</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Тарифы</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block">
+				<ul class="main-menu__title">Сервисы<li class="main-menu__item"><a class="main-menu__link" href="">Производственный календарь</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Должностные инструкции</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Статистика ЗП</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block main-menu-block__desktop">
+				<ul class="main-menu__title">Rabotavgorode<li class="main-menu__item"><a class="main-menu__link" href="">О нас</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Наши вакансии</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Блог</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Реклама на сайте</a></li>
+				</ul>
+				<ul class="main-menu__title main-menu__second">
+					<li class="main-menu__item"><a class="main-menu__link" href="">API</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Правила работы с сайтом</a></li>
+					<li class="main-menu__item"><a class="main-menu__link" href="">Контакты</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block">
+				<ul class="main-menu__title-support">
+					<li class="main-menu__item"><a class="main-menu__link" href="">Служба поддержки</a></li>
+				</ul>
+				<div class="main-menu__devide"></div>
+			</div>
+			<div class="main-menu-block main-menu-block__social-icon">
+				<div class="main-menu__social-icon">
+					<div class="main-menu__social-icon-item"><i class="vk-grey"><svg class="social-icon-item" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item" fill-rule="evenodd" clip-rule="evenodd" d="M25.4034 1.0157C25.5841 0.430218 25.4034 0 24.5432 0H21.6988C20.9756 0 20.6421 0.371645 20.4613 0.781459C20.4613 0.781459 19.0148 4.2065 16.9657 6.43129C16.3027 7.0753 16.0014 7.2802 15.6397 7.2802C15.459 7.2802 15.1877 7.0753 15.1877 6.48986V1.0157C15.1877 0.313121 14.9873 0 14.3846 0H9.91481C9.46285 0 9.19103 0.326083 9.19103 0.635125C9.19103 1.30116 10.2155 1.45475 10.3212 3.3283V7.39735C10.3212 8.28947 10.1553 8.45122 9.79368 8.45122C8.82941 8.45122 6.48383 5.01088 5.09268 1.07423C4.82004 0.309077 4.5466 0 3.81965 0H0.975236C0.162548 0 0 0.371645 0 0.781459C0 1.51333 0.96432 5.14327 4.49003 9.94414C6.84048 13.2228 10.1521 15 13.1656 15C14.9736 15 15.1973 14.6053 15.1973 13.9253V11.4474C15.1973 10.6579 15.3686 10.5003 15.9411 10.5003C16.363 10.5003 17.0862 10.7052 18.7738 12.286C20.7024 14.1595 21.0203 15 22.1051 15H24.9495C25.7622 15 26.1686 14.6053 25.9342 13.8263C25.6777 13.0499 24.7569 11.9234 23.535 10.5881C22.872 9.82704 21.8776 9.00742 21.5763 8.5975C21.1544 8.07064 21.2749 7.8364 21.5763 7.36806C21.5763 7.36806 25.0418 2.62572 25.4034 1.0157Z" fill="#999999"></path>
+							</svg></i></div>
+					<div class="main-menu__social-icon-item"><i class="fb-grey"><svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item"="" d="M10 7.00006H6.65083V5.00006C6.65083 3.96806 6.73064 3.31806 8.13587 3.31806H9.91069V0.138063C9.04703 0.0440625 8.17862 -0.0019375 7.30926 6.25e-05C4.73159 6.25e-05 2.85036 1.65706 2.85036 4.69906V7.00006H0V11.0001L2.85036 10.9991V20.0001H6.65083V10.9971L9.5639 10.9961L10 7.00006Z" fill="#999999"></path>
+							</svg></i></div>
+					<div class="main-menu__social-icon-item"><i class="instgr"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item" d="M5 0C2.239 0 0 2.239 0 5V13C0 15.761 2.239 18 5 18H13C15.761 18 18 15.761 18 13V5C18 2.239 15.761 0 13 0H5ZM15 2C15.552 2 16 2.448 16 3C16 3.552 15.552 4 15 4C14.448 4 14 3.552 14 3C14 2.448 14.448 2 15 2ZM9 4C11.761 4 14 6.239 14 9C14 11.761 11.761 14 9 14C6.239 14 4 11.761 4 9C4 6.239 6.239 4 9 4ZM9 6C8.20435 6 7.44129 6.31607 6.87868 6.87868C6.31607 7.44129 6 8.20435 6 9C6 9.79565 6.31607 10.5587 6.87868 11.1213C7.44129 11.6839 8.20435 12 9 12C9.79565 12 10.5587 11.6839 11.1213 11.1213C11.6839 10.5587 12 9.79565 12 9C12 8.20435 11.6839 7.44129 11.1213 6.87868C10.5587 6.31607 9.79565 6 9 6Z" fill="#999999"></path>
+							</svg></i></div>
+					<div class="main-menu__social-icon-item"><i class="tweet"><svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path class="social-icon-item" d="M24 2.30078C23.1016 2.69922 22.1992 3 21.1992 3.10156C22.1992 2.5 23 1.5 23.3984 0.398438C22.3984 1 21.3984 1.39844 20.3008 1.60156C19.3008 0.601563 18 0 16.6016 0C13.8984 0 11.6992 2.19922 11.6992 4.89844C11.6992 5.30078 11.6992 5.69922 11.8008 6C7.69922 5.80078 4.10156 3.89844 1.69922 0.898438C1.19922 1.60156 1 2.5 1 3.39844C1 5.10156 1.89844 6.60156 3.19922 7.5C2.39844 7.39844 1.60156 7.19922 1 6.89844C1 6.89844 1 6.89844 1 7C1 9.39844 2.69922 11.3984 4.89844 11.8008C4.5 11.8984 4.10156 12 3.60156 12C3.30078 12 3 12 2.69922 11.8984C3.30078 13.8984 5.10156 15.3008 7.30078 15.3008C5.60156 16.6016 3.5 17.3984 1.19922 17.3984C0.800781 17.3984 0.398438 17.3984 0 17.3008C2.19922 18.6992 4.80078 19.5 7.5 19.5C16.6016 19.5 21.5 12 21.5 5.5C21.5 5.30078 21.5 5.10156 21.5 4.89844C22.5 4.19922 23.3008 3.30078 24 2.30078Z" fill="#999999"></path>
+							</svg></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="resume-header-block" style="background-image: url(../img/bg/bg-resume-header-vip.png);">
+		<div class="resume-header-wrapper-bg">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 offset-sm-1 col-sm-10 offset-md-0 col-md-12">
+						<div class="resume-header__breadcrumb-split">
+							<div class="resume-header__breadcrumb">
+								<ol class="breadcrumb-list" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-item-link" itemprop="item" href="#"><span itemprop="name">Главная</span></a>
+										<meta itemprop="position" content="1" />
+									</li>
+									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-item-link" itemprop="item" href="#"><span itemprop="name">Работа</span></a>
+										<meta itemprop="position" content="2" />
+									</li>
+									<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-item-link" itemprop="item" href="#"><span itemprop="name">Вакансия</span></a>
+										<meta itemprop="position" content="3" />
+									</li>
+								</ol>
+							</div>
+							<div class="resume-header__split-text-block">
+								<div class="split-text  split-text--resume-title-block">
+									<div class="split-text__item">123 Просмотра (+45)</div>
+									<div class="split-text__item">21 августа</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-2">
+						<div class="resume-header__user-badge">
+							<div class="resume-header__user-avatar" style="background-image: url(../img/avatar/ava_card.png);"></div>
+						</div>
+					</div>
+					<div class="col-12 offset-sm-1 col-sm-10 offset-md-0 col-md-10">
+						<div class="resume-header__title-block">
+							<div class="resume-header__title-block-info">
+								<div class="resume-header__title">Менеджер по продажам</div>
+								<div class="resume-header__pay">150 000 Р</div>
+							</div>
+							<div class="resume-header__button">
+								<div class="respond-block respond-block--resume modal-window-button" data-dropdownId="#resume__header-dropdown--vip"><a class="btn btn-semi-rounded-blue btn--resume modal-window-button" href="#save-modal">Сохранить</a>
+									<div class="respond-block__download-btn"><i class="icon-download"><svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14 6H10V0H4V6H0L7 13L14 6ZM0 15V17H14V15H0Z" fill="black"></path>
+											</svg></i></div><i class="arrow respond-block-arrow--down arrow--down"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+										</svg></i>
+								</div>
+								<div class="respond-block-dropdown respond-block-dropdown--resume" id="resume__header-dropdown--vip">
+									<div class="respond-block-dropdown-item respond-block-dropdown-item-favor"><i class="icon-favorite respond-block-dropdown-icon icon-favorite--black-border"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+											</svg></i><span class="text-action">Добавить в избранное</span></div>
+									<div class="respond-block-dropdown-item"><i class="icon-printer respond-block-dropdown-icon"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17 5H3C1.34 5 0 6.34 0 8V14H4V18H16V14H20V8C20 6.34 18.66 5 17 5ZM14 16H6V11H14V16ZM17 9C16.45 9 16 8.55 16 8C16 7.45 16.45 7 17 7C17.55 7 18 7.45 18 8C18 8.55 17.55 9 17 9ZM16 0H4V4H16V0Z" fill="black"></path>
+											</svg></i><span class="text-action">Распечатать</span></div>
+									<div class="respond-block-dropdown-item"><i class="icon-complaint respond-block-dropdown-icon"><svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M9.4 2L9 0H0V17H2V10H7.6L8 12H15V2H9.4Z" fill="black"></path>
+											</svg></i><span class="text-action">Пожаловаться</span></div>
+									<div class="respond-block-dropdown-item respond-block-dropdown-item-favor"><i class="icon-download respond-block-dropdown-icon"><svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M14 6H10V0H4V6H0L7 13L14 6ZM0 15V17H14V15H0Z" fill="black"></path>
+											</svg></i><span class="text-action">Скачать Word.doc</span></div>
+									<div class="respond-block-dropdown-item"><i class="icon-label respond-block-dropdown-icon"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M21.41 11.58L12.41 2.58C12.05 2.22 11.55 2 11 2H4C2.9 2 2 2.9 2 4V11C2 11.55 2.22 12.05 2.59 12.42L11.59 21.42C11.95 21.78 12.45 22 13 22C13.55 22 14.05 21.78 14.41 21.41L21.41 14.41C21.78 14.05 22 13.55 22 13C22 12.45 21.77 11.94 21.41 11.58ZM5.5 7C4.67 7 4 6.33 4 5.5C4 4.67 4.67 4 5.5 4C6.33 4 7 4.67 7 5.5C7 6.33 6.33 7 5.5 7Z" fill="#333333"></path>
+											</svg></i><span class="text-action">Предложить вакансию</span></div>
+									<div class="respond-block-dropdown-item"><i class="icon-label respond-block-dropdown-icon"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM15 11C15 12.11 14.1 13 13 13H11V15H15V17H9V13C9 11.89 9.9 11 11 11H13V9H9V7H13C14.1 7 15 7.89 15 9V11Z" fill="#333333"></path>
+											</svg></i><span class="text-action">Найти похожие резюме</span></div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-header__user-content">
+							<div class="resume-header__user-block">
+								<div class="resume-header__user-info">Константин, 33 года</div><a class="vip-badge" href="#" style="background-color:#FDCE14; color:#000;">Pro</a>
+								<div class="split-text  split-text--">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+								<div class="resume-header__location">
+									<div class="color-marker color-marker--blue"></div>
+									<div class="resume-header__address">Купчино, г. Санкт-Петербург</div>
+								</div><a class="btn btn-link modal-window-button resume-header__show-contacts" href="#contacts-modal">Показать контакты</a>
+								<div class="resume-header__show-contacts-unsign"><a class="btn btn-link resume-header__show-contacts control-disabled" href="#">Показать контакты</a><span class="resume-header__unsign-text"><a class="resume-header__link" href="auth-autorization.html">Войдите на сайт чтобы посмотреть контакты</a></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="offset-sm-1 col-sm-10 offset-md-0 col-md-12 col--border-top">
+				<div class="nav-menu nav-menu--resume-fix" id="resume-nav-menu"><a class="nav-menu-item nav-menu-item-active" href="#resume-about" data-pill="undefined"><span class="nav-menu-item__name">О себе</span></a><a class="nav-menu-item" href="#resume-expirience" data-pill="undefined"><span class="nav-menu-item__name">Опыт</span></a><a class="nav-menu-item" href="#resume-education" data-pill="undefined"><span class="nav-menu-item__name">Образование</span></a><a class="nav-menu-item" href="#resume-other" data-pill="undefined"><span class="nav-menu-item__name">Другое</span></a></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="offset-sm-1 col-sm-10 d-md-none">
+				<div class="page-section" id="resume-about">
+					<div class="resume-about">
+						<p>Веду переговоры и заключаю договоры с заказчиком, проводил согласования с городскими инстанциями, обеспечивал технологическую подготовку Заказа к передаче на производство, проектировал сложные рекламоносители, выполнял чертежи и схемы для производства и монтажников, вел отчетность.</p>
+					</div>
+				</div>
+				<div class="page-section" id="resume-expirience">
+					<div class="page-section-top d-flex">
+						<div class="section-title">Опыт работы</div>
+						<div class="work-total-time text-body-grey">6 лет 11 месяцев</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div><a class="btn btn-link" href="#">Смотреть все</a>
+				</div>
+				<div class="page-section">
+					<div class="resume-skills__title">Навыки и знания</div>
+					<div class="resume-skills-content">
+						<div class="resume-skills-content__item">
+							<div class="resume-skills-content__name">UI дизайн</div>
+							<div class="resume-skills-content__rating">
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-skills-content__item">
+							<div class="resume-skills-content__name">UI дизайн</div>
+							<div class="resume-skills-content__rating">
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-skills-content__item">
+							<div class="resume-skills-content__name">Прототипирование</div>
+							<div class="resume-skills-content__rating">
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-skills-content__item">
+							<div class="resume-skills-content__name">Фронт-енд разработка</div>
+							<div class="resume-skills-content__rating">
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+						</div><a class="btn btn-link resume-skills__btn-show" href="#!">Смотреть все</a>
+						<div class="resume-skills-content__badge">
+							<div class="resume-skills-content__badge-skills"><a class="badge badge--big" href="#">JavaScript</a><a class="badge badge--big" href="#">HTML 5sd</a><a class="badge badge--big" href="#">CSS 12345</a><a class="badge badge--big" href="#">JavaScript</a><a class="badge badge--big" href="#">HTML 5sd</a><a class="badge badge--big" href="#">CSS 12345</a></div><a class="btn btn-link resume-skills__btn-hide" href="#!">Свернуть</a>
+						</div>
+					</div>
+				</div>
+				<div class="page-section" id="resume-education">
+					<div class="section-title">Образование</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-section" id="resume-other">
+					<div class="section-title">Другое</div>
+					<div class="other-item">
+						<div class="other-item__title">Иностранные языки</div>
+						<div class="other-item__subtitle">Английский</div>
+						<div class="other-item__description text-body-grey">Общаюсь на профессиональные темы</div>
+						<div class="other-item__subtitle">Немецкий</div>
+						<div class="other-item__description text-body-grey">Базовые знания</div>
+					</div>
+					<div class="other-item">
+						<div class="other-item__title">Водительские права</div>
+						<div class="other-item__subtitle">Права категории &#149; Есть автомобиль</div>
+					</div>
+					<div class="other-item">
+						<div class="other-item__title">Командировки </div>
+						<div class="other-item__subtitle">Готов к командировкам &#149; Готов к командировкам</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="d-md-none">
+		<div class="page-section portfolio-wrapper">
+			<div class="section-title">Портфолио</div>
+			<div class="portfolio">
+				<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+					<div class="portfolio-item__title text-body">Название проекта</div>
+				</div>
+				<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test3.jpg)"></a>
+					<div class="portfolio-item__title text-body">Название проекта</div>
+				</div>
+				<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+					<div class="portfolio-item__title text-body">Название проекта</div>
+				</div>
+				<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+					<div class="portfolio-item__title text-body">Название проекта</div>
+				</div>
+				<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test3.jpg)"></a>
+					<div class="portfolio-item__title text-body">Название проекта</div>
+				</div>
+				<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+					<div class="portfolio-item__title text-body">Название проекта</div>
+				</div>
+				<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+					<div class="portfolio-item__title text-body">Название проекта</div>
+				</div>
+				<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test3.jpg)"></a>
+					<div class="portfolio-item__title text-body">Название проекта</div>
+				</div>
+				<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+					<div class="portfolio-item__title text-body">Название проекта</div>
+				</div>
+			</div><a class="btn btn-link text-action" href="#">Смотреть все</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="offset-sm-1 col-sm-10 d-md-none">
+				<div class="show-contacts page-section">
+					<div class="show-contacts--sign"><a class="btn btn-semi-rounded-blue btn-semi-rounded-blue--bg modal-window-button" href="#contacts-modal">Показать контакты</a>
+						<div class="show-contacts__suggest-vacancy"><i class="icon-label show-contacts__label"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M21.41 11.58L12.41 2.58C12.05 2.22 11.55 2 11 2H4C2.9 2 2 2.9 2 4V11C2 11.55 2.22 12.05 2.59 12.42L11.59 21.42C11.95 21.78 12.45 22 13 22C13.55 22 14.05 21.78 14.41 21.41L21.41 14.41C21.78 14.05 22 13.55 22 13C22 12.45 21.77 11.94 21.41 11.58ZM5.5 7C4.67 7 4 6.33 4 5.5C4 4.67 4.67 4 5.5 4C6.33 4 7 4.67 7 5.5C7 6.33 6.33 7 5.5 7Z" fill="#333333"></path>
+								</svg></i><a class="show-contacts__text modal-window-button" href="#suggest-modal">Предложить вакансию</a></div>
+					</div>
+				</div>
+				<div class="show-contacts page-section">
+					<div class="show-contacts--unsign"><a class="btn btn-semi-rounded-blue control-disabled" href="#">Показать контакты</a><a class="btn show-contacts__text" href="auth-autorization.html">Войдите на сайт чтобы посмотреть контакты</a></div>
+				</div>
+				<div class="page-section">
+					<div class="section-title">Похожие резюме</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-section">
+					<div class="resume__tags-block">
+						<div class="badges-block">
+							<div class="badges-block__title heading-2">Резюме по общему признаку</div>
+							<div class="badges-block-items"><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a></div><a class="btn btn-link btn--badges-skill" href="#">Смотреть все</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="d-none d-md-block col-md-8 col--padding">
+				<div class="page-section" id="resume-expirience">
+					<div class="page-section-top d-flex">
+						<div class="section-title">Опыт работы</div>
+						<div class="work-total-time text-body-grey">6 лет 11 месяцев</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div>
+					<div class="position-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="position-card__title">Должность</div>
+								<div class="split-text  split-text--sector">
+									<div class="split-text__item">Компания</div>
+									<div class="split-text__item">Отрасль</div>
+									<div class="split-text__item">Город</div>
+								</div>
+								<div class="split-text  split-text--period">
+									<div class="split-text__item">Октябрь 2012 — Январь 2014</div>
+									<div class="split-text__item">1 год 3 месяца</div>
+								</div>
+								<div class="position-card__description paragrafe">Описание обязанностей общаться с пользователями продукта, изучать их потребности и находить возможности для решения их практических задач.</div>
+								<div class="position-card__site-link text-action-grey">companydomain.com</div>
+							</div>
+						</div>
+					</div><a class="btn btn-link" href="#">Смотреть все</a>
+				</div>
+				<div class="page-section" id="resume-education">
+					<div class="section-title">Образование</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+					<div class="education-card">
+						<div class="row row--margin">
+							<div class="col-md-3">
+								<div class="education-card__period">2005-2009</div>
+							</div>
+							<div class="col-md-9">
+								<div class="split-text  split-text--education-title">
+									<div class="split-text__item">Специальность</div>
+									<div class="split-text__item">Бакалавр</div>
+								</div>
+								<div class="split-text  split-text--education-type">
+									<div class="split-text__item">Учебное заведение</div>
+									<div class="split-text__item">Высшее</div>
+								</div>
+								<div class="education-card__period">2005-2009</div>
+								<div class="education-card__description paragrafe">Изучаемые дисциплины и прочее, их потребности и находить возможности для решения их практических задач.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-section portfolio-wrapper">
+					<div class="section-title">Портфолио</div>
+					<div class="portfolio">
+						<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+							<div class="portfolio-item__title text-body">Название проекта</div>
+						</div>
+						<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test3.jpg)"></a>
+							<div class="portfolio-item__title text-body">Название проекта</div>
+						</div>
+						<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+							<div class="portfolio-item__title text-body">Название проекта</div>
+						</div>
+						<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+							<div class="portfolio-item__title text-body">Название проекта</div>
+						</div>
+						<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test3.jpg)"></a>
+							<div class="portfolio-item__title text-body">Название проекта</div>
+						</div>
+						<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+							<div class="portfolio-item__title text-body">Название проекта</div>
+						</div>
+						<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+							<div class="portfolio-item__title text-body">Название проекта</div>
+						</div>
+						<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test3.jpg)"></a>
+							<div class="portfolio-item__title text-body">Название проекта</div>
+						</div>
+						<div class="portfolio-group"><a class="portfolio-item" href="#" style="background-image: url(../img/portfolio/test1.jpg)"></a>
+							<div class="portfolio-item__title text-body">Название проекта</div>
+						</div>
+					</div><a class="btn btn-link text-action" href="#">Смотреть все</a>
+				</div>
+				<div class="show-contacts page-section">
+					<div class="show-contacts--unsign"><a class="btn btn-semi-rounded-blue control-disabled" href="#">Показать контакты</a><a class="btn show-contacts__text" href="auth-autorization.html">Войдите на сайт чтобы посмотреть контакты</a></div>
+				</div>
+				<div class="show-contacts page-section">
+					<div class="show-contacts--sign"><a class="btn btn-semi-rounded-blue btn-semi-rounded-blue--bg modal-window-button" href="#contacts-modal">Показать контакты</a>
+						<div class="show-contacts__suggest-vacancy"><i class="icon-label show-contacts__label"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M21.41 11.58L12.41 2.58C12.05 2.22 11.55 2 11 2H4C2.9 2 2 2.9 2 4V11C2 11.55 2.22 12.05 2.59 12.42L11.59 21.42C11.95 21.78 12.45 22 13 22C13.55 22 14.05 21.78 14.41 21.41L21.41 14.41C21.78 14.05 22 13.55 22 13C22 12.45 21.77 11.94 21.41 11.58ZM5.5 7C4.67 7 4 6.33 4 5.5C4 4.67 4.67 4 5.5 4C6.33 4 7 4.67 7 5.5C7 6.33 6.33 7 5.5 7Z" fill="#333333"></path>
+								</svg></i><a class="show-contacts__text modal-window-button" href="#suggest-modal">Предложить вакансию</a></div>
+					</div>
+				</div>
+				<div class="page-section">
+					<div class="section-title">Похожие резюме</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="resume-card  resume-card--list">
+						<div class="resume-card-header  resume-card-header--list d-flex">
+							<div class="resume-card-header__left  resume-card-header__left--list"><a class=" resume-card__title--list resume-card__title" href="#">Менеджер по продажам недвижимости</a><span class="resume-card__salary"> 150 000 Р</span></div>
+							<div class="resume-card-header__right">
+								<div class="resume-card__published">2д</div><i class="icon-favorite"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+									</svg></i>
+							</div>
+						</div>
+						<div class="resume-card-body  resume-card-body--list d-flex">
+							<div class="resume-card-body-left">
+								<div class="resume-card-body__col d-flex">
+									<div class="resume-card-body__row d-flex">
+										<div class="resume-card__aspirant-name text-body">Константин,</div>
+										<div class="resume-card__aspirant-age text-body">33 года</div><a class="vip-badge  vip-badge--yellow" href="#">Pro</a>
+									</div>
+									<div class="split-text  split-text--resume-card split-text--mobile">
+										<div class="split-text__item">7 лет опыта</div>
+										<div class="split-text__item">Эксперт</div>
+										<div class="split-text__item">Неполное высшее</div>
+									</div>
+									<div class="resume-card__aspirant-address">
+										<div class="color-marker color-marker--blueMarker"></div>
+										<div class="resume-card__aspirant-address-metro">Купчино,</div>
+										<div class="resume-card__aspirant-address-city">г. Санкт-Петербург</div>
+									</div>
+								</div>
+								<div class="split-text  split-text--resume-card split-text--desktop">
+									<div class="split-text__item">7 лет опыта</div>
+									<div class="split-text__item">Эксперт</div>
+									<div class="split-text__item">Неполное высшее</div>
+								</div>
+							</div>
+							<div class="resume-card-body-right">
+								<div class="round-icon round-icon--user icon-user--resume-card">AS</div>
+							</div>
+						</div>
+						<div class="resume-card__job">
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Региональный менеджер</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Beб Инвест</div>
+									<div class="split-text__item">3 года 3 месяца</div>
+								</div>
+							</div>
+							<div class="resume-card__job-item d-flex">
+								<div class="resume-card__job-positions">Руководитель отдела продаж недвижимости</div>
+								<div class="split-text  split-text--job-info">
+									<div class="split-text__item">Лен Строй</div>
+									<div class="split-text__item">3 года 9 месяцев</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-card__badges">
+							<div class="badge-group  badge-group--big">
+								<div class="badge-group-item  badge badge--big"><a href="#">Премиум сегмент</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Переговоры</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Проведение корпоративов</a></div>
+								<div class="badge-group-item  badge badge--big"><a href="#">Открываю пиво глазом</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-section">
+					<div class="resume__tags-block">
+						<div class="badges-block">
+							<div class="badges-block__title heading-2">Резюме по общему признаку</div>
+							<div class="badges-block-items"><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a><a class="badge  badge--skill" href="#">Длинныйтэг</a></div><a class="btn btn-link btn--badges-skill" href="#">Смотреть все</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="d-none d-md-block col-md-4">
+				<div class="page-section" id="resume-about">
+					<div class="resume-about">
+						<p>Веду переговоры и заключаю договоры с заказчиком, проводил согласования с городскими инстанциями, обеспечивал технологическую подготовку Заказа к передаче на производство, проектировал сложные рекламоносители, выполнял чертежи и схемы для производства и монтажников, вел отчетность.</p>
+					</div>
+				</div>
+				<div class="page-section">
+					<div class="resume-skills__title">Навыки и знания</div>
+					<div class="resume-skills-content">
+						<div class="resume-skills-content__item">
+							<div class="resume-skills-content__name">UI дизайн</div>
+							<div class="resume-skills-content__rating">
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-skills-content__item">
+							<div class="resume-skills-content__name">UI дизайн</div>
+							<div class="resume-skills-content__rating">
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-skills-content__item">
+							<div class="resume-skills-content__name">Прототипирование</div>
+							<div class="resume-skills-content__rating">
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="resume-skills-content__item">
+							<div class="resume-skills-content__name">Фронт-енд разработка</div>
+							<div class="resume-skills-content__rating">
+								<div class="rating-stars" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+									<div class="rating-stars__items-block">
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#2389A9"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+										<div class="rating-stars__item"><i class="rating-star"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" fill="#CBCBCB"></path>
+													<path d="M18.18 21L12 17.27V2L14.81 8.63L22 9.24L16.54 13.97L18.18 21Z" fill="undefined"></path>
+												</svg></i></div>
+									</div>
+								</div>
+							</div>
+						</div><a class="btn btn-link resume-skills__btn-show" href="#!">Смотреть все</a>
+						<div class="resume-skills-content__badge">
+							<div class="resume-skills-content__badge-skills"><a class="badge badge--big" href="#">JavaScript</a><a class="badge badge--big" href="#">HTML 5sd</a><a class="badge badge--big" href="#">CSS 12345</a><a class="badge badge--big" href="#">JavaScript</a><a class="badge badge--big" href="#">HTML 5sd</a><a class="badge badge--big" href="#">CSS 12345</a></div><a class="btn btn-link resume-skills__btn-hide" href="#!">Свернуть</a>
+						</div>
+					</div>
+				</div>
+				<div class="page-section" id="resume-other">
+					<div class="section-title">Другое</div>
+					<div class="other-item">
+						<div class="other-item__title">Иностранные языки</div>
+						<div class="other-item__subtitle">Английский</div>
+						<div class="other-item__description text-body-grey">Общаюсь на профессиональные темы</div>
+						<div class="other-item__subtitle">Немецкий</div>
+						<div class="other-item__description text-body-grey">Базовые знания</div>
+					</div>
+					<div class="other-item">
+						<div class="other-item__title">Водительские права</div>
+						<div class="other-item__subtitle">Права категории &#149; Есть автомобиль</div>
+					</div>
+					<div class="other-item">
+						<div class="other-item__title">Командировки </div>
+						<div class="other-item__subtitle">Готов к командировкам &#149; Готов к командировкам</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="resume__footer">
+		<div class="container">
+			<div class="row">
+				<div class="offset-sm-1 col-sm-10">
+					<div class="respond-block-wrapper">
+						<div class="respond-block respond-block--resume respond-block__btn" data-dropdownId="#resume__footer-dropdown"><a class="btn btn-semi-rounded-blue btn--resume respond-block__btn" href="#!">Сохранить</a>
+							<div class="respond-block__download-btn"><i class="icon-download"><svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M14 6H10V0H4V6H0L7 13L14 6ZM0 15V17H14V15H0Z" fill="black"></path>
+									</svg></i></div><i class="arrow respond-block-arrow--down arrow--down"><svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.59 7L12 5.66802L6 -2.62268e-07L-2.47757e-07 5.66802L1.41 7L6 2.67341L10.59 7Z"></path>
+								</svg></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="respond-block-dropdown respond-block-dropdown--footer" id="resume__footer-dropdown">
+			<div class="respond-block-dropdown-item respond-block-dropdown-item-favor"><i class="icon-favorite respond-block-dropdown-icon icon-favorite--black-border"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M1.01 2.00062V2C1.01 1.44575 1.4588 1 2 1H12C12.5477 1 13 1.45228 13 2V16.4835L7.39392 14.0809L7 13.912L6.60608 14.0809L1.00095 16.4831L1.01 2.00062Z"></path>
+					</svg></i><span class="text-action">Добавить в избранное</span></div>
+			<div class="respond-block-dropdown-item"><i class="icon-printer respond-block-dropdown-icon"><svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M17 5H3C1.34 5 0 6.34 0 8V14H4V18H16V14H20V8C20 6.34 18.66 5 17 5ZM14 16H6V11H14V16ZM17 9C16.45 9 16 8.55 16 8C16 7.45 16.45 7 17 7C17.55 7 18 7.45 18 8C18 8.55 17.55 9 17 9ZM16 0H4V4H16V0Z" fill="black"></path>
+					</svg></i><span class="text-action">Распечатать</span></div>
+			<div class="respond-block-dropdown-item"><i class="icon-complaint respond-block-dropdown-icon"><svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9.4 2L9 0H0V17H2V10H7.6L8 12H15V2H9.4Z" fill="black"></path>
+					</svg></i><span class="text-action">Пожаловаться</span></div>
+			<div class="respond-block-dropdown-item respond-block-dropdown-item-favor"><i class="icon-download respond-block-dropdown-icon"><svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14 6H10V0H4V6H0L7 13L14 6ZM0 15V17H14V15H0Z" fill="black"></path>
+					</svg></i><span class="text-action">Скачать Word.doc</span></div>
+			<div class="respond-block-dropdown-item"><i class="icon-label respond-block-dropdown-icon"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M21.41 11.58L12.41 2.58C12.05 2.22 11.55 2 11 2H4C2.9 2 2 2.9 2 4V11C2 11.55 2.22 12.05 2.59 12.42L11.59 21.42C11.95 21.78 12.45 22 13 22C13.55 22 14.05 21.78 14.41 21.41L21.41 14.41C21.78 14.05 22 13.55 22 13C22 12.45 21.77 11.94 21.41 11.58ZM5.5 7C4.67 7 4 6.33 4 5.5C4 4.67 4.67 4 5.5 4C6.33 4 7 4.67 7 5.5C7 6.33 6.33 7 5.5 7Z" fill="#333333"></path>
+					</svg></i><span class="text-action">Предложить вакансию</span></div>
+			<div class="respond-block-dropdown-item"><i class="icon-label respond-block-dropdown-icon"><svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM15 11C15 12.11 14.1 13 13 13H11V15H15V17H9V13C9 11.89 9.9 11 11 11H13V9H9V7H13C14.1 7 15 7.89 15 9V11Z" fill="#333333"></path>
+					</svg></i><span class="text-action">Найти похожие резюме</span></div>
+		</div>
+	</div>
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/jquery.nicescroll.js"></script>
+	<script src="js/middle-map.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/input.js"></script>
+	<script src="js/autocomplete.js"></script>
+	<script src="js/title-block.js"></script>
+	<script src="js/main-menu.js"></script>
+	<script src="js/filter-vacancies.js"></script>
+	<script src="js/filter-vacancies-sectors.js"></script>
+	<script src="js/filter-vacancies-position.js"></script>
+	<script src="js/vacance-description.js"></script>
+	<script src="js/vacance-card.js"></script>
+	<script src="js/pagination.js"></script>
+	<script src="js/search-results.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/authorize-form.js"></script>
+	<script src="js/dropdown.js"></script>
+	<script src="js/company.js"></script>
+	<script src="js/company-review.js"></script>
+	<script src="js/modal-window.js"></script>
+	<script src="js/company-modal.js"></script>
+	<script src="js/job__description-block.js"></script>
+	<script src="js/city-selection.js"></script>
+	<script src="js/section-footer-dropdown.js"></script>
+	<script src="js/job.js"></script>
+	<script src="js/areas.js"></script>
+	<script src="js/cities.js"></script>
+	<script src="js/companies.js"></script>
+	<script src="js/apply.js"></script>
+	<script src="js/search-resume.js"></script>
+	<script src="js/search-resume-filter.js"></script>
+	<script src="js/lightbox.js"></script>
+	<script src="js/resume.js"></script>
+	<script src="js/vacancies-tab-service.js"></script>
+	<script src="js/aside-menu.js"></script>
+	<script src="js/table.js"></script>
+	<script src="js/vacancy.js"></script>
+	<script src="js/preview-header-dropdown.js"></script>
+	<script src="js/dropdown-select.js"></script>
+	<script src="js/candidates.js"></script>
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

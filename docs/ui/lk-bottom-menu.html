@@ -1,0 +1,183 @@
+<!-- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.-->
+<!-- Миксин title block для Компаний/Отраслей/Городов-->
+<!--apply page выбранный файл-->
+<!-- Показать контакты со страницы Resume-Page-->
+<!-- rating-star-->
+<!-- rating-star-->
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=375,initial-scale=1, shrink-to-fit=no" />
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<title>Панель меню с иконками(внизу страницы)</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="../css/main.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../libs/custom-grid/custom-grid-dynamic.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../libs/custom-grid/custom-grid-static.css?timestamp=#{time}" />
+	<link rel="stylesheet" href="../fonts/proximaNova.css?timestamp=#{time}" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body class="body--dashboard">
+	<div class="clear"></div>
+	<div class="left-panel blue-skin" id="ui-navifation">
+		<div class="content-wrapper">
+			<div class="left-panel__section">
+				<div class="title-2">UI-KIT и PUG фреймворк</div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Документация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="docs.html">Документация</a><a class="left-panel-nav__link" href="docs-codestyle.html">Оформление кода</a><a class="left-panel-nav__link" href="docs-styleguide.html">Работа со стилями</a><a class="left-panel-nav__link" href="docs-general-recomendations.html">Общие рекомендации</a><a class="left-panel-nav__link" href="docs-workflow.html">Workflow</a><a class="left-panel-nav__link" href="docs-customer-reqiuriements.html">Требования заказчика</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">База</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="grid.html">Сетка</a><a class="left-panel-nav__link" href="colors.html">Цвета</a><a class="left-panel-nav__link" href="typografy.html">Типографика</a><a class="left-panel-nav__link" href="breadcrumb.html">Хлебные крошки</a><a class="left-panel-nav__link" href="elements.html">Элементы</a><a class="left-panel-nav__link" href="badges.html">Бейджи</a><a class="left-panel-nav__link" href="pagination.html">Пагинация</a><a class="left-panel-nav__link" href="icons-svg.html">Иконки</a><a class="left-panel-nav__link" href="modal-window.html">Модальное окно</a><a class="left-panel-nav__link" href="tooltip.html">Tooltip</a><a class="left-panel-nav__link" href="lightbox.html">Lightbox для фотографий</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Формы</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="buttons.html">Кнопки</a><a class="left-panel-nav__link" href="radio-button.html">Радио кнопки</a><a class="left-panel-nav__link" href="checkbox.html">Чекбоксы</a><a class="left-panel-nav__link" href="input.html">Инпуты</a><a class="left-panel-nav__link" href="textarea.html">Textarea</a><a class="left-panel-nav__link" href="autocomplete.html">Поиск (autocomplete)</a><a class="left-panel-nav__link" href="search-form.html">Строка поиска</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Кандидаты</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="preview-title-block__candidate.html">Preview - Title-block</a><a class="left-panel-nav__link" href="candidates__table.html">Таблица</a><a class="left-panel-nav__link" href="data-time-choose.html">Дата и время</a><a class="left-panel-nav__link" href="dropdown-select.html">Выпадашка 'Изменить статус'</a><a class="left-panel-nav__link" href="candidates__change_status.html">Изменить статус</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Вакансии</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="preview-title-block__vacancy.html">Preview - Title-block</a><a class="left-panel-nav__link" href="vacancies__tab-service-card.html">Таб 'Услуги' - Карточка</a><a class="left-panel-nav__link" href="vacancies__tab-history-card.html">Таб 'История' - Карточка</a><a class="left-panel-nav__link" href="vacancies__tab-response-card.html">Таб 'Отлики' - Карточка</a><a class="left-panel-nav__link" href="table.html">Таблица</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - ЛК - Работодателя</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="aside-menu.html">Боковое меню</a><a class="left-panel-nav__link" href="lk-title-block.html">Title block</a><a class="left-panel-nav__link" href="lk-bottom-menu.html">Панель меню с иконками(внизу)</a><a class="left-panel-nav__link" href="lk-table-indicator.html">Индикатор в таблице</a><a class="left-panel-nav__link" href="vacancies__table-dropdown.html">Выпадающее меню в таблице</a><a class="left-panel-nav__link" href="preview-header.html">Превью блок - шапка</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Резюме</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="resume__position-card.html">Карточка Должность</a><a class="left-panel-nav__link" href="resume__section-experience-work.html">Секция Опыт работы</a><a class="left-panel-nav__link" href="resume__education-card.html">Карточка Образование</a><a class="left-panel-nav__link" href="resume__section-education.html">Секция Образование</a><a class="left-panel-nav__link" href="resume__title-block.html">Title-block</a><a class="left-panel-nav__link" href="resume__other.html">Секция Другое</a><a class="left-panel-nav__link" href="resume__skills.html">Навыки и знания</a><a class="left-panel-nav__link" href="resume__tags-block.html">Блок с тегами</a><a class="left-panel-nav__link" href="resume__portfolio-slider.html">Портфолио</a><a class="left-panel-nav__link" href="resume__view-contacts.html">Просмотр контактов</a><a class="left-panel-nav__link" href="resume__show-contacts.html">Показать контакты</a><a class="left-panel-nav__link" href="respond-block-resume.html">Respond блок с кнопкой скачать</a><a class="left-panel-nav__link" href="resume__responding-panel.html">Панель откликнувшегося кандидата</a><a class="left-panel-nav__link" href="resume__footer.html">Сохранить в футере</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Поиск резюме</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="search-resume__filter.html">Фильтр боковой</a><a class="left-panel-nav__link" href="filter-resumes.html">Фильтр резюме</a><a class="left-panel-nav__link" href="search-resume__block.html">Block</a><a class="left-panel-nav__link" href="search-resume__view-resume-header.html">Шапка в Просмотр Резюме</a><a class="left-panel-nav__link" href="search-resume__title.html">Заголовок страницы</a><a class="left-panel-nav__link" href="search-resume__header-tabs.html">Описание резюме</a><a class="left-panel-nav__link" href="search-resume__resume-card.html">Карточка резюме</a><a class="left-panel-nav__link" href="save-suggest-resume.html">Сохранить резюме, Предложить вакансию</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Отклинуться на вакансию (Apply)</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="apply__header.html">Заголовок с табами</a><a class="left-panel-nav__link" href="apply__tab-choose.html">Таб выбрать резюме</a><a class="left-panel-nav__link" href="apply__tab-download.html">Таб загрузить резюме</a><a class="left-panel-nav__link" href="apply__notify.html">Сообщение об отправке резюме</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Отрасли и Компании (Areas and Companies)</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="areas-companies__alphabet.html">Блок с алфавитом</a><a class="left-panel-nav__link" href="areas-companies__title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="companies__vip-company.html">VIP компания</a><a class="left-panel-nav__link" href="companies__slider.html">Слайдер VIP компании</a><a class="left-panel-nav__link" href="areas__badges-block.html">Блок с бейджами</a><a class="left-panel-nav__link" href="areas__tabs-areas.html">Контент таб Отрасли</a><a class="left-panel-nav__link" href="areas-companies__list.html">Отрасли/Компании. Блок. Список</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Job opening</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="job__heading.html">Заголовок о компании</a><a class="left-panel-nav__link" href="job__about-company.html">Секция О компании</a><a class="left-panel-nav__link" href="job__title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="job__description-block.html">Описание позиции</a><a class="left-panel-nav__link" href="job-badges.html">Блок Бэйджи</a><a class="left-panel-nav__link" href="job__vacancy-card.html">Карточка похожие вакансии</a><a class="left-panel-nav__link" href="job__section-vacancy-cards.html">Секция карточек вакансий</a><a class="left-panel-nav__link" href="respond-block.html">Блок с кнопкой &quot;Откликнуться&quot;</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Search Results</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="dropdown.html">Выпадающий список</a><a class="left-panel-nav__link" href="vacance-card.html">Карточка вакансии</a><a class="left-panel-nav__link" href="main-menu.html">Выпадающее меню из логотипа</a><a class="left-panel-nav__link" href="filter-vacancies.html">Фильтр вакансий</a><a class="left-panel-nav__link" href="filter-vacancies-sectors.html">Фильтр вакансий - отрасли</a><a class="left-panel-nav__link" href="title-block.html">Блок под шапкой</a><a class="left-panel-nav__link" href="vacance-description.html">Описание вакансии</a><a class="left-panel-nav__link" href="social-icons.html">Социальные иконки - стр Авторизация, Регистрация</a><a class="left-panel-nav__link" href="notifications.html">Уведомления</a><a class="left-panel-nav__link" href="city-selection.html">Выбор города</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Company</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="avatar-block.html">Аватар + информация</a><a class="left-panel-nav__link" href="contact-person.html">Контактное лицо</a><a class="left-panel-nav__link" href="company-banner.html">Баннер инфо о компании</a><a class="left-panel-nav__link" href="rating-mark.html">Rating - Оценка (91/100)</a><a class="left-panel-nav__link" href="rating-like.html">Rating - Like/Dislike</a><a class="left-panel-nav__link" href="rating-stars.html">Rating - Stars</a><a class="left-panel-nav__link" href="company-review.html">Отзыв</a><a class="left-panel-nav__link" href="feedback-company.html">Отзыв о компании</a><a class="left-panel-nav__link" href="block-company-reviews.html">Блок отзывов</a><a class="left-panel-nav__link" href="rating-block.html">Блок с отзывом для рейтинга</a><a class="left-panel-nav__link" href="rating.html">Рейтинг</a><a class="left-panel-nav__link" href="company-vacancy-card.html">Карточка вакансии</a><a class="left-panel-nav__link" href="company-vacancies-current-region.html">Вакансии компании в текущем регионе</a><a class="left-panel-nav__link" href="company-tab-vacancy.html">Таб Вакансии - середина</a><a class="left-panel-nav__link" href="company-tab-reviews.html">Таб Отзывы - середина</a><a class="left-panel-nav__link" href="company-tab-about.html">Таб Описание - середина</a><a class="left-panel-nav__link" href="company-about.html">О компании</a><a class="left-panel-nav__link" href="company-modal.html">Company - Модальное окно</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Авторизация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="authorize-form.html">Авторизация - форма</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Регистрация</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="registration-form.html">Регистрация - форма</a><a class="left-panel-nav__link" href="registration-social.html">Регистрация через соцсети - середина</a><a class="left-panel-nav__link" href="registration-phone.html">Регистрация по номеру телефона - середина</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Блоки - Восстановление пароля</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="recover-password-email.html">Восстановление пароля по email- середина</a><a class="left-panel-nav__link" href="social-icons.html">Социальные иконки-стр Авторизация</a><a class="left-panel-nav__link" href="yandex-map.html">Яндекс карта</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Секции</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="header-user-panel.html">Шапки миксин</a><a class="left-panel-nav__link" href="footer.html">Футер</a><a class="left-panel-nav__link" href="subscribe.html">Подписка</a><a class="left-panel-nav__link" href="vacance-description.html">Описание вакансии</a><a class="left-panel-nav__link" href="middle-map.html">Средняя часть - Карта</a></div>
+			</div>
+			<div class="left-panel__section">
+				<p class="strong">Страницы</p>
+				<div class="left-panel-nav"><a class="left-panel-nav__link" href="../favourites.html">Избранное</a><a class="left-panel-nav__link" href="../candidates.html">Кандидаты</a><a class="left-panel-nav__link" href="../vacancies.html">Вакансии</a><a class="left-panel-nav__link" href="../resume.html">Резюме</a><a class="left-panel-nav__link" href="../resume-replied.html">Резюме с откликом</a><a class="left-panel-nav__link" href="../search-resume.html">Поиск резюме</a><a class="left-panel-nav__link" href="../apply.html">Откликнуться на вакансию</a><a class="left-panel-nav__link" href="../cities.html">Города</a><a class="left-panel-nav__link" href="../areas.html">Отрасли</a><a class="left-panel-nav__link" href="../companies.html">Компании</a><a class="left-panel-nav__link" href="../company.html">О компании</a><a class="left-panel-nav__link" href="../job.html">Описание вакансии (Job opening)</a><a class="left-panel-nav__link" href="../main.html">Главная</a><a class="left-panel-nav__link" href="../search-results.html">Search results</a><a class="left-panel-nav__link" href="../search-results-aside.html">Search results-aside</a><a class="left-panel-nav__link" href="../auth-autorization.html">Страница авторизации</a><a class="left-panel-nav__link" href="../auth-registration.html">Страница регистрации</a><a class="left-panel-nav__link" href="../auth-recovery-password.html">Страница восстановления пароля</a><a class="left-panel-nav__link" href="../auth-recovery-password-reset.html">Страница сброса пароля (email)</a><a class="left-panel-nav__link" href="../auth-recovery-password-reset-phone.html">Страница сброса пароля (телефон)</a><a class="left-panel-nav__link" href="../auth-password-create.html">Страница создания пароля</a><a class="left-panel-nav__link" href="../auth-registration-social.html">Регистрация через социальные сети</a></div>
+			</div>
+		</div>
+	</div>
+	<div id="ui-nav-toggle">Скрыть/Показать навигацию</div>
+	<div class="container container--left">
+		<div class="title">Панель меню с иконками(внизу страницы)</div>
+		<div class="section-ui bottom-menu-preview">
+			<div class="lk-bottom-menu lk-bottom-menu--vacancies">
+				<div class="menu-selected text-body-grey">Выбрано <span class="selected-number">123</span> вакансии</div>
+				<div class="lk-bottom-menu__items d-flex">
+					<div class="icon-panel-item">
+						<div class="icon-box"><i class="ic-refresh"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M17.65 6.35C16.2 4.9 14.21 4 12 4C7.58001 4 4.01001 7.58 4.01001 12C4.01001 16.42 7.58001 20 12 20C15.73 20 18.84 17.45 19.73 14H17.65C16.83 16.33 14.61 18 12 18C8.69001 18 6.00001 15.31 6.00001 12C6.00001 8.69 8.69001 6 12 6C13.66 6 15.14 6.69 16.22 7.78L13 11H20V4L17.65 6.35Z" fill="#333333"></path>
+								</svg></i></div><a class="icon-panel-item__text" href="#">Обновить</a>
+					</div>
+					<div class="icon-panel-item">
+						<div class="icon-box"><i class="ic_copy"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16 1H4C2.9 1 2 1.9 2 3V17H4V3H16V1ZM19 5H8C6.9 5 6 5.9 6 7V21C6 22.1 6.9 23 8 23H19C20.1 23 21 22.1 21 21V7C21 5.9 20.1 5 19 5ZM19 21H8V7H19V21Z" fill="#333333"></path>
+								</svg></i></div><a class="icon-panel-item__text" href="#">Дублировать</a>
+					</div>
+					<div class="icon-panel-item">
+						<div class="icon-box"><i class="ic-eye"><svg width="24" height="19" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.22666C1.44472 10.8483 3.11794 12.4625 5.02703 13.7009C5.27027 13.8556 5.51351 14.0104 5.76413 14.1505L3.22113 16.6935L3.04423 16.8778C2.68305 17.2389 2.68305 17.8213 3.04423 18.1824C3.40541 18.5436 3.98771 18.5436 4.34889 18.1824L4.5258 18.0055V17.9982L7.51843 15.0129C8.90418 15.5805 10.4005 15.9122 12 15.9122C14.6093 15.9122 16.9312 15.0203 18.973 13.7009C20.8821 12.4625 22.5553 10.8483 24 9.22666C22.3857 7.45025 20.3514 5.6812 18.1327 4.39865L20.9558 1.57555C21.317 1.21437 21.317 0.632064 20.9558 0.270885C20.5946 -0.0902948 20.0123 -0.0902948 19.6511 0.270885L16.3931 3.52887C14.9558 2.9097 13.4668 2.53378 12 2.53378C9.95086 2.53378 7.85749 3.26351 5.91155 4.37654C3.67076 5.65909 1.62162 7.4355 0 9.22666H0ZM7.78378 12.1382C7.21622 11.3127 6.87715 10.3102 6.87715 9.22666C6.87715 7.8188 7.45209 6.53624 8.38084 5.60749C9.33907 4.64189 10.6364 4.10381 12 4.10381C13.0835 4.10381 14.086 4.44287 14.9115 5.01044L13.9091 6.0129C13.3489 5.6812 12.7002 5.48956 12 5.48956C10.9681 5.48956 10.0319 5.90233 9.35381 6.58047C8.68305 7.2586 8.2629 8.19472 8.2629 9.22666C8.2629 9.91953 8.45455 10.5756 8.78624 11.1357L7.78378 12.1382ZM16.2162 6.31511L15.2138 7.31757C15.5455 7.87776 15.7371 8.52641 15.7371 9.22666C15.7371 10.2586 15.317 11.1947 14.6462 11.8728C13.9681 12.5436 13.0319 12.9638 12 12.9638C11.2998 12.9638 10.6511 12.7721 10.0909 12.4404L9.08845 13.4429C9.91401 14.0104 10.9165 14.3495 12 14.3495C13.4079 14.3495 14.6904 13.7746 15.6192 12.8458C16.5479 11.9171 17.1229 10.6345 17.1229 9.22666C17.1229 8.14312 16.7838 7.14066 16.2162 6.31511Z" fill="#333333"></path>
+								</svg></i></div><a class="icon-panel-item__text" href="#">Снять с публикации</a>
+					</div>
+					<div class="icon-panel-item">
+						<div class="icon-box"><i class="icon-star"><svg viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.99923 11.954L12.6342 14.7515L11.4042 9.47897L15.4992 5.93147L10.1067 5.47397L7.99923 0.501465L5.89173 5.47397L0.499229 5.93147L4.59423 9.47897L3.36423 14.7515L7.99923 11.954Z" fill="#999999"></path>
+								</svg></i></div><a class="icon-panel-item__text" href="#">Повысить эффективность</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<pre>.lk-bottom-menu.lk-bottom-menu--vacancies
+	.menu-selected.text-body-grey Выбрано #[span.selected-number 123] вакансии
+	.lk-bottom-menu__items.d-flex
+		+icon-menu-item('ic-refresh','Обновить')
+		+icon-menu-item('ic_copy','Дублировать')
+		+icon-menu-item('ic-eye','Снять с публикации')
+		+icon-menu-item('icon-star-custom','Повысить эффективность')		</pre>
+	</div>
+	<script src="../libs/jquery/jquery.min.js"></script>
+	<script src="../libs/jquery.nicescroll.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../js/input.js"></script>
+	<script src="../js/autocomplete.js"></script>
+	<script src="../js/title-block.js"></script>
+	<script src="../js/main-menu.js"></script>
+	<script src="../js/pagination.js"></script>
+	<script src="../js/filter-vacancies.js"></script>
+	<script src="../js/filter-vacancies-sectors.js"></script>
+	<script src="../js/vacance-description.js"></script>
+	<script src="../js/vacance-card.js"></script>
+	<script src="../js/middle-map.js"></script>
+	<script src="../js/header.js"></script>
+	<script src="../js/authorize-form.js"></script>
+	<script src="../js/dropdown.js"></script>
+	<script src="../js/company.js"></script>
+	<script src="../js/company-review.js"></script>
+	<script src="../js/modal-window.js"></script>
+	<script src="../js/company-modal.js"></script>
+	<script src="../js/section-footer-dropdown.js"></script>
+	<script src="../js/job__description-block.js"></script>
+	<script src="../js/city-selection.js"></script>
+	<script src="../js/job.js"></script>
+	<script src="../js/areas.js"></script>
+	<script src="../js/companies.js"></script>
+	<script src="../js/apply.js"></script>
+	<script src="../js/search-resume.js"></script>
+	<script src="../js/lightbox.js"></script>
+	<script src="../js/resume.js"></script>
+	<script src="../js/vacancies-tab-service.js"></script>
+	<script src="../js/aside-menu.js"></script>
+	<script src="../js/table.js"></script>
+	<script src="../js/preview-header-dropdown.js"></script>
+	<script src="../js/dropdown-select.js"></script>
+	<script src="../js/candidates.js"></script>
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

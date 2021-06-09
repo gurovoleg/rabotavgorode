@@ -23,7 +23,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
     "gulp-rev": "^8.1.1",
-    "gulp-sass": "^4.0.1",
     "gulp-scss": "^1.4.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svgmin": "^1.2.4",
@@ -38,9 +37,10 @@
   "dependencies": {
     "bootstrap-4-grid": "^2.4.0",
     "emitty": "^1.4.1",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-html-beautify": "^1.0.1",
     "gulp-if": "^2.0.2",
+    "gulp-sass": "^4.1.0",
     "hoek": "^5.0.3",
     "jquery": "^3.3.1",
     "normalize.css": "^8.0.0"
