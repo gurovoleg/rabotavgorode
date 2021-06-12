@@ -110,14 +110,14 @@ mixin address-badge(street, moreInfo)
 //-малый бренд в круге
 mixin brand-logo-small(imgSrc)
 	.brand-logo-small
-		img.brand-img(src='../img/ic-svg/'+ imgSrc, alt='icon')
+		img.brand-img(src='img/ic-svg/'+ imgSrc, alt='icon')
 //- бренд в круге
 mixin brand-logo(img)
 	.brand-logo&attributes(attributes)
-		img.brand-img(src='../img/ic-svg/'+ img, alt='icon')
+		img.brand-img(src='img/ic-svg/'+ img, alt='icon')
 //- бренд через background
 mixin brand-logo-bgstyle(img) 
-	.brand-logo__img(style="background-image: url(../img/ic-svg/"+ img + "")&attributes(attributes)
+	.brand-logo__img(style="background-image: url(img/ic-svg/"+ img + "")&attributes(attributes)
 //-nav-menu
 mixin nav-menu(El)
 	.nav-menu&attributes(attributes)
@@ -188,7 +188,7 @@ mixin company-vacancy-card(currentRegion, title, sallary, city, section)
 //- Миксин для VIP company (Companies page)
 mixin companies-vip-company(imgName, ratingValue, vacancyTotal, sallary)
 	a(href="#").bg-vip-company
-		.vip-company__image(style="background-image: url('../img/company-logo-svg/" + imgName "'")
+		.vip-company__image(style="background-image: url('./img/company-logo-svg/" + imgName "'")
 		.vip-company__rating
 			+rating-mark(ratingValue)
 		.vip-company__vacancy-total=vacancyTotal 
@@ -213,9 +213,9 @@ mixin lightbox-item(fileName, label)
 	.lightbox-block
 		a(href="#!").lightbox-block__image
 			picture
-				source(srcset='../../img/photo/portfolio/mobile/' + fileName, media='(max-width: 991px)')
-				source(srcset='../../img/photo/portfolio/' + fileName, media='(min-width: 992px)')
-				img(src="../../img/photo/portfolio/" + fileName) 
+				source(srcset='../img/photo/portfolio/mobile/' + fileName, media='(max-width: 991px)')
+				source(srcset='../img/photo/portfolio/' + fileName, media='(min-width: 992px)')
+				img(src=".//img/photo/portfolio/" + fileName) 
 
 		.lightbox-block__label=label 
 
